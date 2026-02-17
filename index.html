@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Quiz Municipales Paris 2026 — Trouvez votre candidat</title>
+  <meta name="description" content="Découvrez quel candidat aux municipales parisiennes 2026 est le plus proche de vos convictions grâce à notre quiz interactif.">
+  <meta property="og:title" content="Quiz Municipales Paris 2026">
+  <meta property="og:description" content="De quel candidat êtes-vous le plus proche ? Faites le test !">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0f0a1e">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Quiz Paris 2026">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- ====== ÉCRAN 1 : ACCUEIL ====== -->
+  <section id="screen-accueil" class="screen active">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="container">
+      <div class="accueil-content">
+        <div class="accueil-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Municipales Paris 2026
+        </div>
+        <h1>De quel candidat<br>êtes-vous le plus proche&nbsp;?</h1>
+        <p class="accueil-subtitle">Swipez les propositions issues des programmes des 4 candidats et découvrez vos affinités.</p>
+
+        <div class="duration-section">
+          <p class="duration-label">De combien de temps disposez-vous ?</p>
+          <div class="duration-buttons">
+            <button class="btn-duration" onclick="startQuiz(10)">
+              <span class="duration-time">2 min</span>
+              <span class="duration-detail">10 propositions</span>
+            </button>
+            <button class="btn-duration" onclick="startQuiz(25)">
+              <span class="duration-time">5 min</span>
+              <span class="duration-detail">25 propositions</span>
+            </button>
+            <button class="btn-duration" onclick="startQuiz(50)">
+              <span class="duration-time">10 min</span>
+              <span class="duration-detail">50 propositions</span>
+            </button>
+          </div>
+          <p class="duration-hint">Plus vous répondez, plus le résultat est fiable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ÉCRAN 2 : QUIZ (SWIPE) ====== -->
+  <section id="screen-quiz" class="screen">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="container">
+      <div class="quiz-header">
+        <button class="btn-back" onclick="showScreen('accueil')" aria-label="Retour à l'accueil">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+          <span class="progress-text" id="progress-text">1 / 10</span>
+        </div>
+      </div>
+
+      <div class="swipe-zone" id="swipe-zone">
+        <div class="card-stack">
+          <div class="card card-behind-2"></div>
+          <div class="card card-behind-1"></div>
+          <div class="card card-active" id="swipe-card">
+            <div class="card-overlay card-overlay-favorable" id="overlay-favorable">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              <span class="card-overlay-label">Favorable</span>
+            </div>
+            <div class="card-overlay card-overlay-defavorable" id="overlay-defavorable">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg>
+              <span class="card-overlay-label">Défavorable</span>
+            </div>
+            <div class="card-overlay card-overlay-neutre" id="overlay-neutre">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14"/></svg>
+              <span class="card-overlay-label">Neutre</span>
+            </div>
+            <span class="card-theme" id="card-theme">Thématique</span>
+            <p class="card-text" id="card-text">Texte de la proposition</p>
+          </div>
+        </div>
+
+        <div class="swipe-hints">
+          <span class="hint hint-left">← Contre</span>
+          <span class="hint hint-up">↑ Neutre</span>
+          <span class="hint hint-right">Pour →</span>
+        </div>
+      </div>
+
+      <div class="action-buttons">
+        <button class="btn-action btn-defavorable" onclick="answer('defavorable')" aria-label="Défavorable">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+        <button class="btn-action btn-neutre" onclick="answer('neutre')" aria-label="Neutre">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/></svg>
+        </button>
+        <button class="btn-action btn-favorable" onclick="answer('favorable')" aria-label="Favorable">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ÉCRAN 3 : RÉSULTATS ====== -->
+  <section id="screen-resultats" class="screen">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-3"></div>
+    <div class="container">
+      <div class="resultats-content">
+        <h2 class="resultats-title">Vos résultats</h2>
+        <div class="resultats-winner" id="resultats-winner">
+          <p class="winner-label">Vous êtes le plus proche de</p>
+          <div class="winner-name" id="winner-name">Candidat</div>
+          <div class="winner-score" id="winner-score">75%</div>
+          <p class="winner-party" id="winner-party">Parti</p>
+        </div>
+
+        <div class="resultats-bars" id="resultats-bars"></div>
+
+        <div class="resultats-actions">
+          <button class="btn-primary" onclick="shareResults()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
+            Partager mes résultats
+          </button>
+          <button class="btn-secondary" onclick="showScreen('detail')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 012-2h2a2 2 0 012 2M9 5h6"/></svg>
+            Voir le détail de mes réponses
+          </button>
+          <button class="btn-secondary" onclick="showScreen('comparaison')">Comparer les programmes</button>
+          <button class="btn-secondary" onclick="showScreen('merci')">Liens utiles</button>
+          <button class="btn-ghost" onclick="showScreen('accueil')">Recommencer le quiz</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ÉCRAN 3bis : DÉTAIL DES RÉPONSES ====== -->
+  <section id="screen-detail" class="screen">
+    <div class="container">
+      <div class="detail-header">
+        <button class="btn-back" onclick="showScreen('resultats')" aria-label="Retour aux résultats">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <h2>Détail de vos réponses</h2>
+      </div>
+
+      <div class="detail-tabs">
+        <button class="detail-tab active" data-tab="favorable" onclick="switchDetailTab('favorable')">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          Favorables <span class="detail-tab-count" id="count-favorable">0</span>
+        </button>
+        <button class="detail-tab" data-tab="defavorable" onclick="switchDetailTab('defavorable')">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          Rejetées <span class="detail-tab-count" id="count-defavorable">0</span>
+        </button>
+        <button class="detail-tab" data-tab="neutre" onclick="switchDetailTab('neutre')">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/></svg>
+          Neutres <span class="detail-tab-count" id="count-neutre">0</span>
+        </button>
+      </div>
+
+      <div class="detail-list" id="detail-list"></div>
+    </div>
+  </section>
+
+  <!-- ====== ÉCRAN 4 : COMPARAISON ====== -->
+  <section id="screen-comparaison" class="screen">
+    <div class="container">
+      <div class="comparaison-header">
+        <button class="btn-back" onclick="showScreen('resultats')" aria-label="Retour aux résultats">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <h2>Comparer les programmes</h2>
+      </div>
+
+      <div class="comparaison-controls">
+        <div class="control-group">
+          <label for="theme-select">Thématique</label>
+          <select id="theme-select" onchange="updateComparison()"></select>
+        </div>
+        <div class="control-group">
+          <label>Candidats à comparer</label>
+          <div class="candidate-toggles" id="candidate-toggles"></div>
+        </div>
+      </div>
+
+      <div class="comparaison-grid" id="comparaison-grid"></div>
+    </div>
+  </section>
+
+  <!-- ====== ÉCRAN 5 : MERCI ====== -->
+  <section id="screen-merci" class="screen">
+    <div class="container">
+      <div class="merci-content">
+        <h2>Merci d'avoir participé !</h2>
+        <p>Chaque vote compte. Informez-vous et participez aux élections municipales de 2026.</p>
+
+        <div class="links-section">
+          <a href="https://www.victoirespopulaires.fr" target="_blank" rel="noopener" class="link-card">
+            <div class="link-card-text">
+              <strong>Victoires Populaires</strong>
+              <span>Découvrir le mouvement</span>
+            </div>
+            <svg class="link-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://www.maprocuration.gouv.fr" target="_blank" rel="noopener" class="link-card">
+            <div class="link-card-text">
+              <strong>Procuration en ligne</strong>
+              <span>Donnez procuration facilement</span>
+            </div>
+            <svg class="link-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://www.mediapart.fr" target="_blank" rel="noopener" class="link-card">
+            <div class="link-card-text">
+              <strong>Mediapart</strong>
+              <span>Média d'investigation indépendant</span>
+            </div>
+            <svg class="link-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://www.blast-info.fr" target="_blank" rel="noopener" class="link-card">
+            <div class="link-card-text">
+              <strong>Blast</strong>
+              <span>Média indépendant</span>
+            </div>
+            <svg class="link-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="merci-actions">
+          <button class="btn-secondary" onclick="showScreen('resultats')">Revoir mes résultats</button>
+          <button class="btn-ghost" onclick="showScreen('accueil')">Recommencer le quiz</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer">
+    <div class="container">
+      <a href="https://www.victoirespopulaires.fr" target="_blank" rel="noopener" class="footer-link">
+        <span>Un projet</span> <strong>Victoires Populaires</strong>
+      </a>
+      <p class="footer-disclaimer">Ce quiz est un outil d'information citoyenne. Les propositions sont issues des programmes officiels des candidats.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js');
+    }
+  </script>
+</body>
+</html>
