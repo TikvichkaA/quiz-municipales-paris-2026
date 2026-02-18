@@ -73,13 +73,19 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   position: relative;
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: auto;
 }
 
 .screen.active {
   display: flex;
   flex-direction: column;
   animation: screenIn 0.5s var(--ease-out) both;
+}
+
+/* Quiz screen only: no scroll, flex-fit viewport */
+#screen-quiz {
+  overflow-y: hidden;
 }
 
 @keyframes screenIn {
@@ -378,13 +384,15 @@ body {
   touch-action: none;
   padding: 8px 0;
   min-height: 0;
+  overflow: hidden;
 }
 
 .card-stack {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3.2;
-  max-height: 340px;
+  flex: 1;
+  min-height: 180px;
+  max-height: 400px;
   perspective: 800px;
 }
 
@@ -403,10 +411,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 28px 24px;
+  padding: 24px 20px;
   text-align: center;
   transition: transform 0.35s var(--ease-out), opacity 0.35s ease;
   backface-visibility: hidden;
+  overflow: hidden;
 }
 
 .card-behind-2 {
@@ -522,15 +531,19 @@ body {
   line-height: 1.55;
   color: var(--blanc);
   max-width: 340px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.15) transparent;
 }
 
 .swipe-hints {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 32px;
   width: 100%;
-  margin-top: 12px;
-  padding: 0 8px;
+  padding: 6px 0 0;
   flex-shrink: 0;
 }
 
@@ -539,7 +552,13 @@ body {
   color: var(--gris-500);
   font-weight: 600;
   letter-spacing: 0.03em;
+  text-align: center;
+  min-width: 48px;
 }
+
+.hint-left { color: rgba(239, 68, 68, 0.6); }
+.hint-up { color: var(--gris-500); }
+.hint-right { color: rgba(16, 185, 129, 0.6); }
 
 /* ====== ACTION BUTTONS ====== */
 .action-buttons {
@@ -547,7 +566,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 24px;
-  padding: 16px 0 24px;
+  padding: 4px 0 24px;
   flex-shrink: 0;
 }
 
@@ -1264,9 +1283,9 @@ body {
   .duration-section { padding: 24px 16px; margin-top: 24px; }
   .btn-duration { padding: 16px 6px; }
   .duration-time { font-size: 1.3rem; }
-  .card-stack { max-height: 280px; }
-  .card { padding: 22px 18px; }
-  .card-text { font-size: 0.95rem; }
+  .card { padding: 20px 16px; }
+  .card-text { font-size: 0.92rem; }
+  .card-theme { font-size: 0.62rem; margin-bottom: 10px; padding: 4px 10px; }
   .btn-defavorable, .btn-favorable { width: 56px; height: 56px; }
   .btn-neutre { width: 44px; height: 44px; }
   .action-buttons { gap: 20px; padding: 12px 0 20px; }
@@ -1280,13 +1299,16 @@ body {
 }
 
 @media (max-height: 680px) {
-  .card-stack { max-height: 220px; }
   .quiz-header { padding: 8px 0 4px; }
   .action-buttons { padding: 8px 0 12px; }
-  .swipe-hints { margin-top: 6px; }
+  .swipe-hints { padding-top: 2px; }
   .accueil-content { padding-top: 24px; }
-  .accueil-badge { margin-bottom: 16px; }
-  .accueil-subtitle { margin-bottom: 20px; }
+  .accueil-badge { margin-bottom: 12px; }
+  .accueil-subtitle { margin-bottom: 16px; font-size: 0.85rem; }
+  .duration-section { padding: 20px 16px; margin-top: 16px; }
+  .card { padding: 16px 14px; }
+  .card-text { font-size: 0.88rem; line-height: 1.45; }
+  .card-theme { margin-bottom: 8px; }
 }
 
 @media (min-width: 769px) {
