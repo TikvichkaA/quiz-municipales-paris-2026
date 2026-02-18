@@ -438,5 +438,729 @@ const PROPOSITIONS = [
   { id: 298, theme: "Sécurité", text: "Dissoudre la police municipale et démanteler la vidéosurveillance", candidateId: "npa" },
 
   // === FINANCE (NPA) ===
-  { id: 299, theme: "Finance et gestion budgétaire", text: "Mettre en place une taxation sur les entreprises et ménages fortunés pour financer les services publics", candidateId: "npa" }
+  { id: 299, theme: "Finance et gestion budgétaire", text: "Mettre en place une taxation sur les entreprises et ménages fortunés pour financer les services publics", candidateId: "npa" },
+
+  // ============================================
+  // PROPOSITIONS AJOUTÉES — vérification programmes
+  // ============================================
+
+  // === SARAH KNAFO (ajouts depuis programme PDF) ===
+  { id: 300, theme: "Sécurité", text: "Déployer 500 policiers municipaux sur le réseau de transport en commun parisien", candidateId: "knafo" },
+  { id: 301, theme: "Patrimoine et beauté de la ville", text: "Restaurer le mobilier urbain historique de Paris : bancs Davioud, réverbères classiques, grilles d'arbres en fonte", candidateId: "knafo" },
+  { id: 302, theme: "Culture", text: "Ouvrir les musées municipaux en nocturne deux soirs par semaine et les bibliothèques le dimanche", candidateId: "knafo" },
+  { id: 303, theme: "Culture", text: "Consacrer 300 millions d'euros à la restauration des églises parisiennes sur le mandat", candidateId: "knafo" },
+  { id: 304, theme: "Finance et gestion budgétaire", text: "Supprimer plus de 100 millions d'euros par an de subventions aux associations politisées et militantes", candidateId: "knafo" },
+  { id: 305, theme: "Finance et gestion budgétaire", text: "Réduire le nombre d'adjoints au maire à 10 et diviser par cinq le cabinet du maire", candidateId: "knafo" },
+  { id: 306, theme: "Logement", text: "Baisser les frais de notaire (droits de mutation) de 10% pour faciliter l'accession à la propriété", candidateId: "knafo" },
+  { id: 307, theme: "Sport", text: "Installer des terrains de sport (football, basketball, padel) sous les viaducs du métro aérien", candidateId: "knafo" },
+  { id: 308, theme: "Patrimoine et beauté de la ville", text: "Prolonger l'éclairage ornemental des monuments parisiens jusqu'à minuit", candidateId: "knafo" },
+  { id: 309, theme: "Transport", text: "Offrir la première heure de stationnement gratuite pour les professionnels (infirmières, artisans, commerciaux)", candidateId: "knafo" },
+  { id: 310, theme: "Éducation", text: "Nommer un chef étoilé pour refondre les cantines scolaires avec des recettes à base de produits frais français", candidateId: "knafo" },
+  { id: 311, theme: "Culture", text: "Proposer des cours de musique collectifs sans concours ni prérequis dans tous les conservatoires", candidateId: "knafo" },
+
+  // === THIERRY MARIANI (ajouts depuis programme PDF) ===
+  { id: 312, theme: "Santé", text: "Supprimer les salles de shoot et créer un centre de soin unique pour traiter la toxicomanie", candidateId: "mariani" },
+  { id: 313, theme: "Santé", text: "Instaurer une prévention scolaire obligatoire sur les dangers des stupéfiants", candidateId: "mariani" },
+  { id: 314, theme: "Santé", text: "Lancer un plan de prévention des maladies mentales dans les écoles et collèges", candidateId: "mariani" },
+  { id: 315, theme: "Éducation", text: "Garantir un service minimum d'accueil dans les crèches, écoles et cantines les jours de grève", candidateId: "mariani" },
+  { id: 316, theme: "Transport", text: "Créer 20 000 places de stationnement supplémentaires en parking souterrain", candidateId: "mariani" },
+  { id: 317, theme: "Transport", text: "Ouvrir le métro la nuit sur les lignes automatiques le week-end", candidateId: "mariani" },
+  { id: 318, theme: "Transport", text: "Rétablir la gratuité du stationnement pour les deux-roues motorisés", candidateId: "mariani" },
+  { id: 319, theme: "Logement", text: "Convertir des bureaux vacants en 6 000 logements pour les familles parisiennes", candidateId: "mariani" },
+  { id: 320, theme: "Logement", text: "Limiter les locations Airbnb à 60 nuits par an (contre 120 actuellement)", candidateId: "mariani" },
+  { id: 321, theme: "Logement", text: "Permettre à 40 000 familles parisiennes d'accéder à la propriété via un plan d'accession", candidateId: "mariani" },
+  { id: 322, theme: "Commerce", text: "Lancer un programme « 1 000 commerces » pour revitaliser les rues commerçantes de Paris", candidateId: "mariani" },
+  { id: 323, theme: "Écologie et végétalisation", text: "Planter 50 000 arbres supplémentaires à Paris", candidateId: "mariani" },
+  { id: 324, theme: "Éducation", text: "Créer 100 centres de soutien scolaire gratuits dans les quartiers de Paris", candidateId: "mariani" },
+  { id: 325, theme: "Petite enfance", text: "Ouvrir des crèches la nuit pour les parents travaillant en horaires décalés", candidateId: "mariani" },
+  { id: 326, theme: "Petite enfance", text: "Instaurer la gratuité de la crèche à partir du 3ème enfant", candidateId: "mariani" },
+  { id: 327, theme: "Sécurité", text: "Installer des caméras de vidéoprotection dans les parties communes des HLM", candidateId: "mariani" },
+  { id: 328, theme: "Transport", text: "Supprimer la Zone à Trafic Limité (ZTL) du centre de Paris", candidateId: "mariani" },
+
+  // === PIERRE-YVES BOURNAZEL (ajouts depuis site web) ===
+  { id: 329, theme: "Sécurité", text: "Créer un numéro dédié 75.17 pour joindre la police municipale 24h/24", candidateId: "bournazel" },
+  { id: 330, theme: "Sécurité", text: "Déployer la police municipale dans le métro le soir contre les violences et agressions", candidateId: "bournazel" },
+  { id: 331, theme: "Transport", text: "Créer 30 000 places de parking-relais gratuites aux portes de Paris", candidateId: "bournazel" },
+  { id: 332, theme: "Transport", text: "Adapter les vitesses du périphérique selon les horaires : 50 km/h en pointe, 70 km/h en heures creuses", candidateId: "bournazel" },
+  { id: 333, theme: "Logement", text: "Remettre 60 000 logements sur le marché locatif grâce à un pacte avec les propriétaires", candidateId: "bournazel" },
+  { id: 334, theme: "Logement", text: "Transformer les bureaux vacants en logements pour les classes moyennes", candidateId: "bournazel" },
+  { id: 335, theme: "Santé", text: "Ouvrir un centre municipal de santé sans dépassement d'honoraires dans chaque arrondissement d'ici 2032", candidateId: "bournazel" },
+  { id: 336, theme: "Santé", text: "Déployer un bus de santé mobile dans les quartiers mal desservis médicalement", candidateId: "bournazel" },
+  { id: 337, theme: "Commerce", text: "Faire de Paris une Zone Touristique Unique pour autoriser l'ouverture dominicale des commerces", candidateId: "bournazel" },
+  { id: 338, theme: "Écologie et végétalisation", text: "Transformer la Petite Ceinture en poumon vert continu : promenades, jardins potagers et espaces sportifs", candidateId: "bournazel" },
+  { id: 339, theme: "Finance et gestion budgétaire", text: "Vendre 20 000 propriétés municipales situées hors de Paris pour rembourser 3 milliards de dette", candidateId: "bournazel" },
+  { id: 340, theme: "Finance et gestion budgétaire", text: "Supprimer toutes les voitures avec chauffeur des élus et cadres de la Ville", candidateId: "bournazel" },
+  { id: 341, theme: "Transport", text: "Immatriculer les fatbikes et trottinettes surpuissantes pour permettre leur verbalisation", candidateId: "bournazel" },
+  { id: 342, theme: "Petite enfance", text: "Étendre les horaires des crèches jusqu'à 19h30 pour les parents aux horaires décalés", candidateId: "bournazel" },
+  { id: 343, theme: "Éducation", text: "Créer des écoles bilingues publiques pour les familles internationales", candidateId: "bournazel" },
+
+  // === SOPHIA CHIKIROU (ajouts depuis site web) ===
+  { id: 344, theme: "Logement", text: "Créer 80 000 logements publics supplémentaires, en majorité sociaux", candidateId: "chikirou" },
+  { id: 345, theme: "Logement", text: "Tripler les agents de contrôle de l'encadrement des loyers (de 33 à 100 agents)", candidateId: "chikirou" },
+  { id: 346, theme: "Logement", text: "Créer une régie publique locative municipale pour gérer des logements à loyers modérés", candidateId: "chikirou" },
+  { id: 347, theme: "Finance et gestion budgétaire", text: "Augmenter la taxe foncière de 20,5% à 23% pour financer le logement et l'éducation", candidateId: "chikirou" },
+  { id: 348, theme: "Éducation", text: "Recruter 2 000 animateurs périscolaires supplémentaires et titulariser les 4 000 contractuels actuels", candidateId: "chikirou" },
+  { id: 349, theme: "Éducation", text: "Instaurer la cantine bio à 1 euro pour tous les écoliers parisiens", candidateId: "chikirou" },
+  { id: 350, theme: "Écologie et végétalisation", text: "Transformer le périphérique en boulevard urbain végétalisé", candidateId: "chikirou" },
+  { id: 351, theme: "Écologie et végétalisation", text: "Végétaliser 300 hectares et déimperméabiliser 40% du territoire parisien d'ici 2032", candidateId: "chikirou" },
+  { id: 352, theme: "Propreté", text: "Porter le budget de lutte contre les rats à 15 millions d'euros par an", candidateId: "chikirou" },
+  { id: 353, theme: "Santé", text: "Instaurer un chèque psy de 20€ par séance de psychothérapie pour les Parisiens", candidateId: "chikirou" },
+  { id: 354, theme: "Santé", text: "Créer une mutuelle municipale populaire à tarif solidaire pour tous les Parisiens", candidateId: "chikirou" },
+  { id: 355, theme: "Commerce", text: "Tripler les locaux commerciaux publics avec des loyers abaissés pour les commerces de proximité", candidateId: "chikirou" },
+  { id: 356, theme: "Démocratie locale", text: "Augmenter le budget participatif de 5% à 15% du budget d'investissement (300 millions d'euros)", candidateId: "chikirou" },
+  { id: 357, theme: "Solidarité", text: "Atteindre l'objectif zéro sans-abri à Paris avant la fin du mandat", candidateId: "chikirou" },
+  { id: 358, theme: "Solidarité", text: "Ouvrir des restaurants populaires avec des menus bio et locaux à prix solidaires", candidateId: "chikirou" },
+  { id: 359, theme: "Écologie et végétalisation", text: "Moratoire sur la construction de bureaux neufs à Paris", candidateId: "chikirou" },
+  { id: 360, theme: "Sécurité", text: "Porter la police municipale à 3 500 agents avec une charte interdisant les contrôles au faciès", candidateId: "chikirou" }
+];
+
+// ====== DUELS ======
+// Paires de propositions sur le même sous-sujet, deux candidats différents
+const DUELS = [
+  // --- TRANSPORT ---
+  {
+    id: 1,
+    theme: "Transport",
+    subtopic: "Stationnement résidentiel",
+    propA: { candidateId: "dati", text: "Créer un tarif de stationnement résidentiel vraiment avantageux pour les Parisiens" },
+    propB: { candidateId: "knafo", text: "Réduire le tarif du stationnement à 5€/h pour tous (contre 37€/h pour les SUV actuellement)" }
+  },
+  {
+    id: 2,
+    theme: "Transport",
+    subtopic: "Stationnement résidentiel",
+    propA: { candidateId: "gregoire", text: "Baisser le tarif du stationnement résidentiel pour les Parisiens qui ont besoin de leur véhicule" },
+    propB: { candidateId: "mariani", text: "Rétablir l'égalité des tarifs de stationnement en supprimant le zonage discriminatoire" }
+  },
+  {
+    id: 3,
+    theme: "Transport",
+    subtopic: "Bus express",
+    propA: { candidateId: "gregoire", text: "Créer 15 lignes de bus express pour relier rapidement les quartiers de Paris" },
+    propB: { candidateId: "bournazel", text: "Créer 3 lignes de bus express traversant Paris du nord au sud et d'est en ouest" }
+  },
+  {
+    id: 4,
+    theme: "Transport",
+    subtopic: "Métro la nuit",
+    propA: { candidateId: "gregoire", text: "Obtenir le métro 24h/24 le week-end pour une ville qui ne dort jamais" },
+    propB: { candidateId: "bournazel", text: "Obtenir l'ouverture nocturne des lignes de métro 1, 4 et 14 le week-end" }
+  },
+  {
+    id: 5,
+    theme: "Transport",
+    subtopic: "Périphérique",
+    propA: { candidateId: "knafo", text: "Relever la vitesse maximale sur le périphérique de 50 à 80 km/h" },
+    propB: { candidateId: "mariani", text: "Augmenter la vitesse sur le périphérique à 90 km/h sur certains tronçons et la nuit" }
+  },
+  {
+    id: 6,
+    theme: "Transport",
+    subtopic: "Périphérique",
+    propA: { candidateId: "bournazel", text: "Couvrir des tronçons du périphérique pour créer de nouveaux espaces verts" },
+    propB: { candidateId: "mariani", text: "Augmenter la vitesse sur le périphérique à 90 km/h sur certains tronçons et la nuit" }
+  },
+  {
+    id: 7,
+    theme: "Transport",
+    subtopic: "Feux intelligents",
+    propA: { candidateId: "bournazel", text: "Installer des feux intelligents pour fluidifier la circulation et réduire la pollution" },
+    propB: { candidateId: "knafo", text: "Piloter les feux tricolores par intelligence artificielle pour fluidifier le trafic" }
+  },
+  {
+    id: 8,
+    theme: "Transport",
+    subtopic: "Accessibilité transports",
+    propA: { candidateId: "gregoire", text: "Rendre 100% des transports en commun accessibles aux personnes à mobilité réduite" },
+    propB: { candidateId: "chikirou", text: "Rendre l'ensemble des transports et de la voirie universellement accessibles" }
+  },
+  {
+    id: 9,
+    theme: "Transport",
+    subtopic: "Vélo",
+    propA: { candidateId: "gregoire", text: "Achever le réseau cyclable parisien pour couvrir l'ensemble des arrondissements" },
+    propB: { candidateId: "chikirou", text: "Créer une régie publique du vélo pour remplacer le modèle Vélib' actuel" }
+  },
+  {
+    id: 10,
+    theme: "Transport",
+    subtopic: "Livraisons",
+    propA: { candidateId: "gregoire", text: "Réguler les horaires et itinéraires de livraison pour réduire les nuisances" },
+    propB: { candidateId: "bournazel", text: "Doubler le nombre de places de livraison pour réduire le stationnement en double file" }
+  },
+  {
+    id: 11,
+    theme: "Transport",
+    subtopic: "Transports gratuits",
+    propA: { candidateId: "gregoire", text: "Rendre le Navigo gratuit pour tous les enfants et adolescents parisiens" },
+    propB: { candidateId: "npa", text: "Rendre les transports en commun gratuits et fiables pour tous" }
+  },
+
+  // --- SÉCURITÉ ---
+  {
+    id: 12,
+    theme: "Sécurité",
+    subtopic: "Police municipale",
+    propA: { candidateId: "bournazel", text: "Créer une force de 6 000 policiers municipaux pour sécuriser les rues de Paris" },
+    propB: { candidateId: "mariani", text: "Tripler les effectifs de la police municipale pour atteindre 8 350 agents" }
+  },
+  {
+    id: 13,
+    theme: "Sécurité",
+    subtopic: "Police municipale",
+    propA: { candidateId: "dati", text: "Recruter 5 000 policiers municipaux armés pour sécuriser Paris" },
+    propB: { candidateId: "knafo", text: "Doubler les effectifs de la police municipale pour atteindre 8 000 agents" }
+  },
+  {
+    id: 14,
+    theme: "Sécurité",
+    subtopic: "Police municipale",
+    propA: { candidateId: "dati", text: "Recruter 5 000 policiers municipaux armés pour sécuriser Paris" },
+    propB: { candidateId: "npa", text: "Dissoudre la police municipale et démanteler la vidéosurveillance" }
+  },
+  {
+    id: 15,
+    theme: "Sécurité",
+    subtopic: "Armement police",
+    propA: { candidateId: "bournazel", text: "Armer les agents de sécurité de la Ville pour une réponse crédible sur le terrain" },
+    propB: { candidateId: "knafo", text: "Armer la police municipale avec des armes à feu" }
+  },
+  {
+    id: 16,
+    theme: "Sécurité",
+    subtopic: "Vidéosurveillance",
+    propA: { candidateId: "dati", text: "Doubler le nombre de caméras de vidéoprotection sur l'ensemble de la capitale" },
+    propB: { candidateId: "mariani", text: "Tripler le réseau de vidéoprotection pour atteindre 5 000 caméras" }
+  },
+  {
+    id: 17,
+    theme: "Sécurité",
+    subtopic: "Vidéosurveillance IA",
+    propA: { candidateId: "knafo", text: "Équiper les caméras de vidéosurveillance d'intelligence artificielle" },
+    propB: { candidateId: "mariani", text: "Déployer la vidéosurveillance augmentée par intelligence artificielle" }
+  },
+  {
+    id: 18,
+    theme: "Sécurité",
+    subtopic: "Zones de non-droit",
+    propA: { candidateId: "dati", text: "Rétablir la sécurité dans les zones de non-droit et les quartiers sensibles" },
+    propB: { candidateId: "knafo", text: "Plan de reconquête des zones de non-droit avec interpellations massives (Champs-Élysées, Barbès, La Chapelle)" }
+  },
+  {
+    id: 19,
+    theme: "Sécurité",
+    subtopic: "Sécurité des femmes",
+    propA: { candidateId: "chikirou", text: "Mettre en place un plan global de lutte contre les violences faites aux femmes dans l'espace public" },
+    propB: { candidateId: "knafo", text: "Renforcer l'éclairage public nocturne dans tous les quartiers" }
+  },
+
+  // --- LOGEMENT ---
+  {
+    id: 20,
+    theme: "Logement",
+    subtopic: "Encadrement des loyers",
+    propA: { candidateId: "gregoire", text: "Lutter contre la spéculation immobilière avec un encadrement renforcé des loyers" },
+    propB: { candidateId: "knafo", text: "Supprimer l'encadrement des loyers" }
+  },
+  {
+    id: 21,
+    theme: "Logement",
+    subtopic: "Logements sociaux",
+    propA: { candidateId: "gregoire", text: "Construire 60 000 nouveaux logements publics abordables sur le mandat" },
+    propB: { candidateId: "knafo", text: "Moratoire sur la construction de logements sociaux et sur les préemptions foncières" }
+  },
+  {
+    id: 22,
+    theme: "Logement",
+    subtopic: "Logements sociaux",
+    propA: { candidateId: "npa", text: "Construire massivement des logements sociaux, encadrer, geler et baisser les loyers" },
+    propB: { candidateId: "bournazel", text: "Fixer un objectif de 25% de logements sociaux et pas au-delà pour maintenir la mixité" }
+  },
+  {
+    id: 23,
+    theme: "Logement",
+    subtopic: "Vente HLM",
+    propA: { candidateId: "knafo", text: "Vendre des logements sociaux (HLM) avec priorité aux occupants actuels, exonérés de frais de notaire" },
+    propB: { candidateId: "bournazel", text: "Vendre une partie du parc de logements sociaux pour désendetter la Ville" }
+  },
+  {
+    id: 24,
+    theme: "Logement",
+    subtopic: "Rénovation énergétique",
+    propA: { candidateId: "gregoire", text: "Accompagner la rénovation de 200 000 logements privés avec des aides municipales" },
+    propB: { candidateId: "bournazel", text: "Tripler le rythme de rénovation énergétique des logements parisiens" }
+  },
+  {
+    id: 25,
+    theme: "Logement",
+    subtopic: "Attribution logements sociaux",
+    propA: { candidateId: "dati", text: "Réformer l'attribution des logements sociaux pour plus de transparence et d'équité" },
+    propB: { candidateId: "mariani", text: "Instaurer la priorité nationale pour l'accès au logement social, en privilégiant les familles et les travailleurs" }
+  },
+  {
+    id: 26,
+    theme: "Logement",
+    subtopic: "Logements vacants",
+    propA: { candidateId: "npa", text: "Réquisitionner sans indemnité les logements et bureaux vacants pour les transformer en logements" },
+    propB: { candidateId: "dati", text: "Restaurer la confiance des propriétaires bailleurs avec des garanties municipales" }
+  },
+  {
+    id: 27,
+    theme: "Logement",
+    subtopic: "Airbnb",
+    propA: { candidateId: "bournazel", text: "Limiter les locations Airbnb à 30 jours par an au lieu de 120 actuellement" },
+    propB: { candidateId: "gregoire", text: "Lutter contre la spéculation immobilière avec un encadrement renforcé des loyers" }
+  },
+
+  // --- FINANCE ET GESTION BUDGÉTAIRE ---
+  {
+    id: 28,
+    theme: "Finance et gestion budgétaire",
+    subtopic: "Audit budgétaire",
+    propA: { candidateId: "dati", text: "Mener un audit complet de la gestion budgétaire de la Ville et publier les résultats" },
+    propB: { candidateId: "chikirou", text: "Réaliser un audit citoyen de tous les contrats de la Ville avec les entreprises privées" }
+  },
+  {
+    id: 29,
+    theme: "Finance et gestion budgétaire",
+    subtopic: "Impôts locaux",
+    propA: { candidateId: "dati", text: "Garantir la stabilité fiscale : pas de hausse d'impôts locaux pendant le mandat" },
+    propB: { candidateId: "knafo", text: "Diviser la taxe foncière par deux dès le premier budget" }
+  },
+  {
+    id: 30,
+    theme: "Finance et gestion budgétaire",
+    subtopic: "Impôts locaux",
+    propA: { candidateId: "mariani", text: "S'opposer à toute augmentation des taux d'imposition locale pendant toute la durée du mandat" },
+    propB: { candidateId: "npa", text: "Mettre en place une taxation sur les entreprises et ménages fortunés pour financer les services publics" }
+  },
+  {
+    id: 31,
+    theme: "Finance et gestion budgétaire",
+    subtopic: "35 heures",
+    propA: { candidateId: "dati", text: "Faire appliquer les 35 heures effectives dans l'administration parisienne" },
+    propB: { candidateId: "bournazel", text: "Appliquer strictement les 35 heures dans toute l'administration parisienne" }
+  },
+  {
+    id: 32,
+    theme: "Finance et gestion budgétaire",
+    subtopic: "Économies budgétaires",
+    propA: { candidateId: "bournazel", text: "Réaliser 120 millions d'euros d'économies annuelles sur le fonctionnement" },
+    propB: { candidateId: "knafo", text: "Plan d'économies de 10 milliards d'euros sur 10 ans sur la gestion municipale" }
+  },
+  {
+    id: 33,
+    theme: "Finance et gestion budgétaire",
+    subtopic: "Effectifs municipaux",
+    propA: { candidateId: "dati", text: "Réduire la masse salariale par le non-remplacement d'une partie des départs en retraite" },
+    propB: { candidateId: "knafo", text: "Réduire de moitié les effectifs municipaux sur 10 ans (55 000 agents) en ne remplaçant pas les départs naturels" }
+  },
+  {
+    id: 34,
+    theme: "Finance et gestion budgétaire",
+    subtopic: "Austérité vs services publics",
+    propA: { candidateId: "chikirou", text: "Refuser toute politique d'austérité et maintenir un haut niveau de services publics" },
+    propB: { candidateId: "bournazel", text: "Diviser par deux la dette de Paris en six ans grâce à une gestion rigoureuse" }
+  },
+
+  // --- ÉDUCATION ---
+  {
+    id: 35,
+    theme: "Éducation",
+    subtopic: "Cantines scolaires",
+    propA: { candidateId: "chikirou", text: "Instaurer la gratuité de la cantine pour les trois premières tranches du quotient familial" },
+    propB: { candidateId: "knafo", text: "Servir uniquement des produits issus de l'agriculture française dans les cantines scolaires" }
+  },
+  {
+    id: 36,
+    theme: "Éducation",
+    subtopic: "Cantines scolaires",
+    propA: { candidateId: "gregoire", text: "Soulager le budget des familles grâce au gel des tarifs de cantine et à la gratuité progressive" },
+    propB: { candidateId: "mariani", text: "Instaurer l'uniforme scolaire dès l'école primaire" }
+  },
+  {
+    id: 37,
+    theme: "Éducation",
+    subtopic: "Rénovation des écoles",
+    propA: { candidateId: "bournazel", text: "Plan 100% écoles rénovées et accessibles d'ici 2032" },
+    propB: { candidateId: "chikirou", text: "Adapter 100% des collèges et écoles publics aux défis sanitaires et climatiques" }
+  },
+  {
+    id: 38,
+    theme: "Éducation",
+    subtopic: "Mixité scolaire",
+    propA: { candidateId: "gregoire", text: "Moduler les dotations financières aux établissements privés en fonction de critères de mixité sociale" },
+    propB: { candidateId: "chikirou", text: "Renforcer les moyens des écoles et des collèges publics parisiens" }
+  },
+
+  // --- PROPRETÉ ---
+  {
+    id: 39,
+    theme: "Propreté",
+    subtopic: "Privatisation collecte",
+    propA: { candidateId: "bournazel", text: "Privatiser la collecte des déchets pour diviser les coûts et améliorer la qualité" },
+    propB: { candidateId: "mariani", text: "Externaliser totalement la collecte des déchets et laisser chaque arrondissement choisir son prestataire" }
+  },
+  {
+    id: 40,
+    theme: "Propreté",
+    subtopic: "Privatisation collecte",
+    propA: { candidateId: "dati", text: "Externaliser une partie de la collecte des déchets pour améliorer le service" },
+    propB: { candidateId: "knafo", text: "Privatiser la collecte des ordures et le balayage via appels d'offres, avec reprise garantie de 80% des agents" }
+  },
+
+  // --- ÉCOLOGIE ET VÉGÉTALISATION ---
+  {
+    id: 41,
+    theme: "Écologie et végétalisation",
+    subtopic: "Anti-bruit",
+    propA: { candidateId: "dati", text: "Lutter contre les nuisances sonores avec un plan anti-bruit ambitieux" },
+    propB: { candidateId: "bournazel", text: "Créer un bouclier anti-bruit pour protéger les riverains des grands axes" }
+  },
+  {
+    id: 42,
+    theme: "Écologie et végétalisation",
+    subtopic: "Végétalisation",
+    propA: { candidateId: "dati", text: "Créer 500 bandes végétalisées dans les rues parisiennes" },
+    propB: { candidateId: "knafo", text: "Embellir les parcs et jardins en replantant des fleurs" }
+  },
+  {
+    id: 43,
+    theme: "Écologie et végétalisation",
+    subtopic: "Urbanisme vert",
+    propA: { candidateId: "knafo", text: "Abroger le PLU bioclimatique et revenir à un PLU garantissant l'harmonie architecturale" },
+    propB: { candidateId: "dati", text: "Désasphalter massivement Paris pour créer des îlots de fraîcheur" }
+  },
+
+  // --- PETITE ENFANCE ---
+  {
+    id: 44,
+    theme: "Petite enfance",
+    subtopic: "Places en crèche",
+    propA: { candidateId: "dati", text: "Créer 5 000 nouvelles places en crèche sur le mandat" },
+    propB: { candidateId: "chikirou", text: "Ouvrir 6 500 nouvelles places en crèche publique sur le mandat" }
+  },
+  {
+    id: 45,
+    theme: "Petite enfance",
+    subtopic: "Places en crèche",
+    propA: { candidateId: "bournazel", text: "10 000 solutions de garde supplémentaires grâce aux crèches et assistantes maternelles" },
+    propB: { candidateId: "mariani", text: "Réserver en priorité les places en crèches municipales aux familles françaises" }
+  },
+
+  // --- DÉMOCRATIE LOCALE ---
+  {
+    id: 46,
+    theme: "Démocratie locale",
+    subtopic: "Référendums locaux",
+    propA: { candidateId: "knafo", text: "Organiser au minimum deux référendums locaux par an" },
+    propB: { candidateId: "mariani", text: "Organiser un référendum chaque fois que 5% du corps électoral en fait la demande" }
+  },
+  {
+    id: 47,
+    theme: "Démocratie locale",
+    subtopic: "Conseils de quartier",
+    propA: { candidateId: "bournazel", text: "Instaurer une gouvernance citoyenne avec des conseils de quartier renforcés et décisionnaires" },
+    propB: { candidateId: "mariani", text: "Élire tous les conseils de quartier tous les 3 ans et les consulter pour tout projet les concernant" }
+  },
+
+  // --- SERVICES PUBLICS ---
+  {
+    id: 48,
+    theme: "Services publics",
+    subtopic: "Gratuité services",
+    propA: { candidateId: "npa", text: "Rendre gratuits l'eau (premiers m³), les transports en commun, les centres de santé et les cantines" },
+    propB: { candidateId: "gregoire", text: "Garantir un service public universel accessible à tous, y compris aux personnes éloignées du numérique" }
+  },
+  {
+    id: 49,
+    theme: "Services publics",
+    subtopic: "Privatisation vs municipalisation",
+    propA: { candidateId: "npa", text: "Arrêter toutes les privatisations et fermetures de classes, municipaliser les services publics" },
+    propB: { candidateId: "bournazel", text: "Externaliser la collecte des déchets pour économiser 740 millions d'euros sur le mandat" }
+  },
+
+  // --- IMMIGRATION ---
+  {
+    id: 50,
+    theme: "Immigration",
+    subtopic: "Hébergement migrants",
+    propA: { candidateId: "knafo", text: "Fermer le centre d'hébergement de migrants du Bois de Boulogne" },
+    propB: { candidateId: "mariani", text: "Créer une brigade anti-campements clandestins pour démanteler les camps illicites" }
+  },
+
+  // --- SPORT ---
+  {
+    id: 51,
+    theme: "Sport",
+    subtopic: "Infrastructures sportives",
+    propA: { candidateId: "chikirou", text: "Rendre gratuit l'accès aux infrastructures sportives municipales pour tous les Parisiens" },
+    propB: { candidateId: "dati", text: "Augmenter les créneaux sportifs disponibles pour les associations et les scolaires" }
+  },
+
+  // --- DUELS AJOUTÉS (vérification programmes) ---
+
+  // --- TRANSPORT (ajouts) ---
+  {
+    id: 52,
+    theme: "Transport",
+    subtopic: "Parking",
+    propA: { candidateId: "mariani", text: "Créer 20 000 places de stationnement supplémentaires en parking souterrain" },
+    propB: { candidateId: "bournazel", text: "Créer 30 000 places de parking-relais gratuites aux portes de Paris" }
+  },
+  {
+    id: 53,
+    theme: "Transport",
+    subtopic: "Avenir du périphérique",
+    propA: { candidateId: "bournazel", text: "Adapter les vitesses du périphérique selon les horaires : 50 km/h en pointe, 70 km/h en heures creuses" },
+    propB: { candidateId: "chikirou", text: "Transformer le périphérique en boulevard urbain végétalisé" }
+  },
+  {
+    id: 54,
+    theme: "Transport",
+    subtopic: "Métro la nuit",
+    propA: { candidateId: "mariani", text: "Ouvrir le métro la nuit sur les lignes automatiques le week-end" },
+    propB: { candidateId: "gregoire", text: "Obtenir le métro 24h/24 le week-end pour une ville qui ne dort jamais" }
+  },
+  {
+    id: 55,
+    theme: "Transport",
+    subtopic: "ZTL centre de Paris",
+    propA: { candidateId: "dati", text: "Mettre fin à la Zone à Trafic Limité (ZTL) du centre de Paris" },
+    propB: { candidateId: "mariani", text: "Supprimer la Zone à Trafic Limité (ZTL) du centre de Paris" }
+  },
+
+  // --- SÉCURITÉ (ajouts) ---
+  {
+    id: 56,
+    theme: "Sécurité",
+    subtopic: "Police dans les transports",
+    propA: { candidateId: "knafo", text: "Déployer 500 policiers municipaux sur le réseau de transport en commun parisien" },
+    propB: { candidateId: "bournazel", text: "Déployer la police municipale dans le métro le soir contre les violences et agressions" }
+  },
+  {
+    id: 57,
+    theme: "Sécurité",
+    subtopic: "Vidéosurveillance HLM",
+    propA: { candidateId: "mariani", text: "Installer des caméras de vidéoprotection dans les parties communes des HLM" },
+    propB: { candidateId: "npa", text: "Dissoudre la police municipale et démanteler la vidéosurveillance" }
+  },
+  {
+    id: 58,
+    theme: "Sécurité",
+    subtopic: "Approche sécuritaire",
+    propA: { candidateId: "chikirou", text: "Porter la police municipale à 3 500 agents avec une charte interdisant les contrôles au faciès" },
+    propB: { candidateId: "knafo", text: "Doubler les effectifs de la police municipale pour atteindre 8 000 agents" }
+  },
+
+  // --- LOGEMENT (ajouts) ---
+  {
+    id: 59,
+    theme: "Logement",
+    subtopic: "Conversion bureaux",
+    propA: { candidateId: "mariani", text: "Convertir des bureaux vacants en 6 000 logements pour les familles parisiennes" },
+    propB: { candidateId: "bournazel", text: "Transformer les bureaux vacants en logements pour les classes moyennes" }
+  },
+  {
+    id: 60,
+    theme: "Logement",
+    subtopic: "Régulation Airbnb",
+    propA: { candidateId: "mariani", text: "Limiter les locations Airbnb à 60 nuits par an (contre 120 actuellement)" },
+    propB: { candidateId: "bournazel", text: "Limiter les locations Airbnb à 30 jours par an au lieu de 120 actuellement" }
+  },
+  {
+    id: 61,
+    theme: "Logement",
+    subtopic: "Accession à la propriété",
+    propA: { candidateId: "knafo", text: "Baisser les frais de notaire (droits de mutation) de 10% pour faciliter l'accession à la propriété" },
+    propB: { candidateId: "mariani", text: "Permettre à 40 000 familles parisiennes d'accéder à la propriété via un plan d'accession" }
+  },
+  {
+    id: 62,
+    theme: "Logement",
+    subtopic: "Production de logements",
+    propA: { candidateId: "chikirou", text: "Créer 80 000 logements publics supplémentaires, en majorité sociaux" },
+    propB: { candidateId: "bournazel", text: "Remettre 60 000 logements sur le marché locatif grâce à un pacte avec les propriétaires" }
+  },
+
+  // --- SANTÉ (ajouts) ---
+  {
+    id: 63,
+    theme: "Santé",
+    subtopic: "Politique drogues",
+    propA: { candidateId: "mariani", text: "Supprimer les salles de shoot et créer un centre de soin unique pour traiter la toxicomanie" },
+    propB: { candidateId: "gregoire", text: "Des équipes pluridisciplinaires et des lieux dédiés à la réduction des risques liés aux addictions" }
+  },
+  {
+    id: 64,
+    theme: "Santé",
+    subtopic: "Centres de santé",
+    propA: { candidateId: "bournazel", text: "Ouvrir un centre municipal de santé sans dépassement d'honoraires dans chaque arrondissement d'ici 2032" },
+    propB: { candidateId: "chikirou", text: "Densifier le réseau de centres de santé municipaux polyvalents dans tous les arrondissements" }
+  },
+  {
+    id: 65,
+    theme: "Santé",
+    subtopic: "Santé mentale",
+    propA: { candidateId: "chikirou", text: "Instaurer un chèque psy de 20€ par séance de psychothérapie pour les Parisiens" },
+    propB: { candidateId: "mariani", text: "Lancer un plan de prévention des maladies mentales dans les écoles et collèges" }
+  },
+  {
+    id: 66,
+    theme: "Santé",
+    subtopic: "Mutuelle / accès soins",
+    propA: { candidateId: "chikirou", text: "Créer une mutuelle municipale populaire à tarif solidaire pour tous les Parisiens" },
+    propB: { candidateId: "gregoire", text: "Une mutuelle municipale parisienne abordable et de qualité pour tous les Parisiens" }
+  },
+  {
+    id: 67,
+    theme: "Santé",
+    subtopic: "Santé mobile",
+    propA: { candidateId: "bournazel", text: "Déployer un bus de santé mobile dans les quartiers mal desservis médicalement" },
+    propB: { candidateId: "chikirou", text: "Créer un service de bus itinérants santé dans les zones d'intervention prioritaire" }
+  },
+
+  // --- FINANCE (ajouts) ---
+  {
+    id: 68,
+    theme: "Finance et gestion budgétaire",
+    subtopic: "Taxe foncière",
+    propA: { candidateId: "knafo", text: "Diviser la taxe foncière par deux dès le premier budget" },
+    propB: { candidateId: "chikirou", text: "Augmenter la taxe foncière de 20,5% à 23% pour financer le logement et l'éducation" }
+  },
+  {
+    id: 69,
+    theme: "Finance et gestion budgétaire",
+    subtopic: "Subventions associations",
+    propA: { candidateId: "knafo", text: "Supprimer plus de 100 millions d'euros par an de subventions aux associations politisées et militantes" },
+    propB: { candidateId: "dati", text: "Contrôler strictement les subventions aux associations et en publier le bilan" }
+  },
+  {
+    id: 70,
+    theme: "Finance et gestion budgétaire",
+    subtopic: "Train de vie des élus",
+    propA: { candidateId: "knafo", text: "Réduire le nombre d'adjoints au maire à 10 et diviser par cinq le cabinet du maire" },
+    propB: { candidateId: "bournazel", text: "Supprimer toutes les voitures avec chauffeur des élus et cadres de la Ville" }
+  },
+  {
+    id: 71,
+    theme: "Finance et gestion budgétaire",
+    subtopic: "Désendettement",
+    propA: { candidateId: "bournazel", text: "Vendre 20 000 propriétés municipales situées hors de Paris pour rembourser 3 milliards de dette" },
+    propB: { candidateId: "knafo", text: "Plan d'économies de 10 milliards d'euros sur 10 ans sur la gestion municipale" }
+  },
+
+  // --- ÉDUCATION (ajouts) ---
+  {
+    id: 72,
+    theme: "Éducation",
+    subtopic: "Cantines scolaires",
+    propA: { candidateId: "knafo", text: "Nommer un chef étoilé pour refondre les cantines scolaires avec des recettes à base de produits frais français" },
+    propB: { candidateId: "chikirou", text: "Instaurer la cantine bio à 1 euro pour tous les écoliers parisiens" }
+  },
+  {
+    id: 73,
+    theme: "Éducation",
+    subtopic: "Service minimum grève",
+    propA: { candidateId: "mariani", text: "Garantir un service minimum d'accueil dans les crèches, écoles et cantines les jours de grève" },
+    propB: { candidateId: "bournazel", text: "Mettre en place un vrai service minimum dans les écoles les jours de grève" }
+  },
+  {
+    id: 74,
+    theme: "Éducation",
+    subtopic: "Soutien périscolaire",
+    propA: { candidateId: "mariani", text: "Créer 100 centres de soutien scolaire gratuits dans les quartiers de Paris" },
+    propB: { candidateId: "chikirou", text: "Recruter 2 000 animateurs périscolaires supplémentaires et titulariser les 4 000 contractuels actuels" }
+  },
+
+  // --- PATRIMOINE / CULTURE (ajouts) ---
+  {
+    id: 75,
+    theme: "Patrimoine et beauté de la ville",
+    subtopic: "Embellissement",
+    propA: { candidateId: "knafo", text: "Restaurer le mobilier urbain historique de Paris : bancs Davioud, réverbères classiques, grilles d'arbres en fonte" },
+    propB: { candidateId: "dati", text: "Adopter une charte « Paris du beau » pour garantir l'esthétique des aménagements urbains" }
+  },
+  {
+    id: 76,
+    theme: "Culture",
+    subtopic: "Horaires culturels",
+    propA: { candidateId: "knafo", text: "Ouvrir les musées municipaux en nocturne deux soirs par semaine et les bibliothèques le dimanche" },
+    propB: { candidateId: "dati", text: "Ouvrir les bibliothèques municipales le dimanche et en soirée" }
+  },
+
+  // --- ÉCOLOGIE (ajouts) ---
+  {
+    id: 77,
+    theme: "Écologie et végétalisation",
+    subtopic: "Plantation d'arbres",
+    propA: { candidateId: "mariani", text: "Planter 50 000 arbres supplémentaires à Paris" },
+    propB: { candidateId: "chikirou", text: "Végétaliser 300 hectares et déimperméabiliser 40% du territoire parisien d'ici 2032" }
+  },
+  {
+    id: 78,
+    theme: "Écologie et végétalisation",
+    subtopic: "Nouveaux espaces verts",
+    propA: { candidateId: "bournazel", text: "Transformer la Petite Ceinture en poumon vert continu : promenades, jardins potagers et espaces sportifs" },
+    propB: { candidateId: "dati", text: "Désasphalter massivement Paris pour créer des îlots de fraîcheur" }
+  },
+
+  // --- COMMERCE (ajouts) ---
+  {
+    id: 79,
+    theme: "Commerce",
+    subtopic: "Revitalisation commerces",
+    propA: { candidateId: "mariani", text: "Lancer un programme « 1 000 commerces » pour revitaliser les rues commerçantes de Paris" },
+    propB: { candidateId: "chikirou", text: "Tripler les locaux commerciaux publics avec des loyers abaissés pour les commerces de proximité" }
+  },
+  {
+    id: 80,
+    theme: "Commerce",
+    subtopic: "Ouverture dominicale",
+    propA: { candidateId: "bournazel", text: "Faire de Paris une Zone Touristique Unique pour autoriser l'ouverture dominicale des commerces" },
+    propB: { candidateId: "npa", text: "Arrêter les dérogations au repos dominical" }
+  },
+
+  // --- PROPRETÉ (ajouts) ---
+  {
+    id: 81,
+    theme: "Propreté",
+    subtopic: "Lutte contre les nuisibles",
+    propA: { candidateId: "chikirou", text: "Porter le budget de lutte contre les rats à 15 millions d'euros par an" },
+    propB: { candidateId: "dati", text: "Mettre en place un plan anti-prolifération des nuisibles (rats, punaises de lit)" }
+  },
+
+  // --- SOLIDARITÉ (ajouts) ---
+  {
+    id: 82,
+    theme: "Solidarité",
+    subtopic: "Sans-abri",
+    propA: { candidateId: "chikirou", text: "Atteindre l'objectif zéro sans-abri à Paris avant la fin du mandat" },
+    propB: { candidateId: "npa", text: "Développer l'hébergement d'urgence dans des conditions dignes et salubres" }
+  },
+
+  // --- PETITE ENFANCE (ajouts) ---
+  {
+    id: 83,
+    theme: "Petite enfance",
+    subtopic: "Horaires de crèche",
+    propA: { candidateId: "mariani", text: "Ouvrir des crèches la nuit pour les parents travaillant en horaires décalés" },
+    propB: { candidateId: "bournazel", text: "Étendre les horaires des crèches jusqu'à 19h30 pour les parents aux horaires décalés" }
+  },
+  {
+    id: 84,
+    theme: "Petite enfance",
+    subtopic: "Gratuité crèche",
+    propA: { candidateId: "mariani", text: "Instaurer la gratuité de la crèche à partir du 3ème enfant" },
+    propB: { candidateId: "gregoire", text: "Recruter massivement du personnel en crèche pour améliorer le taux d'encadrement" }
+  },
+
+  // --- DÉMOCRATIE LOCALE (ajouts) ---
+  {
+    id: 85,
+    theme: "Démocratie locale",
+    subtopic: "Participation citoyenne",
+    propA: { candidateId: "chikirou", text: "Augmenter le budget participatif de 5% à 15% du budget d'investissement (300 millions d'euros)" },
+    propB: { candidateId: "knafo", text: "Référendum obligatoire pour tout projet municipal dépassant 10 millions d'euros" }
+  }
 ];

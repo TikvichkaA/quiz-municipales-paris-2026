@@ -25,6 +25,16 @@ function showScreen(screenId) {
   if (screenId === 'detail') {
     renderDetail('favorable');
   }
+  if (screenId === 'duel-detail') {
+    renderDuelDetail();
+  }
+  if (screenId === 'accueil') {
+    // Reset mode selection visibility
+    const duration = document.getElementById('classic-duration');
+    const modeSelection = document.querySelector('.mode-selection');
+    if (duration) duration.style.display = 'none';
+    if (modeSelection) modeSelection.style.display = '';
+  }
 }
 
 // ====== PROPOSITION SELECTION ======
@@ -324,7 +334,7 @@ function showResults() {
 
   // Staggered bar animation
   requestAnimationFrame(() => {
-    const bars = document.querySelectorAll('.result-bar-fill');
+    const bars = document.querySelectorAll('#resultats-bars .result-bar-fill');
     bars.forEach((bar, i) => {
       setTimeout(() => {
         bar.style.width = bar.dataset.width + '%';
@@ -588,6 +598,298 @@ function launchConfetti() {
   }
 
   animate();
+}
+
+// ====== ACCUEIL MODE SELECTION ======
+function showClassicMode() {
+  const duration = document.getElementById('classic-duration');
+  const modeSelection = document.querySelector('.mode-selection');
+  if (duration.style.display === 'none' || duration.style.display === '') {
+    duration.style.display = 'block';
+    duration.style.animation = 'screenIn 0.3s var(--ease-out) both';
+    modeSelection.style.display = 'none';
+  }
+}
+
+// ====== DUEL STATE ======
+let duelState = {
+  totalDuels: 0,
+  currentIndex: 0,
+  selectedDuels: [],
+  scores: {},
+  counts: {},
+  answers: [],
+  results: null,
+  isAnimating: false
+};
+
+// ====== SELECT DUELS ======
+function selectDuels(count) {
+  const byTheme = {};
+  DUELS.forEach(d => {
+    if (!byTheme[d.theme]) byTheme[d.theme] = [];
+    byTheme[d.theme].push(d);
+  });
+
+  Object.values(byTheme).forEach(arr => shuffleArray(arr));
+
+  const selected = [];
+  const themes = Object.keys(byTheme);
+  let round = 0;
+
+  while (selected.length < count) {
+    let addedThisRound = false;
+    for (const theme of themes) {
+      if (selected.length >= count) break;
+      if (round < byTheme[theme].length) {
+        selected.push(byTheme[theme][round]);
+        addedThisRound = true;
+      }
+    }
+    round++;
+    if (!addedThisRound) break;
+  }
+
+  shuffleArray(selected);
+  return selected;
+}
+
+// ====== START DUEL ======
+function startDuel() {
+  const count = Math.min(18, DUELS.length);
+  duelState.totalDuels = count;
+  duelState.currentIndex = 0;
+  duelState.selectedDuels = selectDuels(count);
+  duelState.scores = {};
+  duelState.counts = {};
+  duelState.answers = [];
+  duelState.isAnimating = false;
+
+  CANDIDATES.forEach(c => {
+    duelState.scores[c.id] = 0;
+    duelState.counts[c.id] = 0;
+  });
+
+  duelState.selectedDuels.forEach(d => {
+    duelState.counts[d.propA.candidateId]++;
+    duelState.counts[d.propB.candidateId]++;
+  });
+
+  showScreen('duel');
+  renderDuel();
+}
+
+// ====== RENDER DUEL ======
+function renderDuel() {
+  const { currentIndex, totalDuels, selectedDuels } = duelState;
+
+  const pct = (currentIndex / totalDuels) * 100;
+  document.getElementById('duel-progress-fill').style.width = pct + '%';
+  document.getElementById('duel-progress-text').textContent = (currentIndex + 1) + ' / ' + totalDuels;
+
+  if (currentIndex >= totalDuels) {
+    showDuelResults();
+    return;
+  }
+
+  const duel = selectedDuels[currentIndex];
+
+  document.getElementById('duel-theme').textContent = duel.theme;
+  document.getElementById('duel-subtopic').textContent = duel.subtopic;
+
+  // Randomize left/right placement
+  const swap = Math.random() > 0.5;
+  const textA = swap ? duel.propB.text : duel.propA.text;
+  const textB = swap ? duel.propA.text : duel.propB.text;
+
+  document.getElementById('duel-text-a').textContent = textA;
+  document.getElementById('duel-text-b').textContent = textB;
+
+  // Store swap state for correct scoring
+  duelState.currentSwap = swap;
+
+  const cardA = document.getElementById('duel-card-a');
+  const cardB = document.getElementById('duel-card-b');
+  cardA.className = 'duel-card';
+  cardB.className = 'duel-card';
+
+  duelState.isAnimating = false;
+}
+
+// ====== ANSWER DUEL ======
+function answerDuel(choice) {
+  if (duelState.isAnimating) return;
+  if (duelState.currentIndex >= duelState.totalDuels) return;
+
+  duelState.isAnimating = true;
+  const duel = duelState.selectedDuels[duelState.currentIndex];
+  const swap = duelState.currentSwap;
+
+  const cardA = document.getElementById('duel-card-a');
+  const cardB = document.getElementById('duel-card-b');
+
+  // Map visual choice to actual prop (accounting for swap)
+  let actualChoice = choice;
+  if (choice === 'a' || choice === 'b') {
+    if (swap) {
+      actualChoice = choice === 'a' ? 'b' : 'a';
+    }
+  }
+
+  // Record answer
+  duelState.answers.push({ duel, choice: actualChoice });
+
+  // Scoring
+  if (actualChoice === 'a') {
+    duelState.scores[duel.propA.candidateId] += 1;
+    duelState.scores[duel.propB.candidateId] -= 1;
+  } else if (actualChoice === 'b') {
+    duelState.scores[duel.propB.candidateId] += 1;
+    duelState.scores[duel.propA.candidateId] -= 1;
+  }
+
+  // Visual feedback
+  if (choice === 'a') {
+    cardA.classList.add('chosen');
+    cardB.classList.add('rejected');
+  } else if (choice === 'b') {
+    cardB.classList.add('chosen');
+    cardA.classList.add('rejected');
+  } else {
+    cardA.classList.add('skip-fade');
+    cardB.classList.add('skip-fade');
+  }
+
+  // Haptic
+  if (navigator.vibrate) navigator.vibrate(8);
+
+  setTimeout(() => {
+    duelState.currentIndex++;
+    renderDuel();
+  }, 450);
+}
+
+// ====== DUEL RESULTS ======
+function showDuelResults() {
+  const results = CANDIDATES.map(c => {
+    const score = duelState.scores[c.id];
+    const count = duelState.counts[c.id];
+    let affinity = 50;
+    if (count > 0) {
+      affinity = ((score + count) / (2 * count)) * 100;
+    }
+    affinity = Math.round(Math.max(0, Math.min(100, affinity)));
+    return { ...c, affinity };
+  });
+
+  results.sort((a, b) => b.affinity - a.affinity);
+
+  const winner = results[0];
+  document.getElementById('duel-winner-name').textContent = winner.name;
+  document.getElementById('duel-winner-score').textContent = winner.affinity + '%';
+  document.getElementById('duel-winner-party').textContent = winner.party;
+  const scoreEl = document.getElementById('duel-winner-score');
+  scoreEl.style.background = `linear-gradient(135deg, ${winner.color}, var(--cyan))`;
+  scoreEl.style.webkitBackgroundClip = 'text';
+  scoreEl.style.webkitTextFillColor = 'transparent';
+  scoreEl.style.backgroundClip = 'text';
+
+  const barsContainer = document.getElementById('duel-resultats-bars');
+  barsContainer.innerHTML = '';
+
+  results.forEach(r => {
+    const item = document.createElement('div');
+    item.className = 'result-bar-item';
+    item.innerHTML = `
+      <div class="result-bar-header">
+        <span class="result-bar-name">${r.name}</span>
+        <span class="result-bar-pct" style="color:${r.color}">${r.affinity}%</span>
+      </div>
+      <div class="result-bar-track">
+        <div class="result-bar-fill" style="background:${r.color}" data-width="${r.affinity}"></div>
+      </div>
+    `;
+    barsContainer.appendChild(item);
+  });
+
+  showScreen('duel-resultats');
+
+  requestAnimationFrame(() => {
+    const bars = document.querySelectorAll('#duel-resultats-bars .result-bar-fill');
+    bars.forEach((bar, i) => {
+      setTimeout(() => {
+        bar.style.width = bar.dataset.width + '%';
+      }, 150 + i * 120);
+    });
+  });
+
+  duelState.results = results;
+
+  setTimeout(() => launchConfetti(), 400);
+  if (navigator.vibrate) navigator.vibrate([10, 50, 10]);
+}
+
+// ====== DUEL DETAIL ======
+function renderDuelDetail() {
+  const list = document.getElementById('duel-detail-list');
+  list.innerHTML = '';
+
+  duelState.answers.forEach((a, i) => {
+    const duel = a.duel;
+    const choice = a.choice;
+
+    const candidateA = CANDIDATES.find(c => c.id === duel.propA.candidateId);
+    const candidateB = CANDIDATES.find(c => c.id === duel.propB.candidateId);
+
+    const item = document.createElement('div');
+    item.className = 'duel-detail-item';
+    item.style.animationDelay = `${i * 40}ms`;
+
+    const chosenA = choice === 'a' ? 'duel-detail-chosen' : (choice === 'b' ? 'duel-detail-rejected' : '');
+    const chosenB = choice === 'b' ? 'duel-detail-chosen' : (choice === 'a' ? 'duel-detail-rejected' : '');
+
+    item.innerHTML = `
+      <div class="duel-detail-theme">${duel.theme} — ${duel.subtopic}</div>
+      ${choice === 'skip' ? '<div class="duel-detail-skip">Aucune choisie</div>' : ''}
+      <div class="duel-detail-pair">
+        <div>
+          <div class="duel-detail-prop ${chosenA}">${duel.propA.text}</div>
+          <div class="duel-detail-candidate">
+            <span class="detail-candidate-dot" style="background:${candidateA.color}"></span>
+            ${candidateA.name}
+          </div>
+        </div>
+        <div class="duel-detail-vs">VS</div>
+        <div>
+          <div class="duel-detail-prop ${chosenB}">${duel.propB.text}</div>
+          <div class="duel-detail-candidate">
+            <span class="detail-candidate-dot" style="background:${candidateB.color}"></span>
+            ${candidateB.name}
+          </div>
+        </div>
+      </div>
+    `;
+    list.appendChild(item);
+  });
+}
+
+// ====== SHARE DUEL RESULTS ======
+function shareDuelResults() {
+  if (!duelState.results || duelState.results.length === 0) return;
+
+  const winner = duelState.results[0];
+  const text = `En mode duel, je suis à ${winner.affinity}% d'affinité avec ${winner.name} aux municipales de Paris 2026 ! Fais le test →`;
+  const url = window.location.href;
+
+  if (navigator.share) {
+    navigator.share({ title: 'Quiz Municipales Paris 2026 — Mode Duel', text, url }).catch(() => {});
+  } else if (navigator.clipboard) {
+    navigator.clipboard.writeText(text + ' ' + url).then(() => {
+      showToast('Copié dans le presse-papier !');
+    }).catch(() => fallbackCopy(text + ' ' + url));
+  } else {
+    fallbackCopy(text + ' ' + url);
+  }
 }
 
 // ====== KEYBOARD ======

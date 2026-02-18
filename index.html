@@ -36,9 +36,33 @@
           Municipales Paris 2026
         </div>
         <h1>De quel candidat<br>êtes-vous le plus proche&nbsp;?</h1>
-        <p class="accueil-subtitle">Swipez les propositions issues des programmes des 4 candidats et découvrez vos affinités.</p>
+        <p class="accueil-subtitle">Découvrez vos affinités avec les 7 candidats grâce à deux modes de jeu.</p>
 
-        <div class="duration-section">
+        <div class="mode-selection">
+          <button class="mode-card" onclick="showClassicMode()">
+            <div class="mode-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 012-2h2a2 2 0 012 2M9 5h6"/></svg>
+            </div>
+            <div class="mode-card-text">
+              <strong>Quiz classique</strong>
+              <span>Swipez les propositions des 7 candidats</span>
+            </div>
+            <svg class="mode-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+
+          <button class="mode-card" onclick="startDuel()">
+            <div class="mode-card-icon mode-card-icon-duel">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v18M18 3v18M6 12h12M6 7h12M6 17h12"/></svg>
+            </div>
+            <div class="mode-card-text">
+              <strong>Mode duel</strong>
+              <span>Choisissez entre 2 propositions concrètes sur le même sujet</span>
+            </div>
+            <svg class="mode-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+
+        <div class="duration-section" id="classic-duration" style="display: none;">
           <p class="duration-label">De combien de temps disposez-vous ?</p>
           <div class="duration-buttons">
             <button class="btn-duration" onclick="startQuiz(10)">
@@ -117,6 +141,85 @@
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
         </button>
       </div>
+    </div>
+  </section>
+
+  <!-- ====== ÉCRAN DUEL ====== -->
+  <section id="screen-duel" class="screen">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="container">
+      <div class="quiz-header">
+        <button class="btn-back" onclick="showScreen('accueil')" aria-label="Retour à l'accueil">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress-fill" id="duel-progress-fill"></div>
+          </div>
+          <span class="progress-text" id="duel-progress-text">1 / 15</span>
+        </div>
+      </div>
+
+      <div class="duel-context">
+        <span class="duel-theme-label" id="duel-theme"></span>
+        <span class="duel-subtopic-label" id="duel-subtopic"></span>
+      </div>
+
+      <div class="duel-cards" id="duel-cards">
+        <button class="duel-card" id="duel-card-a" onclick="answerDuel('a')">
+          <p class="duel-card-text" id="duel-text-a"></p>
+        </button>
+        <button class="duel-card" id="duel-card-b" onclick="answerDuel('b')">
+          <p class="duel-card-text" id="duel-text-b"></p>
+        </button>
+      </div>
+
+      <button class="duel-skip" onclick="answerDuel('skip')">Aucune ne me convient</button>
+    </div>
+  </section>
+
+  <!-- ====== ÉCRAN RÉSULTATS DUEL ====== -->
+  <section id="screen-duel-resultats" class="screen">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-3"></div>
+    <div class="container">
+      <div class="resultats-content">
+        <h2 class="resultats-title">Vos résultats — Mode duel</h2>
+        <div class="resultats-winner" id="duel-resultats-winner">
+          <p class="winner-label">En mode duel, vous êtes le plus proche de</p>
+          <div class="winner-name" id="duel-winner-name">Candidat</div>
+          <div class="winner-score" id="duel-winner-score">75%</div>
+          <p class="winner-party" id="duel-winner-party">Parti</p>
+        </div>
+
+        <div class="resultats-bars" id="duel-resultats-bars"></div>
+
+        <div class="resultats-actions">
+          <button class="btn-primary" onclick="shareDuelResults()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
+            Partager mes résultats
+          </button>
+          <button class="btn-secondary" onclick="showScreen('duel-detail')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 012-2h2a2 2 0 012 2M9 5h6"/></svg>
+            Voir le détail de mes choix
+          </button>
+          <button class="btn-ghost" onclick="showScreen('accueil')">Recommencer</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ÉCRAN DÉTAIL DUEL ====== -->
+  <section id="screen-duel-detail" class="screen">
+    <div class="container">
+      <div class="detail-header">
+        <button class="btn-back" onclick="showScreen('duel-resultats')" aria-label="Retour aux résultats">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <h2>Détail de vos duels</h2>
+      </div>
+      <div class="duel-detail-list" id="duel-detail-list"></div>
     </div>
   </section>
 
