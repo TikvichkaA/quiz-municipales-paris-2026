@@ -5,7 +5,10 @@ const CANDIDATES = [
   { id: "dati", name: "Rachida Dati", color: "#8B5CF6", party: "LR / Renaissance" },
   { id: "gregoire", name: "Emmanuel Grégoire", color: "#EF4444", party: "PS / NFP" },
   { id: "chikirou", name: "Sophia Chikirou", color: "#F97316", party: "LFI / NFP" },
-  { id: "bournazel", name: "Pierre-Yves Bournazel", color: "#3B82F6", party: "Horizons / Renaissance" }
+  { id: "bournazel", name: "Pierre-Yves Bournazel", color: "#3B82F6", party: "Horizons / Renaissance" },
+  { id: "knafo", name: "Sarah Knafo", color: "#1E3A5F", party: "Reconquête" },
+  { id: "mariani", name: "Thierry Mariani", color: "#0D2B45", party: "RN / UDR" },
+  { id: "npa", name: "Blandine Chauvel", color: "#DC2626", party: "NPA-Révolutionnaires" }
 ];
 
 const THEMES = [
@@ -28,7 +31,11 @@ const THEMES = [
   "Patrimoine et beauté de la ville",
   "Services publics",
   "Commerce",
-  "Probité"
+  "Probité",
+  "Immigration",
+  "Démocratie locale",
+  "Urbanisme",
+  "Emploi et travail"
 ];
 
 const PROPOSITIONS = [
@@ -278,5 +285,158 @@ const PROPOSITIONS = [
 
   // === PROBITÉ ===
   { id: 207, theme: "Probité", text: "Garantir l'exemplarité des élus avec une charte éthique contraignante", candidateId: "bournazel" },
-  { id: 208, theme: "Probité", text: "Instaurer une gouvernance citoyenne avec des conseils de quartier renforcés et décisionnaires", candidateId: "bournazel" }
+  { id: 208, theme: "Probité", text: "Instaurer une gouvernance citoyenne avec des conseils de quartier renforcés et décisionnaires", candidateId: "bournazel" },
+
+  // ============================================
+  // SARAH KNAFO (Reconquête)
+  // ============================================
+
+  // === SÉCURITÉ (Knafo) ===
+  { id: 209, theme: "Sécurité", text: "Doubler les effectifs de la police municipale pour atteindre 8 000 agents", candidateId: "knafo" },
+  { id: 210, theme: "Sécurité", text: "Armer la police municipale avec des armes à feu", candidateId: "knafo" },
+  { id: 211, theme: "Sécurité", text: "Plan de reconquête des zones de non-droit avec interpellations massives (Champs-Élysées, Barbès, La Chapelle)", candidateId: "knafo" },
+  { id: 212, theme: "Sécurité", text: "Créer une brigade équestre municipale (40 chevaux, 60 cavaliers)", candidateId: "knafo" },
+  { id: 213, theme: "Sécurité", text: "Créer une brigade canine municipale (30 chiens)", candidateId: "knafo" },
+  { id: 214, theme: "Sécurité", text: "Équiper les caméras de vidéosurveillance d'intelligence artificielle", candidateId: "knafo" },
+  { id: 215, theme: "Sécurité", text: "Équiper les réverbères de capteurs sonores IA capables de reconnaître des cris d'agression ou des bruits de vitre cassée", candidateId: "knafo" },
+  { id: 216, theme: "Sécurité", text: "Renforcer l'éclairage public nocturne dans tous les quartiers", candidateId: "knafo" },
+
+  // === FINANCE ET GESTION BUDGÉTAIRE (Knafo) ===
+  { id: 217, theme: "Finance et gestion budgétaire", text: "Plan d'économies de 10 milliards d'euros sur 10 ans sur la gestion municipale", candidateId: "knafo" },
+  { id: 218, theme: "Finance et gestion budgétaire", text: "Diviser la taxe foncière par deux dès le premier budget", candidateId: "knafo" },
+  { id: 219, theme: "Finance et gestion budgétaire", text: "Diviser par deux la taxe d'enlèvement des ordures ménagères et la taxe de balayage", candidateId: "knafo" },
+  { id: 220, theme: "Finance et gestion budgétaire", text: "Réduire de moitié les effectifs municipaux sur 10 ans (55 000 agents) en ne remplaçant pas les départs naturels", candidateId: "knafo" },
+  { id: 221, theme: "Propreté", text: "Privatiser la collecte des ordures et le balayage via appels d'offres, avec reprise garantie de 80% des agents", candidateId: "knafo" },
+
+  // === DÉMOCRATIE LOCALE (Knafo) ===
+  { id: 222, theme: "Démocratie locale", text: "Organiser au minimum deux référendums locaux par an", candidateId: "knafo" },
+  { id: 223, theme: "Démocratie locale", text: "Référendum obligatoire pour tout projet municipal dépassant 10 millions d'euros", candidateId: "knafo" },
+  { id: 224, theme: "Démocratie locale", text: "Donner une valeur exécutoire aux résultats de référendum (le résultat s'impose à la mairie)", candidateId: "knafo" },
+
+  // === TRANSPORT (Knafo) ===
+  { id: 225, theme: "Transport", text: "Réouvrir les voies sur berges à la circulation automobile avec une promenade piétonne et cycliste sur pilotis au-dessus", candidateId: "knafo" },
+  { id: 226, theme: "Transport", text: "Relever la vitesse maximale sur le périphérique de 50 à 80 km/h", candidateId: "knafo" },
+  { id: 227, theme: "Transport", text: "Piloter les feux tricolores par intelligence artificielle pour fluidifier le trafic", candidateId: "knafo" },
+  { id: 228, theme: "Transport", text: "Réduire le tarif du stationnement à 5 euros de l'heure pour tous (contre 37€/h pour les SUV actuellement)", candidateId: "knafo" },
+  { id: 229, theme: "Transport", text: "Créer un jumeau numérique de Paris pour simuler l'impact de chaque projet d'aménagement avant réalisation", candidateId: "knafo" },
+
+  // === LOGEMENT (Knafo) ===
+  { id: 230, theme: "Logement", text: "Supprimer l'encadrement des loyers", candidateId: "knafo" },
+  { id: 231, theme: "Logement", text: "Moratoire sur la construction de logements sociaux et sur les préemptions foncières", candidateId: "knafo" },
+  { id: 232, theme: "Logement", text: "Vendre des logements sociaux (HLM) avec priorité aux occupants actuels, exonérés de frais de notaire", candidateId: "knafo" },
+  { id: 233, theme: "Logement", text: "Plan d'accession à la propriété pour les classes moyennes avec réduction des frais de notaire", candidateId: "knafo" },
+  { id: 234, theme: "Logement", text: "Attribuer les logements sociaux via une plateforme en ligne transparente", candidateId: "knafo" },
+  { id: 235, theme: "Jeunesse", text: "Créer une résidence étudiante pour les meilleurs étudiants de France et les apprentis", candidateId: "knafo" },
+
+  // === URBANISME (Knafo) ===
+  { id: 236, theme: "Urbanisme", text: "Abroger le PLU bioclimatique et revenir à un PLU garantissant l'harmonie architecturale", candidateId: "knafo" },
+  { id: 237, theme: "Urbanisme", text: "Réautoriser l'éclairage des vitrines des commerces la nuit", candidateId: "knafo" },
+  { id: 238, theme: "Urbanisme", text: "Réautoriser les terrasses chauffées", candidateId: "knafo" },
+  { id: 239, theme: "Écologie et végétalisation", text: "Embellir les parcs et jardins en replantant des fleurs", candidateId: "knafo" },
+  { id: 240, theme: "Écologie et végétalisation", text: "Rendre tous les espaces verts accessibles aux chiens tenus en laisse (sauf aires de jeux enfants)", candidateId: "knafo" },
+
+  // === ÉDUCATION (Knafo) ===
+  { id: 241, theme: "Éducation", text: "Servir uniquement des produits issus de l'agriculture française dans les cantines scolaires", candidateId: "knafo" },
+
+  // === IMMIGRATION (Knafo) ===
+  { id: 242, theme: "Immigration", text: "Interdire toute occupation illégale de gymnases ou lieux publics par des personnes en situation irrégulière", candidateId: "knafo" },
+  { id: 243, theme: "Immigration", text: "Fermer le centre d'hébergement de migrants du Bois de Boulogne", candidateId: "knafo" },
+  { id: 244, theme: "Immigration", text: "Auditer les 99 centres de migrants parisiens gérés par des associations et financés par le contribuable", candidateId: "knafo" },
+
+  // ============================================
+  // THIERRY MARIANI (RN / UDR)
+  // ============================================
+
+  // === SÉCURITÉ (Mariani) ===
+  { id: 245, theme: "Sécurité", text: "Tripler les effectifs de la police municipale pour atteindre 8 350 agents (ratio de 4 policiers pour 1 000 habitants)", candidateId: "mariani" },
+  { id: 246, theme: "Sécurité", text: "Armer la police municipale et élargir ses prérogatives", candidateId: "mariani" },
+  { id: 247, theme: "Sécurité", text: "Patrouilles de police municipale 24h/24 dans tous les quartiers", candidateId: "mariani" },
+  { id: 248, theme: "Sécurité", text: "Créer 7 brigades spécialisées : anti-squats, anti-drogue, anti-campements, transports, circulation, action rapide, quartier", candidateId: "mariani" },
+  { id: 249, theme: "Sécurité", text: "Tripler le réseau de vidéoprotection pour atteindre 5 000 caméras", candidateId: "mariani" },
+  { id: 250, theme: "Sécurité", text: "Déployer la vidéosurveillance augmentée par intelligence artificielle", candidateId: "mariani" },
+  { id: 251, theme: "Sécurité", text: "Installer systématiquement des caméras de surveillance devant les écoles et collèges", candidateId: "mariani" },
+  { id: 252, theme: "Sécurité", text: "Créer un numéro de téléphone dédié à la police municipale, opérationnel 24h/24", candidateId: "mariani" },
+
+  // === PROPRETÉ (Mariani) ===
+  { id: 253, theme: "Propreté", text: "Externaliser totalement la collecte des déchets et laisser chaque arrondissement choisir son prestataire", candidateId: "mariani" },
+  { id: 254, theme: "Propreté", text: "Assurer la propreté 24h/24 par le redéploiement des agents municipaux sur le terrain", candidateId: "mariani" },
+  { id: 255, theme: "Propreté", text: "Lancer un plan massif de dératisation dans tout Paris", candidateId: "mariani" },
+  { id: 256, theme: "Propreté", text: "Appliquer la théorie des « vitres cassées » : tolérance zéro sur les incivilités, verbalisation systématique", candidateId: "mariani" },
+
+  // === LOGEMENT (Mariani) ===
+  { id: 257, theme: "Logement", text: "Instaurer la priorité nationale pour l'accès au logement social, en privilégiant les familles et les travailleurs", candidateId: "mariani" },
+  { id: 258, theme: "Logement", text: "Rénover massivement le parc de logements sociaux et privés", candidateId: "mariani" },
+  { id: 259, theme: "Logement", text: "Proposer des aides au déménagement adapté pour les locataires, combinées à une réduction de loyer", candidateId: "mariani" },
+  { id: 260, theme: "Solidarité", text: "Créer des résidences sécurisées pour les victimes de violences conjugales", candidateId: "mariani" },
+  { id: 261, theme: "Logement", text: "Développer l'habitat intergénérationnel (étudiants-seniors) pour lutter contre l'isolement", candidateId: "mariani" },
+
+  // === TRANSPORT (Mariani) ===
+  { id: 262, theme: "Transport", text: "Augmenter la vitesse sur le périphérique à 90 km/h sur certains tronçons et la nuit", candidateId: "mariani" },
+  { id: 263, theme: "Transport", text: "Adapter le plan de circulation pour protéger piétons, cyclistes et automobilistes de manière équilibrée", candidateId: "mariani" },
+  { id: 264, theme: "Transport", text: "Faciliter les livraisons pour les commerçants en révisant le plan de circulation", candidateId: "mariani" },
+  { id: 265, theme: "Transport", text: "Rétablir l'égalité des tarifs de stationnement en supprimant le zonage discriminatoire", candidateId: "mariani" },
+
+  // === ÉDUCATION (Mariani) ===
+  { id: 266, theme: "Éducation", text: "Instaurer l'uniforme scolaire dès l'école primaire", candidateId: "mariani" },
+  { id: 267, theme: "Petite enfance", text: "Lancer un grand plan de protection de la petite enfance avec tolérance zéro contre la maltraitance", candidateId: "mariani" },
+  { id: 268, theme: "Petite enfance", text: "Réserver en priorité les places en crèches municipales aux familles françaises", candidateId: "mariani" },
+
+  // === COMMERCE (Mariani) ===
+  { id: 269, theme: "Commerce", text: "Soutenir les artisans et commerçants parisiens avec des allègements fiscaux", candidateId: "mariani" },
+  { id: 270, theme: "Commerce", text: "Privilégier les PME et TPE locales dans les marchés publics municipaux", candidateId: "mariani" },
+  { id: 271, theme: "Commerce", text: "Promouvoir le Made in France et les produits locaux dans les cantines et marchés publics", candidateId: "mariani" },
+
+  // === FINANCE (Mariani) ===
+  { id: 272, theme: "Finance et gestion budgétaire", text: "Plan massif d'économies et de réduction de la dette municipale", candidateId: "mariani" },
+  { id: 273, theme: "Finance et gestion budgétaire", text: "S'opposer à toute augmentation des taux d'imposition locale pendant toute la durée du mandat", candidateId: "mariani" },
+  { id: 274, theme: "Finance et gestion budgétaire", text: "Confier le contrôle de la bonne gestion à une association de défense des contribuables", candidateId: "mariani" },
+  { id: 275, theme: "Finance et gestion budgétaire", text: "Encadrer les frais de réception de la Ville pour éviter les abus", candidateId: "mariani" },
+
+  // === CULTURE / PATRIMOINE (Mariani) ===
+  { id: 276, theme: "Culture", text: "Restaurer le patrimoine historique de Paris et recentrer le budget culture sur le patrimoine", candidateId: "mariani" },
+  { id: 277, theme: "Urbanisme", text: "Créer une charte renforcée de respect de l'urbanisme parisien et des immeubles haussmanniens", candidateId: "mariani" },
+
+  // === IMMIGRATION (Mariani) ===
+  { id: 278, theme: "Immigration", text: "Créer une brigade anti-campements clandestins pour démanteler les camps illicites", candidateId: "mariani" },
+  { id: 279, theme: "Immigration", text: "Refuser l'immigration de masse et mettre fin aux occupations et réquisitions pour les migrants en situation irrégulière", candidateId: "mariani" },
+
+  // === DÉMOCRATIE LOCALE (Mariani) ===
+  { id: 280, theme: "Démocratie locale", text: "Organiser un référendum chaque fois que 5% du corps électoral en fait la demande", candidateId: "mariani" },
+  { id: 281, theme: "Démocratie locale", text: "Élire tous les conseils de quartier tous les 3 ans et les consulter pour tout projet les concernant", candidateId: "mariani" },
+  { id: 282, theme: "Démocratie locale", text: "Renforcer l'e-démocratie avec des outils numériques protégeant les données personnelles", candidateId: "mariani" },
+
+  // ============================================
+  // NPA-RÉVOLUTIONNAIRES (Blandine Chauvel)
+  // ============================================
+
+  // === EMPLOI ET TRAVAIL (NPA) ===
+  { id: 283, theme: "Emploi et travail", text: "Interdire les licenciements et augmenter tous les salaires d'au moins 400 euros par mois", candidateId: "npa" },
+  { id: 284, theme: "Emploi et travail", text: "Mettre fin à la sous-traitance et titulariser tous les travailleurs précaires (contractuels, sous-traitants)", candidateId: "npa" },
+  { id: 285, theme: "Emploi et travail", text: "Partager le temps de travail entre tous pour éliminer le chômage", candidateId: "npa" },
+  { id: 286, theme: "Emploi et travail", text: "Embaucher et titulariser tous les agents municipaux (ATSEM, jardiniers, bibliothécaires, animateurs)", candidateId: "npa" },
+  { id: 287, theme: "Emploi et travail", text: "Arrêter les dérogations au repos dominical", candidateId: "npa" },
+
+  // === LOGEMENT (NPA) ===
+  { id: 288, theme: "Logement", text: "Réquisitionner sans indemnité les logements et bureaux vacants pour les transformer en logements", candidateId: "npa" },
+  { id: 289, theme: "Logement", text: "Arrêter toutes les expulsions locatives et d'hébergement", candidateId: "npa" },
+  { id: 290, theme: "Logement", text: "Construire massivement des logements sociaux, encadrer, geler et baisser les loyers", candidateId: "npa" },
+  { id: 291, theme: "Logement", text: "Plan massif de rénovation des logements et résidences universitaires", candidateId: "npa" },
+  { id: 292, theme: "Solidarité", text: "Développer l'hébergement d'urgence dans des conditions dignes et salubres", candidateId: "npa" },
+
+  // === SERVICES PUBLICS (NPA) ===
+  { id: 293, theme: "Services publics", text: "Arrêter toutes les privatisations et fermetures de classes, municipaliser les services publics", candidateId: "npa" },
+  { id: 294, theme: "Services publics", text: "Rendre gratuits l'eau (premiers m³), les transports en commun, les centres de santé et les cantines", candidateId: "npa" },
+  { id: 295, theme: "Services publics", text: "Exproprier les groupes privés gérant des crèches, EHPAD et centres de soins et les municipaliser", candidateId: "npa" },
+
+  // === SANTÉ (NPA) ===
+  { id: 296, theme: "Santé", text: "Défendre l'hôpital public contre les coupes budgétaires et garantir l'accès à la santé pour tous", candidateId: "npa" },
+
+  // === TRANSPORT (NPA) ===
+  { id: 297, theme: "Transport", text: "Rendre les transports en commun gratuits et fiables pour tous", candidateId: "npa" },
+
+  // === SÉCURITÉ (NPA) ===
+  { id: 298, theme: "Sécurité", text: "Dissoudre la police municipale et démanteler la vidéosurveillance", candidateId: "npa" },
+
+  // === FINANCE (NPA) ===
+  { id: 299, theme: "Finance et gestion budgétaire", text: "Mettre en place une taxation sur les entreprises et ménages fortunés pour financer les services publics", candidateId: "npa" }
 ];
