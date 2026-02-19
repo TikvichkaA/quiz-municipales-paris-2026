@@ -746,7 +746,11 @@ function answerDuel(choice) {
   } else if (actualChoice === 'b') {
     duelState.scores[duel.propB.candidateId] += 1;
     duelState.scores[duel.propA.candidateId] -= 1;
+  } else if (actualChoice === 'both') {
+    duelState.scores[duel.propA.candidateId] += 1;
+    duelState.scores[duel.propB.candidateId] += 1;
   }
+  // skip → 0 for both (unchanged)
 
   // Visual feedback
   if (choice === 'a') {
@@ -755,6 +759,9 @@ function answerDuel(choice) {
   } else if (choice === 'b') {
     cardB.classList.add('chosen');
     cardA.classList.add('rejected');
+  } else if (choice === 'both') {
+    cardA.classList.add('chosen-both');
+    cardB.classList.add('chosen-both');
   } else {
     cardA.classList.add('skip-fade');
     cardB.classList.add('skip-fade');
@@ -845,12 +852,16 @@ function renderDuelDetail() {
     item.className = 'duel-detail-item';
     item.style.animationDelay = `${i * 40}ms`;
 
-    const chosenA = choice === 'a' ? 'duel-detail-chosen' : (choice === 'b' ? 'duel-detail-rejected' : '');
-    const chosenB = choice === 'b' ? 'duel-detail-chosen' : (choice === 'a' ? 'duel-detail-rejected' : '');
+    const chosenA = (choice === 'a' || choice === 'both') ? 'duel-detail-chosen' : (choice === 'b' ? 'duel-detail-rejected' : '');
+    const chosenB = (choice === 'b' || choice === 'both') ? 'duel-detail-chosen' : (choice === 'a' ? 'duel-detail-rejected' : '');
+
+    const statusLabel = choice === 'skip' ? '<div class="duel-detail-skip">Aucune choisie</div>'
+      : choice === 'both' ? '<div class="duel-detail-both">Les deux retenues</div>'
+      : '';
 
     item.innerHTML = `
       <div class="duel-detail-theme">${duel.theme} — ${duel.subtopic}</div>
-      ${choice === 'skip' ? '<div class="duel-detail-skip">Aucune choisie</div>' : ''}
+      ${statusLabel}
       <div class="duel-detail-pair">
         <div>
           <div class="duel-detail-prop ${chosenA}">${duel.propA.text}</div>
