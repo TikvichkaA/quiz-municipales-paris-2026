@@ -497,7 +497,7 @@ body {
   align-items: center;
   gap: 2px;
   flex-shrink: 0;
-  padding: 8px 0 calc(16px + env(safe-area-inset-bottom, 0px));
+  padding: 8px 0 16px;
 }
 
 .duel-both,
@@ -544,7 +544,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  padding-bottom: 100px;
+  padding-bottom: 24px;
 }
 
 .duel-detail-item {
@@ -895,7 +895,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 24px;
-  padding: 4px 0 calc(20px + env(safe-area-inset-bottom, 0px));
+  padding: 4px 0 20px;
   flex-shrink: 0;
 }
 
@@ -1097,7 +1097,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-bottom: 80px;
+  padding-bottom: 24px;
 }
 
 .btn-primary {
@@ -1259,7 +1259,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-bottom: 100px;
+  padding-bottom: 24px;
 }
 
 .detail-item {
@@ -1431,7 +1431,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-  padding-bottom: 100px;
+  padding-bottom: 24px;
 }
 
 .comparaison-column {
@@ -1541,27 +1541,14 @@ body {
   flex-direction: column;
   gap: 10px;
   align-items: stretch;
-  padding-bottom: 80px;
-}
-
-/* Hide footer on quiz/duel screens */
-#screen-quiz.active ~ .site-footer,
-#screen-duel.active ~ .site-footer {
-  display: none;
+  padding-bottom: 24px;
 }
 
 /* ====== FOOTER ====== */
 .site-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: var(--gris-100);
   border-top: 1px solid var(--card-border);
-  padding: 12px 0 calc(12px + env(safe-area-inset-bottom, 0px));
+  padding: 16px 0 calc(16px + env(safe-area-inset-bottom, 0px));
   text-align: center;
 }
 
