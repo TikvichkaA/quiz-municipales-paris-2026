@@ -19,21 +19,21 @@ const THEMES = [
   "Jeunesse",
   "Sécurité",
   "Finance et gestion budgétaire",
-  "Transport",
+  "Transports & Mobilités",
   "Sport",
-  "Culture",
-  "Propreté",
-  "Écologie et végétalisation",
+  "Culture et loisirs",
+  "Propreté et déchets",
+  "Espaces verts & biodiversité",
   "Logement",
-  "Vieillesse",
-  "Handicap",
+  "Séniors",
+  "Solidarité & accessibilité",
   "Solidarité",
-  "Patrimoine et beauté de la ville",
+  "Patrimoine & beauté",
   "Services publics",
-  "Commerce",
+  "Économie & commerces",
   "Probité",
   "Immigration",
-  "Démocratie locale",
+  "Vie démocratique",
   "Urbanisme",
   "Emploi et travail"
 ];
@@ -147,39 +147,39 @@ const PROPOSITIONS = [
   { id: 93, theme: "Finance et gestion budgétaire", text: "Vendre une partie du parc de logements sociaux pour désendetter la Ville", candidateId: "bournazel" },
 
   // === TRANSPORT ===
-  { id: 94, theme: "Transport", text: "Établir un plan global de circulation pour fluidifier le trafic dans Paris", candidateId: "dati" },
-  { id: 95, theme: "Transport", text: "Favoriser les véhicules électriques avec des bornes de recharge partout dans Paris", candidateId: "dati" },
-  { id: 96, theme: "Transport", text: "Mettre fin à la Zone à Trafic Limité (ZTL) du centre de Paris", candidateId: "dati" },
-  { id: 97, theme: "Transport", text: "Développer des itinéraires piétons sécurisés et agréables dans tous les quartiers", candidateId: "dati" },
-  { id: 98, theme: "Transport", text: "Préserver et entretenir les pistes cyclables existantes sans en supprimer", candidateId: "dati" },
-  { id: 99, theme: "Transport", text: "Créer un tarif de stationnement résidentiel vraiment avantageux pour les Parisiens", candidateId: "dati" },
-  { id: 100, theme: "Transport", text: "Rétablir la gratuité du stationnement pour les deux-roues motorisés", candidateId: "dati" },
-  { id: 101, theme: "Transport", text: "Créer des parkings relais aux portes de Paris pour limiter la circulation automobile", candidateId: "dati" },
-  { id: 102, theme: "Transport", text: "Créer 15 lignes de bus express pour relier rapidement les quartiers de Paris", candidateId: "gregoire" },
-  { id: 103, theme: "Transport", text: "Obtenir le métro 24h/24 le week-end pour une ville qui ne dort jamais", candidateId: "gregoire" },
-  { id: 104, theme: "Transport", text: "Rendre le Navigo gratuit pour tous les enfants et adolescents parisiens", candidateId: "gregoire" },
-  { id: 105, theme: "Transport", text: "Rendre 100% des transports en commun accessibles aux personnes à mobilité réduite", candidateId: "gregoire" },
-  { id: 106, theme: "Transport", text: "Achever le réseau cyclable parisien pour couvrir l'ensemble des arrondissements", candidateId: "gregoire" },
-  { id: 107, theme: "Transport", text: "Améliorer les performances et la couverture du service Vélib'", candidateId: "gregoire" },
-  { id: 108, theme: "Transport", text: "Réguler les horaires et itinéraires de livraison pour réduire les nuisances", candidateId: "gregoire" },
-  { id: 109, theme: "Transport", text: "Créer des places de stationnement réservées aux artisans et professionnels mobiles", candidateId: "gregoire" },
-  { id: 110, theme: "Transport", text: "Baisser le tarif du stationnement résidentiel pour les Parisiens qui ont besoin de leur véhicule", candidateId: "gregoire" },
-  { id: 111, theme: "Transport", text: "Engager la Région Île-de-France pour améliorer la desserte des transports en commun", candidateId: "chikirou" },
-  { id: 112, theme: "Transport", text: "Renforcer le réseau de bus Traverses et créer de nouvelles lignes de proximité", candidateId: "chikirou" },
-  { id: 113, theme: "Transport", text: "Rendre l'ensemble des transports et de la voirie universellement accessibles", candidateId: "chikirou" },
-  { id: 114, theme: "Transport", text: "Réduire drastiquement les émissions liées au transport routier dans Paris", candidateId: "chikirou" },
-  { id: 115, theme: "Transport", text: "Créer une régie publique du vélo pour remplacer le modèle Vélib' actuel", candidateId: "chikirou" },
-  { id: 116, theme: "Transport", text: "Soutenir les livreurs à vélo avec des espaces de repos et un statut protecteur", candidateId: "chikirou" },
-  { id: 117, theme: "Transport", text: "Installer des feux intelligents pour fluidifier la circulation et réduire la pollution", candidateId: "bournazel" },
-  { id: 118, theme: "Transport", text: "Créer 3 lignes de bus express traversant Paris du nord au sud et d'est en ouest", candidateId: "bournazel" },
-  { id: 119, theme: "Transport", text: "Supprimer tous les bus diesel et les remplacer par des bus électriques", candidateId: "bournazel" },
-  { id: 120, theme: "Transport", text: "Obtenir l'ouverture nocturne des lignes de métro 1, 4 et 14 le week-end", candidateId: "bournazel" },
-  { id: 121, theme: "Transport", text: "Doubler le nombre de places de livraison pour réduire le stationnement en double file", candidateId: "bournazel" },
-  { id: 122, theme: "Transport", text: "Déployer des agents de sécurité dans le métro et les gares parisiennes", candidateId: "bournazel" },
-  { id: 123, theme: "Transport", text: "Sécuriser 200 intersections accidentogènes identifiées dans Paris", candidateId: "bournazel" },
-  { id: 124, theme: "Transport", text: "Rendre tous les passages piétons accessibles aux personnes en fauteuil roulant", candidateId: "bournazel" },
-  { id: 125, theme: "Transport", text: "Créer 1 000 rues apaisées avec limitation à 20 km/h dans les quartiers résidentiels", candidateId: "bournazel" },
-  { id: 126, theme: "Transport", text: "Mettre en place une signalétique unifiée et lisible dans tout Paris", candidateId: "bournazel" },
+  { id: 94, theme: "Transports & Mobilités", text: "Établir un plan global de circulation pour fluidifier le trafic dans Paris", candidateId: "dati" },
+  { id: 95, theme: "Transports & Mobilités", text: "Favoriser les véhicules électriques avec des bornes de recharge partout dans Paris", candidateId: "dati" },
+  { id: 96, theme: "Transports & Mobilités", text: "Mettre fin à la Zone à Trafic Limité (ZTL) du centre de Paris", candidateId: "dati" },
+  { id: 97, theme: "Transports & Mobilités", text: "Développer des itinéraires piétons sécurisés et agréables dans tous les quartiers", candidateId: "dati" },
+  { id: 98, theme: "Transports & Mobilités", text: "Préserver et entretenir les pistes cyclables existantes sans en supprimer", candidateId: "dati" },
+  { id: 99, theme: "Transports & Mobilités", text: "Créer un tarif de stationnement résidentiel vraiment avantageux pour les Parisiens", candidateId: "dati" },
+  { id: 100, theme: "Transports & Mobilités", text: "Rétablir la gratuité du stationnement pour les deux-roues motorisés", candidateId: "dati" },
+  { id: 101, theme: "Transports & Mobilités", text: "Créer des parkings relais aux portes de Paris pour limiter la circulation automobile", candidateId: "dati" },
+  { id: 102, theme: "Transports & Mobilités", text: "Créer 15 lignes de bus express pour relier rapidement les quartiers de Paris", candidateId: "gregoire" },
+  { id: 103, theme: "Transports & Mobilités", text: "Obtenir le métro 24h/24 le week-end pour une ville qui ne dort jamais", candidateId: "gregoire" },
+  { id: 104, theme: "Transports & Mobilités", text: "Rendre le Navigo gratuit pour tous les enfants et adolescents parisiens", candidateId: "gregoire" },
+  { id: 105, theme: "Transports & Mobilités", text: "Rendre 100% des transports en commun accessibles aux personnes à mobilité réduite", candidateId: "gregoire" },
+  { id: 106, theme: "Transports & Mobilités", text: "Achever le réseau cyclable parisien pour couvrir l'ensemble des arrondissements", candidateId: "gregoire" },
+  { id: 107, theme: "Transports & Mobilités", text: "Améliorer les performances et la couverture du service Vélib'", candidateId: "gregoire" },
+  { id: 108, theme: "Transports & Mobilités", text: "Réguler les horaires et itinéraires de livraison pour réduire les nuisances", candidateId: "gregoire" },
+  { id: 109, theme: "Transports & Mobilités", text: "Créer des places de stationnement réservées aux artisans et professionnels mobiles", candidateId: "gregoire" },
+  { id: 110, theme: "Transports & Mobilités", text: "Baisser le tarif du stationnement résidentiel pour les Parisiens qui ont besoin de leur véhicule", candidateId: "gregoire" },
+  { id: 111, theme: "Transports & Mobilités", text: "Engager la Région Île-de-France pour améliorer la desserte des transports en commun", candidateId: "chikirou" },
+  { id: 112, theme: "Transports & Mobilités", text: "Renforcer le réseau de bus Traverses et créer de nouvelles lignes de proximité", candidateId: "chikirou" },
+  { id: 113, theme: "Transports & Mobilités", text: "Rendre l'ensemble des transports et de la voirie universellement accessibles", candidateId: "chikirou" },
+  { id: 114, theme: "Transports & Mobilités", text: "Réduire drastiquement les émissions liées au transport routier dans Paris", candidateId: "chikirou" },
+  { id: 115, theme: "Transports & Mobilités", text: "Créer une régie publique du vélo pour remplacer le modèle Vélib' actuel", candidateId: "chikirou" },
+  { id: 116, theme: "Transports & Mobilités", text: "Soutenir les livreurs à vélo avec des espaces de repos et un statut protecteur", candidateId: "chikirou" },
+  { id: 117, theme: "Transports & Mobilités", text: "Installer des feux intelligents pour fluidifier la circulation et réduire la pollution", candidateId: "bournazel" },
+  { id: 118, theme: "Transports & Mobilités", text: "Créer 3 lignes de bus express traversant Paris du nord au sud et d'est en ouest", candidateId: "bournazel" },
+  { id: 119, theme: "Transports & Mobilités", text: "Supprimer tous les bus diesel et les remplacer par des bus électriques", candidateId: "bournazel" },
+  { id: 120, theme: "Transports & Mobilités", text: "Obtenir l'ouverture nocturne des lignes de métro 1, 4 et 14 le week-end", candidateId: "bournazel" },
+  { id: 121, theme: "Transports & Mobilités", text: "Doubler le nombre de places de livraison pour réduire le stationnement en double file", candidateId: "bournazel" },
+  { id: 122, theme: "Transports & Mobilités", text: "Déployer des agents de sécurité dans le métro et les gares parisiennes", candidateId: "bournazel" },
+  { id: 123, theme: "Transports & Mobilités", text: "Sécuriser 200 intersections accidentogènes identifiées dans Paris", candidateId: "bournazel" },
+  { id: 124, theme: "Transports & Mobilités", text: "Rendre tous les passages piétons accessibles aux personnes en fauteuil roulant", candidateId: "bournazel" },
+  { id: 125, theme: "Transports & Mobilités", text: "Créer 1 000 rues apaisées avec limitation à 20 km/h dans les quartiers résidentiels", candidateId: "bournazel" },
+  { id: 126, theme: "Transports & Mobilités", text: "Mettre en place une signalétique unifiée et lisible dans tout Paris", candidateId: "bournazel" },
 
   // === SPORT ===
   { id: 127, theme: "Sport", text: "Augmenter les créneaux sportifs disponibles pour les associations et les scolaires", candidateId: "dati" },
@@ -195,34 +195,34 @@ const PROPOSITIONS = [
   { id: 137, theme: "Sport", text: "Remettre de l'ordre sur les pistes cyclables et les trottoirs pour la sécurité de tous", candidateId: "bournazel" },
 
   // === CULTURE ===
-  { id: 138, theme: "Culture", text: "Un orchestre dans chaque collège parisien pour démocratiser la pratique musicale", candidateId: "dati" },
-  { id: 139, theme: "Culture", text: "Créer une « villa Médicis » du design et de la création à Paris", candidateId: "dati" },
-  { id: 140, theme: "Culture", text: "Reconvertir les écoles fermées en lieux culturels et associatifs de quartier", candidateId: "dati" },
+  { id: 138, theme: "Culture et loisirs", text: "Un orchestre dans chaque collège parisien pour démocratiser la pratique musicale", candidateId: "dati" },
+  { id: 139, theme: "Culture et loisirs", text: "Créer une « villa Médicis » du design et de la création à Paris", candidateId: "dati" },
+  { id: 140, theme: "Culture et loisirs", text: "Reconvertir les écoles fermées en lieux culturels et associatifs de quartier", candidateId: "dati" },
 
   // === PROPRETÉ ===
-  { id: 141, theme: "Propreté", text: "Réorganiser entièrement le service de propreté de la Ville pour plus d'efficacité", candidateId: "dati" },
-  { id: 142, theme: "Propreté", text: "Créer des brigades d'urgence propreté mobilisables en quelques heures", candidateId: "dati" },
-  { id: 143, theme: "Propreté", text: "Renforcer les actions de la police municipale contre les incivilités liées à la propreté", candidateId: "dati" },
-  { id: 144, theme: "Propreté", text: "Externaliser une partie de la collecte des déchets pour améliorer le service", candidateId: "dati" },
-  { id: 145, theme: "Propreté", text: "Mettre en place un plan anti-prolifération des nuisibles (rats, punaises de lit)", candidateId: "dati" },
-  { id: 146, theme: "Propreté", text: "Privatiser la collecte des déchets pour diviser les coûts et améliorer la qualité", candidateId: "bournazel" },
-  { id: 147, theme: "Propreté", text: "Associer les communes limitrophes à la gestion de la propreté aux portes de Paris", candidateId: "bournazel" },
+  { id: 141, theme: "Propreté et déchets", text: "Réorganiser entièrement le service de propreté de la Ville pour plus d'efficacité", candidateId: "dati" },
+  { id: 142, theme: "Propreté et déchets", text: "Créer des brigades d'urgence propreté mobilisables en quelques heures", candidateId: "dati" },
+  { id: 143, theme: "Propreté et déchets", text: "Renforcer les actions de la police municipale contre les incivilités liées à la propreté", candidateId: "dati" },
+  { id: 144, theme: "Propreté et déchets", text: "Externaliser une partie de la collecte des déchets pour améliorer le service", candidateId: "dati" },
+  { id: 145, theme: "Propreté et déchets", text: "Mettre en place un plan anti-prolifération des nuisibles (rats, punaises de lit)", candidateId: "dati" },
+  { id: 146, theme: "Propreté et déchets", text: "Privatiser la collecte des déchets pour diviser les coûts et améliorer la qualité", candidateId: "bournazel" },
+  { id: 147, theme: "Propreté et déchets", text: "Associer les communes limitrophes à la gestion de la propreté aux portes de Paris", candidateId: "bournazel" },
 
   // === ÉCOLOGIE ET VÉGÉTALISATION ===
-  { id: 148, theme: "Écologie et végétalisation", text: "Préserver les 200 000 arbres de Paris et planter de nouvelles forêts urbaines", candidateId: "dati" },
-  { id: 149, theme: "Écologie et végétalisation", text: "Créer 500 bandes végétalisées dans les rues parisiennes", candidateId: "dati" },
-  { id: 150, theme: "Écologie et végétalisation", text: "Désasphalter massivement Paris pour créer des îlots de fraîcheur", candidateId: "dati" },
-  { id: 151, theme: "Écologie et végétalisation", text: "Réaménager les grandes places parisiennes avec plus de végétation et moins de béton", candidateId: "dati" },
-  { id: 152, theme: "Écologie et végétalisation", text: "Lancer un grand plan de végétalisation dès la première année du mandat", candidateId: "dati" },
-  { id: 153, theme: "Écologie et végétalisation", text: "Lutter contre les nuisances sonores avec un plan anti-bruit ambitieux", candidateId: "dati" },
-  { id: 154, theme: "Écologie et végétalisation", text: "Mesurer et réduire la pollution sonore dans tous les arrondissements", candidateId: "dati" },
-  { id: 155, theme: "Écologie et végétalisation", text: "Créer un bouclier anti-bruit pour protéger les riverains des grands axes", candidateId: "bournazel" },
-  { id: 156, theme: "Écologie et végétalisation", text: "Obtenir une évolution législative pour donner plus de pouvoirs au maire contre le bruit", candidateId: "bournazel" },
-  { id: 157, theme: "Écologie et végétalisation", text: "Créer 1 000 rues calmes avec revêtement anti-bruit et végétalisation", candidateId: "bournazel" },
-  { id: 158, theme: "Écologie et végétalisation", text: "Piétonniser les rues devant toutes les écoles aux heures d'entrée et de sortie", candidateId: "bournazel" },
-  { id: 159, theme: "Écologie et végétalisation", text: "Encadrer strictement les horaires de chantier et livraison pour réduire le bruit", candidateId: "bournazel" },
-  { id: 160, theme: "Écologie et végétalisation", text: "Interdire les bus touristiques non-électriques dans le centre de Paris", candidateId: "bournazel" },
-  { id: 161, theme: "Écologie et végétalisation", text: "Couvrir des tronçons du périphérique pour créer de nouveaux espaces verts", candidateId: "bournazel" },
+  { id: 148, theme: "Espaces verts & biodiversité", text: "Préserver les 200 000 arbres de Paris et planter de nouvelles forêts urbaines", candidateId: "dati" },
+  { id: 149, theme: "Espaces verts & biodiversité", text: "Créer 500 bandes végétalisées dans les rues parisiennes", candidateId: "dati" },
+  { id: 150, theme: "Espaces verts & biodiversité", text: "Désasphalter massivement Paris pour créer des îlots de fraîcheur", candidateId: "dati" },
+  { id: 151, theme: "Espaces verts & biodiversité", text: "Réaménager les grandes places parisiennes avec plus de végétation et moins de béton", candidateId: "dati" },
+  { id: 152, theme: "Espaces verts & biodiversité", text: "Lancer un grand plan de végétalisation dès la première année du mandat", candidateId: "dati" },
+  { id: 153, theme: "Espaces verts & biodiversité", text: "Lutter contre les nuisances sonores avec un plan anti-bruit ambitieux", candidateId: "dati" },
+  { id: 154, theme: "Espaces verts & biodiversité", text: "Mesurer et réduire la pollution sonore dans tous les arrondissements", candidateId: "dati" },
+  { id: 155, theme: "Espaces verts & biodiversité", text: "Créer un bouclier anti-bruit pour protéger les riverains des grands axes", candidateId: "bournazel" },
+  { id: 156, theme: "Espaces verts & biodiversité", text: "Obtenir une évolution législative pour donner plus de pouvoirs au maire contre le bruit", candidateId: "bournazel" },
+  { id: 157, theme: "Espaces verts & biodiversité", text: "Créer 1 000 rues calmes avec revêtement anti-bruit et végétalisation", candidateId: "bournazel" },
+  { id: 158, theme: "Espaces verts & biodiversité", text: "Piétonniser les rues devant toutes les écoles aux heures d'entrée et de sortie", candidateId: "bournazel" },
+  { id: 159, theme: "Espaces verts & biodiversité", text: "Encadrer strictement les horaires de chantier et livraison pour réduire le bruit", candidateId: "bournazel" },
+  { id: 160, theme: "Espaces verts & biodiversité", text: "Interdire les bus touristiques non-électriques dans le centre de Paris", candidateId: "bournazel" },
+  { id: 161, theme: "Espaces verts & biodiversité", text: "Couvrir des tronçons du périphérique pour créer de nouveaux espaces verts", candidateId: "bournazel" },
 
   // === LOGEMENT ===
   { id: 162, theme: "Logement", text: "Réformer l'attribution des logements sociaux pour plus de transparence et d'équité", candidateId: "dati" },
@@ -246,29 +246,29 @@ const PROPOSITIONS = [
   { id: 180, theme: "Logement", text: "Développer le bail étudiant municipal pour loger les étudiants à prix accessible", candidateId: "bournazel" },
 
   // === VIEILLESSE ===
-  { id: 181, theme: "Vieillesse", text: "Adapter les opérations d'aménagement de l'espace public aux besoins des personnes âgées", candidateId: "dati" },
-  { id: 182, theme: "Vieillesse", text: "Développer les activités et services de proximité pour les personnes âgées isolées", candidateId: "gregoire" },
-  { id: 183, theme: "Vieillesse", text: "Créer des résidences autonomie pour permettre aux seniors de vivre chez eux plus longtemps", candidateId: "gregoire" },
-  { id: 184, theme: "Vieillesse", text: "Aménager l'espace public avec plus de bancs, toilettes et espaces de repos pour les aînés", candidateId: "gregoire" },
-  { id: 185, theme: "Vieillesse", text: "Instaurer une « Journée du lien » annuelle pour lutter contre l'isolement des personnes âgées", candidateId: "gregoire" },
-  { id: 186, theme: "Vieillesse", text: "Créer un droit au répit pour les aidants familiaux avec des solutions de relais", candidateId: "gregoire" },
+  { id: 181, theme: "Séniors", text: "Adapter les opérations d'aménagement de l'espace public aux besoins des personnes âgées", candidateId: "dati" },
+  { id: 182, theme: "Séniors", text: "Développer les activités et services de proximité pour les personnes âgées isolées", candidateId: "gregoire" },
+  { id: 183, theme: "Séniors", text: "Créer des résidences autonomie pour permettre aux seniors de vivre chez eux plus longtemps", candidateId: "gregoire" },
+  { id: 184, theme: "Séniors", text: "Aménager l'espace public avec plus de bancs, toilettes et espaces de repos pour les aînés", candidateId: "gregoire" },
+  { id: 185, theme: "Séniors", text: "Instaurer une « Journée du lien » annuelle pour lutter contre l'isolement des personnes âgées", candidateId: "gregoire" },
+  { id: 186, theme: "Séniors", text: "Créer un droit au répit pour les aidants familiaux avec des solutions de relais", candidateId: "gregoire" },
 
   // === HANDICAP ===
-  { id: 187, theme: "Handicap", text: "Créer un guichet unique pour simplifier toutes les démarches MDPH à Paris", candidateId: "dati" },
-  { id: 188, theme: "Handicap", text: "Utiliser la présidence de l'AP-HP pour améliorer la prise en charge du handicap à Paris", candidateId: "dati" },
-  { id: 189, theme: "Handicap", text: "Soumettre toute délibération du Conseil de Paris à une évaluation de son impact sur le handicap", candidateId: "chikirou" },
-  { id: 190, theme: "Handicap", text: "Rendre 100% des équipements publics municipaux accessibles aux personnes handicapées", candidateId: "chikirou" },
-  { id: 191, theme: "Handicap", text: "Créer un guichet unique handicap pour centraliser l'information et l'accompagnement", candidateId: "chikirou" },
-  { id: 192, theme: "Handicap", text: "Réserver une part des logements sociaux neufs aux personnes en situation de handicap", candidateId: "chikirou" },
-  { id: 193, theme: "Handicap", text: "Atteindre l'objectif de 10% de travailleurs handicapés dans l'administration parisienne", candidateId: "chikirou" },
+  { id: 187, theme: "Solidarité & accessibilité", text: "Créer un guichet unique pour simplifier toutes les démarches MDPH à Paris", candidateId: "dati" },
+  { id: 188, theme: "Solidarité & accessibilité", text: "Utiliser la présidence de l'AP-HP pour améliorer la prise en charge du handicap à Paris", candidateId: "dati" },
+  { id: 189, theme: "Solidarité & accessibilité", text: "Soumettre toute délibération du Conseil de Paris à une évaluation de son impact sur le handicap", candidateId: "chikirou" },
+  { id: 190, theme: "Solidarité & accessibilité", text: "Rendre 100% des équipements publics municipaux accessibles aux personnes handicapées", candidateId: "chikirou" },
+  { id: 191, theme: "Solidarité & accessibilité", text: "Créer un guichet unique handicap pour centraliser l'information et l'accompagnement", candidateId: "chikirou" },
+  { id: 192, theme: "Solidarité & accessibilité", text: "Réserver une part des logements sociaux neufs aux personnes en situation de handicap", candidateId: "chikirou" },
+  { id: 193, theme: "Solidarité & accessibilité", text: "Atteindre l'objectif de 10% de travailleurs handicapés dans l'administration parisienne", candidateId: "chikirou" },
 
   // === SOLIDARITÉ ===
   { id: 194, theme: "Solidarité", text: "Mettre en place un dispositif de veille solidaire dans chaque quartier parisien", candidateId: "dati" },
 
   // === PATRIMOINE ET BEAUTÉ DE LA VILLE ===
-  { id: 195, theme: "Patrimoine et beauté de la ville", text: "Retirer toutes les barrières de chantier des travaux terminés dans un délai de 48h", candidateId: "dati" },
-  { id: 196, theme: "Patrimoine et beauté de la ville", text: "Lancer un plan d'urgence pour la sauvegarde du patrimoine architectural parisien", candidateId: "dati" },
-  { id: 197, theme: "Patrimoine et beauté de la ville", text: "Adopter une charte « Paris du beau » pour garantir l'esthétique des aménagements urbains", candidateId: "dati" },
+  { id: 195, theme: "Patrimoine & beauté", text: "Retirer toutes les barrières de chantier des travaux terminés dans un délai de 48h", candidateId: "dati" },
+  { id: 196, theme: "Patrimoine & beauté", text: "Lancer un plan d'urgence pour la sauvegarde du patrimoine architectural parisien", candidateId: "dati" },
+  { id: 197, theme: "Patrimoine & beauté", text: "Adopter une charte « Paris du beau » pour garantir l'esthétique des aménagements urbains", candidateId: "dati" },
 
   // === SERVICES PUBLICS ===
   { id: 198, theme: "Services publics", text: "Créer un guichet physique unique pour toutes les démarches administratives de la Ville", candidateId: "gregoire" },
@@ -279,9 +279,9 @@ const PROPOSITIONS = [
   { id: 203, theme: "Services publics", text: "Créer un service public du berceau au grand âge pour accompagner chaque Parisien à chaque étape", candidateId: "gregoire" },
 
   // === COMMERCE ===
-  { id: 204, theme: "Commerce", text: "Simplifier toutes les démarches administratives pour les commerçants et artisans parisiens", candidateId: "dati" },
-  { id: 205, theme: "Commerce", text: "Rendre obligatoire une étude d'impact avant toute décision d'urbanisme affectant le commerce", candidateId: "dati" },
-  { id: 206, theme: "Commerce", text: "Créer des marchés éphémères de producteurs locaux dans tous les arrondissements", candidateId: "dati" },
+  { id: 204, theme: "Économie & commerces", text: "Simplifier toutes les démarches administratives pour les commerçants et artisans parisiens", candidateId: "dati" },
+  { id: 205, theme: "Économie & commerces", text: "Rendre obligatoire une étude d'impact avant toute décision d'urbanisme affectant le commerce", candidateId: "dati" },
+  { id: 206, theme: "Économie & commerces", text: "Créer des marchés éphémères de producteurs locaux dans tous les arrondissements", candidateId: "dati" },
 
   // === PROBITÉ ===
   { id: 207, theme: "Probité", text: "Garantir l'exemplarité des élus avec une charte éthique contraignante", candidateId: "bournazel" },
@@ -306,19 +306,19 @@ const PROPOSITIONS = [
   { id: 218, theme: "Finance et gestion budgétaire", text: "Diviser la taxe foncière par deux dès le premier budget", candidateId: "knafo" },
   { id: 219, theme: "Finance et gestion budgétaire", text: "Diviser par deux la taxe d'enlèvement des ordures ménagères et la taxe de balayage", candidateId: "knafo" },
   { id: 220, theme: "Finance et gestion budgétaire", text: "Réduire de moitié les effectifs municipaux sur 10 ans (55 000 agents) en ne remplaçant pas les départs naturels", candidateId: "knafo" },
-  { id: 221, theme: "Propreté", text: "Privatiser la collecte des ordures et le balayage via appels d'offres, avec reprise garantie de 80% des agents", candidateId: "knafo" },
+  { id: 221, theme: "Propreté et déchets", text: "Privatiser la collecte des ordures et le balayage via appels d'offres, avec reprise garantie de 80% des agents", candidateId: "knafo" },
 
   // === DÉMOCRATIE LOCALE (Knafo) ===
-  { id: 222, theme: "Démocratie locale", text: "Organiser au minimum deux référendums locaux par an", candidateId: "knafo" },
-  { id: 223, theme: "Démocratie locale", text: "Référendum obligatoire pour tout projet municipal dépassant 10 millions d'euros", candidateId: "knafo" },
-  { id: 224, theme: "Démocratie locale", text: "Donner une valeur exécutoire aux résultats de référendum (le résultat s'impose à la mairie)", candidateId: "knafo" },
+  { id: 222, theme: "Vie démocratique", text: "Organiser au minimum deux référendums locaux par an", candidateId: "knafo" },
+  { id: 223, theme: "Vie démocratique", text: "Référendum obligatoire pour tout projet municipal dépassant 10 millions d'euros", candidateId: "knafo" },
+  { id: 224, theme: "Vie démocratique", text: "Donner une valeur exécutoire aux résultats de référendum (le résultat s'impose à la mairie)", candidateId: "knafo" },
 
   // === TRANSPORT (Knafo) ===
-  { id: 225, theme: "Transport", text: "Réouvrir les voies sur berges à la circulation automobile avec une promenade piétonne et cycliste sur pilotis au-dessus", candidateId: "knafo" },
-  { id: 226, theme: "Transport", text: "Relever la vitesse maximale sur le périphérique de 50 à 80 km/h", candidateId: "knafo" },
-  { id: 227, theme: "Transport", text: "Piloter les feux tricolores par intelligence artificielle pour fluidifier le trafic", candidateId: "knafo" },
-  { id: 228, theme: "Transport", text: "Réduire le tarif du stationnement à 5 euros de l'heure pour tous (contre 37€/h pour les SUV actuellement)", candidateId: "knafo" },
-  { id: 229, theme: "Transport", text: "Créer un jumeau numérique de Paris pour simuler l'impact de chaque projet d'aménagement avant réalisation", candidateId: "knafo" },
+  { id: 225, theme: "Transports & Mobilités", text: "Réouvrir les voies sur berges à la circulation automobile avec une promenade piétonne et cycliste sur pilotis au-dessus", candidateId: "knafo" },
+  { id: 226, theme: "Transports & Mobilités", text: "Relever la vitesse maximale sur le périphérique de 50 à 80 km/h", candidateId: "knafo" },
+  { id: 227, theme: "Transports & Mobilités", text: "Piloter les feux tricolores par intelligence artificielle pour fluidifier le trafic", candidateId: "knafo" },
+  { id: 228, theme: "Transports & Mobilités", text: "Réduire le tarif du stationnement à 5 euros de l'heure pour tous (contre 37€/h pour les SUV actuellement)", candidateId: "knafo" },
+  { id: 229, theme: "Transports & Mobilités", text: "Créer un jumeau numérique de Paris pour simuler l'impact de chaque projet d'aménagement avant réalisation", candidateId: "knafo" },
 
   // === LOGEMENT (Knafo) ===
   { id: 230, theme: "Logement", text: "Supprimer l'encadrement des loyers", candidateId: "knafo" },
@@ -332,8 +332,8 @@ const PROPOSITIONS = [
   { id: 236, theme: "Urbanisme", text: "Abroger le PLU bioclimatique et revenir à un PLU garantissant l'harmonie architecturale", candidateId: "knafo" },
   { id: 237, theme: "Urbanisme", text: "Réautoriser l'éclairage des vitrines des commerces la nuit", candidateId: "knafo" },
   { id: 238, theme: "Urbanisme", text: "Réautoriser les terrasses chauffées", candidateId: "knafo" },
-  { id: 239, theme: "Écologie et végétalisation", text: "Embellir les parcs et jardins en replantant des fleurs", candidateId: "knafo" },
-  { id: 240, theme: "Écologie et végétalisation", text: "Rendre tous les espaces verts accessibles aux chiens tenus en laisse (sauf aires de jeux enfants)", candidateId: "knafo" },
+  { id: 239, theme: "Espaces verts & biodiversité", text: "Embellir les parcs et jardins en replantant des fleurs", candidateId: "knafo" },
+  { id: 240, theme: "Espaces verts & biodiversité", text: "Rendre tous les espaces verts accessibles aux chiens tenus en laisse (sauf aires de jeux enfants)", candidateId: "knafo" },
 
   // === ÉDUCATION (Knafo) ===
   { id: 241, theme: "Éducation", text: "Servir uniquement des produits issus de l'agriculture française dans les cantines scolaires", candidateId: "knafo" },
@@ -358,10 +358,10 @@ const PROPOSITIONS = [
   { id: 252, theme: "Sécurité", text: "Créer un numéro de téléphone dédié à la police municipale, opérationnel 24h/24", candidateId: "mariani" },
 
   // === PROPRETÉ (Mariani) ===
-  { id: 253, theme: "Propreté", text: "Externaliser totalement la collecte des déchets et laisser chaque arrondissement choisir son prestataire", candidateId: "mariani" },
-  { id: 254, theme: "Propreté", text: "Assurer la propreté 24h/24 par le redéploiement des agents municipaux sur le terrain", candidateId: "mariani" },
-  { id: 255, theme: "Propreté", text: "Lancer un plan massif de dératisation dans tout Paris", candidateId: "mariani" },
-  { id: 256, theme: "Propreté", text: "Appliquer la théorie des « vitres cassées » : tolérance zéro sur les incivilités, verbalisation systématique", candidateId: "mariani" },
+  { id: 253, theme: "Propreté et déchets", text: "Externaliser totalement la collecte des déchets et laisser chaque arrondissement choisir son prestataire", candidateId: "mariani" },
+  { id: 254, theme: "Propreté et déchets", text: "Assurer la propreté 24h/24 par le redéploiement des agents municipaux sur le terrain", candidateId: "mariani" },
+  { id: 255, theme: "Propreté et déchets", text: "Lancer un plan massif de dératisation dans tout Paris", candidateId: "mariani" },
+  { id: 256, theme: "Propreté et déchets", text: "Appliquer la théorie des « vitres cassées » : tolérance zéro sur les incivilités, verbalisation systématique", candidateId: "mariani" },
 
   // === LOGEMENT (Mariani) ===
   { id: 257, theme: "Logement", text: "Instaurer la priorité nationale pour l'accès au logement social, en privilégiant les familles et les travailleurs", candidateId: "mariani" },
@@ -371,10 +371,10 @@ const PROPOSITIONS = [
   { id: 261, theme: "Logement", text: "Développer l'habitat intergénérationnel (étudiants-seniors) pour lutter contre l'isolement", candidateId: "mariani" },
 
   // === TRANSPORT (Mariani) ===
-  { id: 262, theme: "Transport", text: "Augmenter la vitesse sur le périphérique à 90 km/h sur certains tronçons et la nuit", candidateId: "mariani" },
-  { id: 263, theme: "Transport", text: "Adapter le plan de circulation pour protéger piétons, cyclistes et automobilistes de manière équilibrée", candidateId: "mariani" },
-  { id: 264, theme: "Transport", text: "Faciliter les livraisons pour les commerçants en révisant le plan de circulation", candidateId: "mariani" },
-  { id: 265, theme: "Transport", text: "Rétablir l'égalité des tarifs de stationnement en supprimant le zonage discriminatoire", candidateId: "mariani" },
+  { id: 262, theme: "Transports & Mobilités", text: "Augmenter la vitesse sur le périphérique à 90 km/h sur certains tronçons et la nuit", candidateId: "mariani" },
+  { id: 263, theme: "Transports & Mobilités", text: "Adapter le plan de circulation pour protéger piétons, cyclistes et automobilistes de manière équilibrée", candidateId: "mariani" },
+  { id: 264, theme: "Transports & Mobilités", text: "Faciliter les livraisons pour les commerçants en révisant le plan de circulation", candidateId: "mariani" },
+  { id: 265, theme: "Transports & Mobilités", text: "Rétablir l'égalité des tarifs de stationnement en supprimant le zonage discriminatoire", candidateId: "mariani" },
 
   // === ÉDUCATION (Mariani) ===
   { id: 266, theme: "Éducation", text: "Instaurer l'uniforme scolaire dès l'école primaire", candidateId: "mariani" },
@@ -382,9 +382,9 @@ const PROPOSITIONS = [
   { id: 268, theme: "Petite enfance", text: "Réserver en priorité les places en crèches municipales aux familles françaises", candidateId: "mariani" },
 
   // === COMMERCE (Mariani) ===
-  { id: 269, theme: "Commerce", text: "Soutenir les artisans et commerçants parisiens avec des allègements fiscaux", candidateId: "mariani" },
-  { id: 270, theme: "Commerce", text: "Privilégier les PME et TPE locales dans les marchés publics municipaux", candidateId: "mariani" },
-  { id: 271, theme: "Commerce", text: "Promouvoir le Made in France et les produits locaux dans les cantines et marchés publics", candidateId: "mariani" },
+  { id: 269, theme: "Économie & commerces", text: "Soutenir les artisans et commerçants parisiens avec des allègements fiscaux", candidateId: "mariani" },
+  { id: 270, theme: "Économie & commerces", text: "Privilégier les PME et TPE locales dans les marchés publics municipaux", candidateId: "mariani" },
+  { id: 271, theme: "Économie & commerces", text: "Promouvoir le Made in France et les produits locaux dans les cantines et marchés publics", candidateId: "mariani" },
 
   // === FINANCE (Mariani) ===
   { id: 272, theme: "Finance et gestion budgétaire", text: "Plan massif d'économies et de réduction de la dette municipale", candidateId: "mariani" },
@@ -393,7 +393,7 @@ const PROPOSITIONS = [
   { id: 275, theme: "Finance et gestion budgétaire", text: "Encadrer les frais de réception de la Ville pour éviter les abus", candidateId: "mariani" },
 
   // === CULTURE / PATRIMOINE (Mariani) ===
-  { id: 276, theme: "Culture", text: "Restaurer le patrimoine historique de Paris et recentrer le budget culture sur le patrimoine", candidateId: "mariani" },
+  { id: 276, theme: "Culture et loisirs", text: "Restaurer le patrimoine historique de Paris et recentrer le budget culture sur le patrimoine", candidateId: "mariani" },
   { id: 277, theme: "Urbanisme", text: "Créer une charte renforcée de respect de l'urbanisme parisien et des immeubles haussmanniens", candidateId: "mariani" },
 
   // === IMMIGRATION (Mariani) ===
@@ -401,9 +401,9 @@ const PROPOSITIONS = [
   { id: 279, theme: "Immigration", text: "Refuser l'immigration de masse et mettre fin aux occupations et réquisitions pour les migrants en situation irrégulière", candidateId: "mariani" },
 
   // === DÉMOCRATIE LOCALE (Mariani) ===
-  { id: 280, theme: "Démocratie locale", text: "Organiser un référendum chaque fois que 5% du corps électoral en fait la demande", candidateId: "mariani" },
-  { id: 281, theme: "Démocratie locale", text: "Élire tous les conseils de quartier tous les 3 ans et les consulter pour tout projet les concernant", candidateId: "mariani" },
-  { id: 282, theme: "Démocratie locale", text: "Renforcer l'e-démocratie avec des outils numériques protégeant les données personnelles", candidateId: "mariani" },
+  { id: 280, theme: "Vie démocratique", text: "Organiser un référendum chaque fois que 5% du corps électoral en fait la demande", candidateId: "mariani" },
+  { id: 281, theme: "Vie démocratique", text: "Élire tous les conseils de quartier tous les 3 ans et les consulter pour tout projet les concernant", candidateId: "mariani" },
+  { id: 282, theme: "Vie démocratique", text: "Renforcer l'e-démocratie avec des outils numériques protégeant les données personnelles", candidateId: "mariani" },
 
   // ============================================
   // NPA-RÉVOLUTIONNAIRES (Blandine Chauvel)
@@ -432,7 +432,7 @@ const PROPOSITIONS = [
   { id: 296, theme: "Santé", text: "Défendre l'hôpital public contre les coupes budgétaires et garantir l'accès à la santé pour tous", candidateId: "npa" },
 
   // === TRANSPORT (NPA) ===
-  { id: 297, theme: "Transport", text: "Rendre les transports en commun gratuits et fiables pour tous", candidateId: "npa" },
+  { id: 297, theme: "Transports & Mobilités", text: "Rendre les transports en commun gratuits et fiables pour tous", candidateId: "npa" },
 
   // === SÉCURITÉ (NPA) ===
   { id: 298, theme: "Sécurité", text: "Dissoudre la police municipale et démanteler la vidéosurveillance", candidateId: "npa" },
@@ -446,51 +446,51 @@ const PROPOSITIONS = [
 
   // === SARAH KNAFO (ajouts depuis programme PDF) ===
   { id: 300, theme: "Sécurité", text: "Déployer 500 policiers municipaux sur le réseau de transport en commun parisien", candidateId: "knafo" },
-  { id: 301, theme: "Patrimoine et beauté de la ville", text: "Restaurer le mobilier urbain historique de Paris : bancs Davioud, réverbères classiques, grilles d'arbres en fonte", candidateId: "knafo" },
-  { id: 302, theme: "Culture", text: "Ouvrir les musées municipaux en nocturne deux soirs par semaine et les bibliothèques le dimanche", candidateId: "knafo" },
-  { id: 303, theme: "Culture", text: "Consacrer 300 millions d'euros à la restauration des églises parisiennes sur le mandat", candidateId: "knafo" },
+  { id: 301, theme: "Patrimoine & beauté", text: "Restaurer le mobilier urbain historique de Paris : bancs Davioud, réverbères classiques, grilles d'arbres en fonte", candidateId: "knafo" },
+  { id: 302, theme: "Culture et loisirs", text: "Ouvrir les musées municipaux en nocturne deux soirs par semaine et les bibliothèques le dimanche", candidateId: "knafo" },
+  { id: 303, theme: "Culture et loisirs", text: "Consacrer 300 millions d'euros à la restauration des églises parisiennes sur le mandat", candidateId: "knafo" },
   { id: 304, theme: "Finance et gestion budgétaire", text: "Supprimer plus de 100 millions d'euros par an de subventions aux associations politisées et militantes", candidateId: "knafo" },
   { id: 305, theme: "Finance et gestion budgétaire", text: "Réduire le nombre d'adjoints au maire à 10 et diviser par cinq le cabinet du maire", candidateId: "knafo" },
   { id: 306, theme: "Logement", text: "Baisser les frais de notaire (droits de mutation) de 10% pour faciliter l'accession à la propriété", candidateId: "knafo" },
   { id: 307, theme: "Sport", text: "Installer des terrains de sport (football, basketball, padel) sous les viaducs du métro aérien", candidateId: "knafo" },
-  { id: 308, theme: "Patrimoine et beauté de la ville", text: "Prolonger l'éclairage ornemental des monuments parisiens jusqu'à minuit", candidateId: "knafo" },
-  { id: 309, theme: "Transport", text: "Offrir la première heure de stationnement gratuite pour les professionnels (infirmières, artisans, commerciaux)", candidateId: "knafo" },
+  { id: 308, theme: "Patrimoine & beauté", text: "Prolonger l'éclairage ornemental des monuments parisiens jusqu'à minuit", candidateId: "knafo" },
+  { id: 309, theme: "Transports & Mobilités", text: "Offrir la première heure de stationnement gratuite pour les professionnels (infirmières, artisans, commerciaux)", candidateId: "knafo" },
   { id: 310, theme: "Éducation", text: "Nommer un chef étoilé pour refondre les cantines scolaires avec des recettes à base de produits frais français", candidateId: "knafo" },
-  { id: 311, theme: "Culture", text: "Proposer des cours de musique collectifs sans concours ni prérequis dans tous les conservatoires", candidateId: "knafo" },
+  { id: 311, theme: "Culture et loisirs", text: "Proposer des cours de musique collectifs sans concours ni prérequis dans tous les conservatoires", candidateId: "knafo" },
 
   // === THIERRY MARIANI (ajouts depuis programme PDF) ===
   { id: 312, theme: "Santé", text: "Supprimer les salles de shoot et créer un centre de soin unique pour traiter la toxicomanie", candidateId: "mariani" },
   { id: 313, theme: "Santé", text: "Instaurer une prévention scolaire obligatoire sur les dangers des stupéfiants", candidateId: "mariani" },
   { id: 314, theme: "Santé", text: "Lancer un plan de prévention des maladies mentales dans les écoles et collèges", candidateId: "mariani" },
   { id: 315, theme: "Éducation", text: "Garantir un service minimum d'accueil dans les crèches, écoles et cantines les jours de grève", candidateId: "mariani" },
-  { id: 316, theme: "Transport", text: "Créer 20 000 places de stationnement supplémentaires en parking souterrain", candidateId: "mariani" },
-  { id: 317, theme: "Transport", text: "Ouvrir le métro la nuit sur les lignes automatiques le week-end", candidateId: "mariani" },
-  { id: 318, theme: "Transport", text: "Rétablir la gratuité du stationnement pour les deux-roues motorisés", candidateId: "mariani" },
+  { id: 316, theme: "Transports & Mobilités", text: "Créer 20 000 places de stationnement supplémentaires en parking souterrain", candidateId: "mariani" },
+  { id: 317, theme: "Transports & Mobilités", text: "Ouvrir le métro la nuit sur les lignes automatiques le week-end", candidateId: "mariani" },
+  { id: 318, theme: "Transports & Mobilités", text: "Rétablir la gratuité du stationnement pour les deux-roues motorisés", candidateId: "mariani" },
   { id: 319, theme: "Logement", text: "Convertir des bureaux vacants en 6 000 logements pour les familles parisiennes", candidateId: "mariani" },
   { id: 320, theme: "Logement", text: "Limiter les locations Airbnb à 60 nuits par an (contre 120 actuellement)", candidateId: "mariani" },
   { id: 321, theme: "Logement", text: "Permettre à 40 000 familles parisiennes d'accéder à la propriété via un plan d'accession", candidateId: "mariani" },
-  { id: 322, theme: "Commerce", text: "Lancer un programme « 1 000 commerces » pour revitaliser les rues commerçantes de Paris", candidateId: "mariani" },
-  { id: 323, theme: "Écologie et végétalisation", text: "Planter 50 000 arbres supplémentaires à Paris", candidateId: "mariani" },
+  { id: 322, theme: "Économie & commerces", text: "Lancer un programme « 1 000 commerces » pour revitaliser les rues commerçantes de Paris", candidateId: "mariani" },
+  { id: 323, theme: "Espaces verts & biodiversité", text: "Planter 50 000 arbres supplémentaires à Paris", candidateId: "mariani" },
   { id: 324, theme: "Éducation", text: "Créer 100 centres de soutien scolaire gratuits dans les quartiers de Paris", candidateId: "mariani" },
   { id: 325, theme: "Petite enfance", text: "Ouvrir des crèches la nuit pour les parents travaillant en horaires décalés", candidateId: "mariani" },
   { id: 326, theme: "Petite enfance", text: "Instaurer la gratuité de la crèche à partir du 3ème enfant", candidateId: "mariani" },
   { id: 327, theme: "Sécurité", text: "Installer des caméras de vidéoprotection dans les parties communes des HLM", candidateId: "mariani" },
-  { id: 328, theme: "Transport", text: "Supprimer la Zone à Trafic Limité (ZTL) du centre de Paris", candidateId: "mariani" },
+  { id: 328, theme: "Transports & Mobilités", text: "Supprimer la Zone à Trafic Limité (ZTL) du centre de Paris", candidateId: "mariani" },
 
   // === PIERRE-YVES BOURNAZEL (ajouts depuis site web) ===
   { id: 329, theme: "Sécurité", text: "Créer un numéro dédié 75.17 pour joindre la police municipale 24h/24", candidateId: "bournazel" },
   { id: 330, theme: "Sécurité", text: "Déployer la police municipale dans le métro le soir contre les violences et agressions", candidateId: "bournazel" },
-  { id: 331, theme: "Transport", text: "Créer 30 000 places de parking-relais gratuites aux portes de Paris", candidateId: "bournazel" },
-  { id: 332, theme: "Transport", text: "Adapter les vitesses du périphérique selon les horaires : 50 km/h en pointe, 70 km/h en heures creuses", candidateId: "bournazel" },
+  { id: 331, theme: "Transports & Mobilités", text: "Créer 30 000 places de parking-relais gratuites aux portes de Paris", candidateId: "bournazel" },
+  { id: 332, theme: "Transports & Mobilités", text: "Adapter les vitesses du périphérique selon les horaires : 50 km/h en pointe, 70 km/h en heures creuses", candidateId: "bournazel" },
   { id: 333, theme: "Logement", text: "Remettre 60 000 logements sur le marché locatif grâce à un pacte avec les propriétaires", candidateId: "bournazel" },
   { id: 334, theme: "Logement", text: "Transformer les bureaux vacants en logements pour les classes moyennes", candidateId: "bournazel" },
   { id: 335, theme: "Santé", text: "Ouvrir un centre municipal de santé sans dépassement d'honoraires dans chaque arrondissement d'ici 2032", candidateId: "bournazel" },
   { id: 336, theme: "Santé", text: "Déployer un bus de santé mobile dans les quartiers mal desservis médicalement", candidateId: "bournazel" },
-  { id: 337, theme: "Commerce", text: "Faire de Paris une Zone Touristique Unique pour autoriser l'ouverture dominicale des commerces", candidateId: "bournazel" },
-  { id: 338, theme: "Écologie et végétalisation", text: "Transformer la Petite Ceinture en poumon vert continu : promenades, jardins potagers et espaces sportifs", candidateId: "bournazel" },
+  { id: 337, theme: "Économie & commerces", text: "Faire de Paris une Zone Touristique Unique pour autoriser l'ouverture dominicale des commerces", candidateId: "bournazel" },
+  { id: 338, theme: "Espaces verts & biodiversité", text: "Transformer la Petite Ceinture en poumon vert continu : promenades, jardins potagers et espaces sportifs", candidateId: "bournazel" },
   { id: 339, theme: "Finance et gestion budgétaire", text: "Vendre 20 000 propriétés municipales situées hors de Paris pour rembourser 3 milliards de dette", candidateId: "bournazel" },
   { id: 340, theme: "Finance et gestion budgétaire", text: "Supprimer toutes les voitures avec chauffeur des élus et cadres de la Ville", candidateId: "bournazel" },
-  { id: 341, theme: "Transport", text: "Immatriculer les fatbikes et trottinettes surpuissantes pour permettre leur verbalisation", candidateId: "bournazel" },
+  { id: 341, theme: "Transports & Mobilités", text: "Immatriculer les fatbikes et trottinettes surpuissantes pour permettre leur verbalisation", candidateId: "bournazel" },
   { id: 342, theme: "Petite enfance", text: "Étendre les horaires des crèches jusqu'à 19h30 pour les parents aux horaires décalés", candidateId: "bournazel" },
   { id: 343, theme: "Éducation", text: "Créer des écoles bilingues publiques pour les familles internationales", candidateId: "bournazel" },
 
@@ -501,17 +501,124 @@ const PROPOSITIONS = [
   { id: 347, theme: "Finance et gestion budgétaire", text: "Augmenter la taxe foncière de 20,5% à 23% pour financer le logement et l'éducation", candidateId: "chikirou" },
   { id: 348, theme: "Éducation", text: "Recruter 2 000 animateurs périscolaires supplémentaires et titulariser les 4 000 contractuels actuels", candidateId: "chikirou" },
   { id: 349, theme: "Éducation", text: "Instaurer la cantine bio à 1 euro pour tous les écoliers parisiens", candidateId: "chikirou" },
-  { id: 350, theme: "Écologie et végétalisation", text: "Transformer le périphérique en boulevard urbain végétalisé", candidateId: "chikirou" },
-  { id: 351, theme: "Écologie et végétalisation", text: "Végétaliser 300 hectares et déimperméabiliser 40% du territoire parisien d'ici 2032", candidateId: "chikirou" },
-  { id: 352, theme: "Propreté", text: "Porter le budget de lutte contre les rats à 15 millions d'euros par an", candidateId: "chikirou" },
+  { id: 350, theme: "Espaces verts & biodiversité", text: "Transformer le périphérique en boulevard urbain végétalisé", candidateId: "chikirou" },
+  { id: 351, theme: "Espaces verts & biodiversité", text: "Végétaliser 300 hectares et déimperméabiliser 40% du territoire parisien d'ici 2032", candidateId: "chikirou" },
+  { id: 352, theme: "Propreté et déchets", text: "Porter le budget de lutte contre les rats à 15 millions d'euros par an", candidateId: "chikirou" },
   { id: 353, theme: "Santé", text: "Instaurer un chèque psy de 20€ par séance de psychothérapie pour les Parisiens", candidateId: "chikirou" },
   { id: 354, theme: "Santé", text: "Créer une mutuelle municipale populaire à tarif solidaire pour tous les Parisiens", candidateId: "chikirou" },
-  { id: 355, theme: "Commerce", text: "Tripler les locaux commerciaux publics avec des loyers abaissés pour les commerces de proximité", candidateId: "chikirou" },
-  { id: 356, theme: "Démocratie locale", text: "Augmenter le budget participatif de 5% à 15% du budget d'investissement (300 millions d'euros)", candidateId: "chikirou" },
+  { id: 355, theme: "Économie & commerces", text: "Tripler les locaux commerciaux publics avec des loyers abaissés pour les commerces de proximité", candidateId: "chikirou" },
+  { id: 356, theme: "Vie démocratique", text: "Augmenter le budget participatif de 5% à 15% du budget d'investissement (300 millions d'euros)", candidateId: "chikirou" },
   { id: 357, theme: "Solidarité", text: "Atteindre l'objectif zéro sans-abri à Paris avant la fin du mandat", candidateId: "chikirou" },
   { id: 358, theme: "Solidarité", text: "Ouvrir des restaurants populaires avec des menus bio et locaux à prix solidaires", candidateId: "chikirou" },
-  { id: 359, theme: "Écologie et végétalisation", text: "Moratoire sur la construction de bureaux neufs à Paris", candidateId: "chikirou" },
-  { id: 360, theme: "Sécurité", text: "Porter la police municipale à 3 500 agents avec une charte interdisant les contrôles au faciès", candidateId: "chikirou" }
+  { id: 359, theme: "Espaces verts & biodiversité", text: "Moratoire sur la construction de bureaux neufs à Paris", candidateId: "chikirou" },
+  { id: 360, theme: "Sécurité", text: "Porter la police municipale à 3 500 agents avec une charte interdisant les contrôles au faciès", candidateId: "chikirou" },
+
+  // === DATI — Écologie et végétalisation (manquant) ===
+  { id: 361, theme: "Espaces verts & biodiversité", text: "Préserver les 200 000 arbres de Paris et les 300 000 arbres des bois, sauf exception dûment justifiée", candidateId: "dati" },
+  { id: 362, theme: "Espaces verts & biodiversité", text: "Créer 500 nouvelles bandes végétalisées durables avec arrosage et désherbage garantis", candidateId: "dati" },
+  { id: 363, theme: "Espaces verts & biodiversité", text: "Débitumer 100 hectares de sols parisiens pour lutter contre les îlots de chaleur", candidateId: "dati" },
+  { id: 364, theme: "Espaces verts & biodiversité", text: "Réaménager les grandes places parisiennes (Bastille, Nation, Italie) avec plus de verdure", candidateId: "dati" },
+  { id: 365, theme: "Espaces verts & biodiversité", text: "Lancer un plan Grand Chaud : rafraîchissement des rues, brumisateurs, fontaines, ombrages", candidateId: "dati" },
+  { id: 366, theme: "Espaces verts & biodiversité", text: "Plan de lutte contre la pollution sonore avec radars anti-bruit et zones apaisées", candidateId: "dati" },
+
+  // === DATI — Santé (manquant) ===
+  { id: 367, theme: "Santé", text: "Plan de désengorgement des urgences avec installation de maisons de santé dans chaque arrondissement", candidateId: "dati" },
+
+  // === DATI — Vieillesse (manquant) ===
+  { id: 368, theme: "Séniors", text: "Aménager l'espace public pour les personnes âgées : assises, îlots de fraîcheur, prévention des chutes", candidateId: "dati" },
+
+  // === GRÉGOIRE — Sécurité (enrichissement textes restaurés) ===
+  { id: 369, theme: "Sécurité", text: "Créer des brigades nocturnes renforcées et des patrouilles équestres dans les Bois de Boulogne et Vincennes", candidateId: "gregoire" },
+  { id: 370, theme: "Sécurité", text: "Un droit à la nuit pour les femmes : éclairage public renforcé, dispositif d'alerte sur les abribus", candidateId: "gregoire" },
+  { id: 371, theme: "Sécurité", text: "Co-produire la politique de sécurité avec les maires d'arrondissement, la police nationale et les acteurs associatifs", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Sport (enrichissement) ===
+  { id: 372, theme: "Sport", text: "Prendre en charge les frais d'inscription à une activité sportive par enfant et par an à tarifs progressifs", candidateId: "gregoire" },
+  { id: 373, theme: "Sport", text: "Étendre les horaires des gymnases et piscines municipales et poursuivre leur rénovation", candidateId: "gregoire" },
+  { id: 374, theme: "Sport", text: "Promouvoir la pratique sportive féminine en doublant les créneaux dédiés et les subventions aux clubs", candidateId: "gregoire" },
+  { id: 375, theme: "Sport", text: "Candidater pour l'accueil des Jeux Olympiques de la Jeunesse à Paris", candidateId: "gregoire" },
+  { id: 376, theme: "Sport", text: "Instaurer une tolérance zéro face aux violences et discriminations dans le sport", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Propreté (enrichissement) ===
+  { id: 377, theme: "Propreté et déchets", text: "Brigades anti-incivilités au sein de la police municipale contre les infractions de propreté", candidateId: "gregoire" },
+  { id: 378, theme: "Propreté et déchets", text: "Objectif zéro dépôt sur les trottoirs : collecte à domicile des encombrants et amendes renforcées", candidateId: "gregoire" },
+  { id: 379, theme: "Propreté et déchets", text: "Moins 100 000 tonnes de déchets : compostage dans tous les quartiers et tri dans l'espace public", candidateId: "gregoire" },
+  { id: 380, theme: "Propreté et déchets", text: "Nommer des référents propreté et travaux dans chaque quartier pour traiter rapidement les problèmes", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Écologie et végétalisation (nouveau) ===
+  { id: 381, theme: "Espaces verts & biodiversité", text: "25 km de promenade continue et végétalisée le long des berges de Seine, rive gauche et rive droite", candidateId: "gregoire" },
+  { id: 382, theme: "Espaces verts & biodiversité", text: "Poursuite de l'ouverture de la Petite Ceinture avec 10 km supplémentaires de promenade", candidateId: "gregoire" },
+  { id: 383, theme: "Espaces verts & biodiversité", text: "300 nouveaux hectares de jardins ouverts au public avec horaires étendus toute l'année", candidateId: "gregoire" },
+  { id: 384, theme: "Espaces verts & biodiversité", text: "10 nouveaux parcs à la place de voies de circulation sur certains boulevards parisiens", candidateId: "gregoire" },
+  { id: 385, theme: "Espaces verts & biodiversité", text: "Objectif au moins un trottoir ombragé dans chaque rue pour anticiper les canicules", candidateId: "gregoire" },
+  { id: 386, theme: "Espaces verts & biodiversité", text: "Plan de protection des oiseaux et de la biodiversité lors des rénovations d'immeubles", candidateId: "gregoire" },
+  { id: 387, theme: "Espaces verts & biodiversité", text: "Transformation du périphérique en boulevard urbain relié par une grande ceinture verte", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Solidarité (nouveau) ===
+  { id: 388, theme: "Solidarité", text: "Création de 4 000 places d'hébergement d'urgence et réquisition des logements vides depuis plus de 5 ans", candidateId: "gregoire" },
+  { id: 389, theme: "Solidarité", text: "Objectif zéro enfant à la rue avec obligation de mise à l'abri pour les mineurs non accompagnés", candidateId: "gregoire" },
+  { id: 390, theme: "Solidarité", text: "Un Revenu Solidarité Jeunesse sous condition de ressources pour les jeunes de l'Aide Sociale à l'Enfance", candidateId: "gregoire" },
+  { id: 391, theme: "Solidarité", text: "100% de recours aux droits grâce à des permanences mobiles dans chaque quartier", candidateId: "gregoire" },
+  { id: 392, theme: "Solidarité", text: "Distribuer gratuitement des protections périodiques dans les équipements publics parisiens", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Commerce (enrichissement) ===
+  { id: 393, theme: "Économie & commerces", text: "Encadrement des loyers commerciaux pour lutter contre la spéculation via la foncière Paris Commerces", candidateId: "gregoire" },
+  { id: 394, theme: "Économie & commerces", text: "Mise aux enchères des locaux commerciaux vacants depuis plus de 12 mois", candidateId: "gregoire" },
+  { id: 395, theme: "Économie & commerces", text: "Instaurer un Small Business Act : 50% de la commande publique orientée vers les PME et l'ESS", candidateId: "gregoire" },
+  { id: 396, theme: "Économie & commerces", text: "Guichet numérique unique pour faciliter toutes les démarches des commerçants", candidateId: "gregoire" },
+  { id: 397, theme: "Économie & commerces", text: "Ressourcerie solidaire et ateliers de réparation dans chaque quartier", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Culture (nouveau) ===
+  { id: 398, theme: "Culture et loisirs", text: "Étendre les horaires des bibliothèques et des musées municipaux", candidateId: "gregoire" },
+  { id: 399, theme: "Culture et loisirs", text: "Carte de bibliothèque automatique pour tous les enfants et adolescents parisiens", candidateId: "gregoire" },
+  { id: 400, theme: "Culture et loisirs", text: "Créer une Maison des Arts et des Cultures Féministes", candidateId: "gregoire" },
+  { id: 401, theme: "Culture et loisirs", text: "Tarifs réduits dans les grands musées nationaux pour tous les Parisiens en négociant avec l'État", candidateId: "gregoire" },
+  { id: 402, theme: "Culture et loisirs", text: "Garantir des loyers adaptés et un fonds de soutien aux librairies, cinémas et commerces culturels indépendants", candidateId: "gregoire" },
+  { id: 403, theme: "Culture et loisirs", text: "Installer des artistes en résidence dans tous les quartiers, priorité aux quartiers populaires", candidateId: "gregoire" },
+  { id: 404, theme: "Culture et loisirs", text: "Faire de Paris la capitale mondiale du E-Sport", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Handicap (enrichissement) ===
+  { id: 405, theme: "Solidarité & accessibilité", text: "Nouveaux quartiers d'accessibilité augmentée prenant en compte les handicaps visibles et invisibles", candidateId: "gregoire" },
+  { id: 406, theme: "Solidarité & accessibilité", text: "100% des rues accessibles aux personnes à mobilité réduite grâce au désencombrement des trottoirs", candidateId: "gregoire" },
+  { id: 407, theme: "Solidarité & accessibilité", text: "100% des bâtiments municipaux accessibles d'ici 2030 avec balises sonores pour malvoyants", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Vieillesse (enrichissement) ===
+  { id: 408, theme: "Séniors", text: "Des résidences autonomie transformées en véritable chez soi avec des lieux ouverts sur le quartier", candidateId: "gregoire" },
+  { id: 409, theme: "Séniors", text: "Un espace public adapté aux seniors : bancs à intervalles réguliers, trottoirs désencombrés", candidateId: "gregoire" },
+  { id: 410, theme: "Séniors", text: "Journée annuelle du Lien pour identifier et aller à la rencontre des personnes âgées isolées", candidateId: "gregoire" },
+  { id: 411, theme: "Séniors", text: "Droit au répit pour les aidants avec un service public d'appui", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Démocratie locale (enrichissement) ===
+  { id: 412, theme: "Vie démocratique", text: "Élire à terme un Maire du Grand Paris pour une action coordonnée en logement, transports, énergie", candidateId: "gregoire" },
+  { id: 413, theme: "Vie démocratique", text: "Référendums et votations locales d'initiative partagée ouverts à tous quelle que soit la nationalité", candidateId: "gregoire" },
+  { id: 414, theme: "Vie démocratique", text: "Un conseil municipal de la jeunesse dans chaque arrondissement", candidateId: "gregoire" },
+  { id: 415, theme: "Vie démocratique", text: "Laboratoire de conception partagée des politiques publiques associant usagers, citoyens et chercheurs", candidateId: "gregoire" },
+  { id: 416, theme: "Vie démocratique", text: "Comptes-rendus annuels de mandat à l'échelle des quartiers", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Patrimoine et beauté de la ville (enrichissement) ===
+  { id: 417, theme: "Patrimoine & beauté", text: "Manifeste pour une nouvelle esthétique parisienne avec un directeur artistique de la Ville", candidateId: "gregoire" },
+  { id: 418, theme: "Patrimoine & beauté", text: "Refonte de la signalétique : suppression des panneaux obsolètes et indications 100% accessibles", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Transport (enrichissement) ===
+  { id: 419, theme: "Transports & Mobilités", text: "Création d'une vélo-école dans chaque arrondissement pour apprendre à rouler en sécurité", candidateId: "gregoire" },
+  { id: 420, theme: "Transports & Mobilités", text: "1 000 rues piétonnes et de nouveaux cœurs piétons végétalisés dans chaque quartier", candidateId: "gregoire" },
+  { id: 421, theme: "Transports & Mobilités", text: "Déploiement de capteurs et radars sonores pour réduire le bruit à l'échelle de chaque quartier", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Services publics (enrichissement) ===
+  { id: 422, theme: "Services publics", text: "Davantage de toilettes publiques accessibles à tous, avec tables à langer", candidateId: "gregoire" },
+  { id: 423, theme: "Services publics", text: "Réorganiser les services municipaux à l'échelle des quartiers pour travailler en hyper-proximité", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Jeunesse (enrichissement) ===
+  { id: 424, theme: "Jeunesse", text: "10 nouvelles aires de jeux XXL avec rénovation des aires de jeux de quartier", candidateId: "gregoire" },
+  { id: 425, theme: "Jeunesse", text: "Un Quartier Jeunes par arrondissement : accompagnement personnalisé, accès aux droits et à la santé", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Logement (enrichissement) ===
+  { id: 426, theme: "Logement", text: "Mise en sécurité climatique des bâtiments : plan volets et toits végétalisés protégés de la chaleur", candidateId: "gregoire" },
+  { id: 427, theme: "Logement", text: "Rénover les grands ensembles de logements sociaux des quartiers populaires avec animation des rez-de-chaussée", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Santé (enrichissement) ===
+  { id: 428, theme: "Santé", text: "Lutte à la source contre les pollutions de l'eau et de l'air (PFAS, pesticides, particules fines, perturbateurs endocriniens)", candidateId: "gregoire" },
+  { id: 429, theme: "Santé", text: "100% d'alimentation bio, locale et durable dans les cantines et crèches municipales avec goûter gratuit", candidateId: "gregoire" }
 ];
 
 // ====== DUELS ======
@@ -520,77 +627,77 @@ const DUELS = [
   // --- TRANSPORT ---
   {
     id: 1,
-    theme: "Transport",
+    theme: "Transports & Mobilités",
     subtopic: "Stationnement résidentiel",
     propA: { candidateId: "dati", text: "Créer un tarif de stationnement résidentiel vraiment avantageux pour les Parisiens" },
     propB: { candidateId: "knafo", text: "Réduire le tarif du stationnement à 5€/h pour tous (contre 37€/h pour les SUV actuellement)" }
   },
   {
     id: 2,
-    theme: "Transport",
+    theme: "Transports & Mobilités",
     subtopic: "Stationnement résidentiel",
     propA: { candidateId: "gregoire", text: "Baisser le tarif du stationnement résidentiel pour les Parisiens qui ont besoin de leur véhicule" },
     propB: { candidateId: "mariani", text: "Rétablir l'égalité des tarifs de stationnement en supprimant le zonage discriminatoire" }
   },
   {
     id: 3,
-    theme: "Transport",
+    theme: "Transports & Mobilités",
     subtopic: "Bus express",
     propA: { candidateId: "gregoire", text: "Créer 15 lignes de bus express pour relier rapidement les quartiers de Paris" },
     propB: { candidateId: "bournazel", text: "Créer 3 lignes de bus express traversant Paris du nord au sud et d'est en ouest" }
   },
   {
     id: 4,
-    theme: "Transport",
+    theme: "Transports & Mobilités",
     subtopic: "Métro la nuit",
     propA: { candidateId: "gregoire", text: "Obtenir le métro 24h/24 le week-end pour une ville qui ne dort jamais" },
     propB: { candidateId: "bournazel", text: "Obtenir l'ouverture nocturne des lignes de métro 1, 4 et 14 le week-end" }
   },
   {
     id: 5,
-    theme: "Transport",
+    theme: "Transports & Mobilités",
     subtopic: "Périphérique",
     propA: { candidateId: "knafo", text: "Relever la vitesse maximale sur le périphérique de 50 à 80 km/h" },
     propB: { candidateId: "mariani", text: "Augmenter la vitesse sur le périphérique à 90 km/h sur certains tronçons et la nuit" }
   },
   {
     id: 6,
-    theme: "Transport",
+    theme: "Transports & Mobilités",
     subtopic: "Périphérique",
     propA: { candidateId: "bournazel", text: "Couvrir des tronçons du périphérique pour créer de nouveaux espaces verts" },
     propB: { candidateId: "mariani", text: "Augmenter la vitesse sur le périphérique à 90 km/h sur certains tronçons et la nuit" }
   },
   {
     id: 7,
-    theme: "Transport",
+    theme: "Transports & Mobilités",
     subtopic: "Feux intelligents",
     propA: { candidateId: "bournazel", text: "Installer des feux intelligents pour fluidifier la circulation et réduire la pollution" },
     propB: { candidateId: "knafo", text: "Piloter les feux tricolores par intelligence artificielle pour fluidifier le trafic" }
   },
   {
     id: 8,
-    theme: "Transport",
+    theme: "Transports & Mobilités",
     subtopic: "Accessibilité transports",
     propA: { candidateId: "gregoire", text: "Rendre 100% des transports en commun accessibles aux personnes à mobilité réduite" },
     propB: { candidateId: "chikirou", text: "Rendre l'ensemble des transports et de la voirie universellement accessibles" }
   },
   {
     id: 9,
-    theme: "Transport",
+    theme: "Transports & Mobilités",
     subtopic: "Vélo",
     propA: { candidateId: "gregoire", text: "Achever le réseau cyclable parisien pour couvrir l'ensemble des arrondissements" },
     propB: { candidateId: "chikirou", text: "Créer une régie publique du vélo pour remplacer le modèle Vélib' actuel" }
   },
   {
     id: 10,
-    theme: "Transport",
+    theme: "Transports & Mobilités",
     subtopic: "Livraisons",
     propA: { candidateId: "gregoire", text: "Réguler les horaires et itinéraires de livraison pour réduire les nuisances" },
     propB: { candidateId: "bournazel", text: "Doubler le nombre de places de livraison pour réduire le stationnement en double file" }
   },
   {
     id: 11,
-    theme: "Transport",
+    theme: "Transports & Mobilités",
     subtopic: "Transports gratuits",
     propA: { candidateId: "gregoire", text: "Rendre le Navigo gratuit pour tous les enfants et adolescents parisiens" },
     propB: { candidateId: "npa", text: "Rendre les transports en commun gratuits et fiables pour tous" }
@@ -796,14 +903,14 @@ const DUELS = [
   // --- PROPRETÉ ---
   {
     id: 39,
-    theme: "Propreté",
+    theme: "Propreté et déchets",
     subtopic: "Privatisation collecte",
     propA: { candidateId: "bournazel", text: "Privatiser la collecte des déchets pour diviser les coûts et améliorer la qualité" },
     propB: { candidateId: "mariani", text: "Externaliser totalement la collecte des déchets et laisser chaque arrondissement choisir son prestataire" }
   },
   {
     id: 40,
-    theme: "Propreté",
+    theme: "Propreté et déchets",
     subtopic: "Privatisation collecte",
     propA: { candidateId: "dati", text: "Externaliser une partie de la collecte des déchets pour améliorer le service" },
     propB: { candidateId: "knafo", text: "Privatiser la collecte des ordures et le balayage via appels d'offres, avec reprise garantie de 80% des agents" }
@@ -812,21 +919,21 @@ const DUELS = [
   // --- ÉCOLOGIE ET VÉGÉTALISATION ---
   {
     id: 41,
-    theme: "Écologie et végétalisation",
+    theme: "Espaces verts & biodiversité",
     subtopic: "Anti-bruit",
     propA: { candidateId: "dati", text: "Lutter contre les nuisances sonores avec un plan anti-bruit ambitieux" },
     propB: { candidateId: "bournazel", text: "Créer un bouclier anti-bruit pour protéger les riverains des grands axes" }
   },
   {
     id: 42,
-    theme: "Écologie et végétalisation",
+    theme: "Espaces verts & biodiversité",
     subtopic: "Végétalisation",
     propA: { candidateId: "dati", text: "Créer 500 bandes végétalisées dans les rues parisiennes" },
     propB: { candidateId: "knafo", text: "Embellir les parcs et jardins en replantant des fleurs" }
   },
   {
     id: 43,
-    theme: "Écologie et végétalisation",
+    theme: "Espaces verts & biodiversité",
     subtopic: "Urbanisme vert",
     propA: { candidateId: "knafo", text: "Abroger le PLU bioclimatique et revenir à un PLU garantissant l'harmonie architecturale" },
     propB: { candidateId: "dati", text: "Désasphalter massivement Paris pour créer des îlots de fraîcheur" }
@@ -851,14 +958,14 @@ const DUELS = [
   // --- DÉMOCRATIE LOCALE ---
   {
     id: 46,
-    theme: "Démocratie locale",
+    theme: "Vie démocratique",
     subtopic: "Référendums locaux",
     propA: { candidateId: "knafo", text: "Organiser au minimum deux référendums locaux par an" },
     propB: { candidateId: "mariani", text: "Organiser un référendum chaque fois que 5% du corps électoral en fait la demande" }
   },
   {
     id: 47,
-    theme: "Démocratie locale",
+    theme: "Vie démocratique",
     subtopic: "Conseils de quartier",
     propA: { candidateId: "bournazel", text: "Instaurer une gouvernance citoyenne avec des conseils de quartier renforcés et décisionnaires" },
     propB: { candidateId: "mariani", text: "Élire tous les conseils de quartier tous les 3 ans et les consulter pour tout projet les concernant" }
@@ -903,28 +1010,28 @@ const DUELS = [
   // --- TRANSPORT (ajouts) ---
   {
     id: 52,
-    theme: "Transport",
+    theme: "Transports & Mobilités",
     subtopic: "Parking",
     propA: { candidateId: "mariani", text: "Créer 20 000 places de stationnement supplémentaires en parking souterrain" },
     propB: { candidateId: "bournazel", text: "Créer 30 000 places de parking-relais gratuites aux portes de Paris" }
   },
   {
     id: 53,
-    theme: "Transport",
+    theme: "Transports & Mobilités",
     subtopic: "Avenir du périphérique",
     propA: { candidateId: "bournazel", text: "Adapter les vitesses du périphérique selon les horaires : 50 km/h en pointe, 70 km/h en heures creuses" },
     propB: { candidateId: "chikirou", text: "Transformer le périphérique en boulevard urbain végétalisé" }
   },
   {
     id: 54,
-    theme: "Transport",
+    theme: "Transports & Mobilités",
     subtopic: "Métro la nuit",
     propA: { candidateId: "mariani", text: "Ouvrir le métro la nuit sur les lignes automatiques le week-end" },
     propB: { candidateId: "gregoire", text: "Obtenir le métro 24h/24 le week-end pour une ville qui ne dort jamais" }
   },
   {
     id: 55,
-    theme: "Transport",
+    theme: "Transports & Mobilités",
     subtopic: "ZTL centre de Paris",
     propA: { candidateId: "dati", text: "Mettre fin à la Zone à Trafic Limité (ZTL) du centre de Paris" },
     propB: { candidateId: "mariani", text: "Supprimer la Zone à Trafic Limité (ZTL) du centre de Paris" }
@@ -1076,14 +1183,14 @@ const DUELS = [
   // --- PATRIMOINE / CULTURE (ajouts) ---
   {
     id: 75,
-    theme: "Patrimoine et beauté de la ville",
+    theme: "Patrimoine & beauté",
     subtopic: "Embellissement",
     propA: { candidateId: "knafo", text: "Restaurer le mobilier urbain historique de Paris : bancs Davioud, réverbères classiques, grilles d'arbres en fonte" },
     propB: { candidateId: "dati", text: "Adopter une charte « Paris du beau » pour garantir l'esthétique des aménagements urbains" }
   },
   {
     id: 76,
-    theme: "Culture",
+    theme: "Culture et loisirs",
     subtopic: "Horaires culturels",
     propA: { candidateId: "knafo", text: "Ouvrir les musées municipaux en nocturne deux soirs par semaine et les bibliothèques le dimanche" },
     propB: { candidateId: "dati", text: "Ouvrir les bibliothèques municipales le dimanche et en soirée" }
@@ -1092,14 +1199,14 @@ const DUELS = [
   // --- ÉCOLOGIE (ajouts) ---
   {
     id: 77,
-    theme: "Écologie et végétalisation",
+    theme: "Espaces verts & biodiversité",
     subtopic: "Plantation d'arbres",
     propA: { candidateId: "mariani", text: "Planter 50 000 arbres supplémentaires à Paris" },
     propB: { candidateId: "chikirou", text: "Végétaliser 300 hectares et déimperméabiliser 40% du territoire parisien d'ici 2032" }
   },
   {
     id: 78,
-    theme: "Écologie et végétalisation",
+    theme: "Espaces verts & biodiversité",
     subtopic: "Nouveaux espaces verts",
     propA: { candidateId: "bournazel", text: "Transformer la Petite Ceinture en poumon vert continu : promenades, jardins potagers et espaces sportifs" },
     propB: { candidateId: "dati", text: "Désasphalter massivement Paris pour créer des îlots de fraîcheur" }
@@ -1108,14 +1215,14 @@ const DUELS = [
   // --- COMMERCE (ajouts) ---
   {
     id: 79,
-    theme: "Commerce",
+    theme: "Économie & commerces",
     subtopic: "Revitalisation commerces",
     propA: { candidateId: "mariani", text: "Lancer un programme « 1 000 commerces » pour revitaliser les rues commerçantes de Paris" },
     propB: { candidateId: "chikirou", text: "Tripler les locaux commerciaux publics avec des loyers abaissés pour les commerces de proximité" }
   },
   {
     id: 80,
-    theme: "Commerce",
+    theme: "Économie & commerces",
     subtopic: "Ouverture dominicale",
     propA: { candidateId: "bournazel", text: "Faire de Paris une Zone Touristique Unique pour autoriser l'ouverture dominicale des commerces" },
     propB: { candidateId: "npa", text: "Arrêter les dérogations au repos dominical" }
@@ -1124,7 +1231,7 @@ const DUELS = [
   // --- PROPRETÉ (ajouts) ---
   {
     id: 81,
-    theme: "Propreté",
+    theme: "Propreté et déchets",
     subtopic: "Lutte contre les nuisibles",
     propA: { candidateId: "chikirou", text: "Porter le budget de lutte contre les rats à 15 millions d'euros par an" },
     propB: { candidateId: "dati", text: "Mettre en place un plan anti-prolifération des nuisibles (rats, punaises de lit)" }
@@ -1158,9 +1265,178 @@ const DUELS = [
   // --- DÉMOCRATIE LOCALE (ajouts) ---
   {
     id: 85,
-    theme: "Démocratie locale",
+    theme: "Vie démocratique",
     subtopic: "Participation citoyenne",
     propA: { candidateId: "chikirou", text: "Augmenter le budget participatif de 5% à 15% du budget d'investissement (300 millions d'euros)" },
     propB: { candidateId: "knafo", text: "Référendum obligatoire pour tout projet municipal dépassant 10 millions d'euros" }
+  },
+
+  // --- ÉCOLOGIE (nouveaux duels Grégoire/Dati) ---
+  {
+    id: 86,
+    theme: "Espaces verts & biodiversité",
+    subtopic: "Lutte contre la chaleur",
+    propA: { candidateId: "dati", text: "Plan Grand Chaud : rafraîchissement des rues, brumisateurs, fontaines, ombrages" },
+    propB: { candidateId: "gregoire", text: "Objectif au moins un trottoir ombragé dans chaque rue pour anticiper les canicules" }
+  },
+  {
+    id: 87,
+    theme: "Espaces verts & biodiversité",
+    subtopic: "Végétalisation",
+    propA: { candidateId: "dati", text: "Créer 500 nouvelles bandes végétalisées durables avec arrosage et désherbage garantis" },
+    propB: { candidateId: "gregoire", text: "300 nouveaux hectares de jardins ouverts au public avec horaires étendus toute l'année" }
+  },
+  {
+    id: 88,
+    theme: "Espaces verts & biodiversité",
+    subtopic: "Périphérique",
+    propA: { candidateId: "gregoire", text: "Transformation du périphérique en boulevard urbain relié par une grande ceinture verte" },
+    propB: { candidateId: "bournazel", text: "Transformer les portes de Paris en véritables places urbaines végétalisées" }
+  },
+  {
+    id: 89,
+    theme: "Espaces verts & biodiversité",
+    subtopic: "Bruit urbain",
+    propA: { candidateId: "dati", text: "Plan de lutte contre la pollution sonore avec radars anti-bruit et zones apaisées" },
+    propB: { candidateId: "gregoire", text: "Déploiement de capteurs et radars sonores pour réduire le bruit à l'échelle de chaque quartier" }
+  },
+  {
+    id: 90,
+    theme: "Espaces verts & biodiversité",
+    subtopic: "Promenades vertes",
+    propA: { candidateId: "gregoire", text: "25 km de promenade continue et végétalisée le long des berges de Seine" },
+    propB: { candidateId: "dati", text: "Débitumer 100 hectares de sols parisiens pour lutter contre les îlots de chaleur" }
+  },
+
+  // --- PROPRETÉ (nouveaux duels Grégoire) ---
+  {
+    id: 91,
+    theme: "Propreté et déchets",
+    subtopic: "Méthode de nettoyage",
+    propA: { candidateId: "gregoire", text: "Brigades anti-incivilités au sein de la police municipale contre les infractions de propreté" },
+    propB: { candidateId: "bournazel", text: "Privatiser la collecte des déchets et le nettoiement des rues pour économiser 742 millions" }
+  },
+  {
+    id: 92,
+    theme: "Propreté et déchets",
+    subtopic: "Réduction des déchets",
+    propA: { candidateId: "gregoire", text: "Moins 100 000 tonnes de déchets : compostage dans tous les quartiers et tri dans l'espace public" },
+    propB: { candidateId: "dati", text: "Brigades d'intervention d'urgence propreté prêtes à agir plusieurs fois par jour" }
+  },
+
+  // --- SOLIDARITÉ (nouveaux duels Grégoire) ---
+  {
+    id: 93,
+    theme: "Solidarité",
+    subtopic: "Sans-abri",
+    propA: { candidateId: "gregoire", text: "Création de 4 000 places d'hébergement d'urgence et réquisition des logements vides depuis 5 ans" },
+    propB: { candidateId: "chikirou", text: "Atteindre l'objectif zéro sans-abri à Paris avant la fin du mandat" }
+  },
+  {
+    id: 94,
+    theme: "Solidarité",
+    subtopic: "Précarité menstruelle",
+    propA: { candidateId: "gregoire", text: "Distribuer gratuitement des protections périodiques dans les équipements publics parisiens" },
+    propB: { candidateId: "chikirou", text: "Ouvrir des restaurants populaires avec des menus bio et locaux à prix solidaires" }
+  },
+
+  // --- CULTURE (nouveaux duels Grégoire) ---
+  {
+    id: 95,
+    theme: "Culture et loisirs",
+    subtopic: "Accès aux musées",
+    propA: { candidateId: "gregoire", text: "Tarifs réduits dans les grands musées nationaux pour tous les Parisiens en négociant avec l'État" },
+    propB: { candidateId: "dati", text: "Créer un grand orchestre parisien des collèges avec 1 000 collégiens de tous les arrondissements" }
+  },
+  {
+    id: 96,
+    theme: "Culture et loisirs",
+    subtopic: "Bibliothèques",
+    propA: { candidateId: "gregoire", text: "Étendre les horaires des bibliothèques et des musées municipaux" },
+    propB: { candidateId: "knafo", text: "Investir massivement dans la restauration du patrimoine architectural de Paris" }
+  },
+
+  // --- SPORT (nouveaux duels Grégoire) ---
+  {
+    id: 97,
+    theme: "Sport",
+    subtopic: "Sport féminin",
+    propA: { candidateId: "gregoire", text: "Promouvoir la pratique sportive féminine en doublant les créneaux dédiés" },
+    propB: { candidateId: "chikirou", text: "Gratuité des activités sportives municipales pour tous les moins de 25 ans" }
+  },
+  {
+    id: 98,
+    theme: "Sport",
+    subtopic: "Horaires sportifs",
+    propA: { candidateId: "gregoire", text: "Étendre les horaires des gymnases et piscines municipales et poursuivre leur rénovation" },
+    propB: { candidateId: "dati", text: "Ouvrir plus de créneaux sportifs sur des plages horaires élargies toute l'année" }
+  },
+
+  // --- COMMERCE (nouveaux duels Grégoire) ---
+  {
+    id: 99,
+    theme: "Économie & commerces",
+    subtopic: "Locaux vacants",
+    propA: { candidateId: "gregoire", text: "Mise aux enchères des locaux commerciaux vacants depuis plus de 12 mois" },
+    propB: { candidateId: "dati", text: "Obligation d'une étude d'impact sur le commerce pour chaque grand projet d'aménagement" }
+  },
+  {
+    id: 100,
+    theme: "Économie & commerces",
+    subtopic: "PME et ESS",
+    propA: { candidateId: "gregoire", text: "Small Business Act : 50% de la commande publique orientée vers les PME et l'ESS" },
+    propB: { candidateId: "bournazel", text: "Lancer un plan zéro boutique fermée dans les quartiers parisiens" }
+  },
+
+  // --- DÉMOCRATIE LOCALE (nouveaux duels Grégoire) ---
+  {
+    id: 101,
+    theme: "Vie démocratique",
+    subtopic: "Référendums locaux",
+    propA: { candidateId: "gregoire", text: "Référendums et votations locales d'initiative partagée ouverts à tous quelle que soit la nationalité" },
+    propB: { candidateId: "mariani", text: "Organiser des référendums municipaux sur les grands projets d'urbanisme" }
+  },
+  {
+    id: 102,
+    theme: "Vie démocratique",
+    subtopic: "Grand Paris",
+    propA: { candidateId: "gregoire", text: "Élire à terme un Maire du Grand Paris pour une action coordonnée" },
+    propB: { candidateId: "bournazel", text: "Créer un conseil de quartier avec un vrai budget pour les riverains" }
+  },
+
+  // --- SÉCURITÉ (nouveaux duels Grégoire) ---
+  {
+    id: 103,
+    theme: "Sécurité",
+    subtopic: "Sécurité nocturne",
+    propA: { candidateId: "gregoire", text: "Un droit à la nuit pour les femmes : éclairage renforcé et dispositif d'alerte sur les abribus" },
+    propB: { candidateId: "mariani", text: "Rétablir un couvre-feu pour les mineurs de moins de 16 ans dans certains quartiers" }
+  },
+
+  // --- VIEILLESSE (nouveaux duels) ---
+  {
+    id: 104,
+    theme: "Séniors",
+    subtopic: "Aménagement seniors",
+    propA: { candidateId: "dati", text: "Aménager l'espace public pour les personnes âgées : assises, îlots de fraîcheur, prévention des chutes" },
+    propB: { candidateId: "gregoire", text: "Un espace public adapté aux seniors : bancs à intervalles réguliers, trottoirs désencombrés" }
+  },
+
+  // --- SANTÉ (nouveaux duels) ---
+  {
+    id: 105,
+    theme: "Santé",
+    subtopic: "Urgences",
+    propA: { candidateId: "dati", text: "Plan de désengorgement des urgences avec maisons de santé dans chaque arrondissement" },
+    propB: { candidateId: "gregoire", text: "100% d'alimentation bio et locale dans les cantines et crèches municipales" }
+  },
+
+  // --- HANDICAP (nouveau duel) ---
+  {
+    id: 106,
+    theme: "Solidarité & accessibilité",
+    subtopic: "Accessibilité bâtiments",
+    propA: { candidateId: "gregoire", text: "100% des bâtiments municipaux accessibles d'ici 2030 avec balises sonores pour malvoyants" },
+    propB: { candidateId: "chikirou", text: "Rendre 100% des équipements municipaux accessibles avant la fin de la mandature" }
   }
 ];
