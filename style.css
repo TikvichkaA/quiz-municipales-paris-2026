@@ -497,7 +497,7 @@ body {
   align-items: center;
   gap: 2px;
   flex-shrink: 0;
-  padding: 8px 0 20px;
+  padding: 8px 0 70px;
 }
 
 .duel-both,
@@ -895,7 +895,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 24px;
-  padding: 4px 0 24px;
+  padding: 4px 0 70px;
   flex-shrink: 0;
 }
 
@@ -1618,6 +1618,98 @@ body {
 .toast.visible {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+}
+
+/* ====== ACCUEIL COMPARE LINK ====== */
+.accueil-compare-link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* ====== QUIZ TUTORIAL OVERLAY ====== */
+.quiz-tutorial {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 90;
+  padding: 20px;
+  animation: fadeOverlay 0.3s ease;
+}
+
+@keyframes fadeOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.quiz-tutorial-card {
+  background: var(--blanc);
+  border-radius: var(--radius-xl);
+  padding: 32px 24px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--shadow-float);
+}
+
+.quiz-tutorial-card h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: var(--noir);
+}
+
+.tutorial-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.tutorial-action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: var(--gris-600);
+  line-height: 1.4;
+}
+
+.tutorial-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tutorial-icon-right {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--emeraude);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.tutorial-icon-left {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--rouge);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.tutorial-icon-up {
+  background: rgba(150, 150, 150, 0.1);
+  color: var(--gris-500);
+  border: 1px solid rgba(150, 150, 150, 0.2);
+}
+
+.tutorial-hint {
+  font-size: 0.78rem;
+  color: var(--gris-400);
+  margin-bottom: 24px;
 }
 
 /* ====== RESPONSIVE ====== */

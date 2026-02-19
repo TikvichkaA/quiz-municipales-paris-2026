@@ -97,6 +97,95 @@ function startQuiz(count) {
 
   showScreen('quiz');
   renderCard();
+  showTutorial();
+}
+
+// ====== GO BACK (PREVIOUS QUESTION) ======
+function goBackQuiz() {
+  if (quizState.isAnimating) return;
+  if (quizState.currentIndex > 0) {
+    const lastAnswer = quizState.answers.pop();
+    if (lastAnswer) {
+      if (lastAnswer.type === 'favorable') {
+        quizState.scores[lastAnswer.proposition.candidateId] -= 1;
+      } else if (lastAnswer.type === 'defavorable') {
+        quizState.scores[lastAnswer.proposition.candidateId] += 1;
+      }
+    }
+    quizState.currentIndex--;
+    renderCard();
+  } else {
+    showScreen('accueil');
+  }
+}
+
+function goBackDuel() {
+  if (duelState.isAnimating) return;
+  if (duelState.currentIndex > 0) {
+    const lastAnswer = duelState.answers.pop();
+    if (lastAnswer) {
+      const duel = lastAnswer.duel;
+      const choice = lastAnswer.choice;
+      if (choice === 'a') {
+        duelState.scores[duel.propA.candidateId] -= 1;
+        duelState.scores[duel.propB.candidateId] += 1;
+      } else if (choice === 'b') {
+        duelState.scores[duel.propB.candidateId] -= 1;
+        duelState.scores[duel.propA.candidateId] += 1;
+      } else if (choice === 'both') {
+        duelState.scores[duel.propA.candidateId] -= 1;
+        duelState.scores[duel.propB.candidateId] -= 1;
+      }
+    }
+    duelState.currentIndex--;
+    renderDuel();
+  } else {
+    showScreen('accueil');
+  }
+}
+
+// ====== QUIZ TUTORIAL ======
+function showTutorial() {
+  const overlay = document.createElement('div');
+  overlay.id = 'quiz-tutorial';
+  overlay.className = 'quiz-tutorial';
+  overlay.innerHTML = `
+    <div class="quiz-tutorial-card">
+      <h3>Comment ça marche ?</h3>
+      <div class="tutorial-actions">
+        <div class="tutorial-action">
+          <div class="tutorial-icon tutorial-icon-right">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <span>Swipez à <strong>droite</strong> = <strong>favorable</strong></span>
+        </div>
+        <div class="tutorial-action">
+          <div class="tutorial-icon tutorial-icon-left">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </div>
+          <span>Swipez à <strong>gauche</strong> = <strong>défavorable</strong></span>
+        </div>
+        <div class="tutorial-action">
+          <div class="tutorial-icon tutorial-icon-up">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/></svg>
+          </div>
+          <span>Swipez vers le <strong>haut</strong> = <strong>neutre</strong></span>
+        </div>
+      </div>
+      <p class="tutorial-hint">Vous pouvez aussi utiliser les boutons en bas de l'écran.</p>
+      <button class="btn-primary" onclick="dismissTutorial()">C'est compris !</button>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+}
+
+function dismissTutorial() {
+  const overlay = document.getElementById('quiz-tutorial');
+  if (overlay) {
+    overlay.style.opacity = '0';
+    overlay.style.transition = 'opacity 0.3s ease';
+    setTimeout(() => overlay.remove(), 300);
+  }
 }
 
 // ====== RENDER CARD ======
@@ -307,7 +396,7 @@ function showResults() {
   document.getElementById('winner-score').textContent = winner.affinity + '%';
   document.getElementById('winner-party').textContent = winner.party;
   const scoreEl = document.getElementById('winner-score');
-  scoreEl.style.background = `linear-gradient(135deg, ${winner.color}, var(--cyan))`;
+  scoreEl.style.background = `linear-gradient(135deg, ${winner.color}, var(--bleu))`;
   scoreEl.style.webkitBackgroundClip = 'text';
   scoreEl.style.webkitTextFillColor = 'transparent';
   scoreEl.style.backgroundClip = 'text';
@@ -538,7 +627,7 @@ function launchConfetti() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
-  const colors = ['#7c3aed', '#4f46e5', '#06b6d4', '#10b981', '#ec4899', '#f97316', '#22c55e'];
+  const colors = ['#f44e07', '#ff7a3d', '#0000c4', '#10b981', '#e53e3e', '#f97316', '#3333d6'];
   const particles = [];
   const count = 80;
 
@@ -796,7 +885,7 @@ function showDuelResults() {
   document.getElementById('duel-winner-score').textContent = winner.affinity + '%';
   document.getElementById('duel-winner-party').textContent = winner.party;
   const scoreEl = document.getElementById('duel-winner-score');
-  scoreEl.style.background = `linear-gradient(135deg, ${winner.color}, var(--cyan))`;
+  scoreEl.style.background = `linear-gradient(135deg, ${winner.color}, var(--bleu))`;
   scoreEl.style.webkitBackgroundClip = 'text';
   scoreEl.style.webkitTextFillColor = 'transparent';
   scoreEl.style.backgroundClip = 'text';
