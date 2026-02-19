@@ -622,7 +622,125 @@ const PROPOSITIONS = [
 
   // === GRÉGOIRE — Transport (compléments manquants) ===
   { id: 430, theme: "Transports & Mobilités", text: "Créer une Coopérative vélo permettant à ses adhérents de disposer d'un vélo sur longue durée avec assurance à prix abordable, et d'en changer selon ses besoins (vélo-cargo, places enfants, vélo adapté PMR)", candidateId: "gregoire" },
-  { id: 431, theme: "Transports & Mobilités", text: "Un plan de sécurité routière « zéro mort, zéro blessé grave » avec priorité à la protection des usagers vulnérables, nouveaux radars sur les grands axes accidentogènes et généralisation de la vidéoverbalisation", candidateId: "gregoire" }
+  { id: 431, theme: "Transports & Mobilités", text: "Un plan de sécurité routière « zéro mort, zéro blessé grave » avec priorité à la protection des usagers vulnérables, nouveaux radars sur les grands axes accidentogènes et généralisation de la vidéoverbalisation", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Éducation (compléments Excel) ===
+  { id: 432, theme: "Éducation", text: "Lutter contre les inégalités scolaires dans les quartiers populaires en défendant l'excellence de nos écoles publiques et en mettant en place un accompagnement renforcé pour les élèves qui en ont besoin.", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Jeunesse (compléments Excel) ===
+  { id: 433, theme: "Jeunesse", text: "Des mini mobiliers urbains à hauteur d'enfant dans les rues aux écoles.", candidateId: "gregoire" },
+  { id: 434, theme: "Jeunesse", text: "Pérenniser les Olympiades d'arrondissement et faire du sport une fête populaire toute l'année grâce à de grands jeux interscolaires", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Sécurité (compléments Excel) ===
+  { id: 435, theme: "Sécurité", text: "Une police municipale plus nombreuse (+1000 policiers), mieux équipée, présente sur le terrain 24h sur 24, et plus accessible, grâce à l'installation de kiosques dans chaque arrondissement et sur les points chauds", candidateId: "gregoire" },
+  { id: 436, theme: "Sécurité", text: "Recours ciblé à la vidéoprotection, avec 500 nouvelles caméras actives mobiles", candidateId: "gregoire" },
+  { id: 437, theme: "Sécurité", text: "Lutte contre les discriminations et le sexisme dans l'espace public avec une formation spécifique de la police municipale", candidateId: "gregoire" },
+  { id: 438, theme: "Sécurité", text: "Une stratégie de prévention renforcée, grâce à des médiateurs référents dans chaque établissement scolaire et équipement sportif.", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Sport (compléments Excel) ===
+  { id: 439, theme: "Sport", text: "Faire du sport un droit tout au long de la vie en garantissant à chaque enfant un accès aux savoirs sportifs fondamentaux (savoir nager, savoir rouler), en renforçant les Maisons Sport Santé pour lutter contre la sédentarité, et en développant Paris Sport Seniors", candidateId: "gregoire" },
+  { id: 440, theme: "Sport", text: "Faciliter le sport dans l'espace public à travers des installations dédiées, pour une pratique en plein air accessible et gratuite", candidateId: "gregoire" },
+  { id: 441, theme: "Sport", text: "Développer l'héritage des Jeux Paralympiques à travers le soutien et le développement de nouveaux clubs para-accueillants et grâce à des créneaux 100% inclusifs pour favoriser la pratique du handisport", candidateId: "gregoire" },
+  { id: 442, theme: "Sport", text: "Développer le sport grand-parisien, avec plus d'équipements mutualisés entre les différentes communes, pour accroître les possibilités de créneaux et de disciplines", candidateId: "gregoire" },
+  { id: 443, theme: "Sport", text: "Généraliser le jeu et le sport mixtes dans toutes les écoles en aménageant les cours, organisant des temps de jeux collectifs et mixtes, et formant le personnel éducatif pour favoriser l'égalité et la mixité dès la maternelle", candidateId: "gregoire" },
+  { id: 444, theme: "Sport", text: "Sanctuariser les subventions aux associations féministes et appliquer l'éga-conditionnalité dans le sport et la culture pour garantir entre les femmes et les hommes.", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Culture et loisirs (compléments Excel) ===
+  { id: 445, theme: "Culture et loisirs", text: "Créer un réseau des Maisons des Pratiques Artistiques Amateurs métropolitaines, pour développer la pratique amateur et la soutenir à l'échelle du Grand Paris", candidateId: "gregoire" },
+  { id: 446, theme: "Culture et loisirs", text: "Créer Paris Culture, un portail et une application répertoriant les offres des institutions culturelles parisiennes à prix négociés et adaptés pour tous les publics", candidateId: "gregoire" },
+  { id: 447, theme: "Culture et loisirs", text: "Aménager un grand parc dédié à la culture et à l'art dans l'espace public allant des Champs-Elysées aux Tuileries en passant par la Concorde", candidateId: "gregoire" },
+  { id: 448, theme: "Culture et loisirs", text: "Réserver un jour par an la Tour Eiffel aux visites des écoliers parisiens et franciliens", candidateId: "gregoire" },
+  { id: 449, theme: "Culture et loisirs", text: "Développer un réseau d'ateliers, de lieux de répétition et de création", candidateId: "gregoire" },
+  { id: 450, theme: "Culture et loisirs", text: "Soutenir la diversité culturelle, notamment à travers un accompagnement renforcé de la culture hip-hop à l'échelle du Grand Paris pour les artistes, les associations et les projets d'éducation populaire", candidateId: "gregoire" },
+  { id: 451, theme: "Culture et loisirs", text: "Créer un grand rendez-vous international de l'image, des arts numériques et des jeux vidéo, mêlant salons professionnels et événements festifs et gratuits partout dans Paris", candidateId: "gregoire" },
+  { id: 452, theme: "Culture et loisirs", text: "Organiser chaque année un grand festival culturel des Portes de Paris", candidateId: "gregoire" },
+  { id: 453, theme: "Culture et loisirs", text: "Favoriser l'accessibilité des lieux festifs au plus grand nombre en travaillant avec les établissements et les festivals pour faire du Grand Paris une référence en matière de fête populaire et inclusive", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Propreté et déchets (compléments Excel) ===
+  { id: 454, theme: "Propreté et déchets", text: "La propreté, l'affaire de tous: une application «Dans Ma Rue » toujours plus efficace, la responsabilisation des propriétaires de locaux vacants pour lutter contre les tags et des moyens renforcés pour le service public de la propreté, avec notamment une flotte de véhicules 100% électrique pour réduire le bruit", candidateId: "gregoire" },
+  { id: 455, theme: "Propreté et déchets", text: "Développement des emballages réemployables et consignés, en débutant par les chaînes de vente à emporter pour réduire les déchets et améliorer la propreté.", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Espaces verts & biodiversité (compléments Excel) ===
+  { id: 456, theme: "Espaces verts & biodiversité", text: "Transformation des places de la République, du Trocadéro, de la Concorde, d'Italie, de la Bataille de Stalingrad et Gambetta, cœurs battants de leurs quartiers comme des grands événements de la vie parisienne", candidateId: "gregoire" },
+  { id: 457, theme: "Espaces verts & biodiversité", text: "Renaissance de la Bièvre et poursuite de la coulée verte le long de son tracé", candidateId: "gregoire" },
+  { id: 458, theme: "Espaces verts & biodiversité", text: "Transformer le Parc des Princes et la Porte de Saint-Cloud en un quartier de vie ouvert, vert et populaire, avec un stade agrandi, des équipements sportifs de proximité, un espace muséographique et un cadre de vie apaisé: végétalisation massive des abords du Parc et couverture partielle du périphérique pour créer un grand espace métropolitain", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Logement (compléments Excel) ===
+  { id: 459, theme: "Logement", text: "La lutte contre la spéculation, avec la taxation et la réquisition des logements restés vacants depuis plus de 5 ans, l'interdiction de nouvelles résidences secondaires et des meublés touristiques permanents de type Airbnb", candidateId: "gregoire" },
+  { id: 460, theme: "Logement", text: "Une assurance habitation municipale accessible à toutes et à tous, incluant une protection contre les punaises de lit", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Séniors (compléments Excel) ===
+  { id: 461, theme: "Séniors", text: "Sport, culture, loisirs, santé: des activités et des services publics pensés par et pour les seniors grâce à des comités d'usagers dédiés, et un engagement facilité dans le bénévolat et la vie associative", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Solidarité & accessibilité (compléments Excel) ===
+  { id: 462, theme: "Solidarité & accessibilité", text: "Renforcement des permanences délocalisées de la MDPH dans tous les arrondissements", candidateId: "gregoire" },
+  { id: 463, theme: "Solidarité & accessibilité", text: "Un accompagnement personnalisé de tous les allocataires du RSA, favorisant l'accès à la formation et aux métiers en tension, notamment ceux du service public municipal.", candidateId: "gregoire" },
+  { id: 464, theme: "Solidarité & accessibilité", text: "La prise en compte du genre dans l'aménagement de l'espace public, en associant les usagères à chaque étape", candidateId: "gregoire" },
+  { id: 465, theme: "Solidarité & accessibilité", text: "Soutien à la mise en accessibilité, pour des commerces inclusifs", candidateId: "gregoire" },
+  { id: 466, theme: "Solidarité & accessibilité", text: "Créer une mission municipale en charge de la lutte contre le racisme, l'antisémitisme, et la haine anti-LGBTQIA+, dotée de référents dans chaque arrondissement pouvant être saisis par les usagers et chargée de superviser la formation des agents municipaux pour assurer les standards les plus élevés en la matière", candidateId: "gregoire" },
+  { id: 467, theme: "Solidarité & accessibilité", text: "Réaliser de grandes campagnes de testing pour lutter contre les discriminations dans tous les domaines (logement, emploi, accès aux établissements privés et publics…) et démultiplier l'offre de permanences juridiques pour soutenir les victimes de discriminations", candidateId: "gregoire" },
+  { id: 468, theme: "Solidarité & accessibilité", text: "Accélérer le rééquilibrage dans la représentation des femmes et de la diversité des cultures qui font Paris dans nos rues et nos avenues, et notamment renommer les avenues Léopold II dans le 16e et Lamoricière dans le 12e", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Services publics (compléments Excel) ===
+  { id: 469, theme: "Services publics", text: "Un service public solidaire de la naissance à la mort, notamment avec une prise en charge du coût et des démarches funéraires pour les plus précaires et le développement de nouveaux lieux pour les cérémonies funéraires.", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Économie & commerces (compléments Excel) ===
+  { id: 470, theme: "Économie & commerces", text: "Soutien à la diversité commerciale, aux marchés alimentaires, à l'artisanat et à l'économie sociale et solidaire grâce à l'animation des quartiers (événements locaux, illuminations de Noël…)", candidateId: "gregoire" },
+  { id: 471, theme: "Économie & commerces", text: "Création d'un fonds participatif pour permettre aux Parisiennes et aux Parisiens de mettre leur épargne au service des commerces de quartier, avec une sécurisation par la Ville", candidateId: "gregoire" },
+  { id: 472, theme: "Économie & commerces", text: "Un service de collecte des déchets alimentaires et des cartons proposé aux petits commerces, plus compétitif que les tarifs élevés des prestataires privés", candidateId: "gregoire" },
+  { id: 473, theme: "Économie & commerces", text: "Une grande braderie parisienne solidaire et festive chaque année pour faire vivre nos quartiers en favorisant l'économie circulaire", candidateId: "gregoire" },
+  { id: 474, theme: "Économie & commerces", text: "Piloter une stratégie de développement économique avec les professionnels rassemblés en comités de filière (immobilier et foncier, emploi, innovation…)", candidateId: "gregoire" },
+  { id: 475, theme: "Économie & commerces", text: "Créer un « Pacte de Responsabilité Territoriale des Entreprises » pour mobiliser toutes les entreprises du territoire parisien, petites et grandes, en faveur d'objectifs d'intérêt général: formation et insertion professionnelle, partage de données et de connaissances, co-financement de projets…", candidateId: "gregoire" },
+  { id: 476, theme: "Économie & commerces", text: "Développer les liens avec des territoires partenaires pour structurer des filières d'approvisionnement en circuit court.", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Vie démocratique (compléments Excel) ===
+  { id: 477, theme: "Vie démocratique", text: "Une nouvelle ère des conseils de quartier, avec des modalités de concertation et de contribution diversifiées pour faciliter la participation du plus grand nombre", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Défense des droits (compléments Excel) ===
+  { id: 478, theme: "Défense des droits", text: "Organiser, en lien avec l'UNESCO, une semaine internationale de l'éducation, qui fédérera chaque année à Paris l'ensemble des acteurs de l'éducation autour de conférences, rencontres professionnelles et événements ouverts au public", candidateId: "gregoire" },
+  { id: 479, theme: "Défense des droits", text: "Soutenir la liberté de la presse en accueillant et protégeant les journalistes exilés", candidateId: "gregoire" },
+  { id: 480, theme: "Défense des droits", text: "Créer un Prix international de la Ville de Paris pour la défense des droits humains", candidateId: "gregoire" },
+  { id: 481, theme: "Défense des droits", text: "Soutenir activement les associations et la pluralité des lieux LGBTQIA+ dans tous les arrondissements", candidateId: "gregoire" },
+  { id: 482, theme: "Défense des droits", text: "Créer des lieux refuges LGBTQIA+ jeunes: des espaces sûrs dans les centres d'animation pour écouter, protéger et accompagner les jeunes face aux violences et aux discriminations", candidateId: "gregoire" },
+  { id: 483, theme: "Défense des droits", text: "Assurer une égalité d'accès réelle aux services publics pour les familles LGBTQIA+, en prenant notamment mieux en compte les réalités des familles trans et homoparentales et en simplifiant et accélérant les démarches de changement d'état civil", candidateId: "gregoire" },
+  { id: 484, theme: "Défense des droits", text: "Accompagner les LGBTQIA+ séniors, en garantissant des services séniors inclusifs, avec formation des professionnels et labellisation des établissements, pour permettre aux aînés de vieillir dignement sans renoncer à leur identité.", candidateId: "gregoire" },
+  { id: 485, theme: "Défense des droits", text: "Protéger les femmes victimes de violences: création de nouvelles Maisons des femmes permettant une prise en charge médicale, psychologique, sociale et juridique 24h sur 24, et d'hébergements d'urgence disponibles dans tous les arrondissements", candidateId: "gregoire" },
+  { id: 486, theme: "Défense des droits", text: "Déployer un plan « IVG sans entrave », pour défendre et garantir le droit à l'avortement", candidateId: "gregoire" },
+  { id: 487, theme: "Défense des droits", text: "Mettre en place une expérimentation sur le récépissé de contrôle d'identité pour lutter contre les discriminations, en lien avec la Préfecture de Police.", candidateId: "gregoire" },
+  { id: 488, theme: "Défense des droits", text: "Généraliser les « lieux refuges » dans tous les événements organisés à Paris (espaces permettant d'accueillir les personnes se sentant exposées à des comportements violents et/ou discriminants).", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Vie associative & quartiers (compléments Excel) ===
+  { id: 489, theme: "Vie associative & quartiers", text: "Création d'un permis de piétonisation temporaire, pour permettre à chacun d'organiser, sous réserve que la rue s'y prête, un événement associatif, sportif, festif ou familial en bas de chez soi", candidateId: "gregoire" },
+  { id: 490, theme: "Vie associative & quartiers", text: "Une place pour les animaux de compagnie: ouverture des parcs aux chiens tenus en laisse dans certaines zones, des consultations vétérinaires solidaires dans la Maison de l'Animal en Ville et un jardin du souvenir", candidateId: "gregoire" },
+  { id: 491, theme: "Vie associative & quartiers", text: "Ouvrir l'Hôtel de Ville toute l'année aux associations, pour en faire un cœur battant de la vie citoyenne parisienne", candidateId: "gregoire" },
+  { id: 492, theme: "Vie associative & quartiers", text: "Faciliter l'accès aux bâtiments municipaux et la mutualisation des locaux pour l'organisation d'événements et réunions", candidateId: "gregoire" },
+  { id: 493, theme: "Vie associative & quartiers", text: "Sécuriser les subventions par des conventions de financement pluriannuelles et créer un fonds d'urgence pour les associations en difficulté", candidateId: "gregoire" },
+  { id: 494, theme: "Vie associative & quartiers", text: "Structurer un parcours de formation gratuit pour les dirigeantes et dirigeants associatifs", candidateId: "gregoire" },
+  { id: 495, theme: "Vie associative & quartiers", text: "Soutenir les associations qui font vivre les quartiers populaires (accompagnement scolaire, accès à la culture, aide aux familles monoparentales…) et défendre les actions de « politique de la ville » face à l'État qui réduit son soutien", candidateId: "gregoire" },
+  { id: 496, theme: "Vie associative & quartiers", text: "Développer les Volontaires de Paris, faciliter leur mise en relation avec les associations grâce à une application citoyenne et valoriser le bénévolat ainsi que les aidants (accès prioritaire « coupe-file » aux équipements municipaux pour valoriser le temps donné à autrui, accès à des certifications valorisant les compétences acquises).", candidateId: "gregoire" },
+  { id: 497, theme: "Vie associative & quartiers", text: "Ouvrir un réseau de salles des fêtes municipales à tarifs abordables et de 100 cours d'école, une par quartier, pour offrir à toutes les familles des lieux de rencontre et de convivialité", candidateId: "gregoire" },
+  { id: 498, theme: "Vie associative & quartiers", text: "Face à la solitude et à l'isolement, créer « Paris à vos côtés » pour mettre en place, dans chaque quartier, un réseau structuré d'acteurs et de lieux de proximité, pour trouver près de chez soi un lieu de sociabilité", candidateId: "gregoire" },
+  { id: 499, theme: "Vie associative & quartiers", text: "Organiser dans tous les arrondissements un accueil systématique des nouveaux résidents, combinant information sur les services locaux et temps conviviaux réguliers, afin de prévenir l'isolement et de faciliter la création de premiers liens de voisinage.", candidateId: "gregoire" },
+  { id: 500, theme: "Vie associative & quartiers", text: "Prioriser les investissements publics dans les quartiers populaires: nouveaux équipements culturels, équipements de propreté et embellissement des rues, nouvelles structures de santé, épiceries bio et solidaires…", candidateId: "gregoire" },
+  { id: 501, theme: "Vie associative & quartiers", text: "Un nouveau site de baignade et de loisirs dans le port de l'Arsenal: la Plage de la Bastille", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Recherche & Innovation (compléments Excel) ===
+  { id: 502, theme: "Recherche & Innovation", text: "Faire du Grand Paris la première région universitaire et de recherche du monde, en soutenant les Universités parisiennes, notamment dans leurs projets urbains, et en ouvrant les campus sur la ville", candidateId: "gregoire" },
+  { id: 503, theme: "Recherche & Innovation", text: "Placer la science au cœur du débat et des politiques publiques, en associant les laboratoires et chercheurs parisiens à l'action municipale à travers un comité scientifique", candidateId: "gregoire" },
+  { id: 504, theme: "Recherche & Innovation", text: "Créer un service public de la donnée d'intérêt général, alliant Open Data et souveraineté numérique, et fixer un objectif «Ville Zéro délai, Zéro Formulaire » grâce au déploiement d'une Intelligence Artificielle de service public", candidateId: "gregoire" },
+  { id: 505, theme: "Recherche & Innovation", text: "Développer l'Université permanente de Paris: rendre la connaissance accessible à toutes et à tous, qu'il s'agisse d'acquérir les savoirs fondamentaux, de se former en continu face aux grandes mutations technologiques, de se reconvertir tout simplement pour le plaisir d'apprendre", candidateId: "gregoire" },
+  { id: 506, theme: "Recherche & Innovation", text: "Créer une deuxième « Station F » dédiée à l'IA, à la fois incubateur, campus et lieu de formation pour toutes et tous", candidateId: "gregoire" },
+  { id: 507, theme: "Recherche & Innovation", text: "Proposer une offre de logements de courte durée à prix abordables pour accueillir étudiants, doctorants et chercheurs", candidateId: "gregoire" },
+  { id: 508, theme: "Recherche & Innovation", text: "Instaurer un guichet unique pour faciliter l'accueil et les démarches des chercheurs étrangers réfugiés, en exil ou en coopération.", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Tourisme (compléments Excel) ===
+  { id: 509, theme: "Tourisme", text: "Mettre en valeur la diversité du patrimoine et des événements parisiens et métropolitains, pour équilibrer les flux touristiques et éviter le surtourisme dans certains quartiers", candidateId: "gregoire" },
+  { id: 510, theme: "Tourisme", text: "Créer un pack de bienvenue (réductions dans les musées, monuments, etc.) pour les visiteurs qui arrivent à Paris en train ou par un autre mode de transport durable", candidateId: "gregoire" },
+  { id: 511, theme: "Tourisme", text: "Développer le cyclo-tourisme francilien, avec la Grande Boucle Verte de Paris au Havre pour achever les 500 km de continuités marchables et cyclables longeant les boucles de la Seine en coopération avec l'ensemble des communes concernées, la continuité cyclable le long des canaux et la jonction Seine-et-Marne", candidateId: "gregoire" },
+  { id: 512, theme: "Tourisme", text: "Obliger les cars de tourisme à stationner dans des parkings dédiés pour désengorger la chaussée, renforcer la sécurité et éviter les conflits.", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Alimentation (compléments Excel) ===
+  { id: 513, theme: "Alimentation", text: "Droit à l'alimentation saine et durable et sécurité sociale de l'alimentation: soutien aux coopératives, caisses et associations d'aide alimentaire, réseau municipal d'épiceries, halles et supermarchés bios et solidaires, ouverture de nouveaux restaurants municipaux aux publics précaires ou isolés.", candidateId: "gregoire" }
 ];
 
 // ====== DUELS ======
