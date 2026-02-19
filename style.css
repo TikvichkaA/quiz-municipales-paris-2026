@@ -438,7 +438,9 @@ body {
   color: var(--noir);
   -webkit-tap-highlight-color: transparent;
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   box-shadow: var(--shadow-card);
 }
 
@@ -458,6 +460,8 @@ body {
   font-weight: 500;
   line-height: 1.5;
   color: var(--gris-600);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .duel-card.chosen {
@@ -860,10 +864,14 @@ body {
   line-height: 1.55;
   color: var(--noir);
   max-width: 340px;
+  flex: 1;
+  min-height: 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: var(--gris-300) transparent;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .swipe-hints {
@@ -1705,7 +1713,7 @@ body {
 /* ====== RESPONSIVE ====== */
 @media (max-width: 480px) {
   .container { padding: 0 16px; }
-  .accueil-content { padding: 48px 0 20px; }
+  .accueil-content { padding: 48px 0 48px; }
   .accueil-content h1 { font-size: 1.6rem; }
   .accueil-subtitle { font-size: 0.88rem; margin-bottom: 28px; }
   .duration-section { padding: 24px 16px; margin-top: 24px; }
@@ -1716,7 +1724,7 @@ body {
   .card-theme { font-size: 0.62rem; margin-bottom: 10px; padding: 4px 10px; }
   .btn-defavorable, .btn-favorable { width: 56px; height: 56px; }
   .btn-neutre { width: 44px; height: 44px; }
-  .action-buttons { gap: 20px; padding: 12px 0 20px; }
+  .action-buttons { gap: 20px; padding: 12px 0 44px; }
   .winner-name { font-size: 1.3rem; }
   .winner-score { font-size: 2.4rem; }
   .comparaison-grid { grid-template-columns: 1fr; }
@@ -1736,7 +1744,7 @@ body {
 
 @media (max-height: 680px) {
   .quiz-header { padding: 8px 0 4px; }
-  .action-buttons { padding: 8px 0 12px; }
+  .action-buttons { padding: 8px 0 44px; }
   .swipe-hints { padding-top: 2px; }
   .accueil-content { padding-top: 24px; }
   .accueil-badge { margin-bottom: 12px; }

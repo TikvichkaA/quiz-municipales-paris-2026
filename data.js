@@ -618,7 +618,11 @@ const PROPOSITIONS = [
 
   // === GRÉGOIRE — Santé (enrichissement) ===
   { id: 428, theme: "Santé", text: "Lutte à la source contre les pollutions de l'eau et de l'air (PFAS, pesticides, particules fines, perturbateurs endocriniens)", candidateId: "gregoire" },
-  { id: 429, theme: "Santé", text: "100% d'alimentation bio, locale et durable dans les cantines et crèches municipales avec goûter gratuit", candidateId: "gregoire" }
+  { id: 429, theme: "Santé", text: "100% d'alimentation bio, locale et durable dans les cantines et crèches municipales avec goûter gratuit", candidateId: "gregoire" },
+
+  // === GRÉGOIRE — Transport (compléments manquants) ===
+  { id: 430, theme: "Transports & Mobilités", text: "Créer une Coopérative vélo permettant à ses adhérents de disposer d'un vélo sur longue durée avec assurance à prix abordable, et d'en changer selon ses besoins (vélo-cargo, places enfants, vélo adapté PMR)", candidateId: "gregoire" },
+  { id: 431, theme: "Transports & Mobilités", text: "Un plan de sécurité routière « zéro mort, zéro blessé grave » avec priorité à la protection des usagers vulnérables, nouveaux radars sur les grands axes accidentogènes et généralisation de la vidéoverbalisation", candidateId: "gregoire" }
 ];
 
 // ====== DUELS ======
