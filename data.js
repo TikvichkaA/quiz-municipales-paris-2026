@@ -27,15 +27,15 @@ const THEMES = [
   "Logement",
   "Séniors",
   "Solidarité & accessibilité",
-  "Solidarité",
   "Patrimoine & beauté",
   "Services publics",
   "Économie & commerces",
-  "Probité",
   "Immigration",
   "Vie démocratique",
-  "Urbanisme",
-  "Emploi et travail"
+  "Défense des droits",
+  "Vie associative & quartiers",
+  "Recherche & Innovation",
+  "Tourisme"
 ];
 
 const PROPOSITIONS = [
@@ -263,7 +263,7 @@ const PROPOSITIONS = [
   { id: 193, theme: "Solidarité & accessibilité", text: "Atteindre l'objectif de 10% de travailleurs handicapés dans l'administration parisienne", candidateId: "chikirou" },
 
   // === SOLIDARITÉ ===
-  { id: 194, theme: "Solidarité", text: "Mettre en place un dispositif de veille solidaire dans chaque quartier parisien", candidateId: "dati" },
+  { id: 194, theme: "Solidarité & accessibilité", text: "Mettre en place un dispositif de veille solidaire dans chaque quartier parisien", candidateId: "dati" },
 
   // === PATRIMOINE ET BEAUTÉ DE LA VILLE ===
   { id: 195, theme: "Patrimoine & beauté", text: "Retirer toutes les barrières de chantier des travaux terminés dans un délai de 48h", candidateId: "dati" },
@@ -284,8 +284,8 @@ const PROPOSITIONS = [
   { id: 206, theme: "Économie & commerces", text: "Créer des marchés éphémères de producteurs locaux dans tous les arrondissements", candidateId: "dati" },
 
   // === PROBITÉ ===
-  { id: 207, theme: "Probité", text: "Garantir l'exemplarité des élus avec une charte éthique contraignante", candidateId: "bournazel" },
-  { id: 208, theme: "Probité", text: "Instaurer une gouvernance citoyenne avec des conseils de quartier renforcés et décisionnaires", candidateId: "bournazel" },
+  { id: 207, theme: "Vie démocratique", text: "Garantir l'exemplarité des élus avec une charte éthique contraignante", candidateId: "bournazel" },
+  { id: 208, theme: "Vie démocratique", text: "Instaurer une gouvernance citoyenne avec des conseils de quartier renforcés et décisionnaires", candidateId: "bournazel" },
 
   // ============================================
   // SARAH KNAFO (Reconquête)
@@ -329,9 +329,9 @@ const PROPOSITIONS = [
   { id: 235, theme: "Jeunesse", text: "Créer une résidence étudiante pour les meilleurs étudiants de France et les apprentis", candidateId: "knafo" },
 
   // === URBANISME (Knafo) ===
-  { id: 236, theme: "Urbanisme", text: "Abroger le PLU bioclimatique et revenir à un PLU garantissant l'harmonie architecturale", candidateId: "knafo" },
-  { id: 237, theme: "Urbanisme", text: "Réautoriser l'éclairage des vitrines des commerces la nuit", candidateId: "knafo" },
-  { id: 238, theme: "Urbanisme", text: "Réautoriser les terrasses chauffées", candidateId: "knafo" },
+  { id: 236, theme: "Patrimoine & beauté", text: "Abroger le PLU bioclimatique et revenir à un PLU garantissant l'harmonie architecturale", candidateId: "knafo" },
+  { id: 237, theme: "Patrimoine & beauté", text: "Réautoriser l'éclairage des vitrines des commerces la nuit", candidateId: "knafo" },
+  { id: 238, theme: "Patrimoine & beauté", text: "Réautoriser les terrasses chauffées", candidateId: "knafo" },
   { id: 239, theme: "Espaces verts & biodiversité", text: "Embellir les parcs et jardins en replantant des fleurs", candidateId: "knafo" },
   { id: 240, theme: "Espaces verts & biodiversité", text: "Rendre tous les espaces verts accessibles aux chiens tenus en laisse (sauf aires de jeux enfants)", candidateId: "knafo" },
 
@@ -367,7 +367,7 @@ const PROPOSITIONS = [
   { id: 257, theme: "Logement", text: "Instaurer la priorité nationale pour l'accès au logement social, en privilégiant les familles et les travailleurs", candidateId: "mariani" },
   { id: 258, theme: "Logement", text: "Rénover massivement le parc de logements sociaux et privés", candidateId: "mariani" },
   { id: 259, theme: "Logement", text: "Proposer des aides au déménagement adapté pour les locataires, combinées à une réduction de loyer", candidateId: "mariani" },
-  { id: 260, theme: "Solidarité", text: "Créer des résidences sécurisées pour les victimes de violences conjugales", candidateId: "mariani" },
+  { id: 260, theme: "Solidarité & accessibilité", text: "Créer des résidences sécurisées pour les victimes de violences conjugales", candidateId: "mariani" },
   { id: 261, theme: "Logement", text: "Développer l'habitat intergénérationnel (étudiants-seniors) pour lutter contre l'isolement", candidateId: "mariani" },
 
   // === TRANSPORT (Mariani) ===
@@ -394,7 +394,7 @@ const PROPOSITIONS = [
 
   // === CULTURE / PATRIMOINE (Mariani) ===
   { id: 276, theme: "Culture et loisirs", text: "Restaurer le patrimoine historique de Paris et recentrer le budget culture sur le patrimoine", candidateId: "mariani" },
-  { id: 277, theme: "Urbanisme", text: "Créer une charte renforcée de respect de l'urbanisme parisien et des immeubles haussmanniens", candidateId: "mariani" },
+  { id: 277, theme: "Patrimoine & beauté", text: "Créer une charte renforcée de respect de l'urbanisme parisien et des immeubles haussmanniens", candidateId: "mariani" },
 
   // === IMMIGRATION (Mariani) ===
   { id: 278, theme: "Immigration", text: "Créer une brigade anti-campements clandestins pour démanteler les camps illicites", candidateId: "mariani" },
@@ -410,18 +410,18 @@ const PROPOSITIONS = [
   // ============================================
 
   // === EMPLOI ET TRAVAIL (NPA) ===
-  { id: 283, theme: "Emploi et travail", text: "Interdire les licenciements et augmenter tous les salaires d'au moins 400 euros par mois", candidateId: "npa" },
-  { id: 284, theme: "Emploi et travail", text: "Mettre fin à la sous-traitance et titulariser tous les travailleurs précaires (contractuels, sous-traitants)", candidateId: "npa" },
-  { id: 285, theme: "Emploi et travail", text: "Partager le temps de travail entre tous pour éliminer le chômage", candidateId: "npa" },
-  { id: 286, theme: "Emploi et travail", text: "Embaucher et titulariser tous les agents municipaux (ATSEM, jardiniers, bibliothécaires, animateurs)", candidateId: "npa" },
-  { id: 287, theme: "Emploi et travail", text: "Arrêter les dérogations au repos dominical", candidateId: "npa" },
+  { id: 283, theme: "Économie & commerces", text: "Interdire les licenciements et augmenter tous les salaires d'au moins 400 euros par mois", candidateId: "npa" },
+  { id: 284, theme: "Économie & commerces", text: "Mettre fin à la sous-traitance et titulariser tous les travailleurs précaires (contractuels, sous-traitants)", candidateId: "npa" },
+  { id: 285, theme: "Économie & commerces", text: "Partager le temps de travail entre tous pour éliminer le chômage", candidateId: "npa" },
+  { id: 286, theme: "Économie & commerces", text: "Embaucher et titulariser tous les agents municipaux (ATSEM, jardiniers, bibliothécaires, animateurs)", candidateId: "npa" },
+  { id: 287, theme: "Économie & commerces", text: "Arrêter les dérogations au repos dominical", candidateId: "npa" },
 
   // === LOGEMENT (NPA) ===
   { id: 288, theme: "Logement", text: "Réquisitionner sans indemnité les logements et bureaux vacants pour les transformer en logements", candidateId: "npa" },
   { id: 289, theme: "Logement", text: "Arrêter toutes les expulsions locatives et d'hébergement", candidateId: "npa" },
   { id: 290, theme: "Logement", text: "Construire massivement des logements sociaux, encadrer, geler et baisser les loyers", candidateId: "npa" },
   { id: 291, theme: "Logement", text: "Plan massif de rénovation des logements et résidences universitaires", candidateId: "npa" },
-  { id: 292, theme: "Solidarité", text: "Développer l'hébergement d'urgence dans des conditions dignes et salubres", candidateId: "npa" },
+  { id: 292, theme: "Solidarité & accessibilité", text: "Développer l'hébergement d'urgence dans des conditions dignes et salubres", candidateId: "npa" },
 
   // === SERVICES PUBLICS (NPA) ===
   { id: 293, theme: "Services publics", text: "Arrêter toutes les privatisations et fermetures de classes, municipaliser les services publics", candidateId: "npa" },
@@ -508,8 +508,8 @@ const PROPOSITIONS = [
   { id: 354, theme: "Santé", text: "Créer une mutuelle municipale populaire à tarif solidaire pour tous les Parisiens", candidateId: "chikirou" },
   { id: 355, theme: "Économie & commerces", text: "Tripler les locaux commerciaux publics avec des loyers abaissés pour les commerces de proximité", candidateId: "chikirou" },
   { id: 356, theme: "Vie démocratique", text: "Augmenter le budget participatif de 5% à 15% du budget d'investissement (300 millions d'euros)", candidateId: "chikirou" },
-  { id: 357, theme: "Solidarité", text: "Atteindre l'objectif zéro sans-abri à Paris avant la fin du mandat", candidateId: "chikirou" },
-  { id: 358, theme: "Solidarité", text: "Ouvrir des restaurants populaires avec des menus bio et locaux à prix solidaires", candidateId: "chikirou" },
+  { id: 357, theme: "Solidarité & accessibilité", text: "Atteindre l'objectif zéro sans-abri à Paris avant la fin du mandat", candidateId: "chikirou" },
+  { id: 358, theme: "Solidarité & accessibilité", text: "Ouvrir des restaurants populaires avec des menus bio et locaux à prix solidaires", candidateId: "chikirou" },
   { id: 359, theme: "Espaces verts & biodiversité", text: "Moratoire sur la construction de bureaux neufs à Paris", candidateId: "chikirou" },
   { id: 360, theme: "Sécurité", text: "Porter la police municipale à 3 500 agents avec une charte interdisant les contrôles au faciès", candidateId: "chikirou" },
 
@@ -555,11 +555,11 @@ const PROPOSITIONS = [
   { id: 387, theme: "Espaces verts & biodiversité", text: "Transformation du périphérique en boulevard urbain relié par une grande ceinture verte", candidateId: "gregoire" },
 
   // === GRÉGOIRE — Solidarité (nouveau) ===
-  { id: 388, theme: "Solidarité", text: "Création de 4 000 places d'hébergement d'urgence et réquisition des logements vides depuis plus de 5 ans", candidateId: "gregoire" },
-  { id: 389, theme: "Solidarité", text: "Objectif zéro enfant à la rue avec obligation de mise à l'abri pour les mineurs non accompagnés", candidateId: "gregoire" },
-  { id: 390, theme: "Solidarité", text: "Un Revenu Solidarité Jeunesse sous condition de ressources pour les jeunes de l'Aide Sociale à l'Enfance", candidateId: "gregoire" },
-  { id: 391, theme: "Solidarité", text: "100% de recours aux droits grâce à des permanences mobiles dans chaque quartier", candidateId: "gregoire" },
-  { id: 392, theme: "Solidarité", text: "Distribuer gratuitement des protections périodiques dans les équipements publics parisiens", candidateId: "gregoire" },
+  { id: 388, theme: "Solidarité & accessibilité", text: "Création de 4 000 places d'hébergement d'urgence et réquisition des logements vides depuis plus de 5 ans", candidateId: "gregoire" },
+  { id: 389, theme: "Solidarité & accessibilité", text: "Objectif zéro enfant à la rue avec obligation de mise à l'abri pour les mineurs non accompagnés", candidateId: "gregoire" },
+  { id: 390, theme: "Solidarité & accessibilité", text: "Un Revenu Solidarité Jeunesse sous condition de ressources pour les jeunes de l'Aide Sociale à l'Enfance", candidateId: "gregoire" },
+  { id: 391, theme: "Solidarité & accessibilité", text: "100% de recours aux droits grâce à des permanences mobiles dans chaque quartier", candidateId: "gregoire" },
+  { id: 392, theme: "Solidarité & accessibilité", text: "Distribuer gratuitement des protections périodiques dans les équipements publics parisiens", candidateId: "gregoire" },
 
   // === GRÉGOIRE — Commerce (enrichissement) ===
   { id: 393, theme: "Économie & commerces", text: "Encadrement des loyers commerciaux pour lutter contre la spéculation via la foncière Paris Commerces", candidateId: "gregoire" },
@@ -740,7 +740,7 @@ const PROPOSITIONS = [
   { id: 512, theme: "Tourisme", text: "Obliger les cars de tourisme à stationner dans des parkings dédiés pour désengorger la chaussée, renforcer la sécurité et éviter les conflits.", candidateId: "gregoire" },
 
   // === GRÉGOIRE — Alimentation (compléments Excel) ===
-  { id: 513, theme: "Alimentation", text: "Droit à l'alimentation saine et durable et sécurité sociale de l'alimentation: soutien aux coopératives, caisses et associations d'aide alimentaire, réseau municipal d'épiceries, halles et supermarchés bios et solidaires, ouverture de nouveaux restaurants municipaux aux publics précaires ou isolés.", candidateId: "gregoire" }
+  { id: 513, theme: "Santé", text: "Droit à l'alimentation saine et durable et sécurité sociale de l'alimentation: soutien aux coopératives, caisses et associations d'aide alimentaire, réseau municipal d'épiceries, halles et supermarchés bios et solidaires, ouverture de nouveaux restaurants municipaux aux publics précaires ou isolés.", candidateId: "gregoire" }
 ];
 
 // ====== DUELS ======
@@ -1362,7 +1362,7 @@ const DUELS = [
   // --- SOLIDARITÉ (ajouts) ---
   {
     id: 82,
-    theme: "Solidarité",
+    theme: "Solidarité & accessibilité",
     subtopic: "Sans-abri",
     propA: { candidateId: "chikirou", text: "Atteindre l'objectif zéro sans-abri à Paris avant la fin du mandat" },
     propB: { candidateId: "npa", text: "Développer l'hébergement d'urgence dans des conditions dignes et salubres" }
@@ -1449,14 +1449,14 @@ const DUELS = [
   // --- SOLIDARITÉ (nouveaux duels Grégoire) ---
   {
     id: 93,
-    theme: "Solidarité",
+    theme: "Solidarité & accessibilité",
     subtopic: "Sans-abri",
     propA: { candidateId: "gregoire", text: "Création de 4 000 places d'hébergement d'urgence et réquisition des logements vides depuis 5 ans" },
     propB: { candidateId: "chikirou", text: "Atteindre l'objectif zéro sans-abri à Paris avant la fin du mandat" }
   },
   {
     id: 94,
-    theme: "Solidarité",
+    theme: "Solidarité & accessibilité",
     subtopic: "Précarité menstruelle",
     propA: { candidateId: "gregoire", text: "Distribuer gratuitement des protections périodiques dans les équipements publics parisiens" },
     propB: { candidateId: "chikirou", text: "Ouvrir des restaurants populaires avec des menus bio et locaux à prix solidaires" }
