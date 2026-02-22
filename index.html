@@ -36,27 +36,38 @@
           Municipales Paris 2026
         </div>
         <h1>De quel candidat<br>êtes-vous le plus proche&nbsp;?</h1>
-        <p class="accueil-subtitle">Découvrez vos affinités avec les 7 candidats grâce à deux modes de jeu.</p>
+        <p class="accueil-subtitle">Découvrez vos affinités avec les 7 candidats grâce à trois modes de jeu.</p>
 
         <div class="mode-selection">
-          <button class="mode-card" onclick="showClassicMode()">
-            <div class="mode-card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 012-2h2a2 2 0 012 2M9 5h6"/></svg>
+          <button class="mode-card" onclick="startQuiz(35)">
+            <div class="mode-card-icon mode-card-icon-match">
+              <span class="mode-card-emoji">💘</span>
             </div>
             <div class="mode-card-text">
-              <strong>Quiz classique</strong>
-              <span>Swipez les propositions des 7 candidats</span>
+              <strong>Matche avec ton candidat</strong>
+              <span>Swipe les propositions comme sur Tinder · ~5 min</span>
             </div>
             <svg class="mode-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
           </button>
 
           <button class="mode-card" onclick="startDuel()">
             <div class="mode-card-icon mode-card-icon-duel">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v18M18 3v18M6 12h12M6 7h12M6 17h12"/></svg>
+              <span class="mode-card-emoji">⚔️</span>
             </div>
             <div class="mode-card-text">
               <strong>Mode duel</strong>
-              <span>Choisissez entre 2 propositions concrètes sur le même sujet</span>
+              <span>2 propositions face à face, choisis ta préférée · ~3 min</span>
+            </div>
+            <svg class="mode-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+
+          <button class="mode-card" onclick="startQuestionnaire()">
+            <div class="mode-card-icon mode-card-icon-questionnaire">
+              <span class="mode-card-emoji">🗳️</span>
+            </div>
+            <div class="mode-card-text">
+              <strong>Questionnaire par thème</strong>
+              <span>Pour chaque thème, choisis la proposition qui te parle · ~4 min</span>
             </div>
             <svg class="mode-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
           </button>
@@ -64,20 +75,6 @@
 
         <button class="btn-ghost accueil-compare-link" onclick="showScreen('comparaison')">Comparer les programmes →</button>
 
-        <div class="duration-section" id="classic-duration" style="display: none;">
-          <p class="duration-label">De combien de temps disposez-vous ?</p>
-          <div class="duration-buttons">
-            <button class="btn-duration" onclick="startQuiz(25)">
-              <span class="duration-time">3 min</span>
-              <span class="duration-detail">25 propositions</span>
-            </button>
-            <button class="btn-duration" onclick="startQuiz(50)">
-              <span class="duration-time">6 min</span>
-              <span class="duration-detail">50 propositions</span>
-            </button>
-          </div>
-          <p class="duration-hint">Plus vous répondez, plus le résultat est fiable.</p>
-        </div>
       </div>
     </div>
   </section>
@@ -223,6 +220,108 @@
         <h2>Détail de vos duels</h2>
       </div>
       <div class="duel-detail-list" id="duel-detail-list"></div>
+    </div>
+  </section>
+
+  <!-- ====== ÉCRAN QUESTIONNAIRE ====== -->
+  <section id="screen-questionnaire" class="screen">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="container">
+      <div class="quiz-header">
+        <button class="btn-back" onclick="goBackQuestion()" aria-label="Question précédente">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress-fill" id="questionnaire-progress-fill"></div>
+          </div>
+          <span class="progress-text" id="questionnaire-progress-text">1 / 13</span>
+        </div>
+      </div>
+
+      <div class="questionnaire-question">
+        <span class="questionnaire-theme-label" id="questionnaire-theme"></span>
+        <p class="questionnaire-prompt">Quelle proposition vous convient le mieux ?</p>
+      </div>
+
+      <div class="questionnaire-choices" id="questionnaire-choices"></div>
+
+      <div class="questionnaire-bottom">
+        <button class="questionnaire-skip" onclick="answerQuestion(-1)">Aucune ne me convient</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ÉCRAN RÉSULTATS QUESTIONNAIRE ====== -->
+  <section id="screen-questionnaire-resultats" class="screen">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-3"></div>
+    <div class="container">
+      <div class="resultats-content">
+        <h2 class="resultats-title">Vos résultats — Questionnaire</h2>
+        <div class="resultats-winner" id="questionnaire-resultats-winner">
+          <p class="winner-label">En mode questionnaire, vous êtes le plus proche de</p>
+          <div class="winner-name" id="questionnaire-winner-name">Candidat</div>
+          <div class="winner-score" id="questionnaire-winner-score">75%</div>
+          <p class="winner-party" id="questionnaire-winner-party">Parti</p>
+        </div>
+
+        <div class="resultats-bars" id="questionnaire-resultats-bars"></div>
+
+        <div class="resultats-actions">
+          <button class="btn-primary" onclick="shareQuestionnaireResults()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
+            Partager mes résultats
+          </button>
+          <button class="btn-secondary" onclick="showScreen('questionnaire-detail')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 012-2h2a2 2 0 012 2M9 5h6"/></svg>
+            Voir le détail de mes choix
+          </button>
+          <button class="btn-secondary" onclick="showScreen('merci')">Liens utiles</button>
+          <button class="btn-secondary" onclick="showScreen('comparaison')">Comparer les programmes</button>
+          <button class="btn-ghost" onclick="showScreen('accueil')">Recommencer</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ÉCRAN DÉTAIL QUESTIONNAIRE ====== -->
+  <section id="screen-questionnaire-detail" class="screen">
+    <div class="container">
+      <div class="detail-header">
+        <button class="btn-back" onclick="showScreen('questionnaire-resultats')" aria-label="Retour aux résultats">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <h2>Détail de vos choix</h2>
+      </div>
+      <div class="questionnaire-detail-list" id="questionnaire-detail-list"></div>
+    </div>
+  </section>
+
+  <!-- ====== ÉCRAN "IT'S A MATCH!" ====== -->
+  <section id="screen-match" class="screen">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="container">
+      <div class="match-content">
+        <div class="match-heart">💘</div>
+        <h2 class="match-title">It's a Match !</h2>
+        <p class="match-subtitle" id="match-subtitle">Vous êtes à <strong id="match-pct">78%</strong> d'affinité avec</p>
+        <div class="match-candidate-card">
+          <div class="match-candidate-name" id="match-candidate-name">Emmanuel Grégoire</div>
+          <div class="match-candidate-party" id="match-candidate-party">PS / NFP</div>
+          <div class="match-candidate-score" id="match-candidate-score">78%</div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-primary" id="match-btn-results" onclick="showMatchResultsScreen()">Voir tous les résultats</button>
+          <button class="btn-secondary" id="match-btn-share" onclick="shareMatchResults()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
+            Partager
+          </button>
+        </div>
+      </div>
     </div>
   </section>
 

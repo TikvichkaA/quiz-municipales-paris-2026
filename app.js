@@ -28,11 +28,11 @@ function showScreen(screenId) {
   if (screenId === 'duel-detail') {
     renderDuelDetail();
   }
+  if (screenId === 'questionnaire-detail') {
+    renderQuestionnaireDetail();
+  }
   if (screenId === 'accueil') {
-    // Reset mode selection visibility
-    const duration = document.getElementById('classic-duration');
     const modeSelection = document.querySelector('.mode-selection');
-    if (duration) duration.style.display = 'none';
     if (modeSelection) modeSelection.style.display = '';
   }
 }
@@ -377,10 +377,10 @@ function onSwipeEnd() {
 }
 
 // ====== RESULTS ======
-function showResults() {
+function computeResults(scores, counts) {
   const results = CANDIDATES.map(c => {
-    const score = quizState.scores[c.id];
-    const count = quizState.counts[c.id];
+    const score = scores[c.id];
+    const count = counts[c.id];
     let affinity = 50;
     if (count > 0) {
       affinity = ((score + count) / (2 * count)) * 100;
@@ -388,23 +388,15 @@ function showResults() {
     affinity = Math.round(Math.max(0, Math.min(100, affinity)));
     return { ...c, affinity };
   });
-
   results.sort((a, b) => b.affinity - a.affinity);
+  return results;
+}
 
-  const winner = results[0];
-  document.getElementById('winner-name').textContent = winner.name;
-  document.getElementById('winner-score').textContent = winner.affinity + '%';
-  document.getElementById('winner-party').textContent = winner.party;
-  const scoreEl = document.getElementById('winner-score');
-  scoreEl.style.background = `linear-gradient(135deg, ${winner.color}, var(--bleu))`;
-  scoreEl.style.webkitBackgroundClip = 'text';
-  scoreEl.style.webkitTextFillColor = 'transparent';
-  scoreEl.style.backgroundClip = 'text';
-
-  const barsContainer = document.getElementById('resultats-bars');
+function renderResultsBars(containerId, results) {
+  const barsContainer = document.getElementById(containerId);
   barsContainer.innerHTML = '';
 
-  results.forEach((r, i) => {
+  results.forEach(r => {
     const item = document.createElement('div');
     item.className = 'result-bar-item';
     item.innerHTML = `
@@ -418,26 +410,40 @@ function showResults() {
     `;
     barsContainer.appendChild(item);
   });
+}
 
-  showScreen('resultats');
-
-  // Staggered bar animation
+function animateResultsBars(containerId) {
   requestAnimationFrame(() => {
-    const bars = document.querySelectorAll('#resultats-bars .result-bar-fill');
+    const bars = document.querySelectorAll('#' + containerId + ' .result-bar-fill');
     bars.forEach((bar, i) => {
       setTimeout(() => {
         bar.style.width = bar.dataset.width + '%';
       }, 150 + i * 120);
     });
   });
+}
 
+function showResults() {
+  const results = computeResults(quizState.scores, quizState.counts);
   quizState.results = results;
+  showMatchScreen(results, 'classique');
+}
 
-  // Celebration
-  setTimeout(() => launchConfetti(), 400);
-  if (navigator.vibrate) {
-    navigator.vibrate([10, 50, 10]);
-  }
+function displayClassiqueResults() {
+  const results = quizState.results;
+  const winner = results[0];
+  document.getElementById('winner-name').textContent = winner.name;
+  document.getElementById('winner-score').textContent = winner.affinity + '%';
+  document.getElementById('winner-party').textContent = winner.party;
+  const scoreEl = document.getElementById('winner-score');
+  scoreEl.style.background = `linear-gradient(135deg, ${winner.color}, var(--bleu))`;
+  scoreEl.style.webkitBackgroundClip = 'text';
+  scoreEl.style.webkitTextFillColor = 'transparent';
+  scoreEl.style.backgroundClip = 'text';
+
+  renderResultsBars('resultats-bars', results);
+  showScreen('resultats');
+  animateResultsBars('resultats-bars');
 }
 
 // ====== SHARE ======
@@ -689,16 +695,6 @@ function launchConfetti() {
   animate();
 }
 
-// ====== ACCUEIL MODE SELECTION ======
-function showClassicMode() {
-  const duration = document.getElementById('classic-duration');
-  const modeSelection = document.querySelector('.mode-selection');
-  if (duration.style.display === 'none' || duration.style.display === '') {
-    duration.style.display = 'block';
-    duration.style.animation = 'screenIn 0.3s var(--ease-out) both';
-    modeSelection.style.display = 'none';
-  }
-}
 
 // ====== DUEL STATE ======
 let duelState = {
@@ -867,19 +863,13 @@ function answerDuel(choice) {
 
 // ====== DUEL RESULTS ======
 function showDuelResults() {
-  const results = CANDIDATES.map(c => {
-    const score = duelState.scores[c.id];
-    const count = duelState.counts[c.id];
-    let affinity = 50;
-    if (count > 0) {
-      affinity = ((score + count) / (2 * count)) * 100;
-    }
-    affinity = Math.round(Math.max(0, Math.min(100, affinity)));
-    return { ...c, affinity };
-  });
+  const results = computeResults(duelState.scores, duelState.counts);
+  duelState.results = results;
+  showMatchScreen(results, 'duel');
+}
 
-  results.sort((a, b) => b.affinity - a.affinity);
-
+function displayDuelResults() {
+  const results = duelState.results;
   const winner = results[0];
   document.getElementById('duel-winner-name').textContent = winner.name;
   document.getElementById('duel-winner-score').textContent = winner.affinity + '%';
@@ -890,39 +880,9 @@ function showDuelResults() {
   scoreEl.style.webkitTextFillColor = 'transparent';
   scoreEl.style.backgroundClip = 'text';
 
-  const barsContainer = document.getElementById('duel-resultats-bars');
-  barsContainer.innerHTML = '';
-
-  results.forEach(r => {
-    const item = document.createElement('div');
-    item.className = 'result-bar-item';
-    item.innerHTML = `
-      <div class="result-bar-header">
-        <span class="result-bar-name">${r.name}</span>
-        <span class="result-bar-pct" style="color:${r.color}">${r.affinity}%</span>
-      </div>
-      <div class="result-bar-track">
-        <div class="result-bar-fill" style="background:${r.color}" data-width="${r.affinity}"></div>
-      </div>
-    `;
-    barsContainer.appendChild(item);
-  });
-
+  renderResultsBars('duel-resultats-bars', results);
   showScreen('duel-resultats');
-
-  requestAnimationFrame(() => {
-    const bars = document.querySelectorAll('#duel-resultats-bars .result-bar-fill');
-    bars.forEach((bar, i) => {
-      setTimeout(() => {
-        bar.style.width = bar.dataset.width + '%';
-      }, 150 + i * 120);
-    });
-  });
-
-  duelState.results = results;
-
-  setTimeout(() => launchConfetti(), 400);
-  if (navigator.vibrate) navigator.vibrate([10, 50, 10]);
+  animateResultsBars('duel-resultats-bars');
 }
 
 // ====== DUEL DETAIL ======
@@ -983,6 +943,301 @@ function shareDuelResults() {
 
   if (navigator.share) {
     navigator.share({ title: 'Quiz Municipales Paris 2026 — Mode Duel', text, url }).catch(() => {});
+  } else if (navigator.clipboard) {
+    navigator.clipboard.writeText(text + ' ' + url).then(() => {
+      showToast('Copié dans le presse-papier !');
+    }).catch(() => fallbackCopy(text + ' ' + url));
+  } else {
+    fallbackCopy(text + ' ' + url);
+  }
+}
+
+// ====== MATCH SCREEN ======
+let matchMode = null; // 'classique', 'duel', 'questionnaire'
+
+function showMatchScreen(results, mode) {
+  matchMode = mode;
+  const winner = results[0];
+
+  document.getElementById('match-pct').textContent = winner.affinity + '%';
+  document.getElementById('match-candidate-name').textContent = winner.name;
+  document.getElementById('match-candidate-party').textContent = winner.party;
+  document.getElementById('match-candidate-score').textContent = winner.affinity + '%';
+
+  // Apply winner color to score
+  const scoreEl = document.getElementById('match-candidate-score');
+  scoreEl.style.background = `linear-gradient(135deg, ${winner.color}, #e91e63)`;
+  scoreEl.style.webkitBackgroundClip = 'text';
+  scoreEl.style.webkitTextFillColor = 'transparent';
+  scoreEl.style.backgroundClip = 'text';
+
+  showScreen('match');
+
+  // Confetti
+  setTimeout(() => launchConfetti(), 400);
+  if (navigator.vibrate) navigator.vibrate([10, 50, 10]);
+}
+
+function showMatchResultsScreen() {
+  if (matchMode === 'classique') {
+    displayClassiqueResults();
+  } else if (matchMode === 'duel') {
+    displayDuelResults();
+  } else if (matchMode === 'questionnaire') {
+    displayQuestionnaireResults();
+  }
+}
+
+function shareMatchResults() {
+  if (matchMode === 'classique') {
+    shareResults();
+  } else if (matchMode === 'duel') {
+    shareDuelResults();
+  } else if (matchMode === 'questionnaire') {
+    shareQuestionnaireResults();
+  }
+}
+
+// ====== QUESTIONNAIRE STATE ======
+let questionnaireState = {
+  questions: [],
+  currentIndex: 0,
+  scores: {},
+  counts: {},
+  answers: [], // { question, chosenIndex } (-1 = skip)
+  results: null,
+  isAnimating: false
+};
+
+// ====== GENERATE QUESTIONS ======
+function generateQuestions() {
+  // Group propositions by theme
+  const byTheme = {};
+  PROPOSITIONS.forEach(p => {
+    if (!byTheme[p.theme]) byTheme[p.theme] = [];
+    byTheme[p.theme].push(p);
+  });
+
+  const questions = [];
+
+  Object.keys(byTheme).forEach(theme => {
+    const props = byTheme[theme];
+    // Group by candidate within theme
+    const byCand = {};
+    props.forEach(p => {
+      if (!byCand[p.candidateId]) byCand[p.candidateId] = [];
+      byCand[p.candidateId].push(p);
+    });
+
+    const candidateIds = Object.keys(byCand);
+    // Filter: need 4+ candidates represented
+    if (candidateIds.length < 4) return;
+
+    // Pick 1 random proposition per candidate
+    const choices = candidateIds.map(cid => {
+      const arr = byCand[cid];
+      const pick = arr[Math.floor(Math.random() * arr.length)];
+      return { candidateId: cid, text: pick.text };
+    });
+
+    // Shuffle choices
+    shuffleArray(choices);
+
+    questions.push({ theme, choices });
+  });
+
+  // Shuffle question order
+  shuffleArray(questions);
+  return questions;
+}
+
+// ====== START QUESTIONNAIRE ======
+function startQuestionnaire() {
+  questionnaireState.questions = generateQuestions();
+  questionnaireState.currentIndex = 0;
+  questionnaireState.scores = {};
+  questionnaireState.counts = {};
+  questionnaireState.answers = [];
+  questionnaireState.isAnimating = false;
+
+  CANDIDATES.forEach(c => {
+    questionnaireState.scores[c.id] = 0;
+    questionnaireState.counts[c.id] = 0;
+  });
+
+  // Count appearances per candidate across all questions
+  questionnaireState.questions.forEach(q => {
+    q.choices.forEach(ch => {
+      questionnaireState.counts[ch.candidateId]++;
+    });
+  });
+
+  showScreen('questionnaire');
+  renderQuestion();
+}
+
+// ====== RENDER QUESTION ======
+function renderQuestion() {
+  const { currentIndex, questions } = questionnaireState;
+  const total = questions.length;
+
+  const pct = (currentIndex / total) * 100;
+  document.getElementById('questionnaire-progress-fill').style.width = pct + '%';
+  document.getElementById('questionnaire-progress-text').textContent = (currentIndex + 1) + ' / ' + total;
+
+  if (currentIndex >= total) {
+    showQuestionnaireResults();
+    return;
+  }
+
+  const q = questions[currentIndex];
+  document.getElementById('questionnaire-theme').textContent = q.theme;
+
+  const container = document.getElementById('questionnaire-choices');
+  container.innerHTML = '';
+
+  q.choices.forEach((ch, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'questionnaire-choice';
+    btn.innerHTML = `<span class="questionnaire-choice-text">${ch.text}</span>`;
+    btn.onclick = () => answerQuestion(i);
+    container.appendChild(btn);
+  });
+
+  questionnaireState.isAnimating = false;
+}
+
+// ====== ANSWER QUESTION ======
+function answerQuestion(choiceIndex) {
+  if (questionnaireState.isAnimating) return;
+  questionnaireState.isAnimating = true;
+
+  const q = questionnaireState.questions[questionnaireState.currentIndex];
+
+  // Record answer
+  questionnaireState.answers.push({ question: q, chosenIndex: choiceIndex });
+
+  // Scoring
+  if (choiceIndex >= 0) {
+    const chosen = q.choices[choiceIndex];
+    questionnaireState.scores[chosen.candidateId] += 1;
+  }
+
+  // Visual feedback
+  const choices = document.querySelectorAll('.questionnaire-choice');
+  if (choiceIndex >= 0) {
+    choices.forEach((ch, i) => {
+      if (i === choiceIndex) {
+        ch.classList.add('chosen');
+      } else {
+        ch.classList.add('fade-out');
+      }
+    });
+  } else {
+    choices.forEach(ch => ch.classList.add('fade-out'));
+  }
+
+  // Haptic
+  if (navigator.vibrate) navigator.vibrate(8);
+
+  setTimeout(() => {
+    questionnaireState.currentIndex++;
+    renderQuestion();
+  }, 400);
+}
+
+// ====== GO BACK QUESTION ======
+function goBackQuestion() {
+  if (questionnaireState.isAnimating) return;
+  if (questionnaireState.currentIndex > 0) {
+    const lastAnswer = questionnaireState.answers.pop();
+    if (lastAnswer && lastAnswer.chosenIndex >= 0) {
+      const chosen = lastAnswer.question.choices[lastAnswer.chosenIndex];
+      questionnaireState.scores[chosen.candidateId] -= 1;
+    }
+    questionnaireState.currentIndex--;
+    renderQuestion();
+  } else {
+    showScreen('accueil');
+  }
+}
+
+// ====== QUESTIONNAIRE RESULTS ======
+function showQuestionnaireResults() {
+  const results = computeResults(questionnaireState.scores, questionnaireState.counts);
+  questionnaireState.results = results;
+  showMatchScreen(results, 'questionnaire');
+}
+
+function displayQuestionnaireResults() {
+  const results = questionnaireState.results;
+  const winner = results[0];
+  document.getElementById('questionnaire-winner-name').textContent = winner.name;
+  document.getElementById('questionnaire-winner-score').textContent = winner.affinity + '%';
+  document.getElementById('questionnaire-winner-party').textContent = winner.party;
+  const scoreEl = document.getElementById('questionnaire-winner-score');
+  scoreEl.style.background = `linear-gradient(135deg, ${winner.color}, var(--bleu))`;
+  scoreEl.style.webkitBackgroundClip = 'text';
+  scoreEl.style.webkitTextFillColor = 'transparent';
+  scoreEl.style.backgroundClip = 'text';
+
+  renderResultsBars('questionnaire-resultats-bars', results);
+  showScreen('questionnaire-resultats');
+  animateResultsBars('questionnaire-resultats-bars');
+}
+
+// ====== QUESTIONNAIRE DETAIL ======
+function renderQuestionnaireDetail() {
+  const list = document.getElementById('questionnaire-detail-list');
+  list.innerHTML = '';
+
+  questionnaireState.answers.forEach((a, i) => {
+    const q = a.question;
+    const chosenIndex = a.chosenIndex;
+
+    const item = document.createElement('div');
+    item.className = 'questionnaire-detail-item';
+    item.style.animationDelay = `${i * 40}ms`;
+
+    let html = `<div class="questionnaire-detail-theme">${q.theme}</div>`;
+
+    if (chosenIndex < 0) {
+      html += '<div class="questionnaire-detail-skip-label">Aucune proposition choisie</div>';
+    }
+
+    html += '<div class="questionnaire-detail-choices">';
+    q.choices.forEach((ch, ci) => {
+      const candidate = CANDIDATES.find(c => c.id === ch.candidateId);
+      const isChosen = ci === chosenIndex;
+      const cls = isChosen ? 'questionnaire-detail-chosen' : (chosenIndex >= 0 ? 'questionnaire-detail-skipped' : '');
+
+      html += `
+        <div>
+          <div class="questionnaire-detail-choice ${cls}">${ch.text}</div>
+          <div class="questionnaire-detail-candidate">
+            <span class="detail-candidate-dot" style="background:${candidate.color}"></span>
+            ${candidate.name}
+          </div>
+        </div>
+      `;
+    });
+    html += '</div>';
+
+    item.innerHTML = html;
+    list.appendChild(item);
+  });
+}
+
+// ====== SHARE QUESTIONNAIRE ======
+function shareQuestionnaireResults() {
+  if (!questionnaireState.results || questionnaireState.results.length === 0) return;
+
+  const winner = questionnaireState.results[0];
+  const text = `En mode questionnaire, je suis à ${winner.affinity}% d'affinité avec ${winner.name} aux municipales de Paris 2026 ! Fais le test →`;
+  const url = window.location.href;
+
+  if (navigator.share) {
+    navigator.share({ title: 'Quiz Municipales Paris 2026 — Questionnaire', text, url }).catch(() => {});
   } else if (navigator.clipboard) {
     navigator.clipboard.writeText(text + ' ' + url).then(() => {
       showToast('Copié dans le presse-papier !');
