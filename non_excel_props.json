@@ -1,0 +1,602 @@
+[
+  {
+    "theme": "Sécurité",
+    "candidateId": "knafo",
+    "text": "Doubler les effectifs de la police municipale pour atteindre 8 000 agents"
+  },
+  {
+    "theme": "Sécurité",
+    "candidateId": "knafo",
+    "text": "Armer la police municipale avec des armes à feu"
+  },
+  {
+    "theme": "Sécurité",
+    "candidateId": "knafo",
+    "text": "Plan de reconquête des zones de non-droit avec interpellations massives (Champs-Élysées, Barbès, La Chapelle)"
+  },
+  {
+    "theme": "Sécurité",
+    "candidateId": "knafo",
+    "text": "Créer une brigade équestre municipale (40 chevaux, 60 cavaliers)"
+  },
+  {
+    "theme": "Sécurité",
+    "candidateId": "knafo",
+    "text": "Créer une brigade canine municipale (30 chiens)"
+  },
+  {
+    "theme": "Sécurité",
+    "candidateId": "knafo",
+    "text": "Équiper les caméras de vidéosurveillance d'intelligence artificielle"
+  },
+  {
+    "theme": "Sécurité",
+    "candidateId": "knafo",
+    "text": "Équiper les réverbères de capteurs sonores IA capables de reconnaître des cris d'agression ou des bruits de vitre cassée"
+  },
+  {
+    "theme": "Sécurité",
+    "candidateId": "knafo",
+    "text": "Renforcer l'éclairage public nocturne dans tous les quartiers"
+  },
+  {
+    "theme": "Finance et gestion budgétaire",
+    "candidateId": "knafo",
+    "text": "Plan d'économies de 10 milliards d'euros sur 10 ans sur la gestion municipale"
+  },
+  {
+    "theme": "Finance et gestion budgétaire",
+    "candidateId": "knafo",
+    "text": "Diviser la taxe foncière par deux dès le premier budget"
+  },
+  {
+    "theme": "Finance et gestion budgétaire",
+    "candidateId": "knafo",
+    "text": "Diviser par deux la taxe d'enlèvement des ordures ménagères et la taxe de balayage"
+  },
+  {
+    "theme": "Finance et gestion budgétaire",
+    "candidateId": "knafo",
+    "text": "Réduire de moitié les effectifs municipaux sur 10 ans (55 000 agents) en ne remplaçant pas les départs naturels"
+  },
+  {
+    "theme": "Propreté et déchets",
+    "candidateId": "knafo",
+    "text": "Privatiser la collecte des ordures et le balayage via appels d'offres, avec reprise garantie de 80% des agents"
+  },
+  {
+    "theme": "Vie démocratique",
+    "candidateId": "knafo",
+    "text": "Organiser au minimum deux référendums locaux par an"
+  },
+  {
+    "theme": "Vie démocratique",
+    "candidateId": "knafo",
+    "text": "Référendum obligatoire pour tout projet municipal dépassant 10 millions d'euros"
+  },
+  {
+    "theme": "Vie démocratique",
+    "candidateId": "knafo",
+    "text": "Donner une valeur exécutoire aux résultats de référendum (le résultat s'impose à la mairie)"
+  },
+  {
+    "theme": "Transports & Mobilités",
+    "candidateId": "knafo",
+    "text": "Réouvrir les voies sur berges à la circulation automobile avec une promenade piétonne et cycliste sur pilotis au-dessus"
+  },
+  {
+    "theme": "Transports & Mobilités",
+    "candidateId": "knafo",
+    "text": "Relever la vitesse maximale sur le périphérique de 50 à 80 km/h"
+  },
+  {
+    "theme": "Transports & Mobilités",
+    "candidateId": "knafo",
+    "text": "Piloter les feux tricolores par intelligence artificielle pour fluidifier le trafic"
+  },
+  {
+    "theme": "Transports & Mobilités",
+    "candidateId": "knafo",
+    "text": "Réduire le tarif du stationnement à 5 euros de l'heure pour tous (contre 37€/h pour les SUV actuellement)"
+  },
+  {
+    "theme": "Transports & Mobilités",
+    "candidateId": "knafo",
+    "text": "Créer un jumeau numérique de Paris pour simuler l'impact de chaque projet d'aménagement avant réalisation"
+  },
+  {
+    "theme": "Logement",
+    "candidateId": "knafo",
+    "text": "Supprimer l'encadrement des loyers"
+  },
+  {
+    "theme": "Logement",
+    "candidateId": "knafo",
+    "text": "Moratoire sur la construction de logements sociaux et sur les préemptions foncières"
+  },
+  {
+    "theme": "Logement",
+    "candidateId": "knafo",
+    "text": "Vendre des logements sociaux (HLM) avec priorité aux occupants actuels, exonérés de frais de notaire"
+  },
+  {
+    "theme": "Logement",
+    "candidateId": "knafo",
+    "text": "Plan d'accession à la propriété pour les classes moyennes avec réduction des frais de notaire"
+  },
+  {
+    "theme": "Logement",
+    "candidateId": "knafo",
+    "text": "Attribuer les logements sociaux via une plateforme en ligne transparente"
+  },
+  {
+    "theme": "Jeunesse",
+    "candidateId": "knafo",
+    "text": "Créer une résidence étudiante pour les meilleurs étudiants de France et les apprentis"
+  },
+  {
+    "theme": "Patrimoine & beauté",
+    "candidateId": "knafo",
+    "text": "Abroger le PLU bioclimatique et revenir à un PLU garantissant l'harmonie architecturale"
+  },
+  {
+    "theme": "Patrimoine & beauté",
+    "candidateId": "knafo",
+    "text": "Réautoriser l'éclairage des vitrines des commerces la nuit"
+  },
+  {
+    "theme": "Patrimoine & beauté",
+    "candidateId": "knafo",
+    "text": "Réautoriser les terrasses chauffées"
+  },
+  {
+    "theme": "Espaces verts & biodiversité",
+    "candidateId": "knafo",
+    "text": "Embellir les parcs et jardins en replantant des fleurs"
+  },
+  {
+    "theme": "Espaces verts & biodiversité",
+    "candidateId": "knafo",
+    "text": "Rendre tous les espaces verts accessibles aux chiens tenus en laisse (sauf aires de jeux enfants)"
+  },
+  {
+    "theme": "Éducation",
+    "candidateId": "knafo",
+    "text": "Servir uniquement des produits issus de l'agriculture française dans les cantines scolaires"
+  },
+  {
+    "theme": "Immigration",
+    "candidateId": "knafo",
+    "text": "Interdire toute occupation illégale de gymnases ou lieux publics par des personnes en situation irrégulière"
+  },
+  {
+    "theme": "Immigration",
+    "candidateId": "knafo",
+    "text": "Fermer le centre d'hébergement de migrants du Bois de Boulogne"
+  },
+  {
+    "theme": "Immigration",
+    "candidateId": "knafo",
+    "text": "Auditer les 99 centres de migrants parisiens gérés par des associations et financés par le contribuable"
+  },
+  {
+    "theme": "Sécurité",
+    "candidateId": "mariani",
+    "text": "Tripler les effectifs de la police municipale pour atteindre 8 350 agents (ratio de 4 policiers pour 1 000 habitants)"
+  },
+  {
+    "theme": "Sécurité",
+    "candidateId": "mariani",
+    "text": "Armer la police municipale et élargir ses prérogatives"
+  },
+  {
+    "theme": "Sécurité",
+    "candidateId": "mariani",
+    "text": "Patrouilles de police municipale 24h/24 dans tous les quartiers"
+  },
+  {
+    "theme": "Sécurité",
+    "candidateId": "mariani",
+    "text": "Créer 7 brigades spécialisées : anti-squats, anti-drogue, anti-campements, transports, circulation, action rapide, quartier"
+  },
+  {
+    "theme": "Sécurité",
+    "candidateId": "mariani",
+    "text": "Tripler le réseau de vidéoprotection pour atteindre 5 000 caméras"
+  },
+  {
+    "theme": "Sécurité",
+    "candidateId": "mariani",
+    "text": "Déployer la vidéosurveillance augmentée par intelligence artificielle"
+  },
+  {
+    "theme": "Sécurité",
+    "candidateId": "mariani",
+    "text": "Installer systématiquement des caméras de surveillance devant les écoles et collèges"
+  },
+  {
+    "theme": "Sécurité",
+    "candidateId": "mariani",
+    "text": "Créer un numéro de téléphone dédié à la police municipale, opérationnel 24h/24"
+  },
+  {
+    "theme": "Propreté et déchets",
+    "candidateId": "mariani",
+    "text": "Externaliser totalement la collecte des déchets et laisser chaque arrondissement choisir son prestataire"
+  },
+  {
+    "theme": "Propreté et déchets",
+    "candidateId": "mariani",
+    "text": "Assurer la propreté 24h/24 par le redéploiement des agents municipaux sur le terrain"
+  },
+  {
+    "theme": "Propreté et déchets",
+    "candidateId": "mariani",
+    "text": "Lancer un plan massif de dératisation dans tout Paris"
+  },
+  {
+    "theme": "Propreté et déchets",
+    "candidateId": "mariani",
+    "text": "Appliquer la théorie des « vitres cassées » : tolérance zéro sur les incivilités, verbalisation systématique"
+  },
+  {
+    "theme": "Logement",
+    "candidateId": "mariani",
+    "text": "Instaurer la priorité nationale pour l'accès au logement social, en privilégiant les familles et les travailleurs"
+  },
+  {
+    "theme": "Logement",
+    "candidateId": "mariani",
+    "text": "Rénover massivement le parc de logements sociaux et privés"
+  },
+  {
+    "theme": "Logement",
+    "candidateId": "mariani",
+    "text": "Proposer des aides au déménagement adapté pour les locataires, combinées à une réduction de loyer"
+  },
+  {
+    "theme": "Solidarité & accessibilité",
+    "candidateId": "mariani",
+    "text": "Créer des résidences sécurisées pour les victimes de violences conjugales"
+  },
+  {
+    "theme": "Logement",
+    "candidateId": "mariani",
+    "text": "Développer l'habitat intergénérationnel (étudiants-seniors) pour lutter contre l'isolement"
+  },
+  {
+    "theme": "Transports & Mobilités",
+    "candidateId": "mariani",
+    "text": "Augmenter la vitesse sur le périphérique à 90 km/h sur certains tronçons et la nuit"
+  },
+  {
+    "theme": "Transports & Mobilités",
+    "candidateId": "mariani",
+    "text": "Adapter le plan de circulation pour protéger piétons, cyclistes et automobilistes de manière équilibrée"
+  },
+  {
+    "theme": "Transports & Mobilités",
+    "candidateId": "mariani",
+    "text": "Faciliter les livraisons pour les commerçants en révisant le plan de circulation"
+  },
+  {
+    "theme": "Transports & Mobilités",
+    "candidateId": "mariani",
+    "text": "Rétablir l'égalité des tarifs de stationnement en supprimant le zonage discriminatoire"
+  },
+  {
+    "theme": "Éducation",
+    "candidateId": "mariani",
+    "text": "Instaurer l'uniforme scolaire dès l'école primaire"
+  },
+  {
+    "theme": "Petite enfance",
+    "candidateId": "mariani",
+    "text": "Lancer un grand plan de protection de la petite enfance avec tolérance zéro contre la maltraitance"
+  },
+  {
+    "theme": "Petite enfance",
+    "candidateId": "mariani",
+    "text": "Réserver en priorité les places en crèches municipales aux familles françaises"
+  },
+  {
+    "theme": "Économie & commerces",
+    "candidateId": "mariani",
+    "text": "Soutenir les artisans et commerçants parisiens avec des allègements fiscaux"
+  },
+  {
+    "theme": "Économie & commerces",
+    "candidateId": "mariani",
+    "text": "Privilégier les PME et TPE locales dans les marchés publics municipaux"
+  },
+  {
+    "theme": "Économie & commerces",
+    "candidateId": "mariani",
+    "text": "Promouvoir le Made in France et les produits locaux dans les cantines et marchés publics"
+  },
+  {
+    "theme": "Finance et gestion budgétaire",
+    "candidateId": "mariani",
+    "text": "Plan massif d'économies et de réduction de la dette municipale"
+  },
+  {
+    "theme": "Finance et gestion budgétaire",
+    "candidateId": "mariani",
+    "text": "S'opposer à toute augmentation des taux d'imposition locale pendant toute la durée du mandat"
+  },
+  {
+    "theme": "Finance et gestion budgétaire",
+    "candidateId": "mariani",
+    "text": "Confier le contrôle de la bonne gestion à une association de défense des contribuables"
+  },
+  {
+    "theme": "Finance et gestion budgétaire",
+    "candidateId": "mariani",
+    "text": "Encadrer les frais de réception de la Ville pour éviter les abus"
+  },
+  {
+    "theme": "Culture et loisirs",
+    "candidateId": "mariani",
+    "text": "Restaurer le patrimoine historique de Paris et recentrer le budget culture sur le patrimoine"
+  },
+  {
+    "theme": "Patrimoine & beauté",
+    "candidateId": "mariani",
+    "text": "Créer une charte renforcée de respect de l'urbanisme parisien et des immeubles haussmanniens"
+  },
+  {
+    "theme": "Immigration",
+    "candidateId": "mariani",
+    "text": "Créer une brigade anti-campements clandestins pour démanteler les camps illicites"
+  },
+  {
+    "theme": "Immigration",
+    "candidateId": "mariani",
+    "text": "Refuser l'immigration de masse et mettre fin aux occupations et réquisitions pour les migrants en situation irrégulière"
+  },
+  {
+    "theme": "Vie démocratique",
+    "candidateId": "mariani",
+    "text": "Organiser un référendum chaque fois que 5% du corps électoral en fait la demande"
+  },
+  {
+    "theme": "Vie démocratique",
+    "candidateId": "mariani",
+    "text": "Élire tous les conseils de quartier tous les 3 ans et les consulter pour tout projet les concernant"
+  },
+  {
+    "theme": "Vie démocratique",
+    "candidateId": "mariani",
+    "text": "Renforcer l'e-démocratie avec des outils numériques protégeant les données personnelles"
+  },
+  {
+    "theme": "Économie & commerces",
+    "candidateId": "npa",
+    "text": "Interdire les licenciements et augmenter tous les salaires d'au moins 400 euros par mois"
+  },
+  {
+    "theme": "Économie & commerces",
+    "candidateId": "npa",
+    "text": "Mettre fin à la sous-traitance et titulariser tous les travailleurs précaires (contractuels, sous-traitants)"
+  },
+  {
+    "theme": "Économie & commerces",
+    "candidateId": "npa",
+    "text": "Partager le temps de travail entre tous pour éliminer le chômage"
+  },
+  {
+    "theme": "Économie & commerces",
+    "candidateId": "npa",
+    "text": "Embaucher et titulariser tous les agents municipaux (ATSEM, jardiniers, bibliothécaires, animateurs)"
+  },
+  {
+    "theme": "Économie & commerces",
+    "candidateId": "npa",
+    "text": "Arrêter les dérogations au repos dominical"
+  },
+  {
+    "theme": "Logement",
+    "candidateId": "npa",
+    "text": "Réquisitionner sans indemnité les logements et bureaux vacants pour les transformer en logements"
+  },
+  {
+    "theme": "Logement",
+    "candidateId": "npa",
+    "text": "Arrêter toutes les expulsions locatives et d'hébergement"
+  },
+  {
+    "theme": "Logement",
+    "candidateId": "npa",
+    "text": "Construire massivement des logements sociaux, encadrer, geler et baisser les loyers"
+  },
+  {
+    "theme": "Logement",
+    "candidateId": "npa",
+    "text": "Plan massif de rénovation des logements et résidences universitaires"
+  },
+  {
+    "theme": "Solidarité & accessibilité",
+    "candidateId": "npa",
+    "text": "Développer l'hébergement d'urgence dans des conditions dignes et salubres"
+  },
+  {
+    "theme": "Services publics",
+    "candidateId": "npa",
+    "text": "Arrêter toutes les privatisations et fermetures de classes, municipaliser les services publics"
+  },
+  {
+    "theme": "Services publics",
+    "candidateId": "npa",
+    "text": "Rendre gratuits l'eau (premiers m³), les transports en commun, les centres de santé et les cantines"
+  },
+  {
+    "theme": "Services publics",
+    "candidateId": "npa",
+    "text": "Exproprier les groupes privés gérant des crèches, EHPAD et centres de soins et les municipaliser"
+  },
+  {
+    "theme": "Santé",
+    "candidateId": "npa",
+    "text": "Défendre l'hôpital public contre les coupes budgétaires et garantir l'accès à la santé pour tous"
+  },
+  {
+    "theme": "Transports & Mobilités",
+    "candidateId": "npa",
+    "text": "Rendre les transports en commun gratuits et fiables pour tous"
+  },
+  {
+    "theme": "Sécurité",
+    "candidateId": "npa",
+    "text": "Dissoudre la police municipale et démanteler la vidéosurveillance"
+  },
+  {
+    "theme": "Finance et gestion budgétaire",
+    "candidateId": "npa",
+    "text": "Mettre en place une taxation sur les entreprises et ménages fortunés pour financer les services publics"
+  },
+  {
+    "theme": "Sécurité",
+    "candidateId": "knafo",
+    "text": "Déployer 500 policiers municipaux sur le réseau de transport en commun parisien"
+  },
+  {
+    "theme": "Patrimoine & beauté",
+    "candidateId": "knafo",
+    "text": "Restaurer le mobilier urbain historique de Paris : bancs Davioud, réverbères classiques, grilles d'arbres en fonte"
+  },
+  {
+    "theme": "Culture et loisirs",
+    "candidateId": "knafo",
+    "text": "Ouvrir les musées municipaux en nocturne deux soirs par semaine et les bibliothèques le dimanche"
+  },
+  {
+    "theme": "Culture et loisirs",
+    "candidateId": "knafo",
+    "text": "Consacrer 300 millions d'euros à la restauration des églises parisiennes sur le mandat"
+  },
+  {
+    "theme": "Finance et gestion budgétaire",
+    "candidateId": "knafo",
+    "text": "Supprimer plus de 100 millions d'euros par an de subventions aux associations politisées et militantes"
+  },
+  {
+    "theme": "Finance et gestion budgétaire",
+    "candidateId": "knafo",
+    "text": "Réduire le nombre d'adjoints au maire à 10 et diviser par cinq le cabinet du maire"
+  },
+  {
+    "theme": "Logement",
+    "candidateId": "knafo",
+    "text": "Baisser les frais de notaire (droits de mutation) de 10% pour faciliter l'accession à la propriété"
+  },
+  {
+    "theme": "Sport",
+    "candidateId": "knafo",
+    "text": "Installer des terrains de sport (football, basketball, padel) sous les viaducs du métro aérien"
+  },
+  {
+    "theme": "Patrimoine & beauté",
+    "candidateId": "knafo",
+    "text": "Prolonger l'éclairage ornemental des monuments parisiens jusqu'à minuit"
+  },
+  {
+    "theme": "Transports & Mobilités",
+    "candidateId": "knafo",
+    "text": "Offrir la première heure de stationnement gratuite pour les professionnels (infirmières, artisans, commerciaux)"
+  },
+  {
+    "theme": "Éducation",
+    "candidateId": "knafo",
+    "text": "Nommer un chef étoilé pour refondre les cantines scolaires avec des recettes à base de produits frais français"
+  },
+  {
+    "theme": "Culture et loisirs",
+    "candidateId": "knafo",
+    "text": "Proposer des cours de musique collectifs sans concours ni prérequis dans tous les conservatoires"
+  },
+  {
+    "theme": "Santé",
+    "candidateId": "mariani",
+    "text": "Supprimer les salles de shoot et créer un centre de soin unique pour traiter la toxicomanie"
+  },
+  {
+    "theme": "Santé",
+    "candidateId": "mariani",
+    "text": "Instaurer une prévention scolaire obligatoire sur les dangers des stupéfiants"
+  },
+  {
+    "theme": "Santé",
+    "candidateId": "mariani",
+    "text": "Lancer un plan de prévention des maladies mentales dans les écoles et collèges"
+  },
+  {
+    "theme": "Éducation",
+    "candidateId": "mariani",
+    "text": "Garantir un service minimum d'accueil dans les crèches, écoles et cantines les jours de grève"
+  },
+  {
+    "theme": "Transports & Mobilités",
+    "candidateId": "mariani",
+    "text": "Créer 20 000 places de stationnement supplémentaires en parking souterrain"
+  },
+  {
+    "theme": "Transports & Mobilités",
+    "candidateId": "mariani",
+    "text": "Ouvrir le métro la nuit sur les lignes automatiques le week-end"
+  },
+  {
+    "theme": "Transports & Mobilités",
+    "candidateId": "mariani",
+    "text": "Rétablir la gratuité du stationnement pour les deux-roues motorisés"
+  },
+  {
+    "theme": "Logement",
+    "candidateId": "mariani",
+    "text": "Convertir des bureaux vacants en 6 000 logements pour les familles parisiennes"
+  },
+  {
+    "theme": "Logement",
+    "candidateId": "mariani",
+    "text": "Limiter les locations Airbnb à 60 nuits par an (contre 120 actuellement)"
+  },
+  {
+    "theme": "Logement",
+    "candidateId": "mariani",
+    "text": "Permettre à 40 000 familles parisiennes d'accéder à la propriété via un plan d'accession"
+  },
+  {
+    "theme": "Économie & commerces",
+    "candidateId": "mariani",
+    "text": "Lancer un programme « 1 000 commerces » pour revitaliser les rues commerçantes de Paris"
+  },
+  {
+    "theme": "Espaces verts & biodiversité",
+    "candidateId": "mariani",
+    "text": "Planter 50 000 arbres supplémentaires à Paris"
+  },
+  {
+    "theme": "Éducation",
+    "candidateId": "mariani",
+    "text": "Créer 100 centres de soutien scolaire gratuits dans les quartiers de Paris"
+  },
+  {
+    "theme": "Petite enfance",
+    "candidateId": "mariani",
+    "text": "Ouvrir des crèches la nuit pour les parents travaillant en horaires décalés"
+  },
+  {
+    "theme": "Petite enfance",
+    "candidateId": "mariani",
+    "text": "Instaurer la gratuité de la crèche à partir du 3ème enfant"
+  },
+  {
+    "theme": "Sécurité",
+    "candidateId": "mariani",
+    "text": "Installer des caméras de vidéoprotection dans les parties communes des HLM"
+  },
+  {
+    "theme": "Transports & Mobilités",
+    "candidateId": "mariani",
+    "text": "Supprimer la Zone à Trafic Limité (ZTL) du centre de Paris"
+  }
+]
