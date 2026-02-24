@@ -16,6 +16,7 @@ THEME_MAP = {
     'Patrimoine & beauté': 'Patrimoine & Beauté de la ville',
     'Économie & commerces': 'Economie locale & commerces',
     'Vie associative & quartiers': 'Associations et vie de quartier',
+    'Culture': 'Culture et loisirs',
 }
 
 def remap_theme(theme):
@@ -28,10 +29,11 @@ with open('excel_dump.json', 'r', encoding='utf-8') as f:
 # Keep only non-Grégoire Excel props (Grégoire Excel data is garbled)
 excel_non_gregoire = [p for p in excel_props if p['candidateId'] != 'gregoire']
 
-# Dedup
+# Remap Excel themes + dedup
 seen = set()
 clean_excel = []
 for p in excel_non_gregoire:
+    p['theme'] = remap_theme(p['theme'])
     key = p['text'].strip()
     if key in seen:
         continue
@@ -65,6 +67,10 @@ with open('data.js', 'r', encoding='utf-8') as f:
 
 duels_match = re.search(r'(const DUELS = \[.*?\];)', original, re.DOTALL)
 duels_section = duels_match.group(1) if duels_match else ''
+
+# Apply theme remap to DUELS too
+for old_name, new_name in THEME_MAP.items():
+    duels_section = duels_section.replace(f'theme: "{old_name}"', f'theme: "{new_name}"')
 
 # ========= 7. Generate new data.js =========
 def escape_js(text):

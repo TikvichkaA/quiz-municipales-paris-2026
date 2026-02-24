@@ -14,7 +14,6 @@ const CANDIDATES = [
 const THEMES = [
   "Alimentation",
   "Associations et vie de quartier",
-  "Culture",
   "Culture et loisirs",
   "Défense des droits",
   "Economie locale & commerces",
@@ -64,18 +63,16 @@ const PROPOSITIONS = [
   { id: 17, theme: "Associations et vie de quartier", text: "Prioriser les investissements publics dans les quartiers populaires: nouveaux équipements culturels, équipements de propreté et embellissement des rues, nouvelles structures de santé, épiceries bio et solidaires…", candidateId: "gregoire" },
   { id: 18, theme: "Associations et vie de quartier", text: "Un nouveau site de baignade et de loisirs dans le port de l'Arsenal: la Plage de la Bastille", candidateId: "gregoire" },
 
-  // === CULTURE ===
-  { id: 19, theme: "Culture", text: "Je créerai un grand orchestre parisien des collèges avec 1 000 collégiens parisiens, issus de tous les arrondissements. Le recrutement se fera sur motivation et les instruments seront fournis.", candidateId: "dati" },
-  { id: 20, theme: "Culture", text: "Mettre fin à la mainmise d’entreprises et d’acteurs privés sur le patrimoine culturel parisien, comme LVMH", candidateId: "chikirou" },
-  { id: 21, theme: "Culture", text: "Je créerai une « villa Médicis » du design sur le site de l’ex-Mairie du 1er arrondissement, qui intégrera des événements culturels ouverts le soir à tous les Parisiens.", candidateId: "dati" },
-  { id: 22, theme: "Culture", text: "Déclarer les librairies indépendantes « commerce essentiel » et les soutenir contre la pression immobilière, la concurrence du e-commerce international et les menaces à la liberté d’expression", candidateId: "chikirou" },
-  { id: 23, theme: "Culture", text: "Soutenir les cinémas indépendants parisiens et agir contre des fermetures en mobilisant des leviers tels que la transformation en SCIC (coopérative d’intérêt collectif) voire la municipalisation", candidateId: "chikirou" },
-  { id: 24, theme: "Culture", text: "Créer un fonds de garantie pour les loyers des artistes non salariés", candidateId: "chikirou" },
-  { id: 25, theme: "Culture", text: "Favoriser la gratuité et la tarification sociale des équipements culturels avec une politique de médiation ambitieuse pour sensibiliser celles et ceux qui en sont éloignés", candidateId: "chikirou" },
-  { id: 26, theme: "Culture", text: "Créer et soutenir les lieux d’éducation populaire et de pratiques artistiques, comme les Centres Paris Anim’, la Maison des Pratiques Artistiques Amateurs et les Maisons des Jeunes et de la Culture", candidateId: "chikirou" },
-  { id: 27, theme: "Culture", text: "Permettre à toutes et tous d’accéder à un enseignement et à une pratique artistiques en développant les conservatoires : augmentation des places pour mettre fin au tirage au sort, renforcement de la tarification sociale, prêt de matériel et élargissement des disciplines enseignées", candidateId: "chikirou" },
-
   // === CULTURE ET LOISIRS ===
+  { id: 19, theme: "Culture et loisirs", text: "Je créerai un grand orchestre parisien des collèges avec 1 000 collégiens parisiens, issus de tous les arrondissements. Le recrutement se fera sur motivation et les instruments seront fournis.", candidateId: "dati" },
+  { id: 20, theme: "Culture et loisirs", text: "Mettre fin à la mainmise d’entreprises et d’acteurs privés sur le patrimoine culturel parisien, comme LVMH", candidateId: "chikirou" },
+  { id: 21, theme: "Culture et loisirs", text: "Je créerai une « villa Médicis » du design sur le site de l’ex-Mairie du 1er arrondissement, qui intégrera des événements culturels ouverts le soir à tous les Parisiens.", candidateId: "dati" },
+  { id: 22, theme: "Culture et loisirs", text: "Déclarer les librairies indépendantes « commerce essentiel » et les soutenir contre la pression immobilière, la concurrence du e-commerce international et les menaces à la liberté d’expression", candidateId: "chikirou" },
+  { id: 23, theme: "Culture et loisirs", text: "Soutenir les cinémas indépendants parisiens et agir contre des fermetures en mobilisant des leviers tels que la transformation en SCIC (coopérative d’intérêt collectif) voire la municipalisation", candidateId: "chikirou" },
+  { id: 24, theme: "Culture et loisirs", text: "Créer un fonds de garantie pour les loyers des artistes non salariés", candidateId: "chikirou" },
+  { id: 25, theme: "Culture et loisirs", text: "Favoriser la gratuité et la tarification sociale des équipements culturels avec une politique de médiation ambitieuse pour sensibiliser celles et ceux qui en sont éloignés", candidateId: "chikirou" },
+  { id: 26, theme: "Culture et loisirs", text: "Créer et soutenir les lieux d’éducation populaire et de pratiques artistiques, comme les Centres Paris Anim’, la Maison des Pratiques Artistiques Amateurs et les Maisons des Jeunes et de la Culture", candidateId: "chikirou" },
+  { id: 27, theme: "Culture et loisirs", text: "Permettre à toutes et tous d’accéder à un enseignement et à une pratique artistiques en développant les conservatoires : augmentation des places pour mettre fin au tirage au sort, renforcement de la tarification sociale, prêt de matériel et élargissement des disciplines enseignées", candidateId: "chikirou" },
   { id: 28, theme: "Culture et loisirs", text: "Étendre les horaires des bibliothèques et des musées municipaux", candidateId: "gregoire" },
   { id: 29, theme: "Culture et loisirs", text: "Carte de bibliothèque automatique pour tous les enfants et adolescents parisiens", candidateId: "gregoire" },
   { id: 30, theme: "Culture et loisirs", text: "Créer une Maison des Arts et des Cultures Féministes", candidateId: "gregoire" },
@@ -879,28 +876,28 @@ const DUELS = [
   // --- ÉDUCATION ---
   {
     id: 35,
-    theme: "Éducation",
+    theme: "Education",
     subtopic: "Cantines scolaires",
     propA: { candidateId: "chikirou", text: "Instaurer la gratuité de la cantine pour les trois premières tranches du quotient familial" },
     propB: { candidateId: "knafo", text: "Servir uniquement des produits issus de l'agriculture française dans les cantines scolaires" }
   },
   {
     id: 36,
-    theme: "Éducation",
+    theme: "Education",
     subtopic: "Cantines scolaires",
     propA: { candidateId: "gregoire", text: "Soulager le budget des familles grâce au gel des tarifs de cantine et à la gratuité progressive" },
     propB: { candidateId: "mariani", text: "Instaurer l'uniforme scolaire dès l'école primaire" }
   },
   {
     id: 37,
-    theme: "Éducation",
+    theme: "Education",
     subtopic: "Rénovation des écoles",
     propA: { candidateId: "bournazel", text: "Plan 100% écoles rénovées et accessibles d'ici 2032" },
     propB: { candidateId: "chikirou", text: "Adapter 100% des collèges et écoles publics aux défis sanitaires et climatiques" }
   },
   {
     id: 38,
-    theme: "Éducation",
+    theme: "Education",
     subtopic: "Mixité scolaire",
     propA: { candidateId: "gregoire", text: "Moduler les dotations financières aux établissements privés en fonction de critères de mixité sociale" },
     propB: { candidateId: "chikirou", text: "Renforcer les moyens des écoles et des collèges publics parisiens" }
@@ -909,14 +906,14 @@ const DUELS = [
   // --- PROPRETÉ ---
   {
     id: 39,
-    theme: "Propreté et déchets",
+    theme: "Propreté et gestion des déchets",
     subtopic: "Privatisation collecte",
     propA: { candidateId: "bournazel", text: "Privatiser la collecte des déchets pour diviser les coûts et améliorer la qualité" },
     propB: { candidateId: "mariani", text: "Externaliser totalement la collecte des déchets et laisser chaque arrondissement choisir son prestataire" }
   },
   {
     id: 40,
-    theme: "Propreté et déchets",
+    theme: "Propreté et gestion des déchets",
     subtopic: "Privatisation collecte",
     propA: { candidateId: "dati", text: "Externaliser une partie de la collecte des déchets pour améliorer le service" },
     propB: { candidateId: "knafo", text: "Privatiser la collecte des ordures et le balayage via appels d'offres, avec reprise garantie de 80% des agents" }
@@ -925,21 +922,21 @@ const DUELS = [
   // --- ÉCOLOGIE ET VÉGÉTALISATION ---
   {
     id: 41,
-    theme: "Espaces verts & biodiversité",
+    theme: "Espaces verts, végétalisation & biodiversité",
     subtopic: "Anti-bruit",
     propA: { candidateId: "dati", text: "Lutter contre les nuisances sonores avec un plan anti-bruit ambitieux" },
     propB: { candidateId: "bournazel", text: "Créer un bouclier anti-bruit pour protéger les riverains des grands axes" }
   },
   {
     id: 42,
-    theme: "Espaces verts & biodiversité",
+    theme: "Espaces verts, végétalisation & biodiversité",
     subtopic: "Végétalisation",
     propA: { candidateId: "dati", text: "Créer 500 bandes végétalisées dans les rues parisiennes" },
     propB: { candidateId: "knafo", text: "Embellir les parcs et jardins en replantant des fleurs" }
   },
   {
     id: 43,
-    theme: "Espaces verts & biodiversité",
+    theme: "Espaces verts, végétalisation & biodiversité",
     subtopic: "Urbanisme vert",
     propA: { candidateId: "knafo", text: "Abroger le PLU bioclimatique et revenir à un PLU garantissant l'harmonie architecturale" },
     propB: { candidateId: "dati", text: "Désasphalter massivement Paris pour créer des îlots de fraîcheur" }
@@ -948,14 +945,14 @@ const DUELS = [
   // --- PETITE ENFANCE ---
   {
     id: 44,
-    theme: "Petite enfance",
+    theme: "Petite enfance / protection de l'enfance",
     subtopic: "Places en crèche",
     propA: { candidateId: "dati", text: "Créer 5 000 nouvelles places en crèche sur le mandat" },
     propB: { candidateId: "chikirou", text: "Ouvrir 6 500 nouvelles places en crèche publique sur le mandat" }
   },
   {
     id: 45,
-    theme: "Petite enfance",
+    theme: "Petite enfance / protection de l'enfance",
     subtopic: "Places en crèche",
     propA: { candidateId: "bournazel", text: "10 000 solutions de garde supplémentaires grâce aux crèches et assistantes maternelles" },
     propB: { candidateId: "mariani", text: "Réserver en priorité les places en crèches municipales aux familles françaises" }
@@ -1166,21 +1163,21 @@ const DUELS = [
   // --- ÉDUCATION (ajouts) ---
   {
     id: 72,
-    theme: "Éducation",
+    theme: "Education",
     subtopic: "Cantines scolaires",
     propA: { candidateId: "knafo", text: "Nommer un chef étoilé pour refondre les cantines scolaires avec des recettes à base de produits frais français" },
     propB: { candidateId: "chikirou", text: "Instaurer la cantine bio à 1 euro pour tous les écoliers parisiens" }
   },
   {
     id: 73,
-    theme: "Éducation",
+    theme: "Education",
     subtopic: "Service minimum grève",
     propA: { candidateId: "mariani", text: "Garantir un service minimum d'accueil dans les crèches, écoles et cantines les jours de grève" },
     propB: { candidateId: "bournazel", text: "Mettre en place un vrai service minimum dans les écoles les jours de grève" }
   },
   {
     id: 74,
-    theme: "Éducation",
+    theme: "Education",
     subtopic: "Soutien périscolaire",
     propA: { candidateId: "mariani", text: "Créer 100 centres de soutien scolaire gratuits dans les quartiers de Paris" },
     propB: { candidateId: "chikirou", text: "Recruter 2 000 animateurs périscolaires supplémentaires et titulariser les 4 000 contractuels actuels" }
@@ -1189,7 +1186,7 @@ const DUELS = [
   // --- PATRIMOINE / CULTURE (ajouts) ---
   {
     id: 75,
-    theme: "Patrimoine & beauté",
+    theme: "Patrimoine & Beauté de la ville",
     subtopic: "Embellissement",
     propA: { candidateId: "knafo", text: "Restaurer le mobilier urbain historique de Paris : bancs Davioud, réverbères classiques, grilles d'arbres en fonte" },
     propB: { candidateId: "dati", text: "Adopter une charte « Paris du beau » pour garantir l'esthétique des aménagements urbains" }
@@ -1205,14 +1202,14 @@ const DUELS = [
   // --- ÉCOLOGIE (ajouts) ---
   {
     id: 77,
-    theme: "Espaces verts & biodiversité",
+    theme: "Espaces verts, végétalisation & biodiversité",
     subtopic: "Plantation d'arbres",
     propA: { candidateId: "mariani", text: "Planter 50 000 arbres supplémentaires à Paris" },
     propB: { candidateId: "chikirou", text: "Végétaliser 300 hectares et déimperméabiliser 40% du territoire parisien d'ici 2032" }
   },
   {
     id: 78,
-    theme: "Espaces verts & biodiversité",
+    theme: "Espaces verts, végétalisation & biodiversité",
     subtopic: "Nouveaux espaces verts",
     propA: { candidateId: "bournazel", text: "Transformer la Petite Ceinture en poumon vert continu : promenades, jardins potagers et espaces sportifs" },
     propB: { candidateId: "dati", text: "Désasphalter massivement Paris pour créer des îlots de fraîcheur" }
@@ -1221,14 +1218,14 @@ const DUELS = [
   // --- COMMERCE (ajouts) ---
   {
     id: 79,
-    theme: "Économie & commerces",
+    theme: "Economie locale & commerces",
     subtopic: "Revitalisation commerces",
     propA: { candidateId: "mariani", text: "Lancer un programme « 1 000 commerces » pour revitaliser les rues commerçantes de Paris" },
     propB: { candidateId: "chikirou", text: "Tripler les locaux commerciaux publics avec des loyers abaissés pour les commerces de proximité" }
   },
   {
     id: 80,
-    theme: "Économie & commerces",
+    theme: "Economie locale & commerces",
     subtopic: "Ouverture dominicale",
     propA: { candidateId: "bournazel", text: "Faire de Paris une Zone Touristique Unique pour autoriser l'ouverture dominicale des commerces" },
     propB: { candidateId: "npa", text: "Arrêter les dérogations au repos dominical" }
@@ -1237,7 +1234,7 @@ const DUELS = [
   // --- PROPRETÉ (ajouts) ---
   {
     id: 81,
-    theme: "Propreté et déchets",
+    theme: "Propreté et gestion des déchets",
     subtopic: "Lutte contre les nuisibles",
     propA: { candidateId: "chikirou", text: "Porter le budget de lutte contre les rats à 15 millions d'euros par an" },
     propB: { candidateId: "dati", text: "Mettre en place un plan anti-prolifération des nuisibles (rats, punaises de lit)" }
@@ -1246,7 +1243,7 @@ const DUELS = [
   // --- SOLIDARITÉ (ajouts) ---
   {
     id: 82,
-    theme: "Solidarité & accessibilité",
+    theme: "Solidarité, inclusion & accessibilité",
     subtopic: "Sans-abri",
     propA: { candidateId: "chikirou", text: "Atteindre l'objectif zéro sans-abri à Paris avant la fin du mandat" },
     propB: { candidateId: "npa", text: "Développer l'hébergement d'urgence dans des conditions dignes et salubres" }
@@ -1255,14 +1252,14 @@ const DUELS = [
   // --- PETITE ENFANCE (ajouts) ---
   {
     id: 83,
-    theme: "Petite enfance",
+    theme: "Petite enfance / protection de l'enfance",
     subtopic: "Horaires de crèche",
     propA: { candidateId: "mariani", text: "Ouvrir des crèches la nuit pour les parents travaillant en horaires décalés" },
     propB: { candidateId: "bournazel", text: "Étendre les horaires des crèches jusqu'à 19h30 pour les parents aux horaires décalés" }
   },
   {
     id: 84,
-    theme: "Petite enfance",
+    theme: "Petite enfance / protection de l'enfance",
     subtopic: "Gratuité crèche",
     propA: { candidateId: "mariani", text: "Instaurer la gratuité de la crèche à partir du 3ème enfant" },
     propB: { candidateId: "gregoire", text: "Recruter massivement du personnel en crèche pour améliorer le taux d'encadrement" }
@@ -1280,35 +1277,35 @@ const DUELS = [
   // --- ÉCOLOGIE (nouveaux duels Grégoire/Dati) ---
   {
     id: 86,
-    theme: "Espaces verts & biodiversité",
+    theme: "Espaces verts, végétalisation & biodiversité",
     subtopic: "Lutte contre la chaleur",
     propA: { candidateId: "dati", text: "Plan Grand Chaud : rafraîchissement des rues, brumisateurs, fontaines, ombrages" },
     propB: { candidateId: "gregoire", text: "Objectif au moins un trottoir ombragé dans chaque rue pour anticiper les canicules" }
   },
   {
     id: 87,
-    theme: "Espaces verts & biodiversité",
+    theme: "Espaces verts, végétalisation & biodiversité",
     subtopic: "Végétalisation",
     propA: { candidateId: "dati", text: "Créer 500 nouvelles bandes végétalisées durables avec arrosage et désherbage garantis" },
     propB: { candidateId: "gregoire", text: "300 nouveaux hectares de jardins ouverts au public avec horaires étendus toute l'année" }
   },
   {
     id: 88,
-    theme: "Espaces verts & biodiversité",
+    theme: "Espaces verts, végétalisation & biodiversité",
     subtopic: "Périphérique",
     propA: { candidateId: "gregoire", text: "Transformation du périphérique en boulevard urbain relié par une grande ceinture verte" },
     propB: { candidateId: "bournazel", text: "Transformer les portes de Paris en véritables places urbaines végétalisées" }
   },
   {
     id: 89,
-    theme: "Espaces verts & biodiversité",
+    theme: "Espaces verts, végétalisation & biodiversité",
     subtopic: "Bruit urbain",
     propA: { candidateId: "dati", text: "Plan de lutte contre la pollution sonore avec radars anti-bruit et zones apaisées" },
     propB: { candidateId: "gregoire", text: "Déploiement de capteurs et radars sonores pour réduire le bruit à l'échelle de chaque quartier" }
   },
   {
     id: 90,
-    theme: "Espaces verts & biodiversité",
+    theme: "Espaces verts, végétalisation & biodiversité",
     subtopic: "Promenades vertes",
     propA: { candidateId: "gregoire", text: "25 km de promenade continue et végétalisée le long des berges de Seine" },
     propB: { candidateId: "dati", text: "Débitumer 100 hectares de sols parisiens pour lutter contre les îlots de chaleur" }
@@ -1317,14 +1314,14 @@ const DUELS = [
   // --- PROPRETÉ (nouveaux duels Grégoire) ---
   {
     id: 91,
-    theme: "Propreté et déchets",
+    theme: "Propreté et gestion des déchets",
     subtopic: "Méthode de nettoyage",
     propA: { candidateId: "gregoire", text: "Brigades anti-incivilités au sein de la police municipale contre les infractions de propreté" },
     propB: { candidateId: "bournazel", text: "Privatiser la collecte des déchets et le nettoiement des rues pour économiser 742 millions" }
   },
   {
     id: 92,
-    theme: "Propreté et déchets",
+    theme: "Propreté et gestion des déchets",
     subtopic: "Réduction des déchets",
     propA: { candidateId: "gregoire", text: "Moins 100 000 tonnes de déchets : compostage dans tous les quartiers et tri dans l'espace public" },
     propB: { candidateId: "dati", text: "Brigades d'intervention d'urgence propreté prêtes à agir plusieurs fois par jour" }
@@ -1333,14 +1330,14 @@ const DUELS = [
   // --- SOLIDARITÉ (nouveaux duels Grégoire) ---
   {
     id: 93,
-    theme: "Solidarité & accessibilité",
+    theme: "Solidarité, inclusion & accessibilité",
     subtopic: "Sans-abri",
     propA: { candidateId: "gregoire", text: "Création de 4 000 places d'hébergement d'urgence et réquisition des logements vides depuis 5 ans" },
     propB: { candidateId: "chikirou", text: "Atteindre l'objectif zéro sans-abri à Paris avant la fin du mandat" }
   },
   {
     id: 94,
-    theme: "Solidarité & accessibilité",
+    theme: "Solidarité, inclusion & accessibilité",
     subtopic: "Précarité menstruelle",
     propA: { candidateId: "gregoire", text: "Distribuer gratuitement des protections périodiques dans les équipements publics parisiens" },
     propB: { candidateId: "chikirou", text: "Ouvrir des restaurants populaires avec des menus bio et locaux à prix solidaires" }
@@ -1381,14 +1378,14 @@ const DUELS = [
   // --- COMMERCE (nouveaux duels Grégoire) ---
   {
     id: 99,
-    theme: "Économie & commerces",
+    theme: "Economie locale & commerces",
     subtopic: "Locaux vacants",
     propA: { candidateId: "gregoire", text: "Mise aux enchères des locaux commerciaux vacants depuis plus de 12 mois" },
     propB: { candidateId: "dati", text: "Obligation d'une étude d'impact sur le commerce pour chaque grand projet d'aménagement" }
   },
   {
     id: 100,
-    theme: "Économie & commerces",
+    theme: "Economie locale & commerces",
     subtopic: "PME et ESS",
     propA: { candidateId: "gregoire", text: "Small Business Act : 50% de la commande publique orientée vers les PME et l'ESS" },
     propB: { candidateId: "bournazel", text: "Lancer un plan zéro boutique fermée dans les quartiers parisiens" }
@@ -1440,7 +1437,7 @@ const DUELS = [
   // --- HANDICAP (nouveau duel) ---
   {
     id: 106,
-    theme: "Solidarité & accessibilité",
+    theme: "Solidarité, inclusion & accessibilité",
     subtopic: "Accessibilité bâtiments",
     propA: { candidateId: "gregoire", text: "100% des bâtiments municipaux accessibles d'ici 2030 avec balises sonores pour malvoyants" },
     propB: { candidateId: "chikirou", text: "Rendre 100% des équipements municipaux accessibles avant la fin de la mandature" }

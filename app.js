@@ -12,7 +12,14 @@ let quizState = {
 };
 
 // ====== SCREEN NAVIGATION ======
+let previousScreen = 'accueil';
+
 function showScreen(screenId) {
+  // Track previous screen for back navigation
+  const current = document.querySelector('.screen.active');
+  if (current && screenId === 'comparaison') {
+    previousScreen = current.id.replace('screen-', '');
+  }
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   const target = document.getElementById('screen-' + screenId);
   if (target) {
@@ -35,6 +42,10 @@ function showScreen(screenId) {
     const modeSelection = document.querySelector('.mode-selection');
     if (modeSelection) modeSelection.style.display = '';
   }
+}
+
+function goBackFromComparison() {
+  showScreen(previousScreen);
 }
 
 // ====== PROPOSITION SELECTION ======
@@ -172,7 +183,7 @@ function showTutorial() {
           <span>Swipez vers le <strong>haut</strong> = <strong>neutre</strong></span>
         </div>
       </div>
-      <p class="tutorial-hint">Vous pouvez aussi utiliser les boutons en bas de l'écran.</p>
+      <p class="tutorial-hint">Tu peux aussi utiliser les boutons en bas de l'écran.</p>
       <button class="btn-primary" onclick="dismissTutorial()">C'est compris !</button>
     </div>
   `;
