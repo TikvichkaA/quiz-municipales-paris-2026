@@ -1,45 +1,12 @@
 # -*- coding: utf-8 -*-
-"""Rebuild data.js from Excel source + non-Excel candidates."""
+"""Rebuild data.js from Excel source + old corrected Grégoire + non-Excel candidates."""
 import json
 import re
 import sys
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-# ========= 1. Load Excel props =========
-with open('excel_dump.json', 'r', encoding='utf-8') as f:
-    excel_props = json.load(f)
-
-# ========= 2. Garbled detection (Grégoire props with missing 't') =========
-# The corruption systematically removes 't'/'T' characters from text.
-# Normal French has ~7% 't'. Garbled text has 0-1% (only surviving proper nouns).
-def is_garbled(text, candidate_id='gregoire'):
-    if candidate_id != 'gregoire':
-        return False
-    alpha_chars = sum(1 for c in text if c.isalpha())
-    if alpha_chars < 20:
-        return False
-    t_count = sum(1 for c in text if c.lower() == 't')
-    ratio = t_count / alpha_chars
-    return ratio < 0.02  # threshold: <2% means garbled
-
-# ========= 3. Clean + dedup Excel =========
-seen = set()
-clean_excel = []
-for p in excel_props:
-    if is_garbled(p['text'], p['candidateId']):
-        continue
-    key = p['text'].strip()
-    if key in seen:
-        continue
-    seen.add(key)
-    clean_excel.append(p)
-
-# ========= 4. Load non-Excel candidate props =========
-with open('non_excel_props.json', 'r', encoding='utf-8') as f:
-    non_excel = json.load(f)
-
-# Remap themes for non-Excel candidates to match Excel theme names
+# ========= Theme mapping: old names → Excel canonical names =========
 THEME_MAP = {
     'Éducation': 'Education',
     'Petite enfance': "Petite enfance / protection de l'enfance",
@@ -51,36 +18,65 @@ THEME_MAP = {
     'Vie associative & quartiers': 'Associations et vie de quartier',
 }
 
+def remap_theme(theme):
+    return THEME_MAP.get(theme, theme)
+
+# ========= 1. Load Excel props (dati, chikirou, bournazel only) =========
+with open('excel_dump.json', 'r', encoding='utf-8') as f:
+    excel_props = json.load(f)
+
+# Keep only non-Grégoire Excel props (Grégoire Excel data is garbled)
+excel_non_gregoire = [p for p in excel_props if p['candidateId'] != 'gregoire']
+
+# Dedup
+seen = set()
+clean_excel = []
+for p in excel_non_gregoire:
+    key = p['text'].strip()
+    if key in seen:
+        continue
+    seen.add(key)
+    clean_excel.append(p)
+
+# ========= 2. Load old corrected Grégoire props =========
+with open('old_gregoire_props.json', 'r', encoding='utf-8') as f:
+    old_gregoire = json.load(f)
+
+# Remap themes to Excel canonical names
+for p in old_gregoire:
+    p['theme'] = remap_theme(p['theme'])
+
+# ========= 3. Load non-Excel candidate props (knafo, mariani, npa) =========
+with open('non_excel_props.json', 'r', encoding='utf-8') as f:
+    non_excel = json.load(f)
+
 for p in non_excel:
-    p['theme'] = THEME_MAP.get(p['theme'], p['theme'])
+    p['theme'] = remap_theme(p['theme'])
 
-# ========= 5. Build all propositions =========
-all_props = clean_excel + non_excel
+# ========= 4. Build all propositions =========
+all_props = clean_excel + old_gregoire + non_excel
 
-# ========= 6. Build themes list =========
+# ========= 5. Build themes list =========
 all_themes = sorted(set(p['theme'] for p in all_props))
 
-# ========= 7. Read original data.js to preserve DUELS =========
+# ========= 6. Read current data.js to preserve DUELS =========
 with open('data.js', 'r', encoding='utf-8') as f:
     original = f.read()
 
 duels_match = re.search(r'(const DUELS = \[.*?\];)', original, re.DOTALL)
 duels_section = duels_match.group(1) if duels_match else ''
 
-# ========= 8. Generate new data.js =========
+# ========= 7. Generate new data.js =========
 def escape_js(text):
-    # Remove surrounding quotes if present
     text = text.strip()
     if text.startswith('"') and text.endswith('"'):
         text = text[1:-1]
     if text.startswith('\u201c') and text.endswith('\u201d'):
         text = text[1:-1]
-    # Escape for JS double-quoted string
     text = text.replace('\\', '\\\\')
     text = text.replace('"', '\\"')
     text = text.replace('\n', ' ')
     text = text.replace('\r', ' ')
-    # Clean up multiple spaces
     text = ' '.join(text.split())
     return text
 
@@ -135,8 +131,12 @@ output = '\n'.join(lines)
 with open('data.js', 'w', encoding='utf-8') as f:
     f.write(output)
 
+# Stats
 print(f'Generated data.js with {prop_id - 1} propositions across {len(all_themes)} themes')
-print(f'  Excel candidates (clean, deduped): {len(clean_excel)}')
-print(f'  Other candidates (knafo/mariani/npa): {len(non_excel)}')
-garbled_count = sum(1 for p in excel_props if is_garbled(p['text'], p['candidateId']))
-print(f'  Garbled Excel props excluded: {garbled_count}')
+print(f'  Excel (dati/chikirou/bournazel): {len(clean_excel)}')
+print(f'  Old corrected Grégoire: {len(old_gregoire)}')
+print(f'  Scraped (knafo/mariani/npa): {len(non_excel)}')
+print(f'\nBy candidate:')
+for cand in ['dati', 'gregoire', 'chikirou', 'bournazel', 'knafo', 'mariani', 'npa']:
+    count = sum(1 for p in all_props if p['candidateId'] == cand)
+    print(f'  {cand}: {count}')

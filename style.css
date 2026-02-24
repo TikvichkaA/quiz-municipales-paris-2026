@@ -66,6 +66,7 @@ body {
   padding: 0 20px;
   position: relative;
   z-index: 2;
+  overflow-x: hidden;
 }
 
 /* ====== SCREENS ====== */
@@ -462,6 +463,8 @@ body {
   color: var(--gris-600);
   word-wrap: break-word;
   overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 .duel-card.chosen {
@@ -586,6 +589,8 @@ body {
   color: var(--gris-600);
   padding: 8px;
   border-radius: 8px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   border: 1px solid var(--card-border);
 }
 
@@ -863,15 +868,18 @@ body {
   font-weight: 500;
   line-height: 1.55;
   color: var(--noir);
-  max-width: 340px;
+  max-width: 100%;
+  width: 100%;
   flex: 1;
   min-height: 0;
   overflow-y: auto;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: var(--gris-300) transparent;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .swipe-hints {
@@ -1791,6 +1799,10 @@ body {
   text-align: left;
   color: var(--gris-600);
   font-size: 0.88rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  overflow: hidden;
   line-height: 1.5;
   font-weight: 500;
   box-shadow: var(--shadow-card);
