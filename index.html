@@ -67,7 +67,7 @@
             </div>
             <div class="mode-card-text">
               <strong>Questionnaire par thème</strong>
-              <span>Pour chaque thème, choisis la proposition qui te parle · ~4 min</span>
+              <span>20 questions, 7 candidats : choisis la proposition qui te parle · ~5 min</span>
             </div>
             <svg class="mode-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
           </button>
@@ -242,7 +242,8 @@
 
       <div class="questionnaire-question">
         <span class="questionnaire-theme-label" id="questionnaire-theme"></span>
-        <p class="questionnaire-prompt">Quelle proposition te convient le mieux ?</p>
+        <p class="questionnaire-prompt" id="questionnaire-question-text">Quelle proposition te convient le mieux ?</p>
+        <p class="questionnaire-context" id="questionnaire-context" style="display:none"></p>
       </div>
 
       <div class="questionnaire-choices" id="questionnaire-choices"></div>

@@ -1022,42 +1022,13 @@ let questionnaireState = {
 
 // ====== GENERATE QUESTIONS ======
 function generateQuestions() {
-  // Group propositions by theme
-  const byTheme = {};
-  PROPOSITIONS.forEach(p => {
-    if (!byTheme[p.theme]) byTheme[p.theme] = [];
-    byTheme[p.theme].push(p);
-  });
-
-  const questions = [];
-
-  Object.keys(byTheme).forEach(theme => {
-    const props = byTheme[theme];
-    // Group by candidate within theme
-    const byCand = {};
-    props.forEach(p => {
-      if (!byCand[p.candidateId]) byCand[p.candidateId] = [];
-      byCand[p.candidateId].push(p);
-    });
-
-    const candidateIds = Object.keys(byCand);
-    // Filter: need 4+ candidates represented
-    if (candidateIds.length < 4) return;
-
-    // Pick 1 random proposition per candidate
-    const choices = candidateIds.map(cid => {
-      const arr = byCand[cid];
-      const pick = arr[Math.floor(Math.random() * arr.length)];
-      return { candidateId: cid, text: pick.text };
-    });
-
-    // Shuffle choices
-    shuffleArray(choices);
-
-    questions.push({ theme, choices });
-  });
-
-  // Shuffle question order
+  // Use curated questionnaire data from Excel synthesis
+  const questions = QUESTIONNAIRE_DATA.map(q => ({
+    question: q.question,
+    theme: q.theme,
+    context: q.context,
+    choices: shuffleArray([...q.choices])
+  }));
   shuffleArray(questions);
   return questions;
 }
@@ -1103,6 +1074,16 @@ function renderQuestion() {
 
   const q = questions[currentIndex];
   document.getElementById('questionnaire-theme').textContent = q.theme;
+  document.getElementById('questionnaire-question-text').textContent = q.question;
+
+  const contextEl = document.getElementById('questionnaire-context');
+  if (q.context) {
+    contextEl.textContent = q.context;
+    contextEl.style.display = '';
+  } else {
+    contextEl.textContent = '';
+    contextEl.style.display = 'none';
+  }
 
   const container = document.getElementById('questionnaire-choices');
   container.innerHTML = '';
@@ -1211,6 +1192,9 @@ function renderQuestionnaireDetail() {
     item.style.animationDelay = `${i * 40}ms`;
 
     let html = `<div class="questionnaire-detail-theme">${q.theme}</div>`;
+    if (q.question) {
+      html += `<div class="questionnaire-detail-question">${q.question}</div>`;
+    }
 
     if (chosenIndex < 0) {
       html += '<div class="questionnaire-detail-skip-label">Aucune proposition choisie</div>';
