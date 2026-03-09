@@ -39,16 +39,29 @@
         <p class="accueil-subtitle">Découvre tes affinités avec les 7 candidats grâce à deux modes de jeu.</p>
 
         <div class="mode-selection">
-          <button class="mode-card" onclick="startQuestionnaire()">
+          <div class="mode-card mode-card-no-click">
             <div class="mode-card-icon mode-card-icon-questionnaire">
               <span class="mode-card-emoji">💘</span>
             </div>
             <div class="mode-card-text">
               <strong>Trouve ton crush politique</strong>
-              <span>20 questions, 7 candidats : choisis la proposition qui te parle · ~5 min</span>
+              <span>Choisis la proposition qui te parle parmi 7 candidats</span>
             </div>
-            <svg class="mode-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-          </button>
+          </div>
+          <div class="duration-buttons">
+            <button class="btn-duration" onclick="startQuestionnaire(5)">
+              <span class="duration-time">5</span>
+              <span class="duration-detail">questions · ~2 min</span>
+            </button>
+            <button class="btn-duration" onclick="startQuestionnaire(10)">
+              <span class="duration-time">10</span>
+              <span class="duration-detail">questions · ~3 min</span>
+            </button>
+            <button class="btn-duration" onclick="startQuestionnaire(20)">
+              <span class="duration-time">20</span>
+              <span class="duration-detail">questions · ~5 min</span>
+            </button>
+          </div>
 
           <button class="mode-card" onclick="showScreen('comparaison')">
             <div class="mode-card-icon mode-card-icon-compare">

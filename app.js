@@ -335,8 +335,12 @@ function generateQuestions() {
 }
 
 // ====== START QUESTIONNAIRE ======
-function startQuestionnaire() {
-  questionnaireState.questions = generateQuestions();
+function startQuestionnaire(count) {
+  let questions = generateQuestions();
+  if (count && count < questions.length) {
+    questions = questions.slice(0, count);
+  }
+  questionnaireState.questions = questions;
   questionnaireState.currentIndex = 0;
   questionnaireState.scores = {};
   questionnaireState.counts = {};
@@ -420,19 +424,30 @@ function answerQuestion(choiceIndex) {
     });
   }
 
-  // Visual feedback
-  const choices = document.querySelectorAll('.questionnaire-choice');
-  if (choiceIndex >= 0) {
-    choices.forEach((ch, i) => {
+  // Visual feedback + reveal candidate names on all choices
+  const choiceBtns = document.querySelectorAll('.questionnaire-choice');
+  choiceBtns.forEach((btn, i) => {
+    const ch = q.choices[i];
+    // Build candidate label
+    const names = ch.candidateIds.map(cid => {
+      const c = CANDIDATES.find(candidate => candidate.id === cid);
+      return `<span class="detail-candidate-dot" style="background:${c.color}"></span> ${c.name}`;
+    }).join('<span class="candidate-sep"> · </span>');
+    const label = document.createElement('div');
+    label.className = 'questionnaire-choice-reveal';
+    label.innerHTML = names;
+    btn.appendChild(label);
+
+    if (choiceIndex >= 0) {
       if (i === choiceIndex) {
-        ch.classList.add('chosen');
+        btn.classList.add('chosen');
       } else {
-        ch.classList.add('fade-out');
+        btn.classList.add('not-chosen');
       }
-    });
-  } else {
-    choices.forEach(ch => ch.classList.add('fade-out'));
-  }
+    } else {
+      btn.classList.add('not-chosen');
+    }
+  });
 
   // Haptic
   if (navigator.vibrate) navigator.vibrate(8);
@@ -440,7 +455,7 @@ function answerQuestion(choiceIndex) {
   setTimeout(() => {
     questionnaireState.currentIndex++;
     renderQuestion();
-  }, 400);
+  }, 1500);
 }
 
 // ====== GO BACK QUESTION ======
@@ -520,8 +535,8 @@ function renderQuestionnaireDetail() {
 
       html += `
         <div>
-          <div class="questionnaire-detail-choice ${cls}">${ch.text}</div>
           <div class="questionnaire-detail-candidate">${candidateNames}</div>
+          <div class="questionnaire-detail-choice ${cls}">${ch.text}</div>
         </div>
       `;
     });

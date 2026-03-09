@@ -243,16 +243,71 @@ body {
   box-shadow: var(--shadow-card);
 }
 
-.mode-card:hover {
+.mode-card:not(.mode-card-no-click):hover {
   background: var(--card-bg-strong);
   border-color: rgba(233, 30, 99, 0.2);
   transform: translateY(-2px);
   box-shadow: var(--shadow-float);
 }
 
-.mode-card:active {
+.mode-card:not(.mode-card-no-click):active {
   transform: scale(0.98);
   border-color: var(--rose);
+}
+
+.mode-card-no-click {
+  cursor: default;
+}
+
+/* ====== DURATION BUTTONS ====== */
+.duration-buttons {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.btn-duration {
+  flex: 1;
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 18px 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--noir);
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: var(--shadow-card);
+}
+
+.btn-duration:hover {
+  background: var(--rose-bg);
+  border-color: rgba(233, 30, 99, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-duration:active {
+  transform: scale(0.96);
+  background: rgba(233, 30, 99, 0.12);
+  border-color: var(--rose);
+}
+
+.duration-time {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--rose);
+}
+
+.duration-detail {
+  font-size: 0.68rem;
+  color: var(--gris-500);
+  font-weight: 500;
+  text-align: center;
 }
 
 .mode-card-icon {
@@ -993,6 +1048,13 @@ body {
   pointer-events: none;
 }
 
+.questionnaire-choice.not-chosen {
+  opacity: 0.55;
+  pointer-events: none;
+  border-color: var(--gris-200);
+  box-shadow: none;
+}
+
 @keyframes choicePulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.02); }
@@ -1002,6 +1064,25 @@ body {
 .questionnaire-choice-text {
   display: block;
   overflow: visible;
+}
+
+.questionnaire-choice-reveal {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--gris-200);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gris-500);
+  animation: revealIn 0.3s var(--ease-out) both;
+}
+
+@keyframes revealIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: none; }
 }
 
 .questionnaire-bottom {
@@ -1123,7 +1204,7 @@ body {
   font-size: 0.72rem;
   font-weight: 700;
   color: var(--gris-500);
-  margin-top: 4px;
+  margin-bottom: 4px;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -1290,6 +1371,8 @@ body {
   .mode-selection { margin-top: 24px; }
   .mode-card { padding: 16px 14px; gap: 12px; }
   .mode-card-icon { width: 42px; height: 42px; border-radius: 12px; }
+  .btn-duration { padding: 14px 6px; }
+  .duration-time { font-size: 1.3rem; }
   .questionnaire-choice { padding: 12px; font-size: 0.82rem; }
   .match-title { font-size: 1.8rem; }
   .match-candidate-name { font-size: 1.3rem; }
