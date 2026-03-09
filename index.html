@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Quiz Municipales Paris 2026 — Trouve ton candidat</title>
-  <meta name="description" content="Découvre quel candidat aux municipales parisiennes 2026 est le plus proche de tes convictions grâce à notre quiz interactif.">
-  <meta property="og:title" content="Quiz Municipales Paris 2026">
-  <meta property="og:description" content="De quel candidat es-tu le plus proche ? Fais le test !">
+  <title>Super Crush Politique 💘 — Municipales Paris 2026</title>
+  <meta name="description" content="Trouve ton crush politique aux municipales parisiennes 2026 grâce à notre quiz interactif.">
+  <meta property="og:title" content="Super Crush Politique 💘 — Municipales Paris 2026">
+  <meta property="og:description" content="Qui est ton crush politique ? Fais le test !">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#fef7f7">
+  <meta name="theme-color" content="#FFF0F3">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Quiz Paris 2026">
+  <meta name="apple-mobile-web-app-title" content="Super Crush 2026">
   <link rel="manifest" href="manifest.json">
   <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
@@ -35,191 +35,34 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           Municipales Paris 2026
         </div>
-        <h1>De quel candidat<br>es-tu le plus proche&nbsp;?</h1>
-        <p class="accueil-subtitle">Découvre tes affinités avec les 7 candidats grâce à trois modes de jeu.</p>
+        <h1>Trouve ton crush<br>politique 💘</h1>
+        <p class="accueil-subtitle">Découvre tes affinités avec les 7 candidats grâce à deux modes de jeu.</p>
 
         <div class="mode-selection">
-          <button class="mode-card" onclick="startQuiz(35)">
-            <div class="mode-card-icon mode-card-icon-match">
+          <button class="mode-card" onclick="startQuestionnaire()">
+            <div class="mode-card-icon mode-card-icon-questionnaire">
               <span class="mode-card-emoji">💘</span>
             </div>
             <div class="mode-card-text">
-              <strong>Matche avec ton candidat</strong>
-              <span>Swipe les propositions comme sur Tinder · ~5 min</span>
-            </div>
-            <svg class="mode-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-          </button>
-
-          <button class="mode-card" onclick="startDuel()">
-            <div class="mode-card-icon mode-card-icon-duel">
-              <span class="mode-card-emoji">⚔️</span>
-            </div>
-            <div class="mode-card-text">
-              <strong>Mode duel</strong>
-              <span>2 propositions face à face, choisis ta préférée · ~3 min</span>
-            </div>
-            <svg class="mode-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-          </button>
-
-          <button class="mode-card" onclick="startQuestionnaire()">
-            <div class="mode-card-icon mode-card-icon-questionnaire">
-              <span class="mode-card-emoji">🗳️</span>
-            </div>
-            <div class="mode-card-text">
-              <strong>Questionnaire par thème</strong>
+              <strong>Trouve ton crush politique</strong>
               <span>20 questions, 7 candidats : choisis la proposition qui te parle · ~5 min</span>
             </div>
             <svg class="mode-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
           </button>
-        </div>
 
-        <button class="btn-ghost accueil-compare-link" onclick="showScreen('comparaison')">Comparer les programmes →</button>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== ÉCRAN 2 : QUIZ (SWIPE) ====== -->
-  <section id="screen-quiz" class="screen">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="container">
-      <div class="quiz-header">
-        <button class="btn-back" onclick="goBackQuiz()" aria-label="Question précédente">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        </button>
-        <div class="progress-container">
-          <div class="progress-bar">
-            <div class="progress-fill" id="progress-fill"></div>
-          </div>
-          <span class="progress-text" id="progress-text">1 / 10</span>
-        </div>
-      </div>
-
-      <div class="swipe-zone" id="swipe-zone">
-        <div class="card-stack">
-          <div class="card card-behind-2"></div>
-          <div class="card card-behind-1"></div>
-          <div class="card card-active" id="swipe-card">
-            <div class="card-overlay card-overlay-favorable" id="overlay-favorable">
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-              <span class="card-overlay-label">Favorable</span>
+          <button class="mode-card" onclick="showScreen('comparaison')">
+            <div class="mode-card-icon mode-card-icon-compare">
+              <span class="mode-card-emoji">📋</span>
             </div>
-            <div class="card-overlay card-overlay-defavorable" id="overlay-defavorable">
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg>
-              <span class="card-overlay-label">Défavorable</span>
+            <div class="mode-card-text">
+              <strong>Comparer les programmes</strong>
+              <span>Compare les propositions de 2 candidats thème par thème</span>
             </div>
-            <div class="card-overlay card-overlay-neutre" id="overlay-neutre">
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14"/></svg>
-              <span class="card-overlay-label">Neutre</span>
-            </div>
-            <span class="card-theme" id="card-theme">Thématique</span>
-            <p class="card-text" id="card-text">Texte de la proposition</p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="swipe-hints">
-        <span class="hint hint-left">Contre</span>
-        <span class="hint hint-up">Neutre</span>
-        <span class="hint hint-right">Pour</span>
-      </div>
-      <div class="action-buttons">
-        <button class="btn-action btn-defavorable" onclick="answer('defavorable')" aria-label="Défavorable">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
-        </button>
-        <button class="btn-action btn-neutre" onclick="answer('neutre')" aria-label="Neutre">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/></svg>
-        </button>
-        <button class="btn-action btn-favorable" onclick="answer('favorable')" aria-label="Favorable">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== ÉCRAN DUEL ====== -->
-  <section id="screen-duel" class="screen">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="container">
-      <div class="quiz-header">
-        <button class="btn-back" onclick="goBackDuel()" aria-label="Duel précédent">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        </button>
-        <div class="progress-container">
-          <div class="progress-bar">
-            <div class="progress-fill" id="duel-progress-fill"></div>
-          </div>
-          <span class="progress-text" id="duel-progress-text">1 / 15</span>
-        </div>
-      </div>
-
-      <div class="duel-context">
-        <span class="duel-theme-label" id="duel-theme"></span>
-        <span class="duel-subtopic-label" id="duel-subtopic"></span>
-      </div>
-
-      <div class="duel-cards" id="duel-cards">
-        <button class="duel-card" id="duel-card-a" onclick="answerDuel('a')">
-          <p class="duel-card-text" id="duel-text-a"></p>
-        </button>
-        <button class="duel-card" id="duel-card-b" onclick="answerDuel('b')">
-          <p class="duel-card-text" id="duel-text-b"></p>
-        </button>
-      </div>
-
-      <div class="duel-bottom-actions">
-        <button class="duel-both" onclick="answerDuel('both')">Les deux me conviennent</button>
-        <button class="duel-skip" onclick="answerDuel('skip')">Aucune ne me convient</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== ÉCRAN RÉSULTATS DUEL ====== -->
-  <section id="screen-duel-resultats" class="screen">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-3"></div>
-    <div class="container">
-      <div class="resultats-content">
-        <h2 class="resultats-title">Tes résultats — Mode duel</h2>
-        <div class="resultats-winner" id="duel-resultats-winner">
-          <p class="winner-label">En mode duel, tu es le plus proche de</p>
-          <div class="winner-name" id="duel-winner-name">Candidat</div>
-          <div class="winner-score" id="duel-winner-score">75%</div>
-          <p class="winner-party" id="duel-winner-party">Parti</p>
-        </div>
-
-        <div class="resultats-bars" id="duel-resultats-bars"></div>
-
-        <div class="resultats-actions">
-          <button class="btn-primary" onclick="shareDuelResults()">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
-            Partager mes résultats
+            <svg class="mode-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
           </button>
-          <button class="btn-secondary" onclick="showScreen('duel-detail')">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 012-2h2a2 2 0 012 2M9 5h6"/></svg>
-            Voir le détail de mes choix
-          </button>
-          <button class="btn-secondary" onclick="showScreen('merci')">Liens utiles</button>
-          <button class="btn-secondary" onclick="showScreen('comparaison')">Comparer les programmes</button>
-          <button class="btn-ghost" onclick="showScreen('accueil')">Recommencer</button>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ====== ÉCRAN DÉTAIL DUEL ====== -->
-  <section id="screen-duel-detail" class="screen">
-    <div class="container">
-      <div class="detail-header">
-        <button class="btn-back" onclick="showScreen('duel-resultats')" aria-label="Retour aux résultats">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        </button>
-        <h2>Détail de tes duels</h2>
       </div>
-      <div class="duel-detail-list" id="duel-detail-list"></div>
     </div>
   </section>
 
@@ -260,9 +103,9 @@
     <div class="blob blob-3"></div>
     <div class="container">
       <div class="resultats-content">
-        <h2 class="resultats-title">Tes résultats — Questionnaire</h2>
+        <h2 class="resultats-title">Tes résultats 💘</h2>
         <div class="resultats-winner" id="questionnaire-resultats-winner">
-          <p class="winner-label">En mode questionnaire, tu es le plus proche de</p>
+          <p class="winner-label">Ton crush politique est...</p>
           <div class="winner-name" id="questionnaire-winner-name">Candidat</div>
           <div class="winner-score" id="questionnaire-winner-score">75%</div>
           <p class="winner-party" id="questionnaire-winner-party">Parti</p>
@@ -273,15 +116,18 @@
         <div class="resultats-actions">
           <button class="btn-primary" onclick="shareQuestionnaireResults()">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
-            Partager mes résultats
+            Partager mon crush 💘
           </button>
           <button class="btn-secondary" onclick="showScreen('questionnaire-detail')">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 012-2h2a2 2 0 012 2M9 5h6"/></svg>
             Voir le détail de mes choix
           </button>
-          <button class="btn-secondary" onclick="showScreen('merci')">Liens utiles</button>
           <button class="btn-secondary" onclick="showScreen('comparaison')">Comparer les programmes</button>
-          <button class="btn-ghost" onclick="showScreen('accueil')">Recommencer</button>
+          <button class="btn-secondary" onclick="showScreen('merci')">Liens utiles</button>
+          <button class="btn-home" onclick="showScreen('accueil')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Retour à l'accueil
+          </button>
         </div>
       </div>
     </div>
@@ -297,6 +143,12 @@
         <h2>Détail de tes choix</h2>
       </div>
       <div class="questionnaire-detail-list" id="questionnaire-detail-list"></div>
+      <div class="detail-bottom-actions">
+        <button class="btn-home" onclick="showScreen('accueil')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Retour à l'accueil
+        </button>
+      </div>
     </div>
   </section>
 
@@ -319,76 +171,18 @@
           <button class="btn-primary" id="match-btn-results" onclick="showMatchResultsScreen()">Voir tous les résultats</button>
           <button class="btn-secondary" id="match-btn-share" onclick="shareMatchResults()">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
-            Partager
+            Partager mon crush 💘
+          </button>
+          <button class="btn-home" onclick="showScreen('accueil')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Retour à l'accueil
           </button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====== ÉCRAN 3 : RÉSULTATS ====== -->
-  <section id="screen-resultats" class="screen">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-3"></div>
-    <div class="container">
-      <div class="resultats-content">
-        <h2 class="resultats-title">Tes résultats</h2>
-        <div class="resultats-winner" id="resultats-winner">
-          <p class="winner-label">Tu es le plus proche de</p>
-          <div class="winner-name" id="winner-name">Candidat</div>
-          <div class="winner-score" id="winner-score">75%</div>
-          <p class="winner-party" id="winner-party">Parti</p>
-        </div>
-
-        <div class="resultats-bars" id="resultats-bars"></div>
-
-        <div class="resultats-actions">
-          <button class="btn-primary" onclick="shareResults()">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
-            Partager mes résultats
-          </button>
-          <button class="btn-secondary" onclick="showScreen('detail')">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 012-2h2a2 2 0 012 2M9 5h6"/></svg>
-            Voir le détail de mes réponses
-          </button>
-          <button class="btn-secondary" onclick="showScreen('merci')">Liens utiles</button>
-          <button class="btn-secondary" onclick="showScreen('comparaison')">Comparer les programmes</button>
-          <button class="btn-ghost" onclick="showScreen('accueil')">Recommencer le quiz</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== ÉCRAN 3bis : DÉTAIL DES RÉPONSES ====== -->
-  <section id="screen-detail" class="screen">
-    <div class="container">
-      <div class="detail-header">
-        <button class="btn-back" onclick="showScreen('resultats')" aria-label="Retour aux résultats">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        </button>
-        <h2>Détail de tes réponses</h2>
-      </div>
-
-      <div class="detail-tabs">
-        <button class="detail-tab active" data-tab="favorable" onclick="switchDetailTab('favorable')">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-          Favorables <span class="detail-tab-count" id="count-favorable">0</span>
-        </button>
-        <button class="detail-tab" data-tab="defavorable" onclick="switchDetailTab('defavorable')">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
-          Rejetées <span class="detail-tab-count" id="count-defavorable">0</span>
-        </button>
-        <button class="detail-tab" data-tab="neutre" onclick="switchDetailTab('neutre')">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/></svg>
-          Neutres <span class="detail-tab-count" id="count-neutre">0</span>
-        </button>
-      </div>
-
-      <div class="detail-list" id="detail-list"></div>
-    </div>
-  </section>
-
-  <!-- ====== ÉCRAN 4 : COMPARAISON ====== -->
+  <!-- ====== ÉCRAN COMPARAISON ====== -->
   <section id="screen-comparaison" class="screen">
     <div class="container">
       <div class="comparaison-header">
@@ -410,14 +204,21 @@
       </div>
 
       <div class="comparaison-grid" id="comparaison-grid"></div>
+
+      <div class="detail-bottom-actions">
+        <button class="btn-home" onclick="showScreen('accueil')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Retour à l'accueil
+        </button>
+      </div>
     </div>
   </section>
 
-  <!-- ====== ÉCRAN 5 : MERCI ====== -->
+  <!-- ====== ÉCRAN MERCI ====== -->
   <section id="screen-merci" class="screen">
     <div class="container">
       <div class="merci-content">
-        <h2>Merci d'avoir participé !</h2>
+        <h2>Merci d'avoir participé ! 💘</h2>
         <p>Chaque vote compte. Informe-toi et participe aux élections municipales de 2026.</p>
 
         <div class="links-section">
@@ -452,8 +253,11 @@
         </div>
 
         <div class="merci-actions">
-          <button class="btn-secondary" onclick="showScreen('resultats')">Revoir mes résultats</button>
-          <button class="btn-ghost" onclick="showScreen('accueil')">Recommencer le quiz</button>
+          <button class="btn-secondary" onclick="showScreen('questionnaire-resultats')">Revoir mes résultats</button>
+          <button class="btn-home" onclick="showScreen('accueil')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Retour à l'accueil
+          </button>
         </div>
       </div>
     </div>

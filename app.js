@@ -1,21 +1,12 @@
 // ====== STATE ======
 let quizState = {
-  totalQuestions: 0,
-  currentIndex: 0,
-  selectedPropositions: [],
-  scores: {},
-  counts: {},
-  answers: [],        // { proposition, type: 'favorable'|'defavorable'|'neutre' }
-  comparisonCandidates: [],
-  results: null,
-  isAnimating: false
+  comparisonCandidates: []
 };
 
 // ====== SCREEN NAVIGATION ======
 let previousScreen = 'accueil';
 
 function showScreen(screenId) {
-  // Track previous screen for back navigation
   const current = document.querySelector('.screen.active');
   if (current && screenId === 'comparaison') {
     previousScreen = current.id.replace('screen-', '');
@@ -29,18 +20,8 @@ function showScreen(screenId) {
   if (screenId === 'comparaison') {
     initComparison();
   }
-  if (screenId === 'detail') {
-    renderDetail('favorable');
-  }
-  if (screenId === 'duel-detail') {
-    renderDuelDetail();
-  }
   if (screenId === 'questionnaire-detail') {
     renderQuestionnaireDetail();
-  }
-  if (screenId === 'accueil') {
-    const modeSelection = document.querySelector('.mode-selection');
-    if (modeSelection) modeSelection.style.display = '';
   }
 }
 
@@ -48,37 +29,7 @@ function goBackFromComparison() {
   showScreen(previousScreen);
 }
 
-// ====== PROPOSITION SELECTION ======
-function selectPropositions(count) {
-  const byCand = {};
-  CANDIDATES.forEach(c => { byCand[c.id] = []; });
-  PROPOSITIONS.forEach(p => {
-    if (byCand[p.candidateId]) byCand[p.candidateId].push(p);
-  });
-
-  Object.values(byCand).forEach(arr => shuffleArray(arr));
-
-  const selected = [];
-  const candidateIds = CANDIDATES.map(c => c.id);
-  let round = 0;
-
-  while (selected.length < count) {
-    let addedThisRound = false;
-    for (const cid of candidateIds) {
-      if (selected.length >= count) break;
-      if (round < byCand[cid].length) {
-        selected.push(byCand[cid][round]);
-        addedThisRound = true;
-      }
-    }
-    round++;
-    if (!addedThisRound) break;
-  }
-
-  shuffleArray(selected);
-  return selected;
-}
-
+// ====== UTILS ======
 function shuffleArray(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -87,307 +38,7 @@ function shuffleArray(arr) {
   return arr;
 }
 
-// ====== START QUIZ ======
-function startQuiz(count) {
-  quizState.totalQuestions = count;
-  quizState.currentIndex = 0;
-  quizState.selectedPropositions = selectPropositions(count);
-  quizState.scores = {};
-  quizState.counts = {};
-  quizState.isAnimating = false;
-  quizState.answers = [];
-
-  CANDIDATES.forEach(c => {
-    quizState.scores[c.id] = 0;
-    quizState.counts[c.id] = 0;
-  });
-
-  quizState.selectedPropositions.forEach(p => {
-    quizState.counts[p.candidateId]++;
-  });
-
-  showScreen('quiz');
-  renderCard();
-  showTutorial();
-}
-
-// ====== GO BACK (PREVIOUS QUESTION) ======
-function goBackQuiz() {
-  if (quizState.isAnimating) return;
-  if (quizState.currentIndex > 0) {
-    const lastAnswer = quizState.answers.pop();
-    if (lastAnswer) {
-      if (lastAnswer.type === 'favorable') {
-        quizState.scores[lastAnswer.proposition.candidateId] -= 1;
-      } else if (lastAnswer.type === 'defavorable') {
-        quizState.scores[lastAnswer.proposition.candidateId] += 1;
-      }
-    }
-    quizState.currentIndex--;
-    renderCard();
-  } else {
-    showScreen('accueil');
-  }
-}
-
-function goBackDuel() {
-  if (duelState.isAnimating) return;
-  if (duelState.currentIndex > 0) {
-    const lastAnswer = duelState.answers.pop();
-    if (lastAnswer) {
-      const duel = lastAnswer.duel;
-      const choice = lastAnswer.choice;
-      if (choice === 'a') {
-        duelState.scores[duel.propA.candidateId] -= 1;
-        duelState.scores[duel.propB.candidateId] += 1;
-      } else if (choice === 'b') {
-        duelState.scores[duel.propB.candidateId] -= 1;
-        duelState.scores[duel.propA.candidateId] += 1;
-      } else if (choice === 'both') {
-        duelState.scores[duel.propA.candidateId] -= 1;
-        duelState.scores[duel.propB.candidateId] -= 1;
-      }
-    }
-    duelState.currentIndex--;
-    renderDuel();
-  } else {
-    showScreen('accueil');
-  }
-}
-
-// ====== QUIZ TUTORIAL ======
-function showTutorial() {
-  const overlay = document.createElement('div');
-  overlay.id = 'quiz-tutorial';
-  overlay.className = 'quiz-tutorial';
-  overlay.innerHTML = `
-    <div class="quiz-tutorial-card">
-      <h3>Comment ça marche ?</h3>
-      <div class="tutorial-actions">
-        <div class="tutorial-action">
-          <div class="tutorial-icon tutorial-icon-right">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-          </div>
-          <span>Swipez à <strong>droite</strong> = <strong>favorable</strong></span>
-        </div>
-        <div class="tutorial-action">
-          <div class="tutorial-icon tutorial-icon-left">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
-          </div>
-          <span>Swipez à <strong>gauche</strong> = <strong>défavorable</strong></span>
-        </div>
-        <div class="tutorial-action">
-          <div class="tutorial-icon tutorial-icon-up">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/></svg>
-          </div>
-          <span>Swipez vers le <strong>haut</strong> = <strong>neutre</strong></span>
-        </div>
-      </div>
-      <p class="tutorial-hint">Tu peux aussi utiliser les boutons en bas de l'écran.</p>
-      <button class="btn-primary" onclick="dismissTutorial()">C'est compris !</button>
-    </div>
-  `;
-  document.body.appendChild(overlay);
-}
-
-function dismissTutorial() {
-  const overlay = document.getElementById('quiz-tutorial');
-  if (overlay) {
-    overlay.style.opacity = '0';
-    overlay.style.transition = 'opacity 0.3s ease';
-    setTimeout(() => overlay.remove(), 300);
-  }
-}
-
-// ====== RENDER CARD ======
-function renderCard() {
-  const { currentIndex, totalQuestions, selectedPropositions } = quizState;
-
-  const pct = (currentIndex / totalQuestions) * 100;
-  document.getElementById('progress-fill').style.width = pct + '%';
-  document.getElementById('progress-text').textContent = (currentIndex + 1) + ' / ' + totalQuestions;
-
-  if (currentIndex >= totalQuestions) {
-    showResults();
-    return;
-  }
-
-  const prop = selectedPropositions[currentIndex];
-  const card = document.getElementById('swipe-card');
-
-  card.className = 'card card-active';
-  card.style.transform = '';
-  card.style.opacity = '';
-  resetOverlays();
-
-  document.getElementById('card-theme').textContent = prop.theme;
-  document.getElementById('card-text').textContent = prop.text;
-
-  quizState.isAnimating = false;
-}
-
-function resetOverlays() {
-  document.getElementById('overlay-favorable').style.opacity = '0';
-  document.getElementById('overlay-defavorable').style.opacity = '0';
-  document.getElementById('overlay-neutre').style.opacity = '0';
-}
-
-// ====== ANSWER ======
-function answer(type) {
-  if (quizState.isAnimating) return;
-  const prop = quizState.selectedPropositions[quizState.currentIndex];
-  if (!prop) return;
-
-  quizState.isAnimating = true;
-
-  // Enregistrer la réponse
-  quizState.answers.push({ proposition: prop, type });
-
-  if (type === 'favorable') {
-    quizState.scores[prop.candidateId] += 1;
-  } else if (type === 'defavorable') {
-    quizState.scores[prop.candidateId] -= 1;
-  }
-
-  // Haptic feedback
-  if (navigator.vibrate) {
-    navigator.vibrate(8);
-  }
-
-  const card = document.getElementById('swipe-card');
-  if (type === 'favorable') {
-    card.classList.add('fly-right');
-  } else if (type === 'defavorable') {
-    card.classList.add('fly-left');
-  } else {
-    card.classList.add('fly-up');
-  }
-
-  setTimeout(() => {
-    quizState.currentIndex++;
-    renderCard();
-  }, 300);
-}
-
-// ====== SWIPE MECHANICS ======
-let swipeData = {
-  startX: 0,
-  startY: 0,
-  currentX: 0,
-  currentY: 0,
-  isDragging: false,
-  startTime: 0
-};
-
-// Adaptive thresholds: smaller on mobile
-const isMobile = 'ontouchstart' in window;
-const SWIPE_THRESHOLD_X = isMobile ? 60 : 100;
-const SWIPE_THRESHOLD_Y = isMobile ? 50 : 80;
-const VELOCITY_THRESHOLD = 0.4; // px/ms — fast flick detection
-
-function initSwipe() {
-  const zone = document.getElementById('swipe-zone');
-
-  zone.addEventListener('touchstart', onSwipeStart, { passive: true });
-  zone.addEventListener('touchmove', onSwipeMove, { passive: false });
-  zone.addEventListener('touchend', onSwipeEnd);
-  zone.addEventListener('touchcancel', onSwipeEnd);
-
-  zone.addEventListener('mousedown', onSwipeStart);
-  zone.addEventListener('mousemove', onSwipeMove);
-  zone.addEventListener('mouseup', onSwipeEnd);
-  zone.addEventListener('mouseleave', onSwipeEnd);
-}
-
-function getEventXY(e) {
-  if (e.touches && e.touches.length > 0) {
-    return { x: e.touches[0].clientX, y: e.touches[0].clientY };
-  }
-  return { x: e.clientX, y: e.clientY };
-}
-
-function onSwipeStart(e) {
-  if (e.target.closest('.action-buttons') || e.target.closest('.btn-back') || e.target.closest('.quiz-header')) return;
-  if (quizState.isAnimating || quizState.currentIndex >= quizState.totalQuestions) return;
-
-  const { x, y } = getEventXY(e);
-  swipeData.startX = x;
-  swipeData.startY = y;
-  swipeData.currentX = x;
-  swipeData.currentY = y;
-  swipeData.isDragging = true;
-  swipeData.startTime = Date.now();
-
-  const card = document.getElementById('swipe-card');
-  card.classList.add('dragging');
-}
-
-function onSwipeMove(e) {
-  if (!swipeData.isDragging) return;
-  if (e.touches) e.preventDefault();
-
-  const { x, y } = getEventXY(e);
-  swipeData.currentX = x;
-  swipeData.currentY = y;
-
-  const dx = x - swipeData.startX;
-  const dy = y - swipeData.startY;
-
-  const card = document.getElementById('swipe-card');
-  const rotation = dx * 0.08;
-  card.style.transform = `translate(${dx}px, ${dy}px) rotate(${rotation}deg)`;
-
-  const absDx = Math.abs(dx);
-  const absDy = Math.abs(dy);
-
-  resetOverlays();
-
-  if (absDx > absDy && absDx > 15) {
-    const opacity = Math.min(absDx / SWIPE_THRESHOLD_X, 1);
-    if (dx > 0) {
-      document.getElementById('overlay-favorable').style.opacity = opacity;
-    } else {
-      document.getElementById('overlay-defavorable').style.opacity = opacity;
-    }
-  } else if (dy < -15 && absDy > absDx) {
-    const opacity = Math.min(absDy / SWIPE_THRESHOLD_Y, 1);
-    document.getElementById('overlay-neutre').style.opacity = opacity;
-  }
-}
-
-function onSwipeEnd() {
-  if (!swipeData.isDragging) return;
-  swipeData.isDragging = false;
-
-  const card = document.getElementById('swipe-card');
-  card.classList.remove('dragging');
-
-  const dx = swipeData.currentX - swipeData.startX;
-  const dy = swipeData.currentY - swipeData.startY;
-  const absDx = Math.abs(dx);
-  const absDy = Math.abs(dy);
-
-  // Velocity detection for fast flicks
-  const elapsed = Date.now() - swipeData.startTime;
-  const velocityX = absDx / Math.max(elapsed, 1);
-  const velocityY = absDy / Math.max(elapsed, 1);
-  const fastFlickX = velocityX > VELOCITY_THRESHOLD && absDx > 30;
-  const fastFlickY = velocityY > VELOCITY_THRESHOLD && absDy > 25;
-
-  if (absDx > absDy && (absDx >= SWIPE_THRESHOLD_X || fastFlickX)) {
-    answer(dx > 0 ? 'favorable' : 'defavorable');
-  } else if (dy < 0 && absDy > absDx && (absDy >= SWIPE_THRESHOLD_Y || fastFlickY)) {
-    answer('neutre');
-  } else {
-    // Snap back
-    card.classList.add('snap-back');
-    card.style.transform = '';
-    resetOverlays();
-    setTimeout(() => card.classList.remove('snap-back'), 500);
-  }
-}
-
-// ====== RESULTS ======
+// ====== RESULTS COMPUTATION ======
 function computeResults(scores, counts) {
   const results = CANDIDATES.map(c => {
     const score = scores[c.id];
@@ -434,48 +85,7 @@ function animateResultsBars(containerId) {
   });
 }
 
-function showResults() {
-  const results = computeResults(quizState.scores, quizState.counts);
-  quizState.results = results;
-  showMatchScreen(results, 'classique');
-}
-
-function displayClassiqueResults() {
-  const results = quizState.results;
-  const winner = results[0];
-  document.getElementById('winner-name').textContent = winner.name;
-  document.getElementById('winner-score').textContent = winner.affinity + '%';
-  document.getElementById('winner-party').textContent = winner.party;
-  const scoreEl = document.getElementById('winner-score');
-  scoreEl.style.background = `linear-gradient(135deg, ${winner.color}, var(--bleu))`;
-  scoreEl.style.webkitBackgroundClip = 'text';
-  scoreEl.style.webkitTextFillColor = 'transparent';
-  scoreEl.style.backgroundClip = 'text';
-
-  renderResultsBars('resultats-bars', results);
-  showScreen('resultats');
-  animateResultsBars('resultats-bars');
-}
-
 // ====== SHARE ======
-function shareResults() {
-  if (!quizState.results || quizState.results.length === 0) return;
-
-  const winner = quizState.results[0];
-  const text = `Je suis à ${winner.affinity}% d'affinité avec ${winner.name} aux municipales de Paris 2026 ! Fais le test →`;
-  const url = window.location.href;
-
-  if (navigator.share) {
-    navigator.share({ title: 'Quiz Municipales Paris 2026', text, url }).catch(() => {});
-  } else if (navigator.clipboard) {
-    navigator.clipboard.writeText(text + ' ' + url).then(() => {
-      showToast('Copié dans le presse-papier !');
-    }).catch(() => fallbackCopy(text + ' ' + url));
-  } else {
-    fallbackCopy(text + ' ' + url);
-  }
-}
-
 function fallbackCopy(text) {
   const textarea = document.createElement('textarea');
   textarea.value = text;
@@ -586,56 +196,6 @@ function updateComparison() {
   });
 }
 
-// ====== DETAIL ======
-function switchDetailTab(tab) {
-  document.querySelectorAll('.detail-tab').forEach(t => t.classList.remove('active'));
-  document.querySelector(`.detail-tab[data-tab="${tab}"]`).classList.add('active');
-  renderDetail(tab);
-}
-
-function renderDetail(tab) {
-  const list = document.getElementById('detail-list');
-  list.innerHTML = '';
-
-  // Update counts
-  const counts = { favorable: 0, defavorable: 0, neutre: 0 };
-  quizState.answers.forEach(a => counts[a.type]++);
-  document.getElementById('count-favorable').textContent = counts.favorable;
-  document.getElementById('count-defavorable').textContent = counts.defavorable;
-  document.getElementById('count-neutre').textContent = counts.neutre;
-
-  // Ensure active tab is highlighted
-  document.querySelectorAll('.detail-tab').forEach(t => t.classList.remove('active'));
-  const activeTab = document.querySelector(`.detail-tab[data-tab="${tab}"]`);
-  if (activeTab) activeTab.classList.add('active');
-
-  const filtered = quizState.answers.filter(a => a.type === tab);
-
-  if (filtered.length === 0) {
-    const labels = { favorable: 'likée', defavorable: 'rejetée', neutre: 'neutre' };
-    list.innerHTML = `<div class="detail-empty">Aucune proposition ${labels[tab]}.</div>`;
-    return;
-  }
-
-  filtered.forEach((a, i) => {
-    const candidate = CANDIDATES.find(c => c.id === a.proposition.candidateId);
-    const item = document.createElement('div');
-    item.className = `detail-item detail-${tab}`;
-    item.style.animationDelay = `${i * 40}ms`;
-    item.innerHTML = `
-      <div class="detail-item-text">${a.proposition.text}</div>
-      <div class="detail-item-meta">
-        <span class="detail-item-candidate">
-          <span class="detail-candidate-dot" style="background:${candidate.color}"></span>
-          ${candidate.name}
-        </span>
-        <span class="detail-item-theme">${a.proposition.theme}</span>
-      </div>
-    `;
-    list.appendChild(item);
-  });
-}
-
 // ====== CONFETTI ======
 function launchConfetti() {
   const canvas = document.getElementById('confetti-canvas');
@@ -644,7 +204,7 @@ function launchConfetti() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
-  const colors = ['#f44e07', '#ff7a3d', '#0000c4', '#10b981', '#e53e3e', '#f97316', '#3333d6'];
+  const colors = ['#E91E63', '#FF4081', '#F48FB1', '#AD1457', '#C2185B', '#FF80AB', '#F06292'];
   const particles = [];
   const count = 80;
 
@@ -666,7 +226,6 @@ function launchConfetti() {
   }
 
   const startTime = Date.now();
-  let animId;
 
   function animate() {
     const elapsed = Date.now() - startTime;
@@ -697,7 +256,7 @@ function launchConfetti() {
     });
 
     if (alive) {
-      animId = requestAnimationFrame(animate);
+      requestAnimationFrame(animate);
     } else {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
@@ -706,268 +265,8 @@ function launchConfetti() {
   animate();
 }
 
-
-// ====== DUEL STATE ======
-let duelState = {
-  totalDuels: 0,
-  currentIndex: 0,
-  selectedDuels: [],
-  scores: {},
-  counts: {},
-  answers: [],
-  results: null,
-  isAnimating: false
-};
-
-// ====== SELECT DUELS ======
-function selectDuels(count) {
-  const byTheme = {};
-  DUELS.forEach(d => {
-    if (!byTheme[d.theme]) byTheme[d.theme] = [];
-    byTheme[d.theme].push(d);
-  });
-
-  Object.values(byTheme).forEach(arr => shuffleArray(arr));
-
-  const selected = [];
-  const themes = Object.keys(byTheme);
-  let round = 0;
-
-  while (selected.length < count) {
-    let addedThisRound = false;
-    for (const theme of themes) {
-      if (selected.length >= count) break;
-      if (round < byTheme[theme].length) {
-        selected.push(byTheme[theme][round]);
-        addedThisRound = true;
-      }
-    }
-    round++;
-    if (!addedThisRound) break;
-  }
-
-  shuffleArray(selected);
-  return selected;
-}
-
-// ====== START DUEL ======
-function startDuel() {
-  const count = Math.min(18, DUELS.length);
-  duelState.totalDuels = count;
-  duelState.currentIndex = 0;
-  duelState.selectedDuels = selectDuels(count);
-  duelState.scores = {};
-  duelState.counts = {};
-  duelState.answers = [];
-  duelState.isAnimating = false;
-
-  CANDIDATES.forEach(c => {
-    duelState.scores[c.id] = 0;
-    duelState.counts[c.id] = 0;
-  });
-
-  duelState.selectedDuels.forEach(d => {
-    duelState.counts[d.propA.candidateId]++;
-    duelState.counts[d.propB.candidateId]++;
-  });
-
-  showScreen('duel');
-  renderDuel();
-}
-
-// ====== RENDER DUEL ======
-function renderDuel() {
-  const { currentIndex, totalDuels, selectedDuels } = duelState;
-
-  const pct = (currentIndex / totalDuels) * 100;
-  document.getElementById('duel-progress-fill').style.width = pct + '%';
-  document.getElementById('duel-progress-text').textContent = (currentIndex + 1) + ' / ' + totalDuels;
-
-  if (currentIndex >= totalDuels) {
-    showDuelResults();
-    return;
-  }
-
-  const duel = selectedDuels[currentIndex];
-
-  document.getElementById('duel-theme').textContent = duel.theme;
-  document.getElementById('duel-subtopic').textContent = duel.subtopic;
-
-  // Randomize left/right placement
-  const swap = Math.random() > 0.5;
-  const textA = swap ? duel.propB.text : duel.propA.text;
-  const textB = swap ? duel.propA.text : duel.propB.text;
-
-  document.getElementById('duel-text-a').textContent = textA;
-  document.getElementById('duel-text-b').textContent = textB;
-
-  // Store swap state for correct scoring
-  duelState.currentSwap = swap;
-
-  const cardA = document.getElementById('duel-card-a');
-  const cardB = document.getElementById('duel-card-b');
-  cardA.className = 'duel-card';
-  cardB.className = 'duel-card';
-
-  duelState.isAnimating = false;
-}
-
-// ====== ANSWER DUEL ======
-function answerDuel(choice) {
-  if (duelState.isAnimating) return;
-  if (duelState.currentIndex >= duelState.totalDuels) return;
-
-  duelState.isAnimating = true;
-  const duel = duelState.selectedDuels[duelState.currentIndex];
-  const swap = duelState.currentSwap;
-
-  const cardA = document.getElementById('duel-card-a');
-  const cardB = document.getElementById('duel-card-b');
-
-  // Map visual choice to actual prop (accounting for swap)
-  let actualChoice = choice;
-  if (choice === 'a' || choice === 'b') {
-    if (swap) {
-      actualChoice = choice === 'a' ? 'b' : 'a';
-    }
-  }
-
-  // Record answer
-  duelState.answers.push({ duel, choice: actualChoice });
-
-  // Scoring
-  if (actualChoice === 'a') {
-    duelState.scores[duel.propA.candidateId] += 1;
-    duelState.scores[duel.propB.candidateId] -= 1;
-  } else if (actualChoice === 'b') {
-    duelState.scores[duel.propB.candidateId] += 1;
-    duelState.scores[duel.propA.candidateId] -= 1;
-  } else if (actualChoice === 'both') {
-    duelState.scores[duel.propA.candidateId] += 1;
-    duelState.scores[duel.propB.candidateId] += 1;
-  }
-  // skip → 0 for both (unchanged)
-
-  // Visual feedback
-  if (choice === 'a') {
-    cardA.classList.add('chosen');
-    cardB.classList.add('rejected');
-  } else if (choice === 'b') {
-    cardB.classList.add('chosen');
-    cardA.classList.add('rejected');
-  } else if (choice === 'both') {
-    cardA.classList.add('chosen-both');
-    cardB.classList.add('chosen-both');
-  } else {
-    cardA.classList.add('skip-fade');
-    cardB.classList.add('skip-fade');
-  }
-
-  // Haptic
-  if (navigator.vibrate) navigator.vibrate(8);
-
-  setTimeout(() => {
-    duelState.currentIndex++;
-    renderDuel();
-  }, 450);
-}
-
-// ====== DUEL RESULTS ======
-function showDuelResults() {
-  const results = computeResults(duelState.scores, duelState.counts);
-  duelState.results = results;
-  showMatchScreen(results, 'duel');
-}
-
-function displayDuelResults() {
-  const results = duelState.results;
-  const winner = results[0];
-  document.getElementById('duel-winner-name').textContent = winner.name;
-  document.getElementById('duel-winner-score').textContent = winner.affinity + '%';
-  document.getElementById('duel-winner-party').textContent = winner.party;
-  const scoreEl = document.getElementById('duel-winner-score');
-  scoreEl.style.background = `linear-gradient(135deg, ${winner.color}, var(--bleu))`;
-  scoreEl.style.webkitBackgroundClip = 'text';
-  scoreEl.style.webkitTextFillColor = 'transparent';
-  scoreEl.style.backgroundClip = 'text';
-
-  renderResultsBars('duel-resultats-bars', results);
-  showScreen('duel-resultats');
-  animateResultsBars('duel-resultats-bars');
-}
-
-// ====== DUEL DETAIL ======
-function renderDuelDetail() {
-  const list = document.getElementById('duel-detail-list');
-  list.innerHTML = '';
-
-  duelState.answers.forEach((a, i) => {
-    const duel = a.duel;
-    const choice = a.choice;
-
-    const candidateA = CANDIDATES.find(c => c.id === duel.propA.candidateId);
-    const candidateB = CANDIDATES.find(c => c.id === duel.propB.candidateId);
-
-    const item = document.createElement('div');
-    item.className = 'duel-detail-item';
-    item.style.animationDelay = `${i * 40}ms`;
-
-    const chosenA = (choice === 'a' || choice === 'both') ? 'duel-detail-chosen' : (choice === 'b' ? 'duel-detail-rejected' : '');
-    const chosenB = (choice === 'b' || choice === 'both') ? 'duel-detail-chosen' : (choice === 'a' ? 'duel-detail-rejected' : '');
-
-    const statusLabel = choice === 'skip' ? '<div class="duel-detail-skip">Aucune choisie</div>'
-      : choice === 'both' ? '<div class="duel-detail-both">Les deux retenues</div>'
-      : '';
-
-    item.innerHTML = `
-      <div class="duel-detail-theme">${duel.theme} — ${duel.subtopic}</div>
-      ${statusLabel}
-      <div class="duel-detail-pair">
-        <div>
-          <div class="duel-detail-prop ${chosenA}">${duel.propA.text}</div>
-          <div class="duel-detail-candidate">
-            <span class="detail-candidate-dot" style="background:${candidateA.color}"></span>
-            ${candidateA.name}
-          </div>
-        </div>
-        <div class="duel-detail-vs">VS</div>
-        <div>
-          <div class="duel-detail-prop ${chosenB}">${duel.propB.text}</div>
-          <div class="duel-detail-candidate">
-            <span class="detail-candidate-dot" style="background:${candidateB.color}"></span>
-            ${candidateB.name}
-          </div>
-        </div>
-      </div>
-    `;
-    list.appendChild(item);
-  });
-}
-
-// ====== SHARE DUEL RESULTS ======
-function shareDuelResults() {
-  if (!duelState.results || duelState.results.length === 0) return;
-
-  const winner = duelState.results[0];
-  const text = `En mode duel, je suis à ${winner.affinity}% d'affinité avec ${winner.name} aux municipales de Paris 2026 ! Fais le test →`;
-  const url = window.location.href;
-
-  if (navigator.share) {
-    navigator.share({ title: 'Quiz Municipales Paris 2026 — Mode Duel', text, url }).catch(() => {});
-  } else if (navigator.clipboard) {
-    navigator.clipboard.writeText(text + ' ' + url).then(() => {
-      showToast('Copié dans le presse-papier !');
-    }).catch(() => fallbackCopy(text + ' ' + url));
-  } else {
-    fallbackCopy(text + ' ' + url);
-  }
-}
-
 // ====== MATCH SCREEN ======
-let matchMode = null; // 'classique', 'duel', 'questionnaire'
-
-function showMatchScreen(results, mode) {
-  matchMode = mode;
+function showMatchScreen(results) {
   const winner = results[0];
 
   document.getElementById('match-pct').textContent = winner.affinity + '%';
@@ -975,7 +274,6 @@ function showMatchScreen(results, mode) {
   document.getElementById('match-candidate-party').textContent = winner.party;
   document.getElementById('match-candidate-score').textContent = winner.affinity + '%';
 
-  // Apply winner color to score
   const scoreEl = document.getElementById('match-candidate-score');
   scoreEl.style.background = `linear-gradient(135deg, ${winner.color}, #e91e63)`;
   scoreEl.style.webkitBackgroundClip = 'text';
@@ -984,29 +282,16 @@ function showMatchScreen(results, mode) {
 
   showScreen('match');
 
-  // Confetti
   setTimeout(() => launchConfetti(), 400);
   if (navigator.vibrate) navigator.vibrate([10, 50, 10]);
 }
 
 function showMatchResultsScreen() {
-  if (matchMode === 'classique') {
-    displayClassiqueResults();
-  } else if (matchMode === 'duel') {
-    displayDuelResults();
-  } else if (matchMode === 'questionnaire') {
-    displayQuestionnaireResults();
-  }
+  displayQuestionnaireResults();
 }
 
 function shareMatchResults() {
-  if (matchMode === 'classique') {
-    shareResults();
-  } else if (matchMode === 'duel') {
-    shareDuelResults();
-  } else if (matchMode === 'questionnaire') {
-    shareQuestionnaireResults();
-  }
+  shareQuestionnaireResults();
 }
 
 // ====== QUESTIONNAIRE STATE ======
@@ -1020,15 +305,31 @@ let questionnaireState = {
   isAnimating: false
 };
 
-// ====== GENERATE QUESTIONS ======
+// ====== GENERATE QUESTIONS (with merged identical choices) ======
 function generateQuestions() {
-  // Use curated questionnaire data from Excel synthesis
-  const questions = QUESTIONNAIRE_DATA.map(q => ({
-    question: q.question,
-    theme: q.theme,
-    context: q.context,
-    choices: shuffleArray([...q.choices])
-  }));
+  const questions = QUESTIONNAIRE_DATA.map(q => {
+    const shuffled = shuffleArray([...q.choices]);
+
+    // Merge choices with identical text
+    const mergedChoices = [];
+    const textMap = {};
+    shuffled.forEach(ch => {
+      if (textMap[ch.text]) {
+        textMap[ch.text].candidateIds.push(ch.candidateId);
+      } else {
+        const merged = { text: ch.text, candidateIds: [ch.candidateId] };
+        textMap[ch.text] = merged;
+        mergedChoices.push(merged);
+      }
+    });
+
+    return {
+      question: q.question,
+      theme: q.theme,
+      context: q.context,
+      choices: mergedChoices
+    };
+  });
   shuffleArray(questions);
   return questions;
 }
@@ -1047,10 +348,12 @@ function startQuestionnaire() {
     questionnaireState.counts[c.id] = 0;
   });
 
-  // Count appearances per candidate across all questions
+  // Count appearances per candidate across all questions (with merged choices)
   questionnaireState.questions.forEach(q => {
     q.choices.forEach(ch => {
-      questionnaireState.counts[ch.candidateId]++;
+      ch.candidateIds.forEach(cid => {
+        questionnaireState.counts[cid]++;
+      });
     });
   });
 
@@ -1109,10 +412,12 @@ function answerQuestion(choiceIndex) {
   // Record answer
   questionnaireState.answers.push({ question: q, chosenIndex: choiceIndex });
 
-  // Scoring
+  // Scoring: attribute +1 to ALL candidates in the merged group
   if (choiceIndex >= 0) {
     const chosen = q.choices[choiceIndex];
-    questionnaireState.scores[chosen.candidateId] += 1;
+    chosen.candidateIds.forEach(cid => {
+      questionnaireState.scores[cid] += 1;
+    });
   }
 
   // Visual feedback
@@ -1145,7 +450,9 @@ function goBackQuestion() {
     const lastAnswer = questionnaireState.answers.pop();
     if (lastAnswer && lastAnswer.chosenIndex >= 0) {
       const chosen = lastAnswer.question.choices[lastAnswer.chosenIndex];
-      questionnaireState.scores[chosen.candidateId] -= 1;
+      chosen.candidateIds.forEach(cid => {
+        questionnaireState.scores[cid] -= 1;
+      });
     }
     questionnaireState.currentIndex--;
     renderQuestion();
@@ -1158,7 +465,7 @@ function goBackQuestion() {
 function showQuestionnaireResults() {
   const results = computeResults(questionnaireState.scores, questionnaireState.counts);
   questionnaireState.results = results;
-  showMatchScreen(results, 'questionnaire');
+  showMatchScreen(results);
 }
 
 function displayQuestionnaireResults() {
@@ -1168,7 +475,7 @@ function displayQuestionnaireResults() {
   document.getElementById('questionnaire-winner-score').textContent = winner.affinity + '%';
   document.getElementById('questionnaire-winner-party').textContent = winner.party;
   const scoreEl = document.getElementById('questionnaire-winner-score');
-  scoreEl.style.background = `linear-gradient(135deg, ${winner.color}, var(--bleu))`;
+  scoreEl.style.background = `linear-gradient(135deg, ${winner.color}, var(--rose))`;
   scoreEl.style.webkitBackgroundClip = 'text';
   scoreEl.style.webkitTextFillColor = 'transparent';
   scoreEl.style.backgroundClip = 'text';
@@ -1178,7 +485,7 @@ function displayQuestionnaireResults() {
   animateResultsBars('questionnaire-resultats-bars');
 }
 
-// ====== QUESTIONNAIRE DETAIL ======
+// ====== QUESTIONNAIRE DETAIL (with merged choices support) ======
 function renderQuestionnaireDetail() {
   const list = document.getElementById('questionnaire-detail-list');
   list.innerHTML = '';
@@ -1202,17 +509,19 @@ function renderQuestionnaireDetail() {
 
     html += '<div class="questionnaire-detail-choices">';
     q.choices.forEach((ch, ci) => {
-      const candidate = CANDIDATES.find(c => c.id === ch.candidateId);
       const isChosen = ci === chosenIndex;
       const cls = isChosen ? 'questionnaire-detail-chosen' : (chosenIndex >= 0 ? 'questionnaire-detail-skipped' : '');
+
+      // Build candidate names list for merged choices
+      const candidateNames = ch.candidateIds.map(cid => {
+        const c = CANDIDATES.find(candidate => candidate.id === cid);
+        return `<span class="detail-candidate-dot" style="background:${c.color}"></span> ${c.name}`;
+      }).join('<span class="candidate-sep"> · </span>');
 
       html += `
         <div>
           <div class="questionnaire-detail-choice ${cls}">${ch.text}</div>
-          <div class="questionnaire-detail-candidate">
-            <span class="detail-candidate-dot" style="background:${candidate.color}"></span>
-            ${candidate.name}
-          </div>
+          <div class="questionnaire-detail-candidate">${candidateNames}</div>
         </div>
       `;
     });
@@ -1228,11 +537,11 @@ function shareQuestionnaireResults() {
   if (!questionnaireState.results || questionnaireState.results.length === 0) return;
 
   const winner = questionnaireState.results[0];
-  const text = `En mode questionnaire, je suis à ${winner.affinity}% d'affinité avec ${winner.name} aux municipales de Paris 2026 ! Fais le test →`;
+  const text = `Mon crush politique est ${winner.name} (${winner.affinity}% d'affinité) aux municipales de Paris 2026 ! 💘 Fais le test →`;
   const url = window.location.href;
 
   if (navigator.share) {
-    navigator.share({ title: 'Quiz Municipales Paris 2026 — Questionnaire', text, url }).catch(() => {});
+    navigator.share({ title: 'Super Crush Politique 💘 — Municipales Paris 2026', text, url }).catch(() => {});
   } else if (navigator.clipboard) {
     navigator.clipboard.writeText(text + ' ' + url).then(() => {
       showToast('Copié dans le presse-papier !');
@@ -1241,19 +550,3 @@ function shareQuestionnaireResults() {
     fallbackCopy(text + ' ' + url);
   }
 }
-
-// ====== KEYBOARD ======
-document.addEventListener('keydown', (e) => {
-  const quizScreen = document.getElementById('screen-quiz');
-  if (!quizScreen.classList.contains('active')) return;
-  if (quizState.currentIndex >= quizState.totalQuestions) return;
-
-  if (e.key === 'ArrowRight') { e.preventDefault(); answer('favorable'); }
-  else if (e.key === 'ArrowLeft') { e.preventDefault(); answer('defavorable'); }
-  else if (e.key === 'ArrowUp') { e.preventDefault(); answer('neutre'); }
-});
-
-// ====== INIT ======
-document.addEventListener('DOMContentLoaded', () => {
-  initSwipe();
-});
