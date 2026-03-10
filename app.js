@@ -43,7 +43,7 @@ function computeResults(scores, counts) {
   const results = CANDIDATES.map(c => {
     const score = scores[c.id];
     const count = counts[c.id];
-    let affinity = 50;
+    let affinity = 0;
     if (count > 0) {
       affinity = ((score + count) / (2 * count)) * 100;
     }
@@ -403,6 +403,10 @@ function renderQuestion() {
     container.appendChild(btn);
   });
 
+  // Restore skip button (in case it was replaced by "Suivant")
+  const bottomDiv = document.querySelector('.questionnaire-bottom');
+  bottomDiv.innerHTML = `<button class="questionnaire-skip" onclick="answerQuestion(-1)">Aucune ne me convient</button>`;
+
   questionnaireState.isAnimating = false;
 }
 
@@ -452,10 +456,14 @@ function answerQuestion(choiceIndex) {
   // Haptic
   if (navigator.vibrate) navigator.vibrate(8);
 
-  setTimeout(() => {
-    questionnaireState.currentIndex++;
-    renderQuestion();
-  }, 1500);
+  // Hide skip button, show "Suivant" button
+  const bottomDiv = document.querySelector('.questionnaire-bottom');
+  bottomDiv.innerHTML = `<button class="btn-suivant" onclick="nextQuestion()">Suivant →</button>`;
+}
+
+function nextQuestion() {
+  questionnaireState.currentIndex++;
+  renderQuestion();
 }
 
 // ====== GO BACK QUESTION ======

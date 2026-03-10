@@ -1111,6 +1111,27 @@ body {
   color: var(--noir);
 }
 
+.btn-suivant {
+  background: var(--rose);
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-suivant:hover {
+  background: var(--rose-light);
+}
+
+.btn-suivant:active {
+  background: #C2185B;
+}
+
 /* ====== ECRAN DETAIL QUESTIONNAIRE ====== */
 #screen-questionnaire-detail {
   background: var(--creme);
