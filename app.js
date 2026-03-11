@@ -45,7 +45,7 @@ function computeResults(scores, counts) {
     const count = counts[c.id];
     let affinity = 0;
     if (count > 0) {
-      affinity = ((score + count) / (2 * count)) * 100;
+      affinity = (score / count) * 100;
     }
     affinity = Math.round(Math.max(0, Math.min(100, affinity)));
     return { ...c, affinity };
