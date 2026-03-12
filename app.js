@@ -1,7 +1,5 @@
 // ====== STATE ======
-let quizState = {
-  comparisonCandidates: []
-};
+let quizState = {};
 
 // ====== SCREEN NAVIGATION ======
 let previousScreen = 'accueil';
@@ -114,7 +112,7 @@ function showToast(message) {
   setTimeout(() => toast.classList.remove('visible'), 2500);
 }
 
-// ====== COMPARISON ======
+// ====== COMPARISON (all candidates) ======
 function initComparison() {
   const select = document.getElementById('theme-select');
   if (select.options.length <= 1) {
@@ -126,44 +124,7 @@ function initComparison() {
       select.appendChild(opt);
     });
   }
-
-  const togglesContainer = document.getElementById('candidate-toggles');
-  if (togglesContainer.children.length === 0) {
-    CANDIDATES.forEach(c => {
-      const btn = document.createElement('button');
-      btn.className = 'candidate-toggle';
-      btn.dataset.candidateId = c.id;
-      btn.textContent = c.name;
-      btn.onclick = () => toggleCandidate(c.id);
-      togglesContainer.appendChild(btn);
-    });
-    quizState.comparisonCandidates = [CANDIDATES[0].id, CANDIDATES[1].id];
-  }
-
-  updateToggleStyles();
   updateComparison();
-}
-
-function toggleCandidate(candidateId) {
-  const idx = quizState.comparisonCandidates.indexOf(candidateId);
-  if (idx >= 0) {
-    if (quizState.comparisonCandidates.length > 1) {
-      quizState.comparisonCandidates.splice(idx, 1);
-    }
-  } else {
-    if (quizState.comparisonCandidates.length >= 2) {
-      quizState.comparisonCandidates.shift();
-    }
-    quizState.comparisonCandidates.push(candidateId);
-  }
-  updateToggleStyles();
-  updateComparison();
-}
-
-function updateToggleStyles() {
-  document.querySelectorAll('.candidate-toggle').forEach(btn => {
-    btn.classList.toggle('selected', quizState.comparisonCandidates.includes(btn.dataset.candidateId));
-  });
 }
 
 function updateComparison() {
@@ -171,9 +132,8 @@ function updateComparison() {
   const grid = document.getElementById('comparaison-grid');
   grid.innerHTML = '';
 
-  quizState.comparisonCandidates.forEach(cid => {
-    const candidate = CANDIDATES.find(c => c.id === cid);
-    const props = PROPOSITIONS.filter(p => p.theme === theme && p.candidateId === cid);
+  CANDIDATES.forEach(candidate => {
+    const props = PROPOSITIONS.filter(p => p.theme === theme && p.candidateId === candidate.id);
 
     const col = document.createElement('div');
     col.className = 'comparaison-column';
@@ -271,34 +231,23 @@ function launchConfetti() {
   animate();
 }
 
-// ====== MATCH SCREEN ======
-function showMatchScreen(results) {
-  const winner = results[0];
+// ====== THEME PRIORITIES FOR QUESTION SELECTION ======
+const THEME_PRIORITY_5 = [
+  'Education',  // Périscolaire
+  'Sécurité',
+  'Logement social',
+  'Encadrement des loyers',
+  'Lutte contre le sans-abrisme'  // Sans-abris
+];
 
-  document.getElementById('match-pct').textContent = winner.affinity + '%';
-  document.getElementById('match-candidate-name').textContent = winner.name;
-  document.getElementById('match-candidate-party').textContent = winner.party;
-  document.getElementById('match-candidate-score').textContent = winner.affinity + '%';
-
-  const scoreEl = document.getElementById('match-candidate-score');
-  scoreEl.style.background = `linear-gradient(135deg, ${winner.color}, #e91e63)`;
-  scoreEl.style.webkitBackgroundClip = 'text';
-  scoreEl.style.webkitTextFillColor = 'transparent';
-  scoreEl.style.backgroundClip = 'text';
-
-  showScreen('match');
-
-  setTimeout(() => launchConfetti(), 400);
-  if (navigator.vibrate) navigator.vibrate([10, 50, 10]);
-}
-
-function showMatchResultsScreen() {
-  displayQuestionnaireResults();
-}
-
-function shareMatchResults() {
-  shareQuestionnaireResults();
-}
+const THEME_PRIORITY_10 = [
+  ...THEME_PRIORITY_5,
+  'santé',       // Addictions
+  'Féminisme',
+  'Place de la voiture dans l\'espace public',  // Voitures
+  'Subventions aux associations',  // Subventions
+  'Education'    // Moyens pour l'école (second Education question)
+];
 
 // ====== QUESTIONNAIRE STATE ======
 let questionnaireState = {
@@ -306,9 +255,11 @@ let questionnaireState = {
   currentIndex: 0,
   scores: {},
   counts: {},
-  answers: [], // { question, chosenIndex } (-1 = skip)
+  answers: [], // { question, chosenIndex, boosted } (-1 = skip)
   results: null,
-  isAnimating: false
+  hasAnswered: false,
+  boostActive: false,
+  boostUsed: false
 };
 
 // ====== GENERATE QUESTIONS (with merged identical choices) ======
@@ -341,18 +292,59 @@ function generateQuestions() {
   return questions;
 }
 
+// ====== SELECT QUESTIONS BY THEME PRIORITY ======
+function selectQuestionsByTheme(allQuestions, count) {
+  if (count >= allQuestions.length) return allQuestions;
+
+  let priorityThemes;
+  if (count <= 5) {
+    priorityThemes = THEME_PRIORITY_5;
+  } else if (count <= 10) {
+    priorityThemes = THEME_PRIORITY_10;
+  } else {
+    return allQuestions;
+  }
+
+  const selected = [];
+  const usedIndices = new Set();
+
+  // For each priority theme, find a matching question
+  for (const theme of priorityThemes) {
+    if (selected.length >= count) break;
+    const idx = allQuestions.findIndex((q, i) =>
+      !usedIndices.has(i) && q.theme.toLowerCase().includes(theme.toLowerCase())
+    );
+    if (idx >= 0) {
+      selected.push(allQuestions[idx]);
+      usedIndices.add(idx);
+    }
+  }
+
+  // Fill remaining slots with other questions
+  for (let i = 0; i < allQuestions.length && selected.length < count; i++) {
+    if (!usedIndices.has(i)) {
+      selected.push(allQuestions[i]);
+      usedIndices.add(i);
+    }
+  }
+
+  shuffleArray(selected);
+  return selected;
+}
+
 // ====== START QUESTIONNAIRE ======
 function startQuestionnaire(count) {
   let questions = generateQuestions();
-  if (count && count < questions.length) {
-    questions = questions.slice(0, count);
-  }
+  questions = selectQuestionsByTheme(questions, count || questions.length);
+
   questionnaireState.questions = questions;
   questionnaireState.currentIndex = 0;
   questionnaireState.scores = {};
   questionnaireState.counts = {};
   questionnaireState.answers = [];
-  questionnaireState.isAnimating = false;
+  questionnaireState.hasAnswered = false;
+  questionnaireState.boostActive = false;
+  questionnaireState.boostUsed = false;
 
   CANDIDATES.forEach(c => {
     questionnaireState.scores[c.id] = 0;
@@ -405,33 +397,143 @@ function renderQuestion() {
   q.choices.forEach((ch, i) => {
     const btn = document.createElement('button');
     btn.className = 'questionnaire-choice';
-    btn.innerHTML = `<span class="questionnaire-choice-text">${ch.text}</span>`;
+    btn.dataset.choiceIndex = i;
+
+    let choiceHtml = `<span class="questionnaire-choice-text">${ch.text}</span>`;
+
+    // Detail visible BEFORE answering (Phase 4)
+    if (ch.detail) {
+      choiceHtml += `<button class="questionnaire-detail-toggle" data-detail-btn="true">Voir le détail</button>`;
+      choiceHtml += `<div class="questionnaire-choice-detail" style="display:none">${ch.detail}</div>`;
+    }
+
+    btn.innerHTML = choiceHtml;
+
+    // Wire up detail toggle with stopPropagation
+    const detailBtn = btn.querySelector('[data-detail-btn]');
+    if (detailBtn) {
+      detailBtn.onclick = (e) => {
+        e.stopPropagation();
+        const detailDiv = btn.querySelector('.questionnaire-choice-detail');
+        if (detailDiv.style.display === 'none') {
+          detailDiv.style.display = '';
+          detailBtn.textContent = 'Masquer le détail';
+        } else {
+          detailDiv.style.display = 'none';
+          detailBtn.textContent = 'Voir le détail';
+        }
+      };
+    }
+
     btn.onclick = () => answerQuestion(i);
     container.appendChild(btn);
   });
 
-  // Restore skip button (in case it was replaced by "Suivant")
-  const bottomDiv = document.querySelector('.questionnaire-bottom');
-  bottomDiv.innerHTML = `<button class="questionnaire-skip" onclick="answerQuestion(-1)">Aucune ne me convient</button>`;
+  // Reset boost state for new question
+  questionnaireState.hasAnswered = false;
+  questionnaireState.boostActive = false;
+  questionnaireState.boostUsed = false;
 
-  questionnaireState.isAnimating = false;
+  // Restore bottom with skip + boost buttons
+  const bottomDiv = document.querySelector('.questionnaire-bottom');
+  bottomDiv.innerHTML = `
+    <div class="boost-row">
+      <button class="btn-boost" id="btn-boost" onclick="toggleBoost()" title="Cette question comptera double dans votre score final">
+        Super Boost X2
+        <span class="boost-info" onclick="event.stopPropagation(); showToast('Cette question comptera double dans votre score final')">i</span>
+      </button>
+    </div>
+    <button class="questionnaire-skip" onclick="answerQuestion(-1)">Aucune ne me convient</button>
+  `;
+}
+
+// ====== SUPER BOOST X2 ======
+function toggleBoost() {
+  if (questionnaireState.hasAnswered) return;
+  questionnaireState.boostActive = !questionnaireState.boostActive;
+  const btn = document.getElementById('btn-boost');
+  if (btn) {
+    btn.classList.toggle('active', questionnaireState.boostActive);
+  }
 }
 
 // ====== ANSWER QUESTION ======
 function answerQuestion(choiceIndex) {
-  if (questionnaireState.isAnimating) return;
-  questionnaireState.isAnimating = true;
-
   const q = questionnaireState.questions[questionnaireState.currentIndex];
+  const scoreMultiplier = questionnaireState.boostActive ? 2 : 1;
 
-  // Record answer
-  questionnaireState.answers.push({ question: q, chosenIndex: choiceIndex });
+  // If already answered, handle re-answer (Phase 5)
+  if (questionnaireState.hasAnswered) {
+    const currentAnswer = questionnaireState.answers[questionnaireState.answers.length - 1];
+    const prevIndex = currentAnswer.chosenIndex;
+    const prevBoosted = currentAnswer.boosted;
+    const prevMultiplier = prevBoosted ? 2 : 1;
 
-  // Scoring: attribute +1 to ALL candidates in the merged group
+    // Same choice clicked again - do nothing
+    if (choiceIndex === prevIndex) return;
+
+    // Undo previous score
+    if (prevIndex >= 0) {
+      const prevChosen = q.choices[prevIndex];
+      prevChosen.candidateIds.forEach(cid => {
+        questionnaireState.scores[cid] -= prevMultiplier;
+      });
+    }
+
+    // Apply new score
+    if (choiceIndex >= 0) {
+      const newChosen = q.choices[choiceIndex];
+      newChosen.candidateIds.forEach(cid => {
+        questionnaireState.scores[cid] += prevMultiplier;
+      });
+    }
+
+    // Update stored answer (keep same boost status)
+    currentAnswer.chosenIndex = choiceIndex;
+
+    // Update CSS classes
+    const choiceBtns = document.querySelectorAll('.questionnaire-choice');
+    choiceBtns.forEach((btn, i) => {
+      btn.classList.remove('chosen', 'not-chosen');
+      if (choiceIndex >= 0) {
+        if (i === choiceIndex) {
+          btn.classList.add('chosen');
+        } else {
+          btn.classList.add('not-chosen');
+        }
+      } else {
+        btn.classList.add('not-chosen');
+      }
+    });
+
+    if (navigator.vibrate) navigator.vibrate(8);
+    return;
+  }
+
+  // First answer
+  questionnaireState.hasAnswered = true;
+
+  // Record answer with boost info
+  questionnaireState.answers.push({
+    question: q,
+    chosenIndex: choiceIndex,
+    boosted: questionnaireState.boostActive
+  });
+
+  // Scoring: attribute +1 (or +2 if boosted) to ALL candidates in the merged group
   if (choiceIndex >= 0) {
     const chosen = q.choices[choiceIndex];
     chosen.candidateIds.forEach(cid => {
-      questionnaireState.scores[cid] += 1;
+      questionnaireState.scores[cid] += scoreMultiplier;
+    });
+  }
+
+  // If boosted, also double the counts for this question's candidates to keep affinity formula fair
+  if (questionnaireState.boostActive) {
+    q.choices.forEach(ch => {
+      ch.candidateIds.forEach(cid => {
+        questionnaireState.counts[cid]++;
+      });
     });
   }
 
@@ -447,31 +549,13 @@ function answerQuestion(choiceIndex) {
     const label = document.createElement('div');
     label.className = 'questionnaire-choice-reveal';
     label.innerHTML = names;
-    btn.appendChild(label);
 
-    // Detail expand button if detail exists
-    if (ch.detail) {
-      const detailBtn = document.createElement('button');
-      detailBtn.className = 'questionnaire-detail-toggle';
-      detailBtn.textContent = 'Voir le détail';
-      detailBtn.onclick = (e) => {
-        e.stopPropagation();
-        const detailDiv = btn.querySelector('.questionnaire-choice-detail');
-        if (detailDiv.style.display === 'none') {
-          detailDiv.style.display = '';
-          detailBtn.textContent = 'Masquer le détail';
-        } else {
-          detailDiv.style.display = 'none';
-          detailBtn.textContent = 'Voir le détail';
-        }
-      };
-      btn.appendChild(detailBtn);
-
-      const detailDiv = document.createElement('div');
-      detailDiv.className = 'questionnaire-choice-detail';
-      detailDiv.style.display = 'none';
-      detailDiv.textContent = ch.detail;
-      btn.appendChild(detailDiv);
+    // Insert reveal AFTER the text span but before the detail toggle
+    const detailToggle = btn.querySelector('[data-detail-btn]');
+    if (detailToggle) {
+      btn.insertBefore(label, detailToggle);
+    } else {
+      btn.appendChild(label);
     }
 
     if (choiceIndex >= 0) {
@@ -485,12 +569,19 @@ function answerQuestion(choiceIndex) {
     }
   });
 
+  // Disable boost button after answering
+  const boostBtn = document.getElementById('btn-boost');
+  if (boostBtn) {
+    boostBtn.disabled = true;
+    boostBtn.classList.add('disabled');
+  }
+
   // Haptic
   if (navigator.vibrate) navigator.vibrate(8);
 
-  // Hide skip button, show "Suivant" button
+  // Show "Suivant" button, hide skip
   const bottomDiv = document.querySelector('.questionnaire-bottom');
-  bottomDiv.innerHTML = `<button class="btn-suivant" onclick="nextQuestion()">Suivant →</button>`;
+  bottomDiv.innerHTML = `<button class="btn-suivant" onclick="nextQuestion()">Suivant \u2192</button>`;
 }
 
 function nextQuestion() {
@@ -500,13 +591,21 @@ function nextQuestion() {
 
 // ====== GO BACK QUESTION ======
 function goBackQuestion() {
-  if (questionnaireState.isAnimating) return;
   if (questionnaireState.currentIndex > 0) {
     const lastAnswer = questionnaireState.answers.pop();
     if (lastAnswer && lastAnswer.chosenIndex >= 0) {
+      const multiplier = lastAnswer.boosted ? 2 : 1;
       const chosen = lastAnswer.question.choices[lastAnswer.chosenIndex];
       chosen.candidateIds.forEach(cid => {
-        questionnaireState.scores[cid] -= 1;
+        questionnaireState.scores[cid] -= multiplier;
+      });
+    }
+    // If was boosted, undo the extra counts
+    if (lastAnswer && lastAnswer.boosted) {
+      lastAnswer.question.choices.forEach(ch => {
+        ch.candidateIds.forEach(cid => {
+          questionnaireState.counts[cid]--;
+        });
       });
     }
     questionnaireState.currentIndex--;

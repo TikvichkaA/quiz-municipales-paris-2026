@@ -1409,8 +1409,8 @@ const QUESTIONNAIRE_DATA = [
     "choices": [
       {
         "candidateId": "gregoire",
-        "text": "Oui par des référendums d'initiative partagé déclenché par les habitants quelque soit leur nationalité (pas de précision du seuil) + un laboratoire de conception partagée (usagers, citoyen.nes, monde de la recherche), pas de contrôle citoyen sur les politiques publiques mises en oeuvres",
-        "detail": "Des référendums et votations locales d’initiative partagée, sur des sujets structurants, ouverts à toutes les Parisiennes et tous les Parisiens quelle que soit leur nationalité\nDe très nombreux outils de démocratie participative et de consultation des Parisiennes et des Parisiens ont été développés ces dernières années. C’est pourquoi nous mettrons en place des référendums et des votations locales d’initiative partagée sur les sujets structurants de la vie parisienne, ouverts à toutes et tous, y compris aux Parisiennes et Parisiens de nationalité étrangère. A partir d’un certain seuil de signatures, le Conseil de Paris sera tenu de débattre d’un sujet donné et de donner le cas échéant suite à la proposition sous forme d’un référendum local.\nEn élargissant ainsi la participation citoyenne, nous ferons vivre une démocratie plus inclusive, plus représentative et plus proche des habitantes et des habitants.\n\nUn conseil municipal de la jeunesse dans chaque arrondissement, saisi des questions débattues au conseil d’arrondissement ou au conseil de Paris\nChaque arrondissement disposera d’un conseil municipal de la jeunesse. Saisi des questions débattues au conseil d’arrondissement ou au conseil de Paris, il permettra aux jeunes de participer directement à la vie citoyenne et aux décisions qui les concernent.\nCréation d’un laboratoire de conception partagée des politiques publiques associant usagers, citoyens et chercheurs. Pour mieux répondre aux besoins réels, les politiques publiques doivent être conçues avec celles et ceux qu’elles concernent et s’appuyer sur la science. Nous créerons un laboratoire de conception partagée associant usagers, citoyennes et citoyens, ainsi que le monde de la recherche.\nUne nouvelle ère des conseils de quartier, avec des modalités de concertation et de contribution diversifiées pour faciliter la participation du plus grand nombre\nLa participation citoyenne se joue également au plus proche de notre quotidien, dans nos rues, dans nos quartiers. Fidèles à nos valeurs, nous avons mis en place les conseils de quartier\net ils sont devenus un maillon essentiel de la démocratie de proximité.\nPour leur donner un nouveau souffle, nous ouvrirons une nouvelle ère des conseils de quartier, en diversifiant les modalités de concertation et de contribution, afin de permettre au plus grand nombre de participer à la vie locale.\n\nDes comptes rendus annuels de mandat à l’échelle des quartiers permettant de s’assurer du bon avancement des projets de quartier (végétalisation, rénovation des équipements, sécurité, propreté, vie de quartier…).\nPour que chacun puisse suivre l’avancée des projets et en débattre, nous réaliserons chaque année des comptes‑rendus de mandat à l’échelle de chaque quartier.\nIls permettront de vérifier l’avancement des projets locaux — végétalisation, rénovation des équipements, sécurité, propreté ou vie de quartier... — et d’assurer une transparence réelle envers les habitantes et habitants."
+        "text": "Oui par des référendums d'initiative partagée déclenchés par les habitants quelle que soit leur nationalité (nb : pas de précision du seuil) + un laboratoire de conception partagée (usagers, citoyen.nes, monde de la recherche), pas de contrôle citoyen sur les politiques publiques mises en oeuvres",
+        "detail": "Des référendums et votations locales d’initiative partagée, sur des sujets structurants, ouverts à toutes les Parisiennes et tous les Parisiens quelle que soit leur nationalité\n De très nombreux outils de démocratie participative et de consultation des Parisiennes et des Parisiens ont été développés ces dernières années. C’est pourquoi nous mettrons en place des référendums et des votations locales d’initiative partagée sur les sujets structurants de la vie parisienne, ouverts à toutes et tous, y compris aux Parisiennes et Parisiens de nationalité étrangère. A partir d’un certain seuil de signatures, le Conseil de Paris sera tenu de débattre d’un sujet donné et de donner le cas échéant suite à la proposition sous forme d’un référendum local.\n En élargissant ainsi la participation citoyenne, nous ferons vivre une démocratie plus inclusive, plus représentative et plus proche des habitantes et des habitants.\n \n Un conseil municipal de la jeunesse dans chaque arrondissement, saisi des questions débattues au conseil d’arrondissement ou au conseil de Paris\n Chaque arrondissement disposera d’un conseil municipal de la jeunesse. Saisi des questions débattues au conseil d’arrondissement ou au conseil de Paris, il permettra aux jeunes de participer directement à la vie citoyenne et aux décisions qui les concernent.\n Création d’un laboratoire de conception partagée des politiques publiques associant usagers, citoyens et chercheurs. Pour mieux répondre aux besoins réels, les politiques publiques doivent être conçues avec celles et ceux qu’elles concernent et s’appuyer sur la science. Nous créerons un laboratoire de conception partagée associant usagers, citoyennes et citoyens, ainsi que le monde de la recherche.\n Une nouvelle ère des conseils de quartier, avec des modalités de concertation et de contribution diversifiées pour faciliter la participation du plus grand nombre\n La participation citoyenne se joue également au plus proche de notre quotidien, dans nos rues, dans nos quartiers. Fidèles à nos valeurs, nous avons mis en place les conseils de quartier\n et ils sont devenus un maillon essentiel de la démocratie de proximité.\n Pour leur donner un nouveau souffle, nous ouvrirons une nouvelle ère des conseils de quartier, en diversifiant les modalités de concertation et de contribution, afin de permettre au plus grand nombre de participer à la vie locale.\n \n Des comptes rendus annuels de mandat à l’échelle des quartiers permettant de s’assurer du bon avancement des projets de quartier (végétalisation, rénovation des équipements, sécurité, propreté, vie de quartier…).\n Pour que chacun puisse suivre l’avancée des projets et en débattre, nous réaliserons chaque année des comptes‑rendus de mandat à l’échelle de chaque quartier.\n Ils permettront de vérifier l’avancement des projets locaux — végétalisation, rénovation des équipements, sécurité, propreté ou vie de quartier... — et d’assurer une transparence réelle envers les habitantes et habitants."
       },
       {
         "candidateId": "knafo",
@@ -1420,16 +1420,16 @@ const QUESTIONNAIRE_DATA = [
       {
         "candidateId": "chikirou",
         "text": "Oui, par un référendum d’initiative citoyenne déclenché par les habitants quelque soit leur nationalité (seuil de 100 000 signature) + création d’assemblées citoyennes + garantir un véritable contrôle citoyen",
-        "detail": "Un vrai pouvoir d'intervention populaire pour les Parisiens : \nInstaurer un référendum communal d’initiative citoyenne\nDonner aux Parisiens le pouvoir d’initier un référendum local : dès lors qu’une pétition atteint 100 000 signatures, la Ville de Paris organise un référendum d’initiative citoyenne\n\nSoumettre au Conseil de Paris un vœu demandant l’instauration d’un référendum révocatoire lorsqu’une pétition atteignant 10 % du corps électoral le demande et qui en préciserait les modalités (recueil de signatures, charte d’engagement, etc.)\n    Garantir des concertations publiques réelles et en amont pour tout grand projet d’aménagement, avec une restitution transparente des contributions citoyennes et un engagement à faire évoluer les projets pour aboutir à des compromis respectueux de l’intérêt général\n    Garantir un véritable contrôle citoyen de la gestion des services publics locaux, notamment en ouvrant la commission consultative des services publics locaux de la Ville de Paris à toutes les associations et aux citoyens qui le souhaitent, avec la possibilité d’auditionner des experts et de demander tout document utile\n    Donner aux Parisiens le droit de proposer et de choisir chaque année le thème d’une mission de l’Inspection générale de la Ville de Paris, afin par exemple de pouvoir évaluer un service public municipal qui ne donne pas satisfaction\n    Organiser des campagnes locales annuelles d’inscription sur les listes électorales"
+        "detail": "Un vrai pouvoir d'intervention populaire pour les Parisiens : \n Instaurer un référendum communal d’initiative citoyenne\n Donner aux Parisiens le pouvoir d’initier un référendum local : dès lors qu’une pétition atteint 100 000 signatures, la Ville de Paris organise un référendum d’initiative citoyenne\n \n Soumettre au Conseil de Paris un vœu demandant l’instauration d’un référendum révocatoire lorsqu’une pétition atteignant 10 % du corps électoral le demande et qui en préciserait les modalités (recueil de signatures, charte d’engagement, etc.)\n  Garantir des concertations publiques réelles et en amont pour tout grand projet d’aménagement, avec une restitution transparente des contributions citoyennes et un engagement à faire évoluer les projets pour aboutir à des compromis respectueux de l’intérêt général\n  Garantir un véritable contrôle citoyen de la gestion des services publics locaux, notamment en ouvrant la commission consultative des services publics locaux de la Ville de Paris à toutes les associations et aux citoyens qui le souhaitent, avec la possibilité d’auditionner des experts et de demander tout document utile\n  Donner aux Parisiens le droit de proposer et de choisir chaque année le thème d’une mission de l’Inspection générale de la Ville de Paris, afin par exemple de pouvoir évaluer un service public municipal qui ne donne pas satisfaction\n  Organiser des campagnes locales annuelles d’inscription sur les listes électorales"
+      },
+      {
+        "candidateId": "npa",
+        "text": "Oui, en organisant des assemblées générales de travailleurs et d'usagers quelque soit leur nationalité, pour décider collectivement des besoins en services publics",
+        "detail": null
       },
       {
         "candidateId": "dati",
         "text": "Non",
-        "detail": null
-      },
-      {
-        "candidateId": "npa",
-        "text": "Droit de vote des étrangers aux élections municipales et assemblées générales de travailleurs et d'usagers pour décider collectivement des besoins en services publics",
         "detail": null
       }
     ]
@@ -1455,6 +1455,11 @@ const QUESTIONNAIRE_DATA = [
         "detail": null
       },
       {
+        "candidateId": "npa",
+        "text": "être augmenté, en réquisitionnant les logements et bureaux vacants et en interdisant toutes les expulsions",
+        "detail": null
+      },
+      {
         "candidateId": "bournazel",
         "text": "être augmenté et réservé aux personnes qui travaillent",
         "detail": null
@@ -1463,18 +1468,13 @@ const QUESTIONNAIRE_DATA = [
         "candidateId": "knafo",
         "text": "être réduit",
         "detail": null
-      },
-      {
-        "candidateId": "npa",
-        "text": "être massivement augmenté, en réquisitionnant les logements et bureaux vacants et en interdisant toutes les expulsions",
-        "detail": null
       }
     ]
   },
   {
     "question": "La police municipale doit :",
     "theme": "Sécurité",
-    "context": "Il y a aujourd'hui 2 200 policiers municipaux à Paris",
+    "context": "Il y a aujourd’hui 2 200 policiers municipaux à Paris",
     "choices": [
       {
         "candidateId": "bournazel",
@@ -1492,18 +1492,18 @@ const QUESTIONNAIRE_DATA = [
         "detail": null
       },
       {
+        "candidateId": "npa",
+        "text": "être dissoute : la sécurité doit passer par la lutte contre les inégalités sociales, pas par la répression policière",
+        "detail": null
+      },
+      {
         "candidateId": "chikirou",
-        "text": "être augmentée et formé, notamment aux violences sexistes et sexuelles",
+        "text": "être augmentée et formée, notamment aux violences sexistes et sexuelles",
         "detail": null
       },
       {
         "candidateId": "gregoire",
-        "text": "être augmentée et formé, notamment aux violences sexistes et sexuelles",
-        "detail": null
-      },
-      {
-        "candidateId": "npa",
-        "text": "être dissoute : la sécurité doit passer par la lutte contre les inégalités sociales, pas par la répression policière",
+        "text": "être augmentée et formée, notamment aux violences sexistes et sexuelles",
         "detail": null
       }
     ]
@@ -1515,33 +1515,33 @@ const QUESTIONNAIRE_DATA = [
     "choices": [
       {
         "candidateId": "bournazel",
-        "text": "On augmente la vitesse de manière évolutive jusqu'à 70Km/h",
-        "detail": "Grâce à un réseau de capteurs, je mettrai en place une signalisation évolutive pour adapter la vitesse sur le périphérique au trafic et aux horaires (comme c’est déjà le cas en fonction de la météo) afin de fluidifier et réduire les nuisances. Aux heures de pointe, je maintiendrai les 50 km/h ; lorsque la circulation est faible, je porterai la limite à 70 km/h.\n\nJ’engagerai également une transformation progressive du périphérique, en tenant compte de ses contraintes techniques et financières. Là où c’est possible, nous poursuivrons sa couverture, avec l’objectif de 5 kilomètres supplémentaires d’ici 2035, en priorité dans les secteurs les plus exposés au bruit et à la pollution."
+        "text": "On augmente la vitesse de manière évolutive jusqu'à 70 km/h",
+        "detail": "Grâce à un réseau de capteurs, je mettrai en place une signalisation évolutive pour adapter la vitesse sur le périphérique au trafic et aux horaires (comme c’est déjà le cas en fonction de la météo) afin de fluidifier et réduire les nuisances. Aux heures de pointe, je maintiendrai les 50 km/h ; lorsque la circulation est faible, je porterai la limite à 70 km/h.\n \n J’engagerai également une transformation progressive du périphérique, en tenant compte de ses contraintes techniques et financières. Là où c’est possible, nous poursuivrons sa couverture, avec l’objectif de 5 kilomètres supplémentaires d’ici 2035, en priorité dans les secteurs les plus exposés au bruit et à la pollution."
       },
       {
         "candidateId": "dati",
-        "text": "Augmenter la vitesse à 70 km/h.",
+        "text": "On augmente la vitesse à 70 km/h",
         "detail": "Nous rétablirons les 70km/h sur le boulevard périphérique après la pose d’enrobés phoniques, méthode la plus efficace pour lutter contre la pollution sonore. Je contrôlerai davantage les nuisances automobiles grâce à une voirie mieux entretenue qui apaisera la circulation, la pose de revêtements phoniques pour les artères les plus fréquentées, y compris le boulevard périphérique, et par le déploiement de radars « méduses » pour verbaliser les véhicules dépassant les seuils de bruit autorisés."
       },
       {
         "candidateId": "chikirou",
-        "text": "On l'apaise pour pouvoir le franchir plus facilement et réduire les nuisances des riverains",
-        "detail": "Pas de modification de la limitation de 50Km/h"
+        "text": "On l'apaise : lancer une certation sur le boulevard périphérique, portes et autoroutes urbaines afin qu'ils ne constituent plus une frontière avec la petite couronne + engager leur transformation progressive en boulevards urbains + mesures accoustiques",
+        "detail": "Impulser une concertation avec l’État, la Région, la Métropole et les communes concernées sur l’avenir du boulevard périphérique, des portes et des autoroutes urbaines, afin qu’ils ne constituent plus une frontière avec la petite couronne et d’engager leur transformation progressive en boulevards urbains. Dans l’attente de cette mutation, renforcer le déploiement des dispositifs de réduction des nuisances, en concertation étroite avec les habitantes et habitants concernés : murs anti-bruit, enrobés phoniques et techniques de réduction de la pollution"
       },
       {
         "candidateId": "gregoire",
-        "text": "On l'apaise pour pouvoir le franchir plus facilement et réduire les nuisances des riverains",
+        "text": "On l'apaise : transformation du périphérique en boulevard urbain et des portes de Paris en véritables places du Grand Paris, reliées par une grande ceinture verte, culturelle et sportive",
         "detail": "Transformation du périphérique en boulevard urbain et des portes de Paris en véritables places du Grand Paris, reliées par une grande ceinture verte, culturelle et sportive"
       },
       {
-        "candidateId": "knafo",
-        "text": "On augmente la vitesse 80 km/h.",
-        "detail": "Permettre la circulation à 80 km/h sur le périphérique"
+        "candidateId": "npa",
+        "text": "Pas de proposition spécifique sur le périphérique",
+        "detail": null
       },
       {
-        "candidateId": "npa",
-        "text": "Pas de proposition spécifique sur le périphérique, mais la priorité est de rendre les transports en commun gratuits pour réduire la dépendance à la voiture",
-        "detail": null
+        "candidateId": "knafo",
+        "text": "On augmente la vitesse à 80 km/h.",
+        "detail": "Permettre la circulation à 80 km/h sur le périphérique"
       }
     ]
   },
@@ -1552,7 +1552,7 @@ const QUESTIONNAIRE_DATA = [
     "choices": [
       {
         "candidateId": "gregoire",
-        "text": "On se donne les moyens pour le faire respecter",
+        "text": "On va plus loin : contrôle via une brigade de protection du logement pour faire respecter l’encadrement des loyers",
         "detail": "Création d’une brigade de protection du logement pour faire respecter l’encadrement des loyers"
       },
       {
@@ -1562,35 +1562,35 @@ const QUESTIONNAIRE_DATA = [
       },
       {
         "candidateId": "dati",
-        "text": "On l'assoupli",
-        "detail": "J’assouplirai l’encadrement des loyers pour les logements qui sortent des étiquettes F et G (gain de 2 échelons) après la réalisation de travaux d’ampleurs pour encourager les Parisiens audelà\ndes dispositifs existants\nJ’assouplirai les plafonds d’encadrement des loyers lorsqu’un logement revient sur le marché de la location longue après une période de vacance."
+        "text": "On le réduit pour certains logements",
+        "detail": "J’assouplirai l’encadrement des loyers pour les logements qui sortent des étiquettes F et G (gain de 2 échelons) après la réalisation de travaux d’ampleurs pour encourager les Parisiens au delà des dispositifs existants\n J’assouplirai les plafonds d’encadrement des loyers lorsqu’un logement revient sur le marché de la location longue après une période de vacance."
+      },
+      {
+        "candidateId": "npa",
+        "text": "On va plus loin : on encadre, on gêle les loyers",
+        "detail": null
       },
       {
         "candidateId": "chikirou",
-        "text": "On va plus loin",
+        "text": "On va plus loin : on précise l'encadrement des « complément de loyer » et on contrôle son respect",
         "detail": "Contrôler le respect strict de l’encadrement des loyers dans la capitale et mettre en place, en concertation avec le préfet de Paris, des lignes directrices claires et chiffrées sur la nature et le montant du « complément de loyer » pour donner de la clarté aux locataires et bailleurs, et minimiser les abus et le contentieux liés aux compléments de loyers"
       },
       {
         "candidateId": "knafo",
         "text": "On le supprime",
         "detail": null
-      },
-      {
-        "candidateId": "npa",
-        "text": "On va plus loin : on encadre, on gèle et on baisse les loyers pour mettre fin à la spéculation immobilière",
-        "detail": null
       }
     ]
   },
   {
-    "question": "Faut-il renforcer ou réduire les services et biens publiques ?",
+    "question": "Faut-il renforcer ou réduire les services et biens publics ?",
     "theme": "Services publiques",
     "context": null,
     "choices": [
       {
         "candidateId": "dati",
-        "text": "On vend le patrimoine non-stratégique de la Ville (dont logements sociaux et parc des princes) et on réduit le nombre de fonctionnaires.",
-        "detail": null
+        "text": "On vend le patrimoine non-stratégique de la Ville (dont logements sociaux et parc des princes), on réduit le nombre de fonctionnaires, et on privatise le service de propreté",
+        "detail": "Je confierai la collecte à des opérateurs privés sélectionnés sur des critères stricts de performance et de continuité de service public."
       },
       {
         "candidateId": "bournazel",
@@ -1599,7 +1599,12 @@ const QUESTIONNAIRE_DATA = [
       },
       {
         "candidateId": "knafo",
-        "text": "On vend les logement sociaux et on réduit le nombre de fonctionnaires",
+        "text": "On vend les logement sociaux, on réduit le nombre de fonctionnaires, on privatise le service de propreté",
+        "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "On arrête toutes les privatisations, on municipalise les services essentiels et on rends gratuit l'eau, les transports, les centres de santé, et les cantines",
         "detail": null
       },
       {
@@ -1609,29 +1614,29 @@ const QUESTIONNAIRE_DATA = [
       },
       {
         "candidateId": "chikirou",
-        "text": "On refuse la vente du patrimoine public et crée de nouveaux services publics municipaux",
-        "detail": null
-      },
-      {
-        "candidateId": "npa",
-        "text": "On arrête toutes les privatisations, on municipalise les services essentiels et on rend gratuits l'eau, les transports, les centres de santé et les cantines",
-        "detail": null
+        "text": "On refuse la vente du patrimoine public, on s'oppose aux privatisations, et on crée de nouveaux services publics municipaux (service social aux personnes âgées municipalisé, service public de la propreté, régie publique du vélo, régie publique de gestion locative …), on établit un plan de retour en gestion publique ou non lucrative, et on donne la possibilité aux usagers d'évaluer les services",
+        "detail": "Réaliser un audit complet des contrats de concessions, délégations de service public et marchés publics de long terme conclus avec des opérateurs privés par les majorités précédentes afin d’établir un plan de retour en gestion publique ou non lucrative.\n Remunicipaliser l’ensemble du service public de la propreté.\n Donner aux Parisiens le droit de proposer et de choisir chaque année le thème d’une mission de l’Inspection générale de la Ville de Paris, afin par exemple de pouvoir évaluer un service public municipal qui ne donne pas satisfaction"
       }
     ]
   },
   {
-    "question": "Que fait-on vis-à-vis des personnes sans-abris ?",
+    "question": "Que fait-on vis-à-vis des personnes sans-abri ?",
     "theme": "Lutte contre le sans-abrisme",
     "context": "3 507 personnes sans solution d’hébergement ont été recensées à Paris en janvier 2025, dont 2 200 enfants, tandis que 264 000 logements sont vacants",
     "choices": [
       {
         "candidateId": "chikirou",
-        "text": "On réquisitionne les bâtiments vacants depuis 18 mois pour mettre à l’abri les personnes à la rue et on développe des dispositifs d’accompagnement, notamment pour les familles et les enfants",
+        "text": "On réquisitionne les bâtiments vacants depuis 18 mois pour mettre à l’abri les personnes à la rue + on développe des dispositifs d’accompagnement, notamment pour les familles et les enfants",
         "detail": null
       },
       {
         "candidateId": "bournazel",
-        "text": "On crée de nouvelles places d’hébergement d’urgence et on rachète des hôtels 1 étoile pour les transformer en structures d’hébergement.",
+        "text": "On rachète des hôtels 1 étoile pour les transformer en structures d’hébergement + on crée de nouvelles places d’hébergement d’urgence",
+        "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "On réquisitionne les logements vacants + on interdit les expulsions + on régularise tous les sans-papiers + on développe un hébergement d'urgence digne pour tous",
         "detail": null
       },
       {
@@ -1641,17 +1646,12 @@ const QUESTIONNAIRE_DATA = [
       },
       {
         "candidateId": "gregoire",
-        "text": "On crée de nouvelles places d’hébergement d’urgence avec un objectif de « zéro enfant à la rue ».",
-        "detail": null
+        "text": "On réquisition des logements vides depuis plus de 5 ans + on crée de nouvelles places d’hébergement d’urgence avec un objectif de « zéro enfant à la rue ».",
+        "detail": "Création de 4 000 places d'hébergement d'urgence et réquisition des logements vides depuis plus de 5 ans"
       },
       {
         "candidateId": "knafo",
         "text": "On met fin à l’accueil dans les gymnases lors des vagues de froid et on réduit les subventions aux associations d’aide aux migrants.",
-        "detail": null
-      },
-      {
-        "candidateId": "npa",
-        "text": "On réquisitionne les logements vacants, on interdit les expulsions, on régularise tous les sans-papiers et on développe un hébergement d'urgence digne pour tous",
         "detail": null
       }
     ]
@@ -1663,33 +1663,33 @@ const QUESTIONNAIRE_DATA = [
     "choices": [
       {
         "candidateId": "knafo",
-        "text": "Non, on réduira les subventions aux associations (association d'aide aux migrants, culturelles, aide au développement…)",
-        "detail": null
+        "text": "Non, on réduira les subventions de 100 millions aux associations (association d'aide aux migrants, culturelles, aide au développement…)",
+        "detail": "Supprimer plus de 100 millions d'euros par an de subventions aux associations politisées et militantes"
       },
       {
         "candidateId": "bournazel",
-        "text": "Non, on baissera les subventions après un audit indépendant évaluant leur pertinence.",
-        "detail": null
+        "text": "Non, on baissera les subventions de 350 millions d'€ après un audit indépendant évaluant leur pertinence.",
+        "detail": "Baisse des subventions : 350 millions d’économies en les plafonnant, en réalisant un audit annuel et en signant des contrats d’objectifs et de performance pour les 100 plus grosses subventions. Je demanderai par ailleurs la transparence totale des salaires attribués aux dirigeants de ces associations"
       },
       {
         "candidateId": "gregoire",
-        "text": "Oui, sécuriser les subventions existantes, augmenter celles dédiés au sport, et créer un fonds d’urgence pour les associations en difficulté",
-        "detail": "Sécuriser les subventions par des conventions\nde financement pluriannuelles et créer un fonds\nd’urgence pour les associations en difficulté\n\nPromouvoir la pratique sportive féminine, en\ndoublant les créneaux dédiés et en augmentant\nles subventions aux clubs et associations\n\nSanctuariser les subventions aux associations\nféministes et appliquer l’éga-conditionnalité\ndans le sport et la culture pour garantir l’égalité\nentre les femmes et les hommes"
-      },
-      {
-        "candidateId": "chikirou",
-        "text": "oui, notamment pour les clubs sportifs, et les centres de santé + conditionner strictement l’octroi de toute subvention au respect des principes constitutionnels et légaux d’égalité, de non-discrimination et de rejet explicite des discours de haine",
-        "detail": null
-      },
-      {
-        "candidateId": "dati",
-        "text": "Non, on réduira certaines subventions",
-        "detail": null
+        "text": "Oui, on sécurise les subventions existantes + on crée un fonds d’urgence pour les associations en difficulté + on applique un critère d'éga-conditionnalité dans le sport et la culture",
+        "detail": "Sécuriser les subventions par des conventions de financement pluriannuelles et créer un fonds d’urgence pour les associations en difficulté\n Promouvoir la pratique sportive féminine, en doublant les créneaux dédiés et en augmentant les subventions aux clubs et associations\n Sanctuariser les subventions aux associations féministes et appliquer l’éga-conditionnalité dans le sport et la culture pour garantir l’égalité entre les femmes et les hommes"
       },
       {
         "candidateId": "npa",
-        "text": "Oui, on défend les associations menacées et on renforce le soutien aux associations des quartiers populaires qui accompagnent les travailleurs et les familles",
+        "text": "Oui, on défend les associations menacées + on renforce le soutien aux associations des quartiers populaires qui accompagnent les travailleurs et les familles",
         "detail": null
+      },
+      {
+        "candidateId": "chikirou",
+        "text": "Oui, on les renforce et on les conditionne strictement au respect d’égalité, de non-discrimination et de rejet explicite des discours de haine + audit des subventions publiques aux structures commerciales + on protège les librairies indépendantes contre les dérives autoritaires avec un fonds d’aide juridique de 100 000 euros annuels",
+        "detail": "Conditionner les subventions à des critères de parité et de diversité dans la programmation.\n Conditionner strictement l’octroi de toute subvention, mise à disposition de locaux, soutien logistique ou partenariat municipal au respect des principes constitutionnels et légaux d’égalité, de non-discrimination et de rejet explicite des discours de haine, et exclure toute structure promouvant ou tolérant des idéologies racistes, antisémites ou islamophobes du bénéfice de fonds ou de moyens publics municipaux\n Évaluer et rendre publiques les aides aux grandes enseignes, en réalisant un audit des subventions publiques aux structures commerciales (financements municipaux directs, financements indirects via les associations de commerçants et l’animation de l’espace public, financements régionaux et étatiques)\n Protéger les librairies indépendantes contre les dérives autoritaires et mobiliser un fonds d’aide juridique de 100 000 euros annuels pour aider les librairies faisant l’objet de poursuites ou procédures-bâillons liées à leur activité éditoriale"
+      },
+      {
+        "candidateId": "dati",
+        "text": "Non, on les réduira après audit",
+        "detail": "Je lancerai un contrôle de toutes les subventions, avec pour objet d’en réduire le volume en les recentrant sur les priorités locales et en supprimant les subventions militantes ou sans lien avec les Parisiens."
       }
     ]
   },
@@ -1700,7 +1700,7 @@ const QUESTIONNAIRE_DATA = [
     "choices": [
       {
         "candidateId": "dati",
-        "text": "Supprimer la Zone à Trafic Limité (ZTL) du centre de Paris, réequilibrer la rue de rivoli, et favoriser les voitures électriques",
+        "text": "Supprimer la Zone à Trafic Limité (ZTL) du centre de Paris, réequilibrer la rue de Rivoli, et favoriser les voitures électriques",
         "detail": null
       },
       {
@@ -1710,22 +1710,22 @@ const QUESTIONNAIRE_DATA = [
       },
       {
         "candidateId": "chikirou",
+        "text": "Réduire la place de la voiture dans l’espace public et mettre en place une plateforme publique et centralisée de réservation de stationnement",
+        "detail": null
+      },
+      {
+        "candidateId": "npa",
         "text": "Réduire la place de la voiture dans l’espace public",
         "detail": null
       },
       {
         "candidateId": "gregoire",
-        "text": "Réduire la place de la voiture dans l’espace public",
+        "text": "Réduire la place de la voiture dans l’espace public et créer des places de stationnement réservées aux artisans et professionnels mobiles",
         "detail": null
       },
       {
         "candidateId": "bournazel",
         "text": "Créer des stationnements gratuits",
-        "detail": null
-      },
-      {
-        "candidateId": "npa",
-        "text": "Réduire la place de la voiture au profit des transports en commun gratuits et accessibles à tous",
         "detail": null
       }
     ]
@@ -1737,7 +1737,7 @@ const QUESTIONNAIRE_DATA = [
     "choices": [
       {
         "candidateId": "dati",
-        "text": "On maintiend le vélo mais en rééquilibrant l’espace public entre vélos, piétons, bus et voitures.",
+        "text": "On maintient le vélo mais en rééquilibrant l’espace public entre vélos, piétons, bus et voitures.",
         "detail": null
       },
       {
@@ -1751,18 +1751,18 @@ const QUESTIONNAIRE_DATA = [
         "detail": null
       },
       {
+        "candidateId": "npa",
+        "text": "Le vélo doit aussi être accessible à tous comme mobilité populaire",
+        "detail": null
+      },
+      {
         "candidateId": "knafo",
         "text": "On remet la voiture au centre et on revoit l’organisation actuelle du vélo.",
         "detail": null
       },
       {
         "candidateId": "bournazel",
-        "text": "On maintiend les pistes cyclables mais on les régulera et on renforcera les contrôles.",
-        "detail": null
-      },
-      {
-        "candidateId": "npa",
-        "text": "La priorité est aux transports en commun gratuits, mais le vélo doit aussi être accessible à tous comme mobilité populaire",
+        "text": "On maintient les pistes cyclables mais on les régulera et on renforcera les contrôles.",
         "detail": null
       }
     ]
@@ -1784,7 +1784,12 @@ const QUESTIONNAIRE_DATA = [
       },
       {
         "candidateId": "chikirou",
-        "text": "Oui, on renforce le réseau de bus (fréquence, horaire, ruptures urbaines)",
+        "text": "Oui, on renforce le réseau de bus (fréquence, horaire, ruptures urbaines) et on s'oppose à la privatisation du réseau RATP",
+        "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "Oui, on rend les transports en commun gratuits pour tous, financés par les employeurs (nb: les transports sont financés par la Région), et on s'oppose à la privatisation du réseau RATP",
         "detail": null
       },
       {
@@ -1795,11 +1800,6 @@ const QUESTIONNAIRE_DATA = [
       {
         "candidateId": "knafo",
         "text": "Non",
-        "detail": null
-      },
-      {
-        "candidateId": "npa",
-        "text": "Oui, on rend les transports en commun gratuits pour tous, financés par les employeurs, et on s'oppose à la privatisation du réseau de bus RATP",
         "detail": null
       }
     ]
@@ -1812,17 +1812,22 @@ const QUESTIONNAIRE_DATA = [
       {
         "candidateId": "bournazel",
         "text": "Centré sur le soutien des familles monoparentales : créer une carte « parent solo » pour faciliter l’accès aux services municipaux (tarification des crèches, des cantines et des activités périscolaires, mais aussi pour l’accès aux activités culturelles et sportives)",
-        "detail": "Je souhaite que la spécificité des parents solo soit systématiquement prise en compte dans la tarification des crèches, des cantines et des activités périscolaires, mais aussi pour l’accès aux activités culturelles et sportives et notamment aux musées de la Ville de Paris, y compris pour des visites guidées et les ateliers ouverts aux enfants. Trouver une place en crèche, visiter un musée,\ninscrire son enfant au périscolaire ou aux bébés nageurs : toutes les démarches des parents solo seront accélérées et allégées financièrement pour soutenir ces familles."
+        "detail": "Je souhaite que la spécificité des parents solo soit systématiquement prise en compte dans la tarification des crèches, des cantines et des activités périscolaires, mais aussi pour l’accès aux activités culturelles et sportives et notamment aux musées de la Ville de Paris, y compris pour des visites guidées et les ateliers ouverts aux enfants. Trouver une place en crèche, visiter un musée,\n inscrire son enfant au périscolaire ou aux bébés nageurs : toutes les démarches des parents solo seront accélérées et allégées financièrement pour soutenir ces familles."
       },
       {
         "candidateId": "gregoire",
-        "text": "Mener une politique globale de sensibilisation et de protection : protection des victimes (maison des femmes avec prise en charge médicale, psychologique, sociale et juridique, et des hébergements d'urgence), santé des femmes (IVG, maladies sexuelles, endométriose), égalité (rééquilibrage des noms de rue, promotion de la pratique sportive), et soutien financier des associations féministes, etc..",
-        "detail": "-Protéger les victimes de violences en créant de nouvelles Maisons des femmes avec prise en charge médicale, psychologique, sociale et juridique 24h sur 24, et des hébergements d'urgence\nDéployer un plan « IVG sans entrave », pour défendre et garantir le droit à l'avortement\nDes « lieux refuges » dans tous les événements organisés à Paris pour accueillir des personnes victimes de comportements violents et/ou discriminants.\nLutte contre les discriminations et le sexisme dans l'espace public avec une formation spécifique de la police municipale\nDroit à la nuit pour les femmes : éclairage public renforcé, dispositif d'alerte sur les abribus\n\n🟪Un plan ambitieux pour la santé sexuelle et reproductive\nUn parcours d'accompagnement spécifique et personnalisé pour les femmes souffrant d'endométriose\n\n🟪Créer une Maison des Arts et des Cultures Féministes\nRééquilibrage des noms de rue donnés à des femmes #Matrimoine\n\n🟪Promouvoir la pratique sportive féminine en doublant les créneaux dédiés et les subventions aux clubs\nInstaurer une tolérance zéro face aux violences et discriminations dans le sport\nJeu et sport mixtes dans toutes les écoles dès la maternelle\n\n🟪Subventions aux associations féministes et éga-conditionnalité des aide"
+        "text": "Mener une politique globale de sensibilisation et de protection : protection des victimes (maison des femmes avec prise en charge médicale, psychologique, sociale et juridique, et des hébergements d'urgence) + santé des femmes (IVG, maladies sexuelles, endométriose) + égalité (rééquilibrage des noms de rue, promotion de la pratique sportive), et soutien financier des associations féministes, etc..",
+        "detail": "-Protéger les victimes de violences en créant de nouvelles Maisons des femmes avec prise en charge médicale, psychologique, sociale et juridique 24h sur 24, et des hébergements d'urgence\n Déployer un plan « IVG sans entrave », pour défendre et garantir le droit à l'avortement\n Des « lieux refuges » dans tous les événements organisés à Paris pour accueillir des personnes victimes de comportements violents et/ou discriminants.\n Lutte contre les discriminations et le sexisme dans l'espace public avec une formation spécifique de la police municipale\n Droit à la nuit pour les femmes : éclairage public renforcé, dispositif d'alerte sur les abribus\n \n 🟪Un plan ambitieux pour la santé sexuelle et reproductive\n Un parcours d'accompagnement spécifique et personnalisé pour les femmes souffrant d'endométriose\n \n 🟪Créer une Maison des Arts et des Cultures Féministes\n Rééquilibrage des noms de rue donnés à des femmes #Matrimoine\n \n 🟪Promouvoir la pratique sportive féminine en doublant les créneaux dédiés et les subventions aux clubs\n Instaurer une tolérance zéro face aux violences et discriminations dans le sport\n Jeu et sport mixtes dans toutes les écoles dès la maternelle\n \n 🟪Subventions aux associations féministes et éga-conditionnalité des aide"
       },
       {
         "candidateId": "chikirou",
         "text": "Mener une politique globale de sensibilisation et de protection : créer des places d’hébergement d’urgence dédiées, éduquer (intervention en milieu scolaire, campagne de sensibilisation), soutenir financièrement (exclure les pensions alimentaires perçues de l’assiette des revenus, soutien aux associations), sécuriser (former les forces de l'ordre, installer des bornes d’appel d’urgence), etc..",
-        "detail": "Créer des Maisons des Femmes, notamment en s’appuyant sur le réseau déjà existant, lieux de proximité ouverts à toutes, avec des équipes pluridisciplinaires, qui proposeront l’accompagnement contre les violences sexistes et sexuelles, l’information et la prévention en santé féminine, ainsi que des activités intergénérationnelles et culturelles\n\n    Exclure les pensions alimentaires perçues de l’assiette des revenus pris en compte pour la tarification sociale municipale et pour les aides municipales, et agir pour qu’une loi généralise cette exclusion à l’ensemble des aides et tarifications sociales\n\n    Lutter contre le harcèlement de rue avec l’installation de bornes d’appel d’urgence dans les zones identifiées et développer un dispositif inspiré de « Demandez Angela » afin de créer un réseau de lieux publics et privés identifiés, formés pour accueillir, protéger et soutenir les personnes victimes de harcèlement de rue\n\n    Aménager un environnement urbain plus sûr et inclusif à travers un plan « ville éclairée et égalitaire » : diagnostic et réaménagement des espaces perçus comme insécurisants\n\n    Généraliser les parcours d’accompagnement « dépôt de plainte facilité » et le recrutement d’intervenants sociaux  dans tous les commissariats de Paris pour les victimes de violences sexistes et sexuelles : accueil spécifique et discret, salle de mise en sécurité, etc.\n\n    Développer l’information et les campagnes de sensibilisation sur la santé sexuelle et reproductive (contraception, accès à l’IVG, prévention du VIH et des infections sexuellement transmissibles)\n\n    Éduquer à l’égalité en soutenant les associations intervenant en milieu scolaire, en intégrant la prévention des stéréotypes de genre et du harcèlement sexiste dans les activités périscolaires, et en garantissant un accès effectif à l’éducation à la santé sexuelle et reproductive\n\n    Lutter contre les violences sexistes et sexuelles au travail avec une charte locale d’engagement obligatoire pour toute structure bénéficiant d’un soutien municipal\n\n    Renforcer le budget municipal sensible au genre en le rendant transparent, en intégrant des indicateurs publics d’égalité, un suivi budgétaire précis des politiques publiques en faveur de l’égalité, et la publication annuelle d’un rapport sur les violences sexistes et sexuelles\n\n    Rendre effectif le congé menstruel pour l’ensemble des agentes de la mairie de Paris\n\n    Assurer un accès gratuit aux protections hygiéniques dans tous les établissements publics municipaux, ainsi que dans les petits commerces, cafés et restaurants de quartier"
+        "detail": "Créer des Maisons des Femmes, notamment en s’appuyant sur le réseau déjà existant, lieux de proximité ouverts à toutes, avec des équipes pluridisciplinaires, qui proposeront l’accompagnement contre les violences sexistes et sexuelles, l’information et la prévention en santé féminine, ainsi que des activités intergénérationnelles et culturelles\n \n  Exclure les pensions alimentaires perçues de l’assiette des revenus pris en compte pour la tarification sociale municipale et pour les aides municipales, et agir pour qu’une loi généralise cette exclusion à l’ensemble des aides et tarifications sociales\n \n  Lutter contre le harcèlement de rue avec l’installation de bornes d’appel d’urgence dans les zones identifiées et développer un dispositif inspiré de « Demandez Angela » afin de créer un réseau de lieux publics et privés identifiés, formés pour accueillir, protéger et soutenir les personnes victimes de harcèlement de rue\n \n  Aménager un environnement urbain plus sûr et inclusif à travers un plan « ville éclairée et égalitaire » : diagnostic et réaménagement des espaces perçus comme insécurisants\n \n  Généraliser les parcours d’accompagnement « dépôt de plainte facilité » et le recrutement d’intervenants sociaux dans tous les commissariats de Paris pour les victimes de violences sexistes et sexuelles : accueil spécifique et discret, salle de mise en sécurité, etc.\n \n  Développer l’information et les campagnes de sensibilisation sur la santé sexuelle et reproductive (contraception, accès à l’IVG, prévention du VIH et des infections sexuellement transmissibles)\n \n  Éduquer à l’égalité en soutenant les associations intervenant en milieu scolaire, en intégrant la prévention des stéréotypes de genre et du harcèlement sexiste dans les activités périscolaires, et en garantissant un accès effectif à l’éducation à la santé sexuelle et reproductive\n \n  Lutter contre les violences sexistes et sexuelles au travail avec une charte locale d’engagement obligatoire pour toute structure bénéficiant d’un soutien municipal\n \n  Renforcer le budget municipal sensible au genre en le rendant transparent, en intégrant des indicateurs publics d’égalité, un suivi budgétaire précis des politiques publiques en faveur de l’égalité, et la publication annuelle d’un rapport sur les violences sexistes et sexuelles\n \n  Rendre effectif le congé menstruel pour l’ensemble des agentes de la mairie de Paris\n \n  Assurer un accès gratuit aux protections hygiéniques dans tous les établissements publics municipaux, ainsi que dans les petits commerces, cafés et restaurants de quartier"
+      },
+      {
+        "candidateId": "npa",
+        "text": "Créer des lieux d'hébergement pour les femmes victimes de violences",
+        "detail": null
       },
       {
         "candidateId": "knafo",
@@ -1832,11 +1837,6 @@ const QUESTIONNAIRE_DATA = [
       {
         "candidateId": "dati",
         "text": "Pas de mesure",
-        "detail": null
-      },
-      {
-        "candidateId": "npa",
-        "text": "Créer des lieux d'hébergement pour les femmes victimes de violences et les victimes de violences homophobes ou transphobes, et développer crèches et cantines populaires pour alléger la double journée des femmes",
         "detail": null
       }
     ]
@@ -1853,12 +1853,17 @@ const QUESTIONNAIRE_DATA = [
       },
       {
         "candidateId": "gregoire",
-        "text": "On renforce les moyens du service public de la petite enfance (recrutements et accompagnement des familles) et on priorise les familles monoparentales avec une tarification adaptée.",
+        "text": "On renforce les moyens du service public de la petite enfance (recrutements et accompagnement des familles) et on priorise les familles monoparentales avec une tarification adaptée",
         "detail": null
       },
       {
         "candidateId": "chikirou",
         "text": "On développe massivement les crèches publiques avec des tarifs selon les revenus, on élargit les horaires (soir et week-end), et on régule le secteur privé.",
+        "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "On crée massivement des crèches publiques, on embauche et forme le personnel avec de vrais salaires, et on organise des assemblées avec les parents pour définir les vrais besoins",
         "detail": null
       },
       {
@@ -1869,11 +1874,6 @@ const QUESTIONNAIRE_DATA = [
       {
         "candidateId": "knafo",
         "text": "On augmente l’offre de places en combinant crèches municipales et privées, et on ne modifie pas les tarifs actuels",
-        "detail": null
-      },
-      {
-        "candidateId": "npa",
-        "text": "On crée massivement des crèches publiques, on embauche et forme le personnel avec de vrais salaires, et on organise des assemblées avec les parents pour définir les besoins",
         "detail": null
       }
     ]
@@ -1904,51 +1904,51 @@ const QUESTIONNAIRE_DATA = [
         "detail": null
       },
       {
-        "candidateId": "knafo",
-        "text": "Pas de proposition sur la tarification des cantines.",
-        "detail": null
+        "candidateId": "npa",
+        "text": "On rend les cantines gratuites pour tous",
+        "detail": "Oui, on rend les cantines gratuites pour tous et on défend le droit de grève des agents"
       },
       {
-        "candidateId": "npa",
-        "text": "Oui, on rend les cantines gratuites pour tous et on défend le droit de grève des agents",
+        "candidateId": "knafo",
+        "text": "Pas de proposition sur la tarification des cantines.",
         "detail": null
       }
     ]
   },
   {
     "question": "Avez-vous des mesures sur la culture autre que celles liées à l'école et au périscolaire ?",
-    "theme": "culture",
+    "theme": "Culture",
     "context": null,
     "choices": [
       {
         "candidateId": "bournazel",
         "text": "Il faut réduire les subventions.",
-        "detail": null
+        "detail": "mettre toutes les mesures de Bournazel ici"
       },
       {
         "candidateId": "gregoire",
-        "text": "Oui, il faut soutenir la diversité culturelle, soutenir financierement les librairies, cinémas et commerces culturels indépendants, mais sans modifier profondement la structure tarifaire actuelle",
-        "detail": null
+        "text": "Il faut soutenir la diversité culturelle, soutenir financierement les librairies, cinémas et commerces culturels indépendants, etc... (Nb: Pas de proposition de modification de la structure tarifaire actuelle)",
+        "detail": "mettre toutes les mesures de grégoire ici"
       },
       {
         "candidateId": "chikirou",
-        "text": "Oui, il faut mettre fin à la mainmise du privé sur le patrimoine culturel parisien, soutenir les librairies et cinémas indépendants, soutenir les artistes, favoriser la gratuité et la tarification sociale des équipements culturels, et créer des lieux d’éducation populaire.",
+        "text": "Il faut mettre fin à la mainmise du privé sur le patrimoine culturel parisien, soutenir les librairies et cinémas indépendants, soutenir les artistes, favoriser la gratuité et la tarification sociale des équipements culturels, créer des lieux d’éducation populaire, etc...",
+        "detail": "Mettre fin à la mainmise d’entreprises et d’acteurs privés sur le patrimoine culturel parisien, comme LVMH\n Déclarer les librairies indépendantes « commerce essentiel » et les soutenir contre la pression immobilière, la concurrence du e-commerce international et les menaces à la liberté d’expression.\n Soutenir les cinémas indépendants parisiens et agir contre des fermetures en mobilisant des leviers tels que la transformation en SCIC (coopérative d’intérêt collectif) voire la municipalisation.\n Créer un fonds de garantie pour les loyers des artistes non salariés.\n Favoriser la gratuité et la tarification sociale des équipements culturels avec une politique de médiation ambitieuse pour sensibiliser celles et ceux qui en sont éloignés\n Créer et soutenir les lieux d’éducation populaire et de pratiques artistiques, comme les Centres Paris Anim’, la Maison des Pratiques Artistiques Amateurs et les Maisons des Jeunes et de la Culture\n Permettre à toutes et tous d’accéder à un enseignement et à une pratique artistiques en développant les conservatoires : augmentation des places pour mettre fin au tirage au sort, renforcement de la tarification sociale, prêt de matériel et élargissement des disciplines enseignées\n Donner les moyens aux structures accompagnées par la municipalité d’acheter, de produire et coproduire les spectacles programmés et limiter ainsi le système de la coréalisation\n Créer un fonds municipal d’intervention permettant de sauvegarder, par tous les moyens (fonds de garantie, reprise, préemption), les espaces culturels menacés par la spéculation (par exemple le Théâtre l’Auguste dans le 11e arrondissement) ainsi que les librairies indépendantes\n Mettre à disposition des jeunes éditeurs parisiens une « Pépinière d’éditeurs », locaux municipaux à loyers modérés et aux ressources partagées pour mutualiser les besoins et créer des coopérations organiques entre éditeurs\n Protéger les librairies indépendantes contre les dérives autoritaires et mobiliser un fonds d’aide juridique de 100 000 euros annuels pour aider les librairies faisant l’objet de poursuites ou procédures-bâillons liées à leur activité éditoriale\n Ouvrir de nouvelles médiathèques et artothèques de proximité animées par des personnels en nombre suffisant\n Soutenir des espaces festifs démarchandisés et les initiatives populaires gratuites\n Encourager la création de Maisons de la nuit autogérées, inspirées des soziokulturelle Zentren (Allemagne) et des centri culturali (Italie), afin de relier étroitement la culture et la vie sociale dans une perspective de participation active de la population\n Renforcer le soutien économique et technique aux lieux culturels alternatifs existants, notamment pour l’insonorisation, et mieux les intégrer aux décisions d’urbanisme\n Créer des salles des fêtes offrant, d’une part, des espaces de création et d’organisation de fêtes collectives portées par des initiatives d’habitants et, d’autre part, une offre de location à tarif solidaire pour des événements privés (anniversaires, mariages, etc.) permettant aussi aux plus précaires de célébrer les moments de la vie\n Créer et soutenir les lieux d’éducation populaire et de pratiques artistiques, comme les Centres Paris Anim’, la Maison des Pratiques Artistiques Amateurs et les Maisons des Jeunes et de la Culture, afin de renforcer la mixité culturelle, de réduire les inégalités d’accès aux activités et les écarts de tarification entre les arrondissements, et de développer des partenariats avec les acteurs culturels, associatifs et les artistes locaux"
+      },
+      {
+        "candidateId": "npa",
+        "text": "Il faut défendre les espaces culturels populaires et les associations menacées, maintenir le Pass Culture collectif (nb: le pass culture est financé par l'Etat) et ouvrir des lieux de rencontre et d'éducation populaire dans les quartiers",
         "detail": null
       },
       {
         "candidateId": "dati",
-        "text": "Il faut réduire les subventions.",
-        "detail": null
+        "text": "Il faut créer une « villa Médicis » du design",
+        "detail": "Je créerai une « villa Médicis » du design sur le site de l’ex-Mairie du 1er arrondissement, qui intégrera des événements culturels ouverts le soir à tous les Parisiens."
       },
       {
         "candidateId": "knafo",
-        "text": "Il faut réduire les subventions aux associations et consacrer 300 millions d'euros à la restauration des églises",
-        "detail": null
-      },
-      {
-        "candidateId": "npa",
-        "text": "Oui, il faut défendre les espaces culturels populaires et les associations menacées, maintenir le Pass Culture collectif et ouvrir des lieux de rencontre et d'éducation populaire dans les quartiers",
-        "detail": null
+        "text": "Consacrer 300 millions d'euros à la restauration des églises + étendre les horaires des musées + retrouvons l’esprit original de la Fête de la musique + proposer des cours de musique collectifs sans concours ni prérequis dans tous les conservatoires + relancer les fanfares + acquérir davantage d’instruments et créer un système de prêt d’instruments mutualisé à l’échelle de Paris + Utiliser les locaux des écoles municipales",
+        "detail": "Ouvrir les musées municipaux en nocturne deux soirs par semaine et les bibliothèques le dimanche\n Proposer des cours de musique collectifs sans concours ni prérequis dans tous les conservatoires\n Relancer les fanfares et ensembles amateurs municipaux dans tous les arrondissements de Paris, en créant un réseau coordonné d’ensembles de quartier qui pourront se produire lors des événements festifs de la ville (Fête de la Musique, 14 juillet, fêtes de quartier).\n Acquérir davantage d’instruments et créer un système de prêt d’instruments mutualisé à l’échelle de Paris, permettant aux enfants d’essayer plusieurs types d’instruments avant de faire leur choix, sans coût pour les familles.\n Utiliser les locaux des écoles municipales, les soirs et les mercredis, pour donner aux artistes en herbe des locaux d’apprentissage et de répétition.\n Exiger la qualité des expositions temporaires dans l’espace public municipales, les soirs et les mercredis, pour donner aux artistes en herbe des locaux d’apprentissage et de répétition.\n Retrouvons l’esprit original de la Fête de la musique en la réservant aux instruments et chanteurs."
       }
     ]
   },
@@ -1959,33 +1959,33 @@ const QUESTIONNAIRE_DATA = [
     "choices": [
       {
         "candidateId": "bournazel",
-        "text": "J'ai 3 mesures : élargir les horaires des équipements sportifs, créer 17 nouvelles aires sportives de proximité,  lancer une Olympiade sportive des arrondissements chaque année.",
-        "detail": null
+        "text": "J'ai 3 mesures : élargir les horaires des équipements sportifs, créer 17 nouvelles aires sportives de proximité, lancer une Olympiade sportive des arrondissements chaque année.",
+        "detail": "mettre toutes les mesures"
       },
       {
         "candidateId": "gregoire",
-        "text": "J'ai 8 mesures pour permettre le sport à tous :  promotion du sport féminin, soutien financier d'une pratique sportive par enfant selon condition de ressource, élargir les horaires des gymnases et piscines municipales et poursuivre leur rénovation...",
-        "detail": null
+        "text": "J'ai 8 mesures pour permettre le sport à tous : promotion du sport féminin, soutien financier d'une pratique sportive par enfant selon condition de ressource, élargir les horaires des gymnases et piscines municipales et poursuivre leur rénovation...",
+        "detail": "mettre toutes les mesures"
       },
       {
         "candidateId": "chikirou",
         "text": "J'ai 25 mesures pour un sport populaire et accessible à tous : gratuité pour les -25ans, 100 % des enfants sachant nager, budget participatif annuel de 10 millions d’euros), des équipements sportifs de proximité, renforcer l'offre pour les personnes âgées…",
-        "detail": null
-      },
-      {
-        "candidateId": "dati",
-        "text": "J'ai 4 mesures : élargir les horaires des équipements sportifs, rénover les équipements sportifs, créer un village sportif au Parc des Princes, réserver des créneaux  pour le handi-sport",
-        "detail": null
-      },
-      {
-        "candidateId": "knafo",
-        "text": "J'ai 2 mesures : élargir les horaires des centres sportifs, créer des terrains de sport sous le métro aérien",
-        "detail": null
+        "detail": "mettre toutes les mesures"
       },
       {
         "candidateId": "npa",
         "text": "Garantir la gratuité des équipements sportifs municipaux pour tous, en embauchant du personnel et en ouvrant de nouveaux créneaux dans les quartiers populaires",
-        "detail": null
+        "detail": "mettre toutes les mesures"
+      },
+      {
+        "candidateId": "dati",
+        "text": "J'ai 4 mesures : élargir les horaires des équipements sportifs, rénover les équipements sportifs, créer un village sportif au Parc des Princes, réserver des créneaux pour le handi-sport",
+        "detail": "mettre toutes les mesures"
+      },
+      {
+        "candidateId": "knafo",
+        "text": "J'ai 2 mesures : élargir les horaires des centres sportifs, créer des terrains de sport sous le métro aérien",
+        "detail": "mettre toutes les mesures"
       }
     ]
   },
@@ -1997,17 +1997,22 @@ const QUESTIONNAIRE_DATA = [
       {
         "candidateId": "bournazel",
         "text": "Maintenir la halte soins addictions mais l’adosser à un centre mobile et à une prise en charge psycho-médicosociale.",
-        "detail": "La mise à disposition de matériels stériles aux usagers de drogues n’a pas encouragé la consommation mais en a réduit les risques, notamment du point de vue de la transmission d’hépatites ou du VIH. C’est pourquoi je maintiendrai la halte soins addictions (dite « salle de shoot »), tout en garantissant la propreté et la sécurité du quartier pour les riverains.\nToutefois, cela ne suffit pas. Pour éviter la création d’un point de fixation, j’y adosserai un centre mobile pour aller à la rencontre des usagers de drogue, avec de premiers soins et une action de prévention. Je développerai les centres de soins et de prise en charge psycho-médicosociale afin d’assurer un suivi dans la durée des personnes addictes. Je refuserai la surenchère comme la stigmatisation et privilégierai une approche de réduction des risques, de prévention et de soins."
+        "detail": "La mise à disposition de matériels stériles aux usagers de drogues n’a pas encouragé la consommation mais en a réduit les risques, notamment du point de vue de la transmission d’hépatites ou du VIH. C’est pourquoi je maintiendrai la halte soins addictions (dite « salle de shoot »), tout en garantissant la propreté et la sécurité du quartier pour les riverains.\n Toutefois, cela ne suffit pas. Pour éviter la création d’un point de fixation, j’y adosserai un centre mobile pour aller à la rencontre des usagers de drogue, avec de premiers soins et une action de prévention. Je développerai les centres de soins et de prise en charge psycho-médicosociale afin d’assurer un suivi dans la durée des personnes addictes. Je refuserai la surenchère comme la stigmatisation et privilégierai une approche de réduction des risques, de prévention et de soins."
       },
       {
         "candidateId": "gregoire",
         "text": "Des équipes pluridisciplinaires et des lieux dédiés à la réduction des risques, pour prendre en charge les personnes en errance, notamment les usagers de drogue et les personnes souffrant de troubles psychiques",
-        "detail": "Nous renforcerons la prise en charge des personnes en errance et en grande vulnérabilité, en développant des équipes et des lieux dédiés à la réduction des risques dans les quartiers les plus exposés.\nInspirés par le succès de la Halte Soins Addictions (HSA) du 10e arrondissement, nous ouvrirons de nouveaux espaces encadrés par des professionnels de santé, du social et de la médiation, pour protéger les plus fragiles et prévenir les drames liés aux consommations à risque. Ces lieux permettront de réduire les usages de rue, d’éviter les overdoses, de réorienter vers les soins et de restaurer\nla tranquillité dans l’espace public, tout en respectant la dignité de chaque personne. Parce que la sécurité et l’humanité doivent aller de pair, nous ferons de Paris une ville de référence en matière de réduction des risques."
+        "detail": "Nous renforcerons la prise en charge des personnes en errance et en grande vulnérabilité, en développant des équipes et des lieux dédiés à la réduction des risques dans les quartiers les plus exposés.\n Inspirés par le succès de la Halte Soins Addictions (HSA) du 10e arrondissement, nous ouvrirons de nouveaux espaces encadrés par des professionnels de santé, du social et de la médiation, pour protéger les plus fragiles et prévenir les drames liés aux consommations à risque. Ces lieux permettront de réduire les usages de rue, d’éviter les overdoses, de réorienter vers les soins et de restaurer\n la tranquillité dans l’espace public, tout en respectant la dignité de chaque personne. Parce que la sécurité et l’humanité doivent aller de pair, nous ferons de Paris une ville de référence en matière de réduction des risques."
       },
       {
         "candidateId": "chikirou",
         "text": "Prévenir et soigner plutôt que réprimer : développer un réseau Haltes Soins Addictions + favoriser l’accompagnement des consommateurs de substances addictives via un parcours de soins combinant une approche médicale et une approche de réinsertion sociale + prévention et sensibilisation aux risques liés aux addictions",
-        "detail": "Prévenir et soigner plutôt que réprimer : une politique de santé face aux addictions \n\n-Développer un réseau Haltes Soins Addictions sur la base de structures de petite taille pour la prévention, l’accompagnement et la prise en charge dans les quartiers où les besoins se font sentir, accueillant un nombre de personnes limité afin de garantir aux usagers et aux structures une insertion harmonieuse dans le tissu urbain, sans nuisance, ce que la seule structure actuelle de l’hôpital Lariboisière, surchargée, est incapable d’assurer\n\n    Favoriser l’accompagnement des consommateurs de substances addictives via un parcours de soins combinant une approche médicale et une approche de réinsertion sociale par la création d’espaces de repos et de mise à l’abri afin d’éviter les remises à la rue\n\n    Développer des campagnes municipales de prévention et de sensibilisation aux risques liés aux addictions (tabac, alcool, drogues, jeux d’argent, malbouffe)\n\n    Sensibiliser les consommateurs aux impacts des consommations sur la tranquillité publique, dans une logique de responsabilisation et non de stigmatisation"
+        "detail": "Prévenir et soigner plutôt que réprimer : une politique de santé face aux addictions \n \n -Développer un réseau Haltes Soins Addictions sur la base de structures de petite taille pour la prévention, l’accompagnement et la prise en charge dans les quartiers où les besoins se font sentir, accueillant un nombre de personnes limité afin de garantir aux usagers et aux structures une insertion harmonieuse dans le tissu urbain, sans nuisance, ce que la seule structure actuelle de l’hôpital Lariboisière, surchargée, est incapable d’assurer\n \n  Favoriser l’accompagnement des consommateurs de substances addictives via un parcours de soins combinant une approche médicale et une approche de réinsertion sociale par la création d’espaces de repos et de mise à l’abri afin d’éviter les remises à la rue\n \n  Développer des campagnes municipales de prévention et de sensibilisation aux risques liés aux addictions (tabac, alcool, drogues, jeux d’argent, malbouffe)\n \n  Sensibiliser les consommateurs aux impacts des consommations sur la tranquillité publique, dans une logique de responsabilisation et non de stigmatisation"
+      },
+      {
+        "candidateId": "npa",
+        "text": "Prévenir et soigner plutôt que réprimer : accès aux soins gratuits et prévention",
+        "detail": null
       },
       {
         "candidateId": "dati",
@@ -2017,11 +2022,6 @@ const QUESTIONNAIRE_DATA = [
       {
         "candidateId": "knafo",
         "text": "Pas de proposition",
-        "detail": null
-      },
-      {
-        "candidateId": "npa",
-        "text": "Défendre l'hôpital public et les centres de soins contre les coupes budgétaires, lutter contre les addictions par l'accès aux soins gratuits et la prévention, pas par la répression",
         "detail": null
       }
     ]
@@ -2039,12 +2039,12 @@ const QUESTIONNAIRE_DATA = [
       {
         "candidateId": "gregoire",
         "text": "Créer une mutuelle municipale parisienne + objectif de 100 nouveaux lieux de soin de proximité en secteur 1 sans dépassement d'honoraires",
-        "detail": "Une mutuelle municipale parisienne abordable et de qualité pour tous les Parisiens. \nObjectif 100 nouveaux lieux de soin de proximité en secteur 1  (publics, associatifs, libéraux et 7 centres de santé municipaux créés ou agrandis)"
+        "detail": "Une mutuelle municipale parisienne abordable et de qualité pour tous les Parisiens. \n Objectif 100 nouveaux lieux de soin de proximité en secteur 1 (publics, associatifs, libéraux et 7 centres de santé municipaux créés ou agrandis)"
       },
       {
         "candidateId": "chikirou",
-        "text": "Créer une complémentaire populaire communale pour les plus pauvres + mettre en place un « Chèque Psy ». Cf voir les 8 mesures dédiées à l'accès aux soins et 25 mesures pour la santé",
-        "detail": "Créer la Complémentaire Populaire Communale de Paris (CPCP), qui profitera notamment aux personnes qui ont actuellement du mal à s’offrir une complémentaire santé (retraités, indépendants, certains chômeurs, etc.)\nMettre en place un « Chèque Psy » d’un montant de 20 euros / séance pour les Parisiennes et les Parisiens en fonction du quotient familial, pour accompagner les séances non entièrement remboursées par le dispositif étatique « Mon soutien psy »\nFaire usage des pouvoirs de présidence du conseil de surveillance de l’AP-HP pour garantir l’accès des Parisiennes et Parisiens à des médecins généralistes et spécialistes sans dépassement d’honoraires, notamment via le déploiement de médecins de l’AP-HP dans les centres de santé municipaux\nCréer un service de bus itinérants santé dans les zones d’intervention prioritaire (ZIP) afin de renforcer la prévention, l’accompagnement et l’orientation parmi les Parisiennes et les Parisiens les plus vulnérables\nAssurer un accès gratuit aux protections hygiéniques dans tous les établissements publics municipaux, ainsi que dans les petits commerces, cafés et restaurants de quartier"
+        "text": "Créer une complémentaire populaire communale pour les plus pauvres + mettre en place un « Chèque Psy »",
+        "detail": "Créer la Complémentaire Populaire Communale de Paris (CPCP), qui profitera notamment aux personnes qui ont actuellement du mal à s’offrir une complémentaire santé (retraités, indépendants, certains chômeurs, etc.)\n Mettre en place un « Chèque Psy » d’un montant de 20 euros / séance pour les Parisiennes et les Parisiens en fonction du quotient familial, pour accompagner les séances non entièrement remboursées par le dispositif étatique « Mon soutien psy »\n Garantir l’accès à des médecins généralistes et spécialistes sans dépassement d’honoraires, notamment via le déploiement de médecins de l’AP-HP dans les centres de santé municipaux\n Créer un service de bus itinérants santé dans les zones d’intervention prioritaire (ZIP) afin de renforcer la prévention, l’accompagnement et l’orientation parmi les Parisiennes et les Parisiens les plus vulnérables\n Assurer un accès gratuit aux protections hygiéniques dans tous les établissements publics municipaux, ainsi que dans les petits commerces, cafés et restaurants de quartier"
       },
       {
         "candidateId": "dati",
@@ -2052,13 +2052,13 @@ const QUESTIONNAIRE_DATA = [
         "detail": null
       },
       {
-        "candidateId": "knafo",
-        "text": "Pas de proposition",
+        "candidateId": "npa",
+        "text": "Garantir des soins gratuits et dignes pour tous",
         "detail": null
       },
       {
-        "candidateId": "npa",
-        "text": "Défendre l'hôpital public contre les coupes budgétaires, garantir des soins gratuits et dignes pour tous, embaucher massivement dans la santé et s'opposer aux fermetures de centres de santé",
+        "candidateId": "knafo",
+        "text": "Pas de proposition",
         "detail": null
       }
     ]
@@ -2071,31 +2071,31 @@ const QUESTIONNAIRE_DATA = [
       {
         "candidateId": "bournazel",
         "text": "Doubler les investissements annuels dans l’Ecole publique, école 100% accessible",
-        "detail": "Dès l’été 2026, je ferai adopter un budget rectificatif pour 2026 pour doubler les investissements annuels dans l’Ecole publique, \n Plan 100 % écoles accessibles d’ici 2032"
+        "detail": "Dès l’été 2026, je ferai adopter un budget rectificatif pour 2026 pour doubler les investissements annuels dans l’Ecole publique, \n  Plan 100 % écoles accessibles d’ici 2032"
       },
       {
         "candidateId": "gregoire",
         "text": "Moduler les dotations financières aux établissements privés, extension de la gratuité des fournitures scolaires, renforcer les moyens pour une école publique inclusive etc...",
-        "detail": "Renforcer l’attractivité des écoles et collèges publics et la mixité scolaire, Moduler les dotations financières aux établissements privés en fonction de critères de mixité sociale et scolaire. Soulager le budget des familles grâce au gel des tarifs de cantine et à l’extension de la gratuité des fournitures scolaires. \n Ouvrir 50 nouvelles unités d’enseignement adaptées pour les enfants en situation de handicap\n + voir programme complet dans l'onglet dédié"
+        "detail": "Renforcer l’attractivité des écoles et collèges publics et la mixité scolaire, Moduler les dotations financières aux établissements privés en fonction de critères de mixité sociale et scolaire. Soulager le budget des familles grâce au gel des tarifs de cantine et à l’extension de la gratuité des fournitures scolaires. \n  Ouvrir 50 nouvelles unités d’enseignement adaptées pour les enfants en situation de handicap\n  + voir programme complet dans l'onglet dédié"
       },
       {
         "candidateId": "chikirou",
         "text": "Supprimer tout soutien à l’école privée, augmenter les personnels devant les élèves, aller vers la gratuité des fournitures, sorties scolaires, goûters,et périscolaire, école inclusive, décharge des directeurs, etc.",
-        "detail": "S’opposer au démantèlement et à l’affaiblissement de l’école et du collège publics à Paris :\n Renforcer les moyens des écoles et des collèges publics\n Supprimer tout soutien à l’école privée au-delà des obligations légales afin de concentrer l’essentiel des moyens à l’école publique, et réserver 100 % des crédits d’investissement éducatif au secteur public\n Mettre fin à l’opacité des financements de l’école privée et contrôler strictement l’usage des fonds publics par les écoles privées\n Aller vers la gratuité de l’école publique à Paris (fournitures, sorties scolaires, goûters, périscolaire)\n Soutenir et intensifier l’achat de matériel adapté dans les écoles pour accueillir les enfants en situation de handicap \n Compléter la dotation en ordinateurs et en vidéoprojecteurs \n Créer un véritable service de soutien scolaire gratuit et renforcer les animations et ateliers\n Généraliser l’ouverture des écoles les samedis et vacances scolaires aux associations d’accompagnement scolaire, culturelles et sportives\n Augmenter les personnels devant les élèves, améliorer leurs conditions de travail et leur formation : \n Garantir une ATSEM par classe en maternelle\n Garantir la décharge systématique d’enseignement pour les directeurs et directrices d’école à Paris, afin de consacrer le temps nécessaire à leurs missions de direction\n \n \n + voir programme complet dans l'onglet dédié"
+        "detail": "S’opposer au démantèlement et à l’affaiblissement de l’école et du collège publics à Paris :\n  Renforcer les moyens des écoles et des collèges publics\n  Supprimer tout soutien à l’école privée au-delà des obligations légales afin de concentrer l’essentiel des moyens à l’école publique, et réserver 100 % des crédits d’investissement éducatif au secteur public\n  Mettre fin à l’opacité des financements de l’école privée et contrôler strictement l’usage des fonds publics par les écoles privées\n  Aller vers la gratuité de l’école publique à Paris (fournitures, sorties scolaires, goûters, périscolaire)\n  Soutenir et intensifier l’achat de matériel adapté dans les écoles pour accueillir les enfants en situation de handicap \n  Compléter la dotation en ordinateurs et en vidéoprojecteurs \n  Créer un véritable service de soutien scolaire gratuit et renforcer les animations et ateliers\n  Généraliser l’ouverture des écoles les samedis et vacances scolaires aux associations d’accompagnement scolaire, culturelles et sportives\n  Augmenter les personnels devant les élèves, améliorer leurs conditions de travail et leur formation : \n  Garantir une ATSEM par classe en maternelle\n  Garantir la décharge systématique d’enseignement pour les directeurs et directrices d’école à Paris, afin de consacrer le temps nécessaire à leurs missions de direction\n  \n  \n  + voir programme complet dans l'onglet dédié"
       },
       {
         "candidateId": "dati",
         "text": "Financer davantage les écoles privées",
-        "detail": "Je réviserai le forfait communal à destination des écoles maternelles privées sous contrat, afin\n qu’il soit conforme au coût réel et revaloriserai le forfait pour les écoles élémentaires pour rattraper\n l’inflation. La Ville de Paris doit se conformer à la loi afin d’offrir une équité de traitement entre tous\n les élèves parisiens."
+        "detail": "Je réviserai le forfait communal à destination des écoles maternelles privées sous contrat, afin\n  qu’il soit conforme au coût réel et revaloriserai le forfait pour les écoles élémentaires pour rattraper\n  l’inflation. La Ville de Paris doit se conformer à la loi afin d’offrir une équité de traitement entre tous\n  les élèves parisiens."
+      },
+      {
+        "candidateId": "npa",
+        "text": "Exiger le remplacement systématique des enseignants absents et embaucher massivement dans l'éducation (nb: prérogative de l'Etat)",
+        "detail": null
       },
       {
         "candidateId": "knafo",
         "text": "Mettre fin à la guerre contre l’école privée",
-        "detail": null
-      },
-      {
-        "candidateId": "npa",
-        "text": "S'opposer aux fermetures de classes et aux suppressions de postes, exiger le remplacement systématique des enseignants absents et embaucher massivement dans l'éducation",
         "detail": null
       }
     ]
@@ -2108,17 +2108,22 @@ const QUESTIONNAIRE_DATA = [
       {
         "candidateId": "bournazel",
         "text": "Instaurer un screening systématique des références et du casier judiciaire avant tout recrutement et de l’intégralité des 12 000 personnels en poste. Renvoyer sur le champ les agents concernés par toute irrégularité. L’ensemble des animateurs sera formé durant deux ans jusqu’au niveau BAFA ou équivalent. Créer une inspection municipale du périscolaire, chargée de contrôler 100 % des structures. Recours prioritaire à des personnels titulaires et non des vacataires. Créer une filière de l’animation à la Mairie de Paris et offrir des primes.",
-        "detail": "1. J’instaurerai un screening systématique et obligatoire des références et du casier judiciaire avant tout recrutement d’un nouvel animateur périscolaire. Je ferai également scanner l’intégralité des 12 000 personnels en poste et renverrai sur le champ les agents concernés par toute irrégularité.\n \n 2. Formation : Le nouveau périscolaire parisien sera irréprochable : l’ensemble des animateurs sera formé durant deux ans jusqu’au niveau BAFA ou équivalent, ce qui représentera un investissement de 8 millions d’euros par an. Cette formation préparera également à la détection et à la prévention des violences faites aux enfants.\n \n 3. Contrôle. Je créerai une inspection municipale du périscolaire, chargée de contrôler chaque année 100 % des structures, soit environ 650 sites, afin d’assurer un niveau homogène de sécurité et de qualité dans tout Paris. Ce sera un contrôle continu, organisé de manière inopinée et dont les résultats seront rendus publics après avoir été anonymisés. Toutes les irrégularités, les manquements hiérarchiques, les défaillances de signalement donneront lieuà des sanctions et des actions correctives. Tout fait pénalement qualifiable sera transmis sans filtre au procureur de la République. Les mêmes règles de screening et de contrôle s’appliqueront aux agents de l’Aide sociale à l’enfance.\n \n 4. Recrutement. J’aurai prioritairement recours à des personnels titulaires, adaptés à des missions aussi importantes pour nos enfants. Le recours actuellement massif aux vacataires, qui représentent aujourd’hui trois quarts des effectifs d’animateurs, fragilise la continuité éducative, limite la formation des équipes et dégrade la qualité comme la sécurité du service public. Les organisations professionnelles ont elles-mêmes dénoncé un déficit de formation et d’accompagnement des animateurs. Pour rompre avec cette logique et recruter des personnels titulaires, je revaloriserai ces métiers avec des primes de reconnaissance de l’engagement professionnel pouvant s’élever jusqu’à 500 € et je créerai une véritable filière de l’animation à la Mairie de Paris, qui leur offrira des perspectives d’évolution de carrière et de progression. En outre, je prioriserai les agents municipaux dans l’accès au logement social à Paris avec une clause de fonction, ce qui aidera aussi à résoudre les difficultés de recrutement. Comme l’ensemble des personnels de la Mairie de Paris, ils seront recrutés pour produire du service public et non de l’administration, ils seront formés, reconnus, motivés et valorisés pour leurs missions essentielles aux Parisiens."
+        "detail": "1. J’instaurerai un screening systématique et obligatoire des références et du casier judiciaire avant tout recrutement d’un nouvel animateur périscolaire. Je ferai également scanner l’intégralité des 12 000 personnels en poste et renverrai sur le champ les agents concernés par toute irrégularité.\n  \n  2. Formation : Le nouveau périscolaire parisien sera irréprochable : l’ensemble des animateurs sera formé durant deux ans jusqu’au niveau BAFA ou équivalent, ce qui représentera un investissement de 8 millions d’euros par an. Cette formation préparera également à la détection et à la prévention des violences faites aux enfants.\n  \n  3. Contrôle. Je créerai une inspection municipale du périscolaire, chargée de contrôler chaque année 100 % des structures, soit environ 650 sites, afin d’assurer un niveau homogène de sécurité et de qualité dans tout Paris. Ce sera un contrôle continu, organisé de manière inopinée et dont les résultats seront rendus publics après avoir été anonymisés. Toutes les irrégularités, les manquements hiérarchiques, les défaillances de signalement donneront lieuà des sanctions et des actions correctives. Tout fait pénalement qualifiable sera transmis sans filtre au procureur de la République. Les mêmes règles de screening et de contrôle s’appliqueront aux agents de l’Aide sociale à l’enfance.\n  \n  4. Recrutement. J’aurai prioritairement recours à des personnels titulaires, adaptés à des missions aussi importantes pour nos enfants. Le recours actuellement massif aux vacataires, qui représentent aujourd’hui trois quarts des effectifs d’animateurs, fragilise la continuité éducative, limite la formation des équipes et dégrade la qualité comme la sécurité du service public. Les organisations professionnelles ont elles-mêmes dénoncé un déficit de formation et d’accompagnement des animateurs. Pour rompre avec cette logique et recruter des personnels titulaires, je revaloriserai ces métiers avec des primes de reconnaissance de l’engagement professionnel pouvant s’élever jusqu’à 500 € et je créerai une véritable filière de l’animation à la Mairie de Paris, qui leur offrira des perspectives d’évolution de carrière et de progression. En outre, je prioriserai les agents municipaux dans l’accès au logement social à Paris avec une clause de fonction, ce qui aidera aussi à résoudre les difficultés de recrutement. Comme l’ensemble des personnels de la Mairie de Paris, ils seront recrutés pour produire du service public et non de l’administration, ils seront formés, reconnus, motivés et valorisés pour leurs missions essentielles aux Parisiens."
       },
       {
         "candidateId": "gregoire",
         "text": "Jamais d’adulte seul avec un enfant, des dispositifs pour recueillir la parole, une formation à la bientraitance, aux droits de l’enfant et à la détection des violences pour tous les animateurs, des inspections indépendantes régulières et des processus de signalement transparents. Lancement d’une convention citoyenne.",
-        "detail": "1. La protection des enfants comme impératif absolu : jamais d’adulte seul avec un enfant, des dispositifs pour recueillir leur parole dans chaque école, une formation à la bientraitance, aux droits de l’enfant et à la détection des violences pour tous les animateurs, des inspections indépendantes régulières et des processus de signalement transparents. \n \n 2. Nous recruterons 2 800 postes et revaloriserons financièrement les métiers de l’animation . Il y aura une exigence de sécurité maximum pour rétablir la transparence et la confiance avec les parents. Nous favoriserons la montée en compétence des professionnels, notamment pour mieux recueillir la parole des enfants.\n \n 3. Lancement d’une convention citoyenne dès avril 2026 : Dès le lendemain de ma prise de fonction, le 4 avril 2026, je convoquerai une convention citoyenne pour mieux protéger les enfants. Cette convention rassemblera des citoyens tirés au sort, appuyés par une gouvernance représentative des parties prenantes, avec des parents d’élèves, des membres de la communauté éducative, de l’Académie de Paris, des représentants des organisations syndicales et des experts. Elle évoquera la protection de l’enfance pour mieux détecter les situations de violence, les rythmes scolaires et périscolaires et la refonte des apprentissages périscolaires. Un vote aura lieu en Conseil de Paris à l’été 2026 et les conclusions de cette convention seront mises en application dès la rentrée 2026."
+        "detail": "1. La protection des enfants comme impératif absolu : jamais d’adulte seul avec un enfant, des dispositifs pour recueillir leur parole dans chaque école, une formation à la bientraitance, aux droits de l’enfant et à la détection des violences pour tous les animateurs, des inspections indépendantes régulières et des processus de signalement transparents. \n  \n  2. Nous recruterons 2 800 postes et revaloriserons financièrement les métiers de l’animation . Il y aura une exigence de sécurité maximum pour rétablir la transparence et la confiance avec les parents. Nous favoriserons la montée en compétence des professionnels, notamment pour mieux recueillir la parole des enfants.\n  \n  3. Lancement d’une convention citoyenne dès avril 2026 : Dès le lendemain de ma prise de fonction, le 4 avril 2026, je convoquerai une convention citoyenne pour mieux protéger les enfants. Cette convention rassemblera des citoyens tirés au sort, appuyés par une gouvernance représentative des parties prenantes, avec des parents d’élèves, des membres de la communauté éducative, de l’Académie de Paris, des représentants des organisations syndicales et des experts. Elle évoquera la protection de l’enfance pour mieux détecter les situations de violence, les rythmes scolaires et périscolaires et la refonte des apprentissages périscolaires. Un vote aura lieu en Conseil de Paris à l’été 2026 et les conclusions de cette convention seront mises en application dès la rentrée 2026."
+      },
+      {
+        "candidateId": "npa",
+        "text": "Embaucher et titulariser tous les animateurs périscolaires, garantir des conditions de travail dignes et un taux d'encadrement suffisant",
+        "detail": null
       },
       {
         "candidateId": "chikirou",
         "text": "Respecter le taux d’encadrement, limiter le recours aux vacataires, créer une filière des métiers du périscolaire avec une formation initiale et continue renforcée, définir un binôme paritaire d’animateurs référents dans chaque établissement, former tous les agents au contact des enfants, organiser des activités de sensibilisation",
-        "detail": "Pour un véritable service public du périscolaire :\n 1.Respecter le taux d’encadrement national de 1 pour 8 pour les enfants de moins de 6 ans et de 1 pour 12 pour les plus de 6 ans en recrutantpour atteindre 10 000 animateurs périscolaires permanents à la fin de la mandature. \n 2.Sécuriser et stabiliser les équipes en limitant le recours aux vacataires et en lançant un plan de déprécarisation des 4 000 animateurs « faux vacataires » via des titularisations et contractualisations\n 3.Créer une véritable filière des métiers du périscolaire avec une formation initiale et continue renforcée via l’École des métiers de la DASCO et des partenariats avec des lycées professionnels préparant au bac pro Animation, ainsi que la création de 5 niveaux de postes de la catégorie C à la catégorie A\n \n Protéger les enfants de toute forme de violence à l’école :\n 4.Former les animateurs et intervenants sur le temps périscolaire et extrascolaire à la prévention contre les violences éducatives\n 5.Définir un binôme paritaire d’animateurs référents dans chaque établissement pouvant être l’interlocuteur privilégié des enfants pour écouter, aider et orienter\n 6.​​Former tous les agents au contact des enfants (ATSEM, animateurs, gardiens) à la perception et à la gestion des premiers signes de harcèlement scolaire\n 7.Organiser plusieurs fois dans l’année des activités de sensibilisation en petits groupes sur les questions de harcèlement, de situations stressantes et de violences de genre, racistes, homophobes"
+        "detail": "Pour un véritable service public du périscolaire :\n  1.Respecter le taux d’encadrement national de 1 pour 8 pour les enfants de moins de 6 ans et de 1 pour 12 pour les plus de 6 ans en recrutantpour atteindre 10 000 animateurs périscolaires permanents à la fin de la mandature. \n  2.Sécuriser et stabiliser les équipes en limitant le recours aux vacataires et en lançant un plan de déprécarisation des 4 000 animateurs « faux vacataires » via des titularisations et contractualisations\n  3.Créer une véritable filière des métiers du périscolaire avec une formation initiale et continue renforcée via l’École des métiers de la DASCO et des partenariats avec des lycées professionnels préparant au bac pro Animation, ainsi que la création de 5 niveaux de postes de la catégorie C à la catégorie A\n  \n  Protéger les enfants de toute forme de violence à l’école :\n  4.Former les animateurs et intervenants sur le temps périscolaire et extrascolaire à la prévention contre les violences éducatives\n  5.Définir un binôme paritaire d’animateurs référents dans chaque établissement pouvant être l’interlocuteur privilégié des enfants pour écouter, aider et orienter\n  6.​​Former tous les agents au contact des enfants (ATSEM, animateurs, gardiens) à la perception et à la gestion des premiers signes de harcèlement scolaire\n  7.Organiser plusieurs fois dans l’année des activités de sensibilisation en petits groupes sur les questions de harcèlement, de situations stressantes et de violences de genre, racistes, homophobes"
       },
       {
         "candidateId": "dati",
@@ -2129,11 +2134,6 @@ const QUESTIONNAIRE_DATA = [
         "candidateId": "knafo",
         "text": "Faire appel aux parents et aux grands-parents pour l’animation des activités périscolaires. Effectuer des vérifications strictes pour tous les intervenants",
         "detail": "Restaurer la confiance dans l’encadrement des activités périscolaires :\n  1. Faire appel aux parents et aux grands-parents pour l’animation des activités périscolaires\n  2. Effectuer des vérifications strictes pour tous les intervenants"
-      },
-      {
-        "candidateId": "npa",
-        "text": "Embaucher et titulariser tous les animateurs périscolaires, garantir des conditions de travail dignes et un taux d'encadrement suffisant",
-        "detail": null
       }
     ]
   }

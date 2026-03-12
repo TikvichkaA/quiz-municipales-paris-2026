@@ -31,6 +31,7 @@
     <div class="blob blob-3"></div>
     <div class="container">
       <div class="accueil-content">
+        <img src="logo-vp.jpeg" alt="Victoires Populaires" class="accueil-logo">
         <div class="accueil-badge">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           Municipales Paris 2026
@@ -70,7 +71,7 @@
             </div>
             <div class="mode-card-text">
               <strong>Comparer les programmes</strong>
-              <span>Compare les propositions de 2 candidats thème par thème</span>
+              <span>Compare les propositions des candidats thème par thème</span>
             </div>
             <svg class="mode-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
           </button>
@@ -169,36 +170,6 @@
     </div>
   </section>
 
-  <!-- ====== ÉCRAN "IT'S A MATCH!" ====== -->
-  <section id="screen-match" class="screen">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-    <div class="container">
-      <div class="match-content">
-        <div class="match-heart">💘</div>
-        <h2 class="match-title">It's a Match !</h2>
-        <p class="match-subtitle" id="match-subtitle">Tu es à <strong id="match-pct">78%</strong> d'affinité avec</p>
-        <div class="match-candidate-card">
-          <div class="match-candidate-name" id="match-candidate-name">Emmanuel Grégoire</div>
-          <div class="match-candidate-party" id="match-candidate-party">PS / NFP</div>
-          <div class="match-candidate-score" id="match-candidate-score">78%</div>
-        </div>
-        <div class="match-actions">
-          <button class="btn-primary" id="match-btn-results" onclick="showMatchResultsScreen()">Voir tous les résultats</button>
-          <button class="btn-secondary" id="match-btn-share" onclick="shareMatchResults()">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
-            Partager mon crush 💘
-          </button>
-          <button class="btn-home" onclick="showScreen('accueil')">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            Retour à l'accueil
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ====== ÉCRAN COMPARAISON ====== -->
   <section id="screen-comparaison" class="screen">
     <div class="container">
@@ -213,10 +184,6 @@
         <div class="control-group">
           <label for="theme-select">Thématique</label>
           <select id="theme-select" onchange="updateComparison()"></select>
-        </div>
-        <div class="control-group">
-          <label>Candidats à comparer</label>
-          <div class="candidate-toggles" id="candidate-toggles"></div>
         </div>
       </div>
 
