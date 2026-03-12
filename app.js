@@ -322,8 +322,9 @@ function generateQuestions() {
     shuffled.forEach(ch => {
       if (textMap[ch.text]) {
         textMap[ch.text].candidateIds.push(ch.candidateId);
+        if (ch.detail && !textMap[ch.text].detail) textMap[ch.text].detail = ch.detail;
       } else {
-        const merged = { text: ch.text, candidateIds: [ch.candidateId] };
+        const merged = { text: ch.text, candidateIds: [ch.candidateId], detail: ch.detail || null };
         textMap[ch.text] = merged;
         mergedChoices.push(merged);
       }
@@ -448,6 +449,31 @@ function answerQuestion(choiceIndex) {
     label.innerHTML = names;
     btn.appendChild(label);
 
+    // Detail expand button if detail exists
+    if (ch.detail) {
+      const detailBtn = document.createElement('button');
+      detailBtn.className = 'questionnaire-detail-toggle';
+      detailBtn.textContent = 'Voir le détail';
+      detailBtn.onclick = (e) => {
+        e.stopPropagation();
+        const detailDiv = btn.querySelector('.questionnaire-choice-detail');
+        if (detailDiv.style.display === 'none') {
+          detailDiv.style.display = '';
+          detailBtn.textContent = 'Masquer le détail';
+        } else {
+          detailDiv.style.display = 'none';
+          detailBtn.textContent = 'Voir le détail';
+        }
+      };
+      btn.appendChild(detailBtn);
+
+      const detailDiv = document.createElement('div');
+      detailDiv.className = 'questionnaire-choice-detail';
+      detailDiv.style.display = 'none';
+      detailDiv.textContent = ch.detail;
+      btn.appendChild(detailDiv);
+    }
+
     if (choiceIndex >= 0) {
       if (i === choiceIndex) {
         btn.classList.add('chosen');
@@ -494,7 +520,8 @@ function goBackQuestion() {
 function showQuestionnaireResults() {
   const results = computeResults(questionnaireState.scores, questionnaireState.counts);
   questionnaireState.results = results;
-  showMatchScreen(results);
+  displayQuestionnaireResults();
+  setTimeout(() => launchConfetti(), 400);
 }
 
 function displayQuestionnaireResults() {

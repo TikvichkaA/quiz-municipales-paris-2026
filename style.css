@@ -1085,6 +1085,33 @@ body {
   to { opacity: 1; transform: none; }
 }
 
+.questionnaire-detail-toggle {
+  display: block;
+  margin-top: 6px;
+  background: none;
+  border: none;
+  color: var(--rose);
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 2px 0;
+  text-decoration: underline;
+}
+
+.questionnaire-choice-detail {
+  margin-top: 6px;
+  padding: 8px 10px;
+  background: var(--gris-100);
+  border-radius: 8px;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: var(--gris-600);
+  white-space: pre-line;
+  text-align: left;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
 .questionnaire-bottom {
   flex-shrink: 0;
   padding: 4px 0 44px;

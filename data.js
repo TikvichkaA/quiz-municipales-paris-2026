@@ -1426,6 +1426,11 @@ const QUESTIONNAIRE_DATA = [
         "candidateId": "dati",
         "text": "Non",
         "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "Droit de vote des étrangers aux élections municipales et assemblées générales de travailleurs et d'usagers pour décider collectivement des besoins en services publics",
+        "detail": null
       }
     ]
   },
@@ -1457,6 +1462,11 @@ const QUESTIONNAIRE_DATA = [
       {
         "candidateId": "knafo",
         "text": "être réduit",
+        "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "être massivement augmenté, en réquisitionnant les logements et bureaux vacants et en interdisant toutes les expulsions",
         "detail": null
       }
     ]
@@ -1490,6 +1500,11 @@ const QUESTIONNAIRE_DATA = [
         "candidateId": "gregoire",
         "text": "être augmentée et formé, notamment aux violences sexistes et sexuelles",
         "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "être dissoute : la sécurité doit passer par la lutte contre les inégalités sociales, pas par la répression policière",
+        "detail": null
       }
     ]
   },
@@ -1522,6 +1537,11 @@ const QUESTIONNAIRE_DATA = [
         "candidateId": "knafo",
         "text": "On augmente la vitesse 80 km/h.",
         "detail": "Permettre la circulation à 80 km/h sur le périphérique"
+      },
+      {
+        "candidateId": "npa",
+        "text": "Pas de proposition spécifique sur le périphérique, mais la priorité est de rendre les transports en commun gratuits pour réduire la dépendance à la voiture",
+        "detail": null
       }
     ]
   },
@@ -1553,6 +1573,11 @@ const QUESTIONNAIRE_DATA = [
       {
         "candidateId": "knafo",
         "text": "On le supprime",
+        "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "On va plus loin : on encadre, on gèle et on baisse les loyers pour mettre fin à la spéculation immobilière",
         "detail": null
       }
     ]
@@ -1586,6 +1611,11 @@ const QUESTIONNAIRE_DATA = [
         "candidateId": "chikirou",
         "text": "On refuse la vente du patrimoine public et crée de nouveaux services publics municipaux",
         "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "On arrête toutes les privatisations, on municipalise les services essentiels et on rend gratuits l'eau, les transports, les centres de santé et les cantines",
+        "detail": null
       }
     ]
   },
@@ -1617,6 +1647,11 @@ const QUESTIONNAIRE_DATA = [
       {
         "candidateId": "knafo",
         "text": "On met fin à l’accueil dans les gymnases lors des vagues de froid et on réduit les subventions aux associations d’aide aux migrants.",
+        "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "On réquisitionne les logements vacants, on interdit les expulsions, on régularise tous les sans-papiers et on développe un hébergement d'urgence digne pour tous",
         "detail": null
       }
     ]
@@ -1650,6 +1685,11 @@ const QUESTIONNAIRE_DATA = [
         "candidateId": "dati",
         "text": "Non, on réduira certaines subventions",
         "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "Oui, on défend les associations menacées et on renforce le soutien aux associations des quartiers populaires qui accompagnent les travailleurs et les familles",
+        "detail": null
       }
     ]
   },
@@ -1681,6 +1721,11 @@ const QUESTIONNAIRE_DATA = [
       {
         "candidateId": "bournazel",
         "text": "Créer des stationnements gratuits",
+        "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "Réduire la place de la voiture au profit des transports en commun gratuits et accessibles à tous",
         "detail": null
       }
     ]
@@ -1714,6 +1759,11 @@ const QUESTIONNAIRE_DATA = [
         "candidateId": "bournazel",
         "text": "On maintiend les pistes cyclables mais on les régulera et on renforcera les contrôles.",
         "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "La priorité est aux transports en commun gratuits, mais le vélo doit aussi être accessible à tous comme mobilité populaire",
+        "detail": null
       }
     ]
   },
@@ -1745,6 +1795,11 @@ const QUESTIONNAIRE_DATA = [
       {
         "candidateId": "knafo",
         "text": "Non",
+        "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "Oui, on rend les transports en commun gratuits pour tous, financés par les employeurs, et on s'oppose à la privatisation du réseau de bus RATP",
         "detail": null
       }
     ]
@@ -1778,6 +1833,11 @@ const QUESTIONNAIRE_DATA = [
         "candidateId": "dati",
         "text": "Pas de mesure",
         "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "Créer des lieux d'hébergement pour les femmes victimes de violences et les victimes de violences homophobes ou transphobes, et développer crèches et cantines populaires pour alléger la double journée des femmes",
+        "detail": null
       }
     ]
   },
@@ -1809,6 +1869,11 @@ const QUESTIONNAIRE_DATA = [
       {
         "candidateId": "knafo",
         "text": "On augmente l’offre de places en combinant crèches municipales et privées, et on ne modifie pas les tarifs actuels",
+        "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "On crée massivement des crèches publiques, on embauche et forme le personnel avec de vrais salaires, et on organise des assemblées avec les parents pour définir les besoins",
         "detail": null
       }
     ]
@@ -1842,6 +1907,11 @@ const QUESTIONNAIRE_DATA = [
         "candidateId": "knafo",
         "text": "Pas de proposition sur la tarification des cantines.",
         "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "Oui, on rend les cantines gratuites pour tous et on défend le droit de grève des agents",
+        "detail": null
       }
     ]
   },
@@ -1873,6 +1943,11 @@ const QUESTIONNAIRE_DATA = [
       {
         "candidateId": "knafo",
         "text": "Il faut réduire les subventions aux associations et consacrer 300 millions d'euros à la restauration des églises",
+        "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "Oui, il faut défendre les espaces culturels populaires et les associations menacées, maintenir le Pass Culture collectif et ouvrir des lieux de rencontre et d'éducation populaire dans les quartiers",
         "detail": null
       }
     ]
@@ -1906,6 +1981,11 @@ const QUESTIONNAIRE_DATA = [
         "candidateId": "knafo",
         "text": "J'ai 2 mesures : élargir les horaires des centres sportifs, créer des terrains de sport sous le métro aérien",
         "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "Garantir la gratuité des équipements sportifs municipaux pour tous, en embauchant du personnel et en ouvrant de nouveaux créneaux dans les quartiers populaires",
+        "detail": null
       }
     ]
   },
@@ -1937,6 +2017,11 @@ const QUESTIONNAIRE_DATA = [
       {
         "candidateId": "knafo",
         "text": "Pas de proposition",
+        "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "Défendre l'hôpital public et les centres de soins contre les coupes budgétaires, lutter contre les addictions par l'accès aux soins gratuits et la prévention, pas par la répression",
         "detail": null
       }
     ]
@@ -1970,6 +2055,11 @@ const QUESTIONNAIRE_DATA = [
         "candidateId": "knafo",
         "text": "Pas de proposition",
         "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "Défendre l'hôpital public contre les coupes budgétaires, garantir des soins gratuits et dignes pour tous, embaucher massivement dans la santé et s'opposer aux fermetures de centres de santé",
+        "detail": null
       }
     ]
   },
@@ -2001,6 +2091,11 @@ const QUESTIONNAIRE_DATA = [
       {
         "candidateId": "knafo",
         "text": "Mettre fin à la guerre contre l’école privée",
+        "detail": null
+      },
+      {
+        "candidateId": "npa",
+        "text": "S'opposer aux fermetures de classes et aux suppressions de postes, exiger le remplacement systématique des enseignants absents et embaucher massivement dans l'éducation",
         "detail": null
       }
     ]
@@ -2034,6 +2129,11 @@ const QUESTIONNAIRE_DATA = [
         "candidateId": "knafo",
         "text": "Faire appel aux parents et aux grands-parents pour l’animation des activités périscolaires. Effectuer des vérifications strictes pour tous les intervenants",
         "detail": "Restaurer la confiance dans l’encadrement des activités périscolaires :\n  1. Faire appel aux parents et aux grands-parents pour l’animation des activités périscolaires\n  2. Effectuer des vérifications strictes pour tous les intervenants"
+      },
+      {
+        "candidateId": "npa",
+        "text": "Embaucher et titulariser tous les animateurs périscolaires, garantir des conditions de travail dignes et un taux d'encadrement suffisant",
+        "detail": null
       }
     ]
   }
