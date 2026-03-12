@@ -38,6 +38,12 @@ function shuffleArray(arr) {
   return arr;
 }
 
+// ====== TOGGLE DURATION BUTTONS ======
+function toggleDurationButtons() {
+  const el = document.getElementById('duration-buttons');
+  el.style.display = el.style.display === 'none' ? '' : 'none';
+}
+
 // ====== RESULTS COMPUTATION ======
 function computeResults(scores, counts) {
   const results = CANDIDATES.map(c => {

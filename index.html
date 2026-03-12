@@ -36,19 +36,20 @@
           Municipales Paris 2026
         </div>
         <h1>Trouve ton crush<br>politique 💘</h1>
-        <p class="accueil-subtitle">Découvre tes affinités avec les 7 candidats grâce à deux modes de jeu.</p>
+        <p class="accueil-subtitle">Découvre tes affinités avec les 6 candidats grâce à deux modes de jeu.</p>
 
         <div class="mode-selection">
-          <div class="mode-card mode-card-no-click">
+          <button class="mode-card" id="btn-crush" onclick="toggleDurationButtons()">
             <div class="mode-card-icon mode-card-icon-questionnaire">
               <span class="mode-card-emoji">💘</span>
             </div>
             <div class="mode-card-text">
               <strong>Trouve ton crush politique</strong>
-              <span>Choisis la proposition qui te parle parmi 7 candidats</span>
+              <span>Choisis la proposition qui te parle parmi 6 candidats</span>
             </div>
-          </div>
-          <div class="duration-buttons">
+            <svg class="mode-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+          <div class="duration-buttons" id="duration-buttons" style="display:none">
             <button class="btn-duration" onclick="startQuestionnaire(5)">
               <span class="duration-time">5</span>
               <span class="duration-detail">questions · ~2 min</span>
@@ -139,7 +140,7 @@
             Voir le détail de mes choix
           </button>
           <button class="btn-secondary" onclick="showScreen('comparaison')">Comparer les programmes</button>
-          <button class="btn-secondary" onclick="showScreen('merci')">Liens utiles</button>
+          <a class="btn-secondary" href="https://www.victoirespopulaires.fr/agir/" target="_blank" rel="noopener">Devenir bénévole Victoires Populaires</a>
           <button class="btn-home" onclick="showScreen('accueil')">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
             Retour à l'accueil
@@ -238,31 +239,10 @@
         <p>Chaque vote compte. Informe-toi et participe aux élections municipales de 2026.</p>
 
         <div class="links-section">
-          <a href="https://www.victoirespopulaires.fr" target="_blank" rel="noopener" class="link-card">
+          <a href="https://www.victoirespopulaires.fr/agir/" target="_blank" rel="noopener" class="link-card">
             <div class="link-card-text">
-              <strong>Victoires Populaires</strong>
-              <span>Découvrir le mouvement</span>
-            </div>
-            <svg class="link-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="https://www.maprocuration.gouv.fr" target="_blank" rel="noopener" class="link-card">
-            <div class="link-card-text">
-              <strong>Procuration en ligne</strong>
-              <span>Donnez procuration facilement</span>
-            </div>
-            <svg class="link-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="https://www.mediapart.fr" target="_blank" rel="noopener" class="link-card">
-            <div class="link-card-text">
-              <strong>Mediapart</strong>
-              <span>Média d'investigation indépendant</span>
-            </div>
-            <svg class="link-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="https://www.blast-info.fr" target="_blank" rel="noopener" class="link-card">
-            <div class="link-card-text">
-              <strong>Blast</strong>
-              <span>Média indépendant</span>
+              <strong>Devenir bénévole Victoires Populaires</strong>
+              <span>Rejoindre le groupe local Paris</span>
             </div>
             <svg class="link-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
