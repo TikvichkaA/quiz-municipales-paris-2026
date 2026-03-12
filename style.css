@@ -757,8 +757,11 @@ body {
   padding: 16px 14px;
   box-shadow: var(--shadow-card);
   min-width: 260px;
+  max-width: calc(100vw - 48px);
   flex-shrink: 0;
   scroll-snap-align: start;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .comparaison-column-name {
@@ -776,6 +779,8 @@ body {
   font-size: 0.8rem;
   line-height: 1.5;
   color: var(--gris-600);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .comparaison-proposition:last-child { border-bottom: none; }
