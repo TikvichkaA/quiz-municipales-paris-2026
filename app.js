@@ -425,7 +425,7 @@ function renderQuestion() {
 
     // Detail visible BEFORE answering (Phase 4)
     if (ch.detail) {
-      choiceHtml += `<button class="questionnaire-detail-toggle" data-detail-btn="true">Voir le détail</button>`;
+      choiceHtml += `<button class="questionnaire-detail-toggle" data-detail-btn="true">Voir extraits du programme</button>`;
       choiceHtml += `<div class="questionnaire-choice-detail" style="display:none">${ch.detail}</div>`;
     }
 
@@ -439,10 +439,10 @@ function renderQuestion() {
         const detailDiv = btn.querySelector('.questionnaire-choice-detail');
         if (detailDiv.style.display === 'none') {
           detailDiv.style.display = '';
-          detailBtn.textContent = 'Masquer le détail';
+          detailBtn.textContent = 'Masquer les extraits';
         } else {
           detailDiv.style.display = 'none';
-          detailBtn.textContent = 'Voir le détail';
+          detailBtn.textContent = 'Voir extraits du programme';
         }
       };
     }
