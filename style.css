@@ -1100,7 +1100,7 @@ body {
   color: var(--gris-600);
   white-space: pre-line;
   text-align: left;
-  max-height: 200px;
+  max-height: 300px;
   overflow-y: auto;
 }
 

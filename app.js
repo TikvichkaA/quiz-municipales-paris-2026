@@ -263,6 +263,20 @@ let questionnaireState = {
 };
 
 // ====== GENERATE QUESTIONS (with merged identical choices) ======
+// Resolve "mettre les mesures" placeholders with actual PROPOSITIONS
+function resolvePropositionsDetail(candidateId, quizTheme) {
+  const themeLower = quizTheme.toLowerCase();
+  const props = PROPOSITIONS.filter(p =>
+    p.candidateId === candidateId && (
+      p.theme.toLowerCase() === themeLower ||
+      p.theme.toLowerCase().includes(themeLower) ||
+      themeLower.includes(p.theme.toLowerCase())
+    )
+  );
+  if (props.length === 0) return null;
+  return props.map(p => '• ' + p.text).join('\n');
+}
+
 function generateQuestions() {
   const questions = QUESTIONNAIRE_DATA.map(q => {
     const shuffled = shuffleArray([...q.choices]);
@@ -271,11 +285,17 @@ function generateQuestions() {
     const mergedChoices = [];
     const textMap = {};
     shuffled.forEach(ch => {
+      // Replace "mettre les mesures" placeholders
+      let detail = ch.detail || null;
+      if (detail && /mettre.*mesures/i.test(detail)) {
+        detail = resolvePropositionsDetail(ch.candidateId, q.theme) || detail;
+      }
+
       if (textMap[ch.text]) {
         textMap[ch.text].candidateIds.push(ch.candidateId);
-        if (ch.detail && !textMap[ch.text].detail) textMap[ch.text].detail = ch.detail;
+        if (detail && !textMap[ch.text].detail) textMap[ch.text].detail = detail;
       } else {
-        const merged = { text: ch.text, candidateIds: [ch.candidateId], detail: ch.detail || null };
+        const merged = { text: ch.text, candidateIds: [ch.candidateId], detail: detail };
         textMap[ch.text] = merged;
         mergedChoices.push(merged);
       }
@@ -368,6 +388,8 @@ function startQuestionnaire(count) {
 function renderQuestion() {
   const { currentIndex, questions } = questionnaireState;
   const total = questions.length;
+
+  window.scrollTo(0, 0);
 
   const pct = (currentIndex / total) * 100;
   document.getElementById('questionnaire-progress-fill').style.width = pct + '%';
