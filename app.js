@@ -132,7 +132,7 @@ function updateComparison() {
   const grid = document.getElementById('comparaison-grid');
   grid.innerHTML = '';
 
-  CANDIDATES.forEach(candidate => {
+  CANDIDATES.filter(c => c.id !== 'npa').forEach(candidate => {
     const props = PROPOSITIONS.filter(p => p.theme === theme && p.candidateId === candidate.id);
 
     const col = document.createElement('div');
@@ -274,7 +274,7 @@ function resolvePropositionsDetail(candidateId, quizTheme) {
     )
   );
   if (props.length === 0) return null;
-  return props.map(p => '• ' + p.text).join('\n');
+  return props.map(p => '– ' + p.text).join('\n');
 }
 
 function generateQuestions() {
@@ -471,11 +471,40 @@ function renderQuestion() {
 
 // ====== SUPER BOOST X2 ======
 function toggleBoost() {
-  if (questionnaireState.hasAnswered) return;
   questionnaireState.boostActive = !questionnaireState.boostActive;
   const btn = document.getElementById('btn-boost');
   if (btn) {
     btn.classList.toggle('active', questionnaireState.boostActive);
+  }
+
+  // If already answered, apply/unapply boost retroactively
+  if (questionnaireState.hasAnswered) {
+    const currentAnswer = questionnaireState.answers[questionnaireState.answers.length - 1];
+    const q = questionnaireState.questions[questionnaireState.currentIndex];
+
+    if (questionnaireState.boostActive && !currentAnswer.boosted) {
+      // Activating boost: add +1 to chosen candidate score, +1 to all counts
+      if (currentAnswer.chosenIndex >= 0) {
+        q.choices[currentAnswer.chosenIndex].candidateIds.forEach(cid => {
+          questionnaireState.scores[cid]++;
+        });
+      }
+      q.choices.forEach(ch => {
+        ch.candidateIds.forEach(cid => { questionnaireState.counts[cid]++; });
+      });
+      currentAnswer.boosted = true;
+    } else if (!questionnaireState.boostActive && currentAnswer.boosted) {
+      // Deactivating boost: undo
+      if (currentAnswer.chosenIndex >= 0) {
+        q.choices[currentAnswer.chosenIndex].candidateIds.forEach(cid => {
+          questionnaireState.scores[cid]--;
+        });
+      }
+      q.choices.forEach(ch => {
+        ch.candidateIds.forEach(cid => { questionnaireState.counts[cid]--; });
+      });
+      currentAnswer.boosted = false;
+    }
   }
 }
 
@@ -591,19 +620,21 @@ function answerQuestion(choiceIndex) {
     }
   });
 
-  // Disable boost button after answering
-  const boostBtn = document.getElementById('btn-boost');
-  if (boostBtn) {
-    boostBtn.disabled = true;
-    boostBtn.classList.add('disabled');
-  }
-
   // Haptic
   if (navigator.vibrate) navigator.vibrate(8);
 
-  // Show "Suivant" button, hide skip
+  // Show "Suivant" button alongside boost, hide skip
   const bottomDiv = document.querySelector('.questionnaire-bottom');
-  bottomDiv.innerHTML = `<button class="btn-suivant" onclick="nextQuestion()">Suivant \u2192</button>`;
+  const isActive = questionnaireState.boostActive ? ' active' : '';
+  bottomDiv.innerHTML = `
+    <div class="boost-suivant-row">
+      <button class="btn-boost${isActive}" id="btn-boost" onclick="toggleBoost()" title="Cette question comptera double dans votre score final">
+        Super Boost X2
+        <span class="boost-info" onclick="event.stopPropagation(); showToast('Cette question comptera double dans votre score final')">i</span>
+      </button>
+      <button class="btn-suivant" onclick="nextQuestion()">Suivant →</button>
+    </div>
+  `;
 }
 
 function nextQuestion() {

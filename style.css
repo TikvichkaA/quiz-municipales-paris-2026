@@ -1160,6 +1160,14 @@ body {
   margin-bottom: 8px;
 }
 
+.boost-suivant-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 .btn-boost {
   display: inline-flex;
   align-items: center;
@@ -1381,7 +1389,7 @@ body {
   .mode-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-float); }
   .comparaison-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     overflow-x: visible;
     scroll-snap-type: none;
   }
