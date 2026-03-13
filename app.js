@@ -285,9 +285,9 @@ function generateQuestions() {
     const mergedChoices = [];
     const textMap = {};
     shuffled.forEach(ch => {
-      // Replace "mettre les mesures" placeholders
+      // Replace "mettre/reprendre les mesures" placeholders with actual PROPOSITIONS
       let detail = ch.detail || null;
-      if (detail && /mettre.*mesures/i.test(detail)) {
+      if (detail && /(mettre|reprendre).*mesures/i.test(detail)) {
         detail = resolvePropositionsDetail(ch.candidateId, q.theme) || detail;
       }
 
