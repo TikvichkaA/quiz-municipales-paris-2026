@@ -67,7 +67,7 @@ function renderResultsBars(containerId, results) {
     item.className = 'result-bar-item';
     item.innerHTML = `
       <div class="result-bar-header">
-        <span class="result-bar-name">${r.name}</span>
+        <span class="result-bar-name">${r.name} <span class="result-bar-party">${r.party}</span></span>
         <span class="result-bar-pct" style="color:${r.color}">${r.affinity}%</span>
       </div>
       <div class="result-bar-track">

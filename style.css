@@ -538,6 +538,13 @@ body {
   color: var(--gris-600);
 }
 
+.result-bar-party {
+  font-weight: 400;
+  font-size: 0.72rem;
+  color: var(--gris-400);
+  margin-left: 4px;
+}
+
 .result-bar-pct {
   font-weight: 800;
   font-size: 0.88rem;
@@ -713,6 +720,7 @@ body {
 
 #theme-select {
   width: 100%;
+  max-width: 100%;
   padding: 14px 40px 14px 16px;
   border: 1px solid var(--gris-200);
   border-radius: var(--radius);
@@ -747,7 +755,7 @@ body {
   padding-bottom: 24px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x proximity;
 }
 
 .comparaison-column {
