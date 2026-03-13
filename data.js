@@ -3,7 +3,7 @@
 
 const CANDIDATES = [
   { id: "dati", name: "Rachida Dati", color: "#8B5CF6", party: "LR / Renaissance" },
-  { id: "gregoire", name: "Emmanuel Grégoire", color: "#EF4444", party: "PS / NFP" },
+  { id: "gregoire", name: "Emmanuel Grégoire", color: "#EF4444", party: "PS / Les Écologistes / Place Publique / PCF / L'Après" },
   { id: "chikirou", name: "Sophia Chikirou", color: "#F97316", party: "LFI / NFP" },
   { id: "bournazel", name: "Pierre-Yves Bournazel", color: "#3B82F6", party: "Horizons / Renaissance" },
   { id: "knafo", name: "Sarah Knafo", color: "#1E3A5F", party: "Reconquête" },
