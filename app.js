@@ -132,7 +132,7 @@ function updateComparison() {
   const grid = document.getElementById('comparaison-grid');
   grid.innerHTML = '';
 
-  CANDIDATES.filter(c => c.id !== 'npa').forEach(candidate => {
+  CANDIDATES.forEach(candidate => {
     const props = PROPOSITIONS.filter(p => p.theme === theme && p.candidateId === candidate.id);
 
     const col = document.createElement('div');
