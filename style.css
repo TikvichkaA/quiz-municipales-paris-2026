@@ -226,6 +226,28 @@ body {
 }
 
 /* ====== MODE SELECTION (ACCUEIL) ====== */
+.info-alliance {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--gris-100);
+  border: 1px solid var(--gris-200);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-top: 18px;
+  font-size: 0.82rem;
+  color: var(--gris-600);
+  line-height: 1.5;
+}
+.info-alliance svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--gris-400);
+}
+.info-alliance p {
+  margin: 0;
+}
+
 .mode-selection {
   display: flex;
   flex-direction: column;
@@ -1421,7 +1443,7 @@ body {
   .mode-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-float); }
   .comparaison-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     overflow-x: visible;
     scroll-snap-type: none;
   }
