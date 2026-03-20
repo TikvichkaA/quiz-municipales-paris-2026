@@ -1,4 +1,4 @@
-const CACHE_NAME = 'quiz-municipales-v27';
+const CACHE_NAME = 'quiz-municipales-v28';
 const ASSETS = [
   './',
   './index.html',
@@ -19,7 +19,7 @@ self.addEventListener('install', (e) => {
   );
 });
 
-// Activate: clean old caches
+// Activate: clean old caches, take control immediately
 self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys().then(keys =>
@@ -28,22 +28,22 @@ self.addEventListener('activate', (e) => {
   );
 });
 
-// Fetch: cache-first, fallback network
+// Fetch: network-first, fallback to cache (ensures fresh content)
 self.addEventListener('fetch', (e) => {
   e.respondWith(
-    caches.match(e.request).then(cached => {
-      if (cached) return cached;
-      return fetch(e.request).then(response => {
-        if (response.ok && e.request.method === 'GET') {
-          const clone = response.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put(e.request, clone));
-        }
-        return response;
-      });
-    }).catch(() => {
-      if (e.request.destination === 'document') {
-        return caches.match('./index.html');
+    fetch(e.request).then(response => {
+      if (response.ok && e.request.method === 'GET') {
+        const clone = response.clone();
+        caches.open(CACHE_NAME).then(cache => cache.put(e.request, clone));
       }
+      return response;
+    }).catch(() => {
+      return caches.match(e.request).then(cached => {
+        if (cached) return cached;
+        if (e.request.destination === 'document') {
+          return caches.match('./index.html');
+        }
+      });
     })
   );
 });
